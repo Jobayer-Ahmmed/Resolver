@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,6 +32,99 @@
     </script>
   </head>
   <body class="bg-[#F4F4F4]">
+    <header class="bg-white">
+      <div
+        class="flex max-w-full w-[1416px] mx-auto py-5 items-center justify-between"
+      >
+        <nav class="flex items-center gap-10">
+          <div>
+            <img
+              class="w-[175.407px] h-[32px]"
+              src="./assets/logo/logo.svg"
+              alt=""
+            />
+          </div>
+          <ul
+            class="text-[#344054] flex items-center gap-6 text-base font-semibold"
+          >
+            <li>
+              <a class="px-3 py-2" href="">Home</a>
+            </li>
+            <li>
+              <a class="px-3 py-2" href="">How It Works</a>
+            </li>
+            <li>
+              <a class="px-3 py-2" href="">Read Reviews</a>
+            </li>
+            <li>
+              <a class="px-3 py-2" href="">Write Review</a>
+            </li>
+            <li>
+              <a class="px-3 py-2" href="">About Us</a>
+            </li>
+            <li>
+              <a class="px-3 py-2" href="">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="flex items-center gap-4">
+          <li class="px-2 py-2">
+            <button
+              class="flex items-center gap-3 py-[10px] px-[14px] rounded-lg border-2"
+            >
+              <img class="w-5 h-5" src="./assets/zap.svg" alt="" />
+              <span class="font-semibold">Upgrade now</span>
+            </button>
+          </li>
+          <li class="px-2 py-2">
+            <button>
+              <img class="w-5 h-5" src="./assets/settings.svg" alt="" />
+            </button>
+          </li>
+
+          <li class="px-2 py-2">
+            <button>
+              <img class="w-5 h-5" src="./assets/bell-01.svg" alt="" />
+            </button>
+          </li>
+          <li class="px-2 py-2">
+            <button>
+              <img class="w-10 h-10" src="./assets/user.png" alt="" />
+            </button>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div
+        class="flex max-w-full w-[1416px] mx-auto py-5 items-center justify-between"
+      >
+        <ul
+          class="text-[#344054] flex items-center gap-6 text-base font-semibold"
+        >
+          <li>
+            <a
+              class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
+              href=""
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a
+              class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
+              href=""
+              >Profiles</a
+            >
+          </li>
+          <li>
+            <a
+              class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
+              href=""
+              >Settings</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
     <section class="bg-[#F6FBFD] mb-16">
       <div class="max-w-full w-[1416px] mx-auto py-10">
         <div class="flex flex-col items-center justify-center gap-4">
@@ -591,7 +684,6 @@
         activeTab.classList.remove("hidden");
         inactiveTab.classList.add("hidden");
         inactiveTab.classList.remove("block");
-
 
         // Optional: you can also toggle active state for buttons
       }
