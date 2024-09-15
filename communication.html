@@ -1,0 +1,613 @@
+!<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Communication</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#273F2B",
+              secondary: "#4B4B4B",
+            },
+            boxShadow: {
+              "3xl": "0px 10px 40px 0px rgba(32, 32, 35, 0.08)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#F4F4F4]">
+    <section class="bg-[#F6FBFD] mb-16">
+      <div class="max-w-full w-[1416px] mx-auto py-10">
+        <div class="flex flex-col items-center justify-center gap-4">
+          <img
+            class="rounded-full w-[120px] h-[120px]"
+            src="./assets/user.png"
+            alt=""
+          />
+          <h2 class="text-center text-primary text-[32px] font-medium">
+            Charlie Henderson
+          </h2>
+          <p class="flex items-center gap-2">
+            <img class="w-5 h-5" src="./assets/location.svg" alt="" />
+            <span class="text-primary">San Francisco,CA</span>
+          </p>
+        </div>
+        <div
+          class="bg-white mt-8 flex items-center gap-3 px-4 border rounded-lg py-2"
+        >
+          <button
+            id="userInterface"
+            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+          >
+            User Information
+          </button>
+          <button
+            id="communicationBtn"
+            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+          >
+            Communication
+          </button>
+          <button
+            id="privacySettingBtn"
+            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+          >
+            Privacy Settings
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-full w-[1416px] mx-auto">
+      <!-- Communication tab start -->
+      <div class="block" id="communicationTab">
+        <div class="bg-white mb-16 p-8 rounded-[10px] shadow">
+          <div class="pb-5 border-b mb-8">
+            <h2 class="text-primary font-semibold text-lg">Communication</h2>
+            <p class="text-secondary">
+              Update your Communication settings here.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-y-10 gap-x-8">
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
+                <p class="text-[#69747B]">When a user sent you a complaints</p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Reply</h2>
+                <p class="text-[#69747B]">
+                  Get notification when someone replied you
+                </p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
+                <p class="text-[#69747B]">When a user sent you a complaints</p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Reply</h2>
+                <p class="text-[#69747B]">
+                  Get notification when someone replied you
+                </p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
+                <p class="text-[#69747B]">When a user sent you a complaints</p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Reply</h2>
+                <p class="text-[#69747B]">
+                  Get notification when someone replied you
+                </p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
+                <p class="text-[#69747B]">When a user sent you a complaints</p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Reply</h2>
+                <p class="text-[#69747B]">
+                  Get notification when someone replied you
+                </p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
+                <p class="text-[#69747B]">When a user sent you a complaints</p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Reply</h2>
+                <p class="text-[#69747B]">
+                  Get notification when someone replied you
+                </p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
+                <p class="text-[#69747B]">When a user sent you a complaints</p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Reply</h2>
+                <p class="text-[#69747B]">
+                  Get notification when someone replied you
+                </p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white mb-16 p-8 rounded-[10px] shadow">
+          <div class="pb-5 border-b mb-8">
+            <h2 class="text-primary font-semibold text-lg">Messages</h2>
+            <p class="text-secondary">Keep in touch with your members</p>
+          </div>
+          <div class="grid grid-cols-2 pb-10 gap-y-10 gap-x-8">
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
+                <p class="text-[#69747B]">When a user sent you a complaints</p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Reply</h2>
+                <p class="text-[#69747B]">
+                  Get notification when someone replied you
+                </p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
+                <p class="text-[#69747B]">When a user sent you a complaints</p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+            <div
+              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            >
+              <div>
+                <h2 class="text-primary font-medium text-xl">New Reply</h2>
+                <p class="text-[#69747B]">
+                  Get notification when someone replied you
+                </p>
+              </div>
+              <div>
+                <label class="inline-flex items-center me-5 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                  ></div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="flex mt-5 items-center justify-end gap-1">
+            <button
+              class="w-[270px] text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 h-[48px] px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
+            >
+              Cancel
+            </button>
+            <button
+              class="w-[270px] text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 h-[48px] px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Communication tab end -->
+
+      <!-- privacy-setting start tab  -->
+      <div
+        id="privacySettingTab"
+        class="bg-white hidden mb-16 p-8 rounded-[10px] shadow"
+      >
+        <div class="pb-5 border-b mb-8">
+          <h2 class="text-primary font-semibold text-lg">Privacy Settings</h2>
+          <p class="text-secondary">Keep your settings more secured</p>
+        </div>
+        <div class="grid grid-cols-2 pb-10 gap-y-10 gap-x-8">
+          <div
+            class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+          >
+            <div>
+              <h2 class="text-primary font-medium text-xl">
+                Anyone can message me
+              </h2>
+              <p class="text-[#69747B]">When a user sent you a message</p>
+            </div>
+            <div>
+              <label class="inline-flex items-center me-5 cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" checked />
+                <div
+                  class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                ></div>
+              </label>
+            </div>
+          </div>
+
+          <div
+            class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+          >
+            <div>
+              <h2 class="text-primary font-medium text-xl">
+                Keep my profile private
+              </h2>
+              <p class="text-[#69747B]">
+                Your profile will private mode if you turn on enable
+              </p>
+            </div>
+            <div>
+              <label class="inline-flex items-center me-5 cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" checked />
+                <div
+                  class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                ></div>
+              </label>
+            </div>
+          </div>
+
+          <div
+            class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+          >
+            <div>
+              <h2 class="text-primary font-medium text-xl">New Complaints</h2>
+              <p class="text-[#69747B]">When a user sent you a complaints</p>
+            </div>
+            <div>
+              <label class="inline-flex items-center me-5 cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" checked />
+                <div
+                  class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                ></div>
+              </label>
+            </div>
+          </div>
+          <div
+            class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+          >
+            <div>
+              <h2 class="text-primary font-medium text-xl">New Reply</h2>
+              <p class="text-[#69747B]">
+                Get notification when someone replied you
+              </p>
+            </div>
+            <div>
+              <label class="inline-flex items-center me-5 cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" checked />
+                <div
+                  class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
+                ></div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="flex mt-5 items-center justify-end gap-1">
+          <button
+            class="w-[270px] text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 h-[48px] px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
+          >
+            Cancel
+          </button>
+          <button
+            class="w-[270px] text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 h-[48px] px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+      <!-- privacy-setting end tab  -->
+    </section>
+
+    <script>
+      const communicationBtn = document.getElementById("communicationBtn");
+      const communicationTab = document.getElementById("communicationTab");
+      const privacySettingBtn = document.getElementById("privacySettingBtn");
+      const privacySettingTab = document.getElementById("privacySettingTab");
+
+      console.log(
+        communicationBtn,
+        communicationTab,
+        privacySettingBtn,
+        privacySettingTab
+      );
+
+      // Function to switch tabs
+      function switchTab(activeBtn, activeTab, inactiveTab) {
+        // Add active class to the active tab and remove from the other
+        activeTab.classList.add("block");
+        activeTab.classList.remove("hidden");
+        inactiveTab.classList.add("hidden");
+        inactiveTab.classList.remove("block");
+
+
+        // Optional: you can also toggle active state for buttons
+      }
+
+      // By default, show the communication tab when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        switchTab(communicationBtn, communicationTab, privacySettingTab);
+      });
+
+      privacySettingBtn.addEventListener("click", () => {
+        switchTab(privacySettingBtn, privacySettingTab, communicationTab);
+      });
+      // Set up click event listeners to switch tabs when buttons are clicked
+      communicationBtn.addEventListener("click", () => {
+        switchTab(communicationBtn, communicationTab, privacySettingTab);
+      });
+    </script>
+  </body>
+</html>

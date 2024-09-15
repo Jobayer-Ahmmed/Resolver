@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#273F2B",
+              secondary: "#4B4B4B",
+            },
+            boxShadow: {
+              "3xl": "0px 14px 34px 0px rgba(21, 58, 36, 0.10)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#F4F4F4]">
+    <!-- Complaint start -->
+    <section>
+      <div class="w-[978px] mx-auto">
+        <div
+          class="flex px-40 flex-col item-center justify-center gap-4 mb-11 text-center"
+        >
+          <h1 class="text-primary leading-tight font-intel text-5xl font-bold">
+            Submit Your Complaint
+          </h1>
+          <p class="text-secondary">
+            Whether you need to file a complaint, post a review, tell us about a
+            misleading advertisement, or report a scam, you're in the right
+            place.
+          </p>
+        </div>
+        <div class="bg-white rounded-lg py-[60px] px-10 shadow-3xl">
+          <form id="" action="" class="space-y-8">
+            <div>
+              <h2 class="text-primary text-2xl font-medium">
+                Submit a Complaint
+              </h2>
+            </div>
+            <div class="flex items-center justify-between gap-8">
+              <div class="w-full">
+                <label class="text-[#344054] text-sm font-medium" for=""
+                  >Company Type<span class="text-gray-400">
+                    (Industry Sector)</span
+                  ></label
+                >
+                <br />
+                <select
+                  class="border-2 w-full rounded-md outline-none p-3"
+                  name=""
+                  id=""
+                >
+                  <option value="">Enter company type</option>
+                </select>
+              </div>
+              <div class="w-full">
+                <label class="text-[#344054] text-sm font-medium" for=""
+                  >Company Name</label
+                >
+                <br />
+                <select
+                  class="border-2 w-full rounded-md outline-none p-3"
+                  name=""
+                  id=""
+                >
+                  <option value="">Enter company type</option>
+                </select>
+              </div>
+            </div>
+            <div class="w-full">
+              <label class="text-[#344054] text-sm font-medium" for=""
+                >Company Type</label
+              >
+              <br />
+              <select
+                class="border-2 w-full rounded-md outline-none p-3"
+                name=""
+                id=""
+              >
+                <option value="">Enter company type</option>
+              </select>
+            </div>
+            <div class="w-full">
+              <label class="text-[#344054] text-sm font-medium" for=""
+                >Complaint Description</label
+              >
+              <br />
+
+              <textarea
+                class="border-2 w-full h-[104px] rounded-md outline-none p-3"
+                name=""
+                id=""
+                placeholder="Enter a description..."
+              ></textarea>
+              <p class="text-right">0/1000</p>
+            </div>
+            <div class="w-full">
+              <label class="text-[#344054] text-sm font-medium" for=""
+                >Upload Files<span class="text-gray-400">
+                  (Optional)</span
+                ></label
+              >
+              <br />
+              <div class="flex items-center justify-center w-full">
+                <label
+                  for="dropzone-file"
+                  class="flex flex-col items-center px-6 py-4 justify-center w-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
+                >
+                  <div
+                    class="flex flex-col items-center justify-center pt-5 pb-6"
+                  >
+                    <img src="./assets/upload-cloud-02.svg" alt="" />
+                    <p class="mb-2 text-sm text-gray-500">
+                      <span class="font-semibold text-[#78EB54]"
+                        >Click to upload</span
+                      >
+                      or drag and drop
+                    </p>
+                    <p class="text-xs text-gray-500">
+                      SVG, PNG, JPG or GIF (MAX. 800x400px)
+                    </p>
+                  </div>
+                  <input id="dropzone-file" type="file" class="hidden" />
+                </label>
+              </div>
+            </div>
+
+            <div class="flex mb-4">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                class="w-6 h-6 shrink-0 text-[#78EB54] bg-gray-100 border-gray-300 rounded focus:ring-[#78EB54] focus:ring-2"
+              />
+              <label
+                for="default-checkbox"
+                class="ms-2 text-base font-normal text-[#737C86]"
+                >I confirm this review reflects my own experience and genuine
+                opinion. I have no personal or business ties with this
+                organization. By checking this box, I consent to ConsumerAffairs
+                contacting me and agree to their Terms of Use. Zero tolerance
+                policy applies.</label
+              >
+            </div>
+            <div class="flex mb-4">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                class="w-6 h-6 shrink-0 text-[#78EB54] bg-gray-100 border-gray-300 rounded focus:ring-[#78EB54] focus:ring-2"
+              />
+              <label
+                for="default-checkbox"
+                class="ms-2 text-base font-normal text-[#737C86]"
+                >Escalate and report to regulator</label
+              >
+            </div>
+            <div>
+              <input
+                class="text-base shadow font-semibold bg-[#78EB54] cursor-pointer text-primary px-8 py-4 rounded-[99px]"
+                type="submit"
+                value="Submit Complaint"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Complaint end  -->
+    <!-- Resolver Support start -->
+    <section class="max-w-full mb-[180px] px-[219px] py-[90px] space-y-14">
+      <div
+        class="flex w-[600px] mx-auto flex-col item-center justify-center gap-4 mb-11 text-center"
+      >
+        <h1 class="text-primary leading-tight font-intel text-5xl font-bold">
+          How Resolver Support
+        </h1>
+        <p class="text-secondary">
+          Resolver software is a type of software tool used for data analysis
+          and reporting. It is designed to help businesses, organizations.
+        </p>
+      </div>
+      <div class="grid grid-cols-3 gap-24">
+        <div>
+          <div
+            class="w-[150px] h-[150px] mx-auto mb-8 bg-[#2196F3] flex items-center rounded-full justify-center"
+          >
+            <img src="./assets/support-icon/mail-receive-02.svg" alt="" />
+          </div>
+          <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
+            Email
+          </h3>
+          <p class="text-center text-secondary">
+            We are here to assist you with any questions or concerns you may
+            have. Please don't hesitate to email
+            <a class="text-[#2196F3]" href="mailto:us-email@example.com"
+              >us-email@example.com</a
+            >.
+          </p>
+        </div>
+        <div>
+          <div
+            class="w-[150px] h-[150px] mx-auto mb-8 bg-[#6F4BE5] flex items-center rounded-full justify-center"
+          >
+            <img src="./assets/support-icon/customer-service-01.svg" alt="" />
+          </div>
+          <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
+            Live Support
+          </h3>
+          <p class="text-center text-secondary">
+            Live support for resolvers ensures quick assistance in resolving
+            complaints, fostering trust and satisfaction.
+          </p>
+        </div>
+        <div>
+          <div
+            class="w-[150px] h-[150px] mx-auto mb-8 bg-[#FF9066] flex items-center rounded-full justify-center"
+          >
+            <img src="./assets/support-icon/telephone.svg" alt="" />
+          </div>
+          <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
+            Live Support
+          </h3>
+          <p class="text-center text-secondary">
+            Live support for resolvers ensures quick assistance in resolving
+            complaints, fostering trust and satisfaction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resolver Support end -->
+
+    <!-- Around the Corner start -->
+    <section
+      class="py-[100px] bg-[#FAFAFA] mb-[180px] flex items-center justify-between px-[220px]"
+    >
+      <div class="flex-1">
+        <h1 class="text-primary font-semibold text-5xl mb-4">
+          Your Next Review is Just Around the Corner
+        </h1>
+        <p class="text-secondary mb-12">
+          We're currently out of suggestions for you. Keep using Yelp, and we'll
+          have new recommendations for you soon.
+        </p>
+        <button
+          class="bg-[#78EB54] font-semibold text-primary px-8 py-[18px] rounded-[99px] shadow"
+        >
+          Write First Review
+        </button>
+      </div>
+      <div class="flex flex-1 justify-end relative items-end">
+        <img class="w-3/4" src="./assets//frame.png " alt="" />
+        <div
+          class="absolute left-20 flex items-center gap-3 bg-[#78EB54] rounded-[47.799px] py-3 pr-3 ps-2"
+        >
+          <img class="w-16" src="./assets/type.svg" alt="" />
+          <p class="text-[#26422B] text-2xl font-bold">Share your thought</p>
+        </div>
+      </div>
+    </section>
+    <!-- Around the Corner end -->
+    <!-- Popup and Overlay  start -->
+    <div
+      id="overlay"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+    ></div>
+
+    <div
+      id="popup"
+      class="hidden fixed top-72 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-white px-28 py-20 rounded-lg shadow-3xl w-[978px] text-center"
+    >
+      <img
+        class="w-20 mb-10 mx-auto"
+        src="./assets/support-icon/right.svg"
+        alt=""
+      />
+      <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
+        Thank You for Your Submission!
+      </h3>
+      <p class="text-secondary mb-10">
+        Your reference number is [123456]. You can track the status of your
+        complaint using this reference number
+      </p>
+      <button
+        id="closePopup"
+        class="bg-[#78EB54] text-primary font-semibold text-based rounded-full px-8 py-4 cursor-pointer"
+      >
+        See Complaint
+      </button>
+    </div>
+    <!-- Popup and Overlay  end -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const submitButton = document.querySelector("input[type='submit']");
+        submitButton.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          document.getElementById("overlay").classList.remove("hidden");
+          document.getElementById("popup").classList.remove("hidden");
+        });
+
+        const closeButton = document.getElementById("closePopup");
+        closeButton.addEventListener("click", function () {
+          document.getElementById("popup").classList.add("hidden");
+          document.getElementById("overlay").classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
