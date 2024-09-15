@@ -15,7 +15,8 @@
 
 <body>
     <!-- sub menu -->
-     <div class="flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-5 py-3 mt-10">
+    <div
+        class="hidden lg:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
         <div>
             <button class="px-4 py-2">Dashboard</button>
             <button class="px-4 py-2 border border-black rounded  text-black">Profiles</button>
@@ -25,9 +26,42 @@
             <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
             <input type="text" class="border-collapse outline-none" placeholder="Search" name="" id="">
         </div>
-     </div>
+    </div>
+    <!-- profile intro section responsive -->
+    <section class="lg:hidden  bg-[#F4F4F4] px-4 flex justify-center items-center py-7">
+        <div class="bg-white p-4 w-full rounded-xl">
+            <h2 class="mb-5  text-2xl font-medium">Profiles</h2>
+            <select
+                class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
+                <option class="px-4 py-2">History of Complaints</option>
+                <option class="px-4 py-2">Profile Information</option>
+                <option class="px-4 py-2">Companies</option>
+                <option class="px-4 py-2">My Companies</option>
+                <option class="px-4 py-2">My Reviews</option>
+            </select>
+
+            <div class=" my-5">
+                <h1 class="text-[#273F2B] text-xl font-medium ">History of your complaint</h1>
+                <p class="text-[#818B9C]">Tracking allows users to monitor the progress of their complaints in
+                    real-time, providing
+                    transparency
+                    and timely updates on each stage of the resolution process.</p>
+            </div>
+            <div
+                class="">
+                <div class="flex justify-start items-center gap-3 border-2 border-gray-300 rounded-full pl-5 py-3">
+                    <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+                    <input type="text" class="outline-none border-collapse w-full rounded-full" placeholder="Search for reviews, companies"
+                        name="" id="">
+                </div>
+                <input type="submit" class="mt-2 w-full h-[52px] bg-[#78EB54] px-5 py-2 rounded-full text-[#273F2B] text-xl font-semibold"
+                    value="Search" name="" id="">
+            </div>
+        </div>
+
+    </section>
     <!-- profile intro section -->
-    <section class="bg-[#F6FBFD] py-16 ">
+    <!-- <section class="lg:block hidden bg-[#F6FBFD] py-16 ">
         <div class="container mx-auto px-4 flex flex-col justify-center items-center">
             <div class="flex flex-col justify-center items-center">
                 <div><img src="../assets/images/charlie.png" alt=""></div>
@@ -46,17 +80,20 @@
             </div>
         </div>
 
-    </section>
+    </section> -->
+    
+
+    <!-- compaint section  -->
     <section class=" lg:px-32 lg:pt-10 lg:pb-32  bg-[#F4F4F4] ">
-        <div class="bg-white px-5 pt-5 pb-10 shadow">
-            <div class="flex justify-center items-center">
+        <div class="lg:bg-white px-5 pt-5 pb-10 shadow">
+            <div class="hidden lg:flex justify-center items-center ">
                 <div class=" lg:w-[700px] text-center ">
                     <h1 class="text-[#273F2B] lg:text-4xl font-medium mb-3">History of your complaint</h1>
                     <p>Tracking allows users to monitor the progress of their complaints in real-time, providing
                         transparency
                         and timely updates on each stage of the resolution process.</p>
 
-                    <!-- search -->
+                   <p> search comment</p>
                     <div
                         class="w-[600px] mx-auto flex justify-between items-center px-4 py-2 shadow-2xl rounded-full mt-10 border">
                         <div class="flex justify-start items-center gap-3">
@@ -77,19 +114,27 @@
                 </div>
             </div>
 
-            <div class="uppercase flex justify-between my-10">
+            <div class="hidden uppercase lg:flex justify-between my-10">
                 <button class="uppercase w-56 py-2 rounded-xl bg-[#78EB54]">all</button>
                 <button class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">in progress</button>
                 <button class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">submitted</button>
                 <button class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">resolved</button>
                 <button class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">pending</button>
             </div>
+            <!-- for responsive -->
+            <select class="font-semibold shadow lg:hidden uppercase flex justify-between my-3 border w-full rounded-lg px-4 py-3">
+                <option class="uppercase w-56 py-2 rounded-xl bg-[#78EB54]">all</option>
+                <option class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">in progress</option>
+                <option class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">submitted</option>
+                <option class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">resolved</option>
+                <option class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">pending</option>
+            </select>
 
-            <!-- cards div -->
-            <div class="grid grid-cols-2 gap-10">
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+            <!-- card divs commment -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
+                <div class="rounded-lg  shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -104,7 +149,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -115,7 +160,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -134,10 +179,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+                <div class="rounded-lg   shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -152,7 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -163,7 +211,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -182,10 +230,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+                <div class="rounded-lg  shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -200,7 +251,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -211,7 +262,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -230,10 +281,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+                <div class="rounded-lg  shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -248,7 +302,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -259,7 +313,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -278,10 +332,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+                <div class="rounded-lg  hidden lg:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -296,7 +353,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -307,7 +364,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -326,10 +383,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+                <div class="rounded-lg  hidden lg:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -344,7 +404,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -355,7 +415,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -374,10 +434,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+                <div class="rounded-lg  hidden lg:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -392,7 +455,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -403,7 +466,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -422,10 +485,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+                <div class="rounded-lg  hidden lg:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -440,7 +506,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -451,7 +517,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -470,10 +536,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+                <div class="rounded-lg  hidden lg:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -488,7 +557,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -499,7 +568,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -518,10 +587,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
-                <div class="rounded-lg shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex justify-between">
-                        <div class=" flex justify-center items-center gap-3">
+                <div class="rounded-lg  hidden lg:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
                             <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
                             </div>
                             <div>
@@ -536,7 +608,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-3">
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
                             <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
                             <p class="text-[#666] font-medium">Resolved</p>
                         </div>
@@ -547,7 +619,7 @@
                             leads to the company or
                             brand’s good name recognition and reputation, bringing more customers and profit...</p>
                     </div>
-                    <div class="flex justify-between items-end">
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
                         <div class="text-[#4B4B4B]">
                             <p>Tracking number</p>
                             <p>#569874</p>
@@ -566,26 +638,133 @@
                             </div>
                         </div>
                     </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
                 </div>
+                <div class="rounded-lg  hidden lg:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
+                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
+                            </div>
+                            <div>
+                                <div class="flex justify-center items-center gap-2">
+                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
+                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
+                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
+                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
+                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
+                            <p class="text-[#666] font-medium">Resolved</p>
+                        </div>
+                    </div>
+                    <div class="my-5">
+                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
+                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
+                            leads to the company or
+                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
+                    </div>
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
+                        <div class="text-[#4B4B4B]">
+                            <p>Tracking number</p>
+                            <p>#569874</p>
+                        </div>
+                        <div class="flex gap-2 items-center text-[#949494]">
+                            <div>
+                                <p>Submitted on</p>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
+                            <div>
+                                <p>1 Apr 2024</p>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
+                            <div>
+                                <p>3PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
+                </div>
+                <div class="rounded-lg  hidden lg:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
+                    <div class="flex lg:flex-row flex-col lg:justify-between">
+                        <div class=" flex justify-start lg:justify-center items-center gap-3">
+                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
+                            </div>
+                            <div>
+                                <div class="flex justify-center items-center gap-2">
+                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
+                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
+                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
+                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start lg:justify-center items-center lg:mt-0 mt-5 gap-3">
+                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
+                            <p class="text-[#666] font-medium">Resolved</p>
+                        </div>
+                    </div>
+                    <div class="my-5">
+                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
+                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
+                            leads to the company or
+                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
+                    </div>
+                    <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end lg:gap-0 gap-2">
+                        <div class="text-[#4B4B4B]">
+                            <p>Tracking number</p>
+                            <p>#569874</p>
+                        </div>
+                        <div class="flex gap-2 items-center text-[#949494]">
+                            <div>
+                                <p>Submitted on</p>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
+                            <div>
+                                <p>1 Apr 2024</p>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
+                            <div>
+                                <p>3PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:hidden flex items-center mt-5">
+                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i class="fa-solid fa-arrow-right "></i></p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="mt-10 text-sm flex justify-between">
+            
+            <!-- page number -->
+             <div class="mt-10 flex lg:justify-between justify-center">
+                <div class="lg:hidden block"></div>
                 <div>
                     <p>Page 1 of 10</p>
                 </div>
-                <div>
-                    <button class="px-4 py-1 rounded border border-gray-400">Previous</button>
-                    <button class="px-4 py-1 rounded border border-gray-400">Next</button>
+                <div class="hidden lg:flex lg:gap-3">
+                    <button class="border border-gray-400 rounded px-4 py-1">Previous</button>
+                    <button class="border border-gray-400 rounded px-4 py-1">Next</button>
                 </div>
-            </div>
-
-        </div>
+                <div class="lg:hidden block"></div>
+             </div>
 
     </section>
 
 
     <!-- Review section -->
-    <section class="lg:px-32 lg:mb-32 flex justify-between bg-[#ECEFEE] py-24">
+    <!-- <section class="lg:px-32 lg:mb-32 flex justify-between bg-[#ECEFEE] py-24">
         <div>
             <h1 class="text-4xl font-medium text-[#273F2B] mb-3">Your Next Review is Just <br> Around the Corner</h1>
             <p>We're currently out of suggestions for you. Keep using Yelp, and we'll have <br> new recommendations for
@@ -605,7 +784,7 @@
                 <p class="text-[#26422B] text-2xl font-bold">Share your thought</p>
             </div>
         </div>
-    </section>
+    </section> -->
 </body>
 
 </html>
