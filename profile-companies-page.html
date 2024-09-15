@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Web App</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script
+            src="https://kit.fontawesome.com/96ee5d0221.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="./src/css/styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="bg-gray-100 container font-inter px-20 mb-20">
+        <!-- Navigation -->
+        <nav
+            class="flex justify-between items-center mb-10 border-t border-b py-4"
+        >
+            <div class="flex space-x-4">
+                <button class="text-gray-800 px-4 py-2 rounded-md font-medium">
+                    Dashboard
+                </button>
+                <button
+                    class="border-2 border-gray-400 text-gray-600 px-4 py-2 rounded-md font-medium"
+                >
+                    Profiles
+                </button>
+                <button class="text-gray-600 px-4 py-2 rounded-md font-medium">
+                    Settings
+                </button>
+            </div>
+            <div class="relative">
+                <div
+                    class="flex items-center border border-gray-300 rounded-md py-2 px-4 bg-white w-64"
+                >
+                    <svg
+                        class="w-5 h-5 text-gray-500 mr-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
+                    </svg>
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        class="bg-white focus:outline-none focus:ring-0 w-full"
+                    />
+                </div>
+            </div>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="text-center my-10 mt-4">
+            <img
+                src="./src/images/image 3.png"
+                alt="Profile Picture"
+                class="w-24 h-24 rounded-full mx-auto mb-4"
+            />
+            <h1 class="text-2xl font-bold mb-2">Charlie Henderson</h1>
+            <div class="flex gap-2 items-center justify-center">
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g opacity="0.7">
+                        <path
+                            d="M5.83203 15C4.30792 15.3431 3.33203 15.8703 3.33203 16.4614C3.33203 17.4953 6.3168 18.3333 9.9987 18.3333C13.6806 18.3333 16.6654 17.4953 16.6654 16.4614C16.6654 15.8703 15.6894 15.3431 14.1654 15"
+                            stroke="#273F2B"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M12.0846 7.49935C12.0846 8.64993 11.1519 9.58268 10.0013 9.58268C8.85072 9.58268 7.91797 8.64993 7.91797 7.49935C7.91797 6.34876 8.85072 5.41602 10.0013 5.41602C11.1519 5.41602 12.0846 6.34876 12.0846 7.49935Z"
+                            stroke="#273F2B"
+                            stroke-width="1.5"
+                        />
+                        <path
+                            d="M11.0491 14.5773C10.7681 14.848 10.3924 14.9993 10.0015 14.9993C9.61047 14.9993 9.2348 14.848 8.95372 14.5773C6.37989 12.0833 2.93063 9.29727 4.61273 5.25246C5.52222 3.06545 7.70542 1.66602 10.0015 1.66602C12.2975 1.66602 14.4806 3.06546 15.3901 5.25246C17.0701 9.29218 13.6293 12.0919 11.0491 14.5773Z"
+                            stroke="#273F2B"
+                            stroke-width="1.5"
+                        />
+                    </g>
+                </svg>
+                <p class="text-gray-600">San Francisco, CA</p>
+            </div>
+        </div>
+
+        <!-- Profile Menu -->
+        <div
+            class="flex space-x-4 my-8 px-4 bg-[#F6FBFD] rounded-md border-2 border-gray-150 py-3"
+        >
+            <button class="text-gray-600 px-2 py-1 rounded-md font-medium">
+                Profile Information
+            </button>
+            <button
+                class="border-2 border-gray-400 text-gray-800 px-2 py-1 rounded-md font-medium"
+            >
+                Companies
+            </button>
+            <button class="text-gray-600 px-2 py-1 rounded-md font-medium">
+                My Complaints
+            </button>
+            <button class="text-gray-600 px-2 py-1 rounded-md font-medium">
+                My Reviews
+            </button>
+            <button class="text-gray-600 px-2 py-1 rounded-md font-medium">
+                History of Complaints
+            </button>
+        </div>
+
+        <!-- Company Profile -->
+        <div class="bg-white p-16 rounded-md shadow-md">
+            <!-- Upper part you already created -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center mb-10 py-4 border-b border-gray-150"
+            >
+                <div class="ml-6">
+                    <div class="flex gap-4 items-center">
+                        <h1 class="text-2xl font-bold">All Complaints</h1>
+                        <p
+                            class="border border-gray-400 px-2 py-1 text-xs rounded-lg"
+                        >
+                            240 companies
+                        </p>
+                    </div>
+                    <p class="text-gray-600">
+                        Keep track of your company ratings.
+                    </p>
+                </div>
+                <div
+                    class="flex flex-row justify-end gap-2 md:items-center mb-4 w-full md:w-4/12 mr-6"
+                >
+                    <div
+                        class="relative w-full md:w-9/12 mb-4 md:mb-0 rounded-lg border border-gray-200"
+                    >
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            class="w-full pl-10 pr-4 py-2 border rounded-md"
+                        />
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 text-gray-400 absolute left-3 top-2.5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                            />
+                        </svg>
+                    </div>
+                    <button
+                        class="bg-white text-gray-700 border border-gray-200 rounded-lg px-4 py-0 md:py-2 h-11 flex items-center gap-3"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M5 10H15M2.5 5H17.5M7.5 15H12.5"
+                                stroke="#344054"
+                                stroke-width="1.66667"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                        <span>Filters</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card section -->
+            <div>
+                <!-- single card -->
+                <div
+                    class="mt-6 space-y-4 flex flex-col gap-2 bg-white rounded-lg p-4 my-4 border border-gray-200 border-l-0 border-r-0"
+                >
+                    <div class="flex items-center gap-4 space-x-4">
+                        <!-- Image -->
+                        <img
+                            src="./src/images/company_profile.png"
+                            alt="Ali Baba Express"
+                            class="w-20 h-20 rounded-md object-cover"
+                        />
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <div class="space-y-1">
+                                <div
+                                    class="font-semibold text-green-800 text-lg"
+                                >
+                                    Ali Baba Express
+                                </div>
+                                <div
+                                    class="text-gray-500 text-sm flex items-center"
+                                >
+                                    <span>Resolver Score 4.9</span>
+                                    <span class="mx-2">|</span>
+                                    <span>1,251 Reviews</span>
+                                </div>
+                                <div
+                                    class="text-sm text-black font-semibold mt-1"
+                                >
+                                    New York, CA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-3 divide-x-2 items-center text-gray-600 text-sm mt-2 space-x-1"
+                    >
+                        <!-- Icons -->
+                        <div class="flex items-center gap-2">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.99935 18.3337C14.6017 18.3337 18.3327 14.6027 18.3327 10.0003C18.3327 5.39795 14.6017 1.66699 9.99935 1.66699C5.39698 1.66699 1.66602 5.39795 1.66602 10.0003C1.66602 14.6027 5.39698 18.3337 9.99935 18.3337Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                />
+                                <path
+                                    d="M6.66602 10.0003C6.66602 15.0003 9.99935 18.3337 9.99935 18.3337C9.99935 18.3337 13.3327 15.0003 13.3327 10.0003C13.3327 5.00033 9.99935 1.66699 9.99935 1.66699C9.99935 1.66699 6.66602 5.00033 6.66602 10.0003Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 12.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 7.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3.14736 9.95233C2.35735 8.57474 1.97589 7.44989 1.74588 6.30967C1.4057 4.62331 2.18419 2.976 3.47383 1.92489C4.01889 1.48064 4.64371 1.63243 4.96601 2.21066L5.69366 3.51609C6.27042 4.5508 6.5588 5.06815 6.5016 5.61665C6.44441 6.16515 6.05549 6.61188 5.27766 7.50534L3.14736 9.95233ZM3.14736 9.95233C4.74644 12.7406 7.25588 15.2514 10.0473 16.8523M10.0473 16.8523C11.4249 17.6423 12.5498 18.0238 13.69 18.2538C15.3763 18.594 17.0237 17.8155 18.0748 16.5258C18.519 15.9808 18.3673 15.356 17.789 15.0337L16.4836 14.306C15.4488 13.7292 14.9315 13.4409 14.383 13.4981C13.8345 13.5552 13.3878 13.9442 12.4943 14.722L10.0473 16.8523Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.83398 7.08301L8.28567 8.53251C9.71498 9.37759 10.2863 9.37759 11.7157 8.53251L14.1673 7.08301"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M1.67915 11.23C1.73364 13.7846 1.76087 15.0619 2.70348 16.0081C3.64609 16.9544 4.95796 16.9873 7.58171 17.0532C9.19877 17.0939 10.7999 17.0939 12.417 17.0532C15.0408 16.9873 16.3526 16.9544 17.2952 16.0081C18.2379 15.0619 18.2651 13.7846 18.3195 11.23C18.3371 10.4086 18.3371 9.59202 18.3195 8.77068C18.2651 6.21604 18.2379 4.93873 17.2952 3.99254C16.3526 3.04635 15.0408 3.01339 12.417 2.94747C10.7999 2.90683 9.19877 2.90683 7.5817 2.94746C4.95796 3.01338 3.64609 3.04633 2.70348 3.99253C1.76087 4.93873 1.73363 6.21603 1.67915 8.7706C1.66164 9.59202 1.66164 10.4086 1.67915 11.23Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div class="pl-4">
+                            <span>Bank</span>
+                            <span class="mx-2">•</span>
+                            <span>Financial Consultant</span>
+                            <span class="mx-2">•</span>
+                            <span>Federal Credit Union</span>
+                        </div>
+                    </div>
+                    <!-- Repeat card elements as needed -->
+                </div>
+                <!-- single card -->
+                <div
+                    class="mt-6 space-y-4 flex flex-col gap-2 bg-white rounded-lg p-4 my-4 border border-gray-200 border-l-0 border-r-0 border-t-0"
+                >
+                    <div class="flex items-center gap-4 space-x-4">
+                        <!-- Image -->
+                        <img
+                            src="./src/images/company_profile.png"
+                            alt="Ali Baba Express"
+                            class="w-20 h-20 rounded-md object-cover"
+                        />
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <div class="space-y-1">
+                                <div
+                                    class="font-semibold text-green-800 text-lg"
+                                >
+                                    Ali Baba Express
+                                </div>
+                                <div
+                                    class="text-gray-500 text-sm flex items-center"
+                                >
+                                    <span>Resolver Score 4.9</span>
+                                    <span class="mx-2">|</span>
+                                    <span>1,251 Reviews</span>
+                                </div>
+                                <div
+                                    class="text-sm text-black font-semibold mt-1"
+                                >
+                                    New York, CA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-3 divide-x-2 items-center text-gray-600 text-sm mt-2 space-x-1"
+                    >
+                        <!-- Icons -->
+                        <div class="flex items-center gap-2">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.99935 18.3337C14.6017 18.3337 18.3327 14.6027 18.3327 10.0003C18.3327 5.39795 14.6017 1.66699 9.99935 1.66699C5.39698 1.66699 1.66602 5.39795 1.66602 10.0003C1.66602 14.6027 5.39698 18.3337 9.99935 18.3337Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                />
+                                <path
+                                    d="M6.66602 10.0003C6.66602 15.0003 9.99935 18.3337 9.99935 18.3337C9.99935 18.3337 13.3327 15.0003 13.3327 10.0003C13.3327 5.00033 9.99935 1.66699 9.99935 1.66699C9.99935 1.66699 6.66602 5.00033 6.66602 10.0003Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 12.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 7.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3.14736 9.95233C2.35735 8.57474 1.97589 7.44989 1.74588 6.30967C1.4057 4.62331 2.18419 2.976 3.47383 1.92489C4.01889 1.48064 4.64371 1.63243 4.96601 2.21066L5.69366 3.51609C6.27042 4.5508 6.5588 5.06815 6.5016 5.61665C6.44441 6.16515 6.05549 6.61188 5.27766 7.50534L3.14736 9.95233ZM3.14736 9.95233C4.74644 12.7406 7.25588 15.2514 10.0473 16.8523M10.0473 16.8523C11.4249 17.6423 12.5498 18.0238 13.69 18.2538C15.3763 18.594 17.0237 17.8155 18.0748 16.5258C18.519 15.9808 18.3673 15.356 17.789 15.0337L16.4836 14.306C15.4488 13.7292 14.9315 13.4409 14.383 13.4981C13.8345 13.5552 13.3878 13.9442 12.4943 14.722L10.0473 16.8523Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.83398 7.08301L8.28567 8.53251C9.71498 9.37759 10.2863 9.37759 11.7157 8.53251L14.1673 7.08301"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M1.67915 11.23C1.73364 13.7846 1.76087 15.0619 2.70348 16.0081C3.64609 16.9544 4.95796 16.9873 7.58171 17.0532C9.19877 17.0939 10.7999 17.0939 12.417 17.0532C15.0408 16.9873 16.3526 16.9544 17.2952 16.0081C18.2379 15.0619 18.2651 13.7846 18.3195 11.23C18.3371 10.4086 18.3371 9.59202 18.3195 8.77068C18.2651 6.21604 18.2379 4.93873 17.2952 3.99254C16.3526 3.04635 15.0408 3.01339 12.417 2.94747C10.7999 2.90683 9.19877 2.90683 7.5817 2.94746C4.95796 3.01338 3.64609 3.04633 2.70348 3.99253C1.76087 4.93873 1.73363 6.21603 1.67915 8.7706C1.66164 9.59202 1.66164 10.4086 1.67915 11.23Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div class="pl-4">
+                            <span>Bank</span>
+                            <span class="mx-2">•</span>
+                            <span>Financial Consultant</span>
+                            <span class="mx-2">•</span>
+                            <span>Federal Credit Union</span>
+                        </div>
+                    </div>
+                    <!-- Repeat card elements as needed -->
+                </div>
+                <!-- single card -->
+                <div
+                    class="mt-6 space-y-4 flex flex-col gap-2 bg-white rounded-lg p-4 my-4 border border-gray-200 border-l-0 border-r-0 border-t-0"
+                >
+                    <div class="flex items-center gap-4 space-x-4">
+                        <!-- Image -->
+                        <img
+                            src="./src/images/company_profile.png"
+                            alt="Ali Baba Express"
+                            class="w-20 h-20 rounded-md object-cover"
+                        />
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <div class="space-y-1">
+                                <div
+                                    class="font-semibold text-green-800 text-lg"
+                                >
+                                    Ali Baba Express
+                                </div>
+                                <div
+                                    class="text-gray-500 text-sm flex items-center"
+                                >
+                                    <span>Resolver Score 4.9</span>
+                                    <span class="mx-2">|</span>
+                                    <span>1,251 Reviews</span>
+                                </div>
+                                <div
+                                    class="text-sm text-black font-semibold mt-1"
+                                >
+                                    New York, CA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-3 divide-x-2 items-center text-gray-600 text-sm mt-2 space-x-1"
+                    >
+                        <!-- Icons -->
+                        <div class="flex items-center gap-2">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.99935 18.3337C14.6017 18.3337 18.3327 14.6027 18.3327 10.0003C18.3327 5.39795 14.6017 1.66699 9.99935 1.66699C5.39698 1.66699 1.66602 5.39795 1.66602 10.0003C1.66602 14.6027 5.39698 18.3337 9.99935 18.3337Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                />
+                                <path
+                                    d="M6.66602 10.0003C6.66602 15.0003 9.99935 18.3337 9.99935 18.3337C9.99935 18.3337 13.3327 15.0003 13.3327 10.0003C13.3327 5.00033 9.99935 1.66699 9.99935 1.66699C9.99935 1.66699 6.66602 5.00033 6.66602 10.0003Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 12.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 7.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3.14736 9.95233C2.35735 8.57474 1.97589 7.44989 1.74588 6.30967C1.4057 4.62331 2.18419 2.976 3.47383 1.92489C4.01889 1.48064 4.64371 1.63243 4.96601 2.21066L5.69366 3.51609C6.27042 4.5508 6.5588 5.06815 6.5016 5.61665C6.44441 6.16515 6.05549 6.61188 5.27766 7.50534L3.14736 9.95233ZM3.14736 9.95233C4.74644 12.7406 7.25588 15.2514 10.0473 16.8523M10.0473 16.8523C11.4249 17.6423 12.5498 18.0238 13.69 18.2538C15.3763 18.594 17.0237 17.8155 18.0748 16.5258C18.519 15.9808 18.3673 15.356 17.789 15.0337L16.4836 14.306C15.4488 13.7292 14.9315 13.4409 14.383 13.4981C13.8345 13.5552 13.3878 13.9442 12.4943 14.722L10.0473 16.8523Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.83398 7.08301L8.28567 8.53251C9.71498 9.37759 10.2863 9.37759 11.7157 8.53251L14.1673 7.08301"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M1.67915 11.23C1.73364 13.7846 1.76087 15.0619 2.70348 16.0081C3.64609 16.9544 4.95796 16.9873 7.58171 17.0532C9.19877 17.0939 10.7999 17.0939 12.417 17.0532C15.0408 16.9873 16.3526 16.9544 17.2952 16.0081C18.2379 15.0619 18.2651 13.7846 18.3195 11.23C18.3371 10.4086 18.3371 9.59202 18.3195 8.77068C18.2651 6.21604 18.2379 4.93873 17.2952 3.99254C16.3526 3.04635 15.0408 3.01339 12.417 2.94747C10.7999 2.90683 9.19877 2.90683 7.5817 2.94746C4.95796 3.01338 3.64609 3.04633 2.70348 3.99253C1.76087 4.93873 1.73363 6.21603 1.67915 8.7706C1.66164 9.59202 1.66164 10.4086 1.67915 11.23Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div class="pl-4">
+                            <span>Bank</span>
+                            <span class="mx-2">•</span>
+                            <span>Financial Consultant</span>
+                            <span class="mx-2">•</span>
+                            <span>Federal Credit Union</span>
+                        </div>
+                    </div>
+                    <!-- Repeat card elements as needed -->
+                </div>
+                <!-- single card -->
+                <div
+                    class="mt-6 space-y-4 flex flex-col gap-2 bg-white rounded-lg p-4 my-4 border border-gray-200 border-l-0 border-r-0 border-t-0"
+                >
+                    <div class="flex items-center gap-4 space-x-4">
+                        <!-- Image -->
+                        <img
+                            src="./src/images/company_profile.png"
+                            alt="Ali Baba Express"
+                            class="w-20 h-20 rounded-md object-cover"
+                        />
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <div class="space-y-1">
+                                <div
+                                    class="font-semibold text-green-800 text-lg"
+                                >
+                                    Ali Baba Express
+                                </div>
+                                <div
+                                    class="text-gray-500 text-sm flex items-center"
+                                >
+                                    <span>Resolver Score 4.9</span>
+                                    <span class="mx-2">|</span>
+                                    <span>1,251 Reviews</span>
+                                </div>
+                                <div
+                                    class="text-sm text-black font-semibold mt-1"
+                                >
+                                    New York, CA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-3 divide-x-2 items-center text-gray-600 text-sm mt-2 space-x-1"
+                    >
+                        <!-- Icons -->
+                        <div class="flex items-center gap-2">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.99935 18.3337C14.6017 18.3337 18.3327 14.6027 18.3327 10.0003C18.3327 5.39795 14.6017 1.66699 9.99935 1.66699C5.39698 1.66699 1.66602 5.39795 1.66602 10.0003C1.66602 14.6027 5.39698 18.3337 9.99935 18.3337Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                />
+                                <path
+                                    d="M6.66602 10.0003C6.66602 15.0003 9.99935 18.3337 9.99935 18.3337C9.99935 18.3337 13.3327 15.0003 13.3327 10.0003C13.3327 5.00033 9.99935 1.66699 9.99935 1.66699C9.99935 1.66699 6.66602 5.00033 6.66602 10.0003Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 12.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 7.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3.14736 9.95233C2.35735 8.57474 1.97589 7.44989 1.74588 6.30967C1.4057 4.62331 2.18419 2.976 3.47383 1.92489C4.01889 1.48064 4.64371 1.63243 4.96601 2.21066L5.69366 3.51609C6.27042 4.5508 6.5588 5.06815 6.5016 5.61665C6.44441 6.16515 6.05549 6.61188 5.27766 7.50534L3.14736 9.95233ZM3.14736 9.95233C4.74644 12.7406 7.25588 15.2514 10.0473 16.8523M10.0473 16.8523C11.4249 17.6423 12.5498 18.0238 13.69 18.2538C15.3763 18.594 17.0237 17.8155 18.0748 16.5258C18.519 15.9808 18.3673 15.356 17.789 15.0337L16.4836 14.306C15.4488 13.7292 14.9315 13.4409 14.383 13.4981C13.8345 13.5552 13.3878 13.9442 12.4943 14.722L10.0473 16.8523Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.83398 7.08301L8.28567 8.53251C9.71498 9.37759 10.2863 9.37759 11.7157 8.53251L14.1673 7.08301"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M1.67915 11.23C1.73364 13.7846 1.76087 15.0619 2.70348 16.0081C3.64609 16.9544 4.95796 16.9873 7.58171 17.0532C9.19877 17.0939 10.7999 17.0939 12.417 17.0532C15.0408 16.9873 16.3526 16.9544 17.2952 16.0081C18.2379 15.0619 18.2651 13.7846 18.3195 11.23C18.3371 10.4086 18.3371 9.59202 18.3195 8.77068C18.2651 6.21604 18.2379 4.93873 17.2952 3.99254C16.3526 3.04635 15.0408 3.01339 12.417 2.94747C10.7999 2.90683 9.19877 2.90683 7.5817 2.94746C4.95796 3.01338 3.64609 3.04633 2.70348 3.99253C1.76087 4.93873 1.73363 6.21603 1.67915 8.7706C1.66164 9.59202 1.66164 10.4086 1.67915 11.23Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div class="pl-4">
+                            <span>Bank</span>
+                            <span class="mx-2">•</span>
+                            <span>Financial Consultant</span>
+                            <span class="mx-2">•</span>
+                            <span>Federal Credit Union</span>
+                        </div>
+                    </div>
+                    <!-- Repeat card elements as needed -->
+                </div>
+                <!-- single card -->
+                <div
+                    class="mt-6 space-y-4 flex flex-col gap-2 bg-white rounded-lg p-4 my-4 border border-gray-200 border-l-0 border-r-0 border-t-0"
+                >
+                    <div class="flex items-center gap-4 space-x-4">
+                        <!-- Image -->
+                        <img
+                            src="./src/images/company_profile.png"
+                            alt="Ali Baba Express"
+                            class="w-20 h-20 rounded-md object-cover"
+                        />
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <div class="space-y-1">
+                                <div
+                                    class="font-semibold text-green-800 text-lg"
+                                >
+                                    Ali Baba Express
+                                </div>
+                                <div
+                                    class="text-gray-500 text-sm flex items-center"
+                                >
+                                    <span>Resolver Score 4.9</span>
+                                    <span class="mx-2">|</span>
+                                    <span>1,251 Reviews</span>
+                                </div>
+                                <div
+                                    class="text-sm text-black font-semibold mt-1"
+                                >
+                                    New York, CA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-3 divide-x-2 items-center text-gray-600 text-sm mt-2 space-x-1"
+                    >
+                        <!-- Icons -->
+                        <div class="flex items-center gap-2">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.99935 18.3337C14.6017 18.3337 18.3327 14.6027 18.3327 10.0003C18.3327 5.39795 14.6017 1.66699 9.99935 1.66699C5.39698 1.66699 1.66602 5.39795 1.66602 10.0003C1.66602 14.6027 5.39698 18.3337 9.99935 18.3337Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                />
+                                <path
+                                    d="M6.66602 10.0003C6.66602 15.0003 9.99935 18.3337 9.99935 18.3337C9.99935 18.3337 13.3327 15.0003 13.3327 10.0003C13.3327 5.00033 9.99935 1.66699 9.99935 1.66699C9.99935 1.66699 6.66602 5.00033 6.66602 10.0003Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 12.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 7.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3.14736 9.95233C2.35735 8.57474 1.97589 7.44989 1.74588 6.30967C1.4057 4.62331 2.18419 2.976 3.47383 1.92489C4.01889 1.48064 4.64371 1.63243 4.96601 2.21066L5.69366 3.51609C6.27042 4.5508 6.5588 5.06815 6.5016 5.61665C6.44441 6.16515 6.05549 6.61188 5.27766 7.50534L3.14736 9.95233ZM3.14736 9.95233C4.74644 12.7406 7.25588 15.2514 10.0473 16.8523M10.0473 16.8523C11.4249 17.6423 12.5498 18.0238 13.69 18.2538C15.3763 18.594 17.0237 17.8155 18.0748 16.5258C18.519 15.9808 18.3673 15.356 17.789 15.0337L16.4836 14.306C15.4488 13.7292 14.9315 13.4409 14.383 13.4981C13.8345 13.5552 13.3878 13.9442 12.4943 14.722L10.0473 16.8523Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.83398 7.08301L8.28567 8.53251C9.71498 9.37759 10.2863 9.37759 11.7157 8.53251L14.1673 7.08301"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M1.67915 11.23C1.73364 13.7846 1.76087 15.0619 2.70348 16.0081C3.64609 16.9544 4.95796 16.9873 7.58171 17.0532C9.19877 17.0939 10.7999 17.0939 12.417 17.0532C15.0408 16.9873 16.3526 16.9544 17.2952 16.0081C18.2379 15.0619 18.2651 13.7846 18.3195 11.23C18.3371 10.4086 18.3371 9.59202 18.3195 8.77068C18.2651 6.21604 18.2379 4.93873 17.2952 3.99254C16.3526 3.04635 15.0408 3.01339 12.417 2.94747C10.7999 2.90683 9.19877 2.90683 7.5817 2.94746C4.95796 3.01338 3.64609 3.04633 2.70348 3.99253C1.76087 4.93873 1.73363 6.21603 1.67915 8.7706C1.66164 9.59202 1.66164 10.4086 1.67915 11.23Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div class="pl-4">
+                            <span>Bank</span>
+                            <span class="mx-2">•</span>
+                            <span>Financial Consultant</span>
+                            <span class="mx-2">•</span>
+                            <span>Federal Credit Union</span>
+                        </div>
+                    </div>
+                    <!-- Repeat card elements as needed -->
+                </div>
+                <!-- single card -->
+                <div
+                    class="mt-6 space-y-4 flex flex-col gap-2 bg-white rounded-lg p-4 my-4 border border-gray-200 border-l-0 border-r-0 border-t-0"
+                >
+                    <div class="flex items-center gap-4 space-x-4">
+                        <!-- Image -->
+                        <img
+                            src="./src/images/company_profile.png"
+                            alt="Ali Baba Express"
+                            class="w-20 h-20 rounded-md object-cover"
+                        />
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <div class="space-y-1">
+                                <div
+                                    class="font-semibold text-green-800 text-lg"
+                                >
+                                    Ali Baba Express
+                                </div>
+                                <div
+                                    class="text-gray-500 text-sm flex items-center"
+                                >
+                                    <span>Resolver Score 4.9</span>
+                                    <span class="mx-2">|</span>
+                                    <span>1,251 Reviews</span>
+                                </div>
+                                <div
+                                    class="text-sm text-black font-semibold mt-1"
+                                >
+                                    New York, CA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-3 divide-x-2 items-center text-gray-600 text-sm mt-2 space-x-1"
+                    >
+                        <!-- Icons -->
+                        <div class="flex items-center gap-2">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.99935 18.3337C14.6017 18.3337 18.3327 14.6027 18.3327 10.0003C18.3327 5.39795 14.6017 1.66699 9.99935 1.66699C5.39698 1.66699 1.66602 5.39795 1.66602 10.0003C1.66602 14.6027 5.39698 18.3337 9.99935 18.3337Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                />
+                                <path
+                                    d="M6.66602 10.0003C6.66602 15.0003 9.99935 18.3337 9.99935 18.3337C9.99935 18.3337 13.3327 15.0003 13.3327 10.0003C13.3327 5.00033 9.99935 1.66699 9.99935 1.66699C9.99935 1.66699 6.66602 5.00033 6.66602 10.0003Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 12.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 7.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3.14736 9.95233C2.35735 8.57474 1.97589 7.44989 1.74588 6.30967C1.4057 4.62331 2.18419 2.976 3.47383 1.92489C4.01889 1.48064 4.64371 1.63243 4.96601 2.21066L5.69366 3.51609C6.27042 4.5508 6.5588 5.06815 6.5016 5.61665C6.44441 6.16515 6.05549 6.61188 5.27766 7.50534L3.14736 9.95233ZM3.14736 9.95233C4.74644 12.7406 7.25588 15.2514 10.0473 16.8523M10.0473 16.8523C11.4249 17.6423 12.5498 18.0238 13.69 18.2538C15.3763 18.594 17.0237 17.8155 18.0748 16.5258C18.519 15.9808 18.3673 15.356 17.789 15.0337L16.4836 14.306C15.4488 13.7292 14.9315 13.4409 14.383 13.4981C13.8345 13.5552 13.3878 13.9442 12.4943 14.722L10.0473 16.8523Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.83398 7.08301L8.28567 8.53251C9.71498 9.37759 10.2863 9.37759 11.7157 8.53251L14.1673 7.08301"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M1.67915 11.23C1.73364 13.7846 1.76087 15.0619 2.70348 16.0081C3.64609 16.9544 4.95796 16.9873 7.58171 17.0532C9.19877 17.0939 10.7999 17.0939 12.417 17.0532C15.0408 16.9873 16.3526 16.9544 17.2952 16.0081C18.2379 15.0619 18.2651 13.7846 18.3195 11.23C18.3371 10.4086 18.3371 9.59202 18.3195 8.77068C18.2651 6.21604 18.2379 4.93873 17.2952 3.99254C16.3526 3.04635 15.0408 3.01339 12.417 2.94747C10.7999 2.90683 9.19877 2.90683 7.5817 2.94746C4.95796 3.01338 3.64609 3.04633 2.70348 3.99253C1.76087 4.93873 1.73363 6.21603 1.67915 8.7706C1.66164 9.59202 1.66164 10.4086 1.67915 11.23Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div class="pl-4">
+                            <span>Bank</span>
+                            <span class="mx-2">•</span>
+                            <span>Financial Consultant</span>
+                            <span class="mx-2">•</span>
+                            <span>Federal Credit Union</span>
+                        </div>
+                    </div>
+                    <!-- Repeat card elements as needed -->
+                </div>
+                <!-- single card -->
+                <div
+                    class="mt-6 space-y-4 flex flex-col gap-2 bg-white rounded-lg p-4 my-4 border border-gray-200 border-l-0 border-r-0 border-t-0"
+                >
+                    <div class="flex items-center gap-4 space-x-4">
+                        <!-- Image -->
+                        <img
+                            src="./src/images/company_profile.png"
+                            alt="Ali Baba Express"
+                            class="w-20 h-20 rounded-md object-cover"
+                        />
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <div class="space-y-1">
+                                <div
+                                    class="font-semibold text-green-800 text-lg"
+                                >
+                                    Ali Baba Express
+                                </div>
+                                <div
+                                    class="text-gray-500 text-sm flex items-center"
+                                >
+                                    <span>Resolver Score 4.9</span>
+                                    <span class="mx-2">|</span>
+                                    <span>1,251 Reviews</span>
+                                </div>
+                                <div
+                                    class="text-sm text-black font-semibold mt-1"
+                                >
+                                    New York, CA
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-3 divide-x-2 items-center text-gray-600 text-sm mt-2 space-x-1"
+                    >
+                        <!-- Icons -->
+                        <div class="flex items-center gap-2">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.99935 18.3337C14.6017 18.3337 18.3327 14.6027 18.3327 10.0003C18.3327 5.39795 14.6017 1.66699 9.99935 1.66699C5.39698 1.66699 1.66602 5.39795 1.66602 10.0003C1.66602 14.6027 5.39698 18.3337 9.99935 18.3337Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                />
+                                <path
+                                    d="M6.66602 10.0003C6.66602 15.0003 9.99935 18.3337 9.99935 18.3337C9.99935 18.3337 13.3327 15.0003 13.3327 10.0003C13.3327 5.00033 9.99935 1.66699 9.99935 1.66699C9.99935 1.66699 6.66602 5.00033 6.66602 10.0003Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 12.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 7.5H2.5"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3.14736 9.95233C2.35735 8.57474 1.97589 7.44989 1.74588 6.30967C1.4057 4.62331 2.18419 2.976 3.47383 1.92489C4.01889 1.48064 4.64371 1.63243 4.96601 2.21066L5.69366 3.51609C6.27042 4.5508 6.5588 5.06815 6.5016 5.61665C6.44441 6.16515 6.05549 6.61188 5.27766 7.50534L3.14736 9.95233ZM3.14736 9.95233C4.74644 12.7406 7.25588 15.2514 10.0473 16.8523M10.0473 16.8523C11.4249 17.6423 12.5498 18.0238 13.69 18.2538C15.3763 18.594 17.0237 17.8155 18.0748 16.5258C18.519 15.9808 18.3673 15.356 17.789 15.0337L16.4836 14.306C15.4488 13.7292 14.9315 13.4409 14.383 13.4981C13.8345 13.5552 13.3878 13.9442 12.4943 14.722L10.0473 16.8523Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.83398 7.08301L8.28567 8.53251C9.71498 9.37759 10.2863 9.37759 11.7157 8.53251L14.1673 7.08301"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M1.67915 11.23C1.73364 13.7846 1.76087 15.0619 2.70348 16.0081C3.64609 16.9544 4.95796 16.9873 7.58171 17.0532C9.19877 17.0939 10.7999 17.0939 12.417 17.0532C15.0408 16.9873 16.3526 16.9544 17.2952 16.0081C18.2379 15.0619 18.2651 13.7846 18.3195 11.23C18.3371 10.4086 18.3371 9.59202 18.3195 8.77068C18.2651 6.21604 18.2379 4.93873 17.2952 3.99254C16.3526 3.04635 15.0408 3.01339 12.417 2.94747C10.7999 2.90683 9.19877 2.90683 7.5817 2.94746C4.95796 3.01338 3.64609 3.04633 2.70348 3.99253C1.76087 4.93873 1.73363 6.21603 1.67915 8.7706C1.66164 9.59202 1.66164 10.4086 1.67915 11.23Z"
+                                    stroke="#4B4B4B"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div class="pl-4">
+                            <span>Bank</span>
+                            <span class="mx-2">•</span>
+                            <span>Financial Consultant</span>
+                            <span class="mx-2">•</span>
+                            <span>Federal Credit Union</span>
+                        </div>
+                    </div>
+                    <!-- Repeat card elements as needed -->
+                </div>
+            </div>
+            <!-- Pagination Section -->
+            <div
+                class="flex justify-between items-center mt-8 border-t border-gray-200 pt-4"
+            >
+                <p class="text-gray-600 text-sm">Page 1 of 10</p>
+                <div class="flex space-x-2">
+                    <button
+                        class="px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100"
+                    >
+                        Previous
+                    </button>
+                    <button
+                        class="px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100"
+                    >
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
