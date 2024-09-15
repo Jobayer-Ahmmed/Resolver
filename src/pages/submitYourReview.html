@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- sub menu -->
+    <div
+        class="hidden lg:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
+        <div>
+            <button class="px-4 py-2">Dashboard</button>
+            <button class="px-4 py-2 border border-black rounded  text-black">Profiles</button>
+            <button class="px-4 py-2 ">Settings</button>
+        </div>
+        <div class="border-2 border-gray-300 rounded py-2 px-4">
+            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+            <input type="text" class="border-collapse outline-none" placeholder="Search" name="" id="">
+        </div>
+    </div>
+
+    <section class=" container lg:px-20 px-4 bg-[#F4F4F4] pt-16 pb-24">
+        <div class="lg:hidden block mb-10"><i class="fa-solid fa-arrow-left mr-2 "></i><span
+                class="text-lg font-semibold">Back</span></div>
+        <div class="mb-10 flex flex-col justify-center items-center lg:w-[600px] w-full mx-auto gap-3">
+            <h1 class="text-4xl font-semibold text-center">Submit Your Review</h1>
+            <p class="text-center ">Whether you need to file a complaint, post a review, tell us about a misleading
+                advertisement, or report
+                a scam, you're in the right place.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg ">
+            <h2 class="text-xl font-semibold">Write a review</h2>
+            <div class="mt-7">
+                <h6 class="font-medium mb-3">Rate your recent experience</h6>
+                <div>
+                    <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
+                    <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
+                    <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
+                    <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
+                    <i class="fa-solid fa-star text-white bg-gray-300 p-2 rounded-sm"></i>
+                </div>
+            </div>
+            <div class="mt-5">
+                <h6>Tell us about your experience</h6>
+                <textarea
+                    class="mt-2 p-4 w-full border-2 border-gray-300 rounded"
+                    placeholder="This is where you write your review. Explain what happened, and leave out offensive words. Keep your feedback honest, helpful, and constructive."
+                    name="" id="" rows="5"></textarea>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
