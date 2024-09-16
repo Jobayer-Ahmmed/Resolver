@@ -14,144 +14,134 @@
         <div class="bg-white rounded-lg shadow-lg p-8 md:flex md:space-x-8">
           
           <!-- Left Review Section (You can adjust this for review content) -->
-          <div class="hidden md:block bg-gradient-to-br from-green-400 to-green-300 p-4 rounded-lg max-w-md">
-            <!-- Review Card (Example content) -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="flex items-center mb-4">
-                <img src="path_to_image.jpg" alt="Reviewer" class="w-12 h-12 rounded-full">
-                <div class="ml-4">
-                  <p class="font-bold">Cameron Williamson</p>
-                  <p class="text-sm text-gray-600">Founder of Ocean Villa</p>
-                </div>
-              </div>
-              <p class="text-gray-700">
-                Ocean Villa <span class="bg-green-500 text-white rounded-full px-2 py-1 text-sm">4.9 ⭐</span>
-              </p>
-              <p class="mt-4 text-gray-600 text-sm">
-                Dramatically improved our ability to manage contracts accurately and quickly. The intuitive interface and robust feature set perfectly match the requirements.
-              </p>
+          <div class="relative flex-shrink-0">
+            <div class="w-72 h-72 bg-green-300 rounded-full flex items-center justify-center overflow-hidden">
+              <!-- You can place your image or content here -->
+              <p class="text-lg text-gray-700">Your Image or Content</p>
             </div>
           </div>
       
           <!-- Right Form Section -->
-          <div class="w-full max-w-lg">
-            <h2 class="text-2xl font-bold mb-6 text-gray-800">Create Account</h2>
-            <form action="#" method="POST">
+          <div class="min-h-screen flex items-center justify-center bg-gray-50">
+            <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl">
               
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- First Name -->
-                <div>
-                  <label class="block text-sm font-medium text-gray-700" for="first-name">First Name</label>
-                  <input type="text" id="first-name" placeholder="Enter your first name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50">
-                </div>
-      
-                <!-- Last Name -->
-                <div>
-                  <label class="block text-sm font-medium text-gray-700" for="last-name">Last Name</label>
-                  <input type="text" id="last-name" placeholder="Enter your last name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50">
-                </div>
-              </div>
-      
-              <!-- Email and Phone -->
-              <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Email Address -->
-                <div>
-                  <label class="block text-sm font-medium text-gray-700" for="email">Email Address</label>
-                  <input type="email" id="email" placeholder="Enter your email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50">
-                </div>
-      
-                <!-- Phone Number -->
-                <div>
-                  <label class="block text-sm font-medium text-gray-700" for="phone">Phone Number</label>
-                  <div class="flex">
-                    <select class="rounded-l-md border-gray-300 focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50">
-                      <option>BD +88</option>
+              <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Create Account</h2>
+          
+              <form action="#" method="POST" class="space-y-6">
+          
+                <!-- Grid for Input Fields -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  
+                  <!-- First Name -->
+                  <div>
+                    <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
+                    <input type="text" id="first-name" placeholder="Enter your first name" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                  </div>
+          
+                  <!-- Last Name -->
+                  <div>
+                    <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Enter your last name" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                  </div>
+          
+                  <!-- Email Address -->
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                  </div>
+          
+                  <!-- Phone Number -->
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <div class="flex">
+                      <select class="rounded-l-lg border-gray-300 focus:border-green-500 focus:ring-green-500">
+                        <option>BD +88</option>
+                      </select>
+                      <input type="text" id="phone" placeholder="+088" class="mt-1 block w-full rounded-r-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                    </div>
+                  </div>
+          
+                  <!-- Password -->
+                  <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <div class="relative">
+                      <input type="password" id="password" placeholder="Enter your password" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                      <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A6.375 6.375 0 119.375 12.5a1.125 1.125 0 00-.875 1.75"></path>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+          
+                  <!-- Confirm Password -->
+                  <div>
+                    <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                    <div class="relative">
+                      <input type="password" id="confirm-password" placeholder="Confirm password" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                      <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A6.375 6.375 0 119.375 12.5a1.125 1.125 0 00-.875 1.75"></path>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+          
+                  <!-- Gender -->
+                  <div>
+                    <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                    <select id="gender" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                      <option>Select gender</option>
                     </select>
-                    <input type="text" id="phone" placeholder="Enter your phone" class="mt-1 block w-full rounded-r-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50">
+                  </div>
+          
+                  <!-- Companies Associated -->
+                  <div>
+                    <label for="companies" class="block text-sm font-medium text-gray-700">Companies Associated</label>
+                    <select id="companies" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                      <option>Select company</option>
+                    </select>
                   </div>
                 </div>
-              </div>
-      
-              <!-- Password and Confirm Password -->
-              <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Password -->
-                <div>
-                  <label class="block text-sm font-medium text-gray-700" for="password">Password</label>
-                  <div class="relative">
-                    <input type="password" id="password" placeholder="Enter your password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50">
-                    <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A6.375 6.375 0 119.375 12.5a1.125 1.125 0 00-.875 1.75"></path>
-                      </svg>
-                    </span>
-                  </div>
+          
+                <!-- Terms Checkbox -->
+                <div class="mt-6">
+                  <label class="inline-flex items-center">
+                    <input type="checkbox" class="rounded border-gray-300 text-green-500 focus:ring-green-500">
+                    <span class="ml-2 text-sm text-gray-700">By clicking this you will agree with Resolver.NG terms & conditions applied.</span>
+                  </label>
                 </div>
-      
-                <!-- Confirm Password -->
-                <div>
-                  <label class="block text-sm font-medium text-gray-700" for="confirm-password">Confirm Password</label>
-                  <div class="relative">
-                    <input type="password" id="confirm-password" placeholder="Confirm password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50">
-                    <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A6.375 6.375 0 119.375 12.5a1.125 1.125 0 00-.875 1.75"></path>
-                      </svg>
-                    </span>
-                  </div>
+          
+                <!-- Create Account Button -->
+                <div class="mt-6">
+                  <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg shadow-lg transition">Create Account</button>
                 </div>
+              </form>
+          
+              <!-- Divider -->
+              <div class="mt-6 flex items-center justify-between">
+                <span class="border-t w-1/5 lg:w-1/4"></span>
+                <p class="text-sm text-gray-500 text-center">Or using other method</p>
+                <span class="border-t w-1/5 lg:w-1/4"></span>
               </div>
-      
-              <!-- Gender and Companies Associated -->
-              <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Gender -->
-                <div>
-                  <label class="block text-sm font-medium text-gray-700" for="gender">Gender</label>
-                  <select id="gender" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50">
-                    <option>Select gender</option>
-                  </select>
-                </div>
-      
-                <!-- Companies Associated -->
-                <div>
-                  <label class="block text-sm font-medium text-gray-700" for="companies">Companies Associated</label>
-                  <select id="companies" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50">
-                    <option>Select company</option>
-                  </select>
-                </div>
-              </div>
-      
-              <!-- Agreement Checkbox -->
-              <div class="mt-4">
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="rounded border-gray-300 text-green-600 focus:ring-green-500">
-                  <span class="ml-2 text-sm text-gray-700">By clicking this you will agree with Resolver.NG terms & conditions applied.</span>
-                </label>
-              </div>
-      
-              <!-- Submit Button -->
-              <div class="mt-6">
-                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-md shadow-lg transition">Create Account</button>
-              </div>
-            </form>
-      
-            <!-- Divider -->
-            <div class="my-6 text-center">
-              <p class="text-sm text-gray-500">Or using other method</p>
-              <div class="flex justify-center space-x-4 mt-4">
-                <button class="bg-white border border-gray-300 rounded-md p-2">
-                  <img src="path_to_facebook_icon.png" alt="Facebook" class="h-5">
+          
+              <!-- Social Login -->
+              <div class="mt-6 flex justify-center space-x-4">
+                <button class="bg-white border border-gray-300 rounded-lg p-3">
+                  <img src="path_to_facebook_icon.png" alt="Facebook" class="h-6 w-6">
                 </button>
-                <button class="bg-white border border-gray-300 rounded-md p-2">
-                  <img src="path_to_google_icon.png" alt="Google" class="h-5">
+                <button class="bg-white border border-gray-300 rounded-lg p-3">
+                  <img src="path_to_google_icon.png" alt="Google" class="h-6 w-6">
                 </button>
               </div>
-            </div>
-      
-            <!-- Sign In Link -->
-            <div class="text-center">
-              <p class="text-sm text-gray-500">Already have an account? <a href="#" class="text-green-500 hover:underline">Sign In</a></p>
+          
+              <!-- Sign In Link -->
+              <div class="mt-6 text-center">
+                <p class="text-sm text-gray-500">Already have an account? <a href="#" class="text-green-500 hover:underline">Sign In</a></p>
+              </div>
             </div>
           </div>
+          
         </div>
       </div>
       

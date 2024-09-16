@@ -66,8 +66,8 @@
     </div>
   </header>
   <!-- Hero Section -->
-  <section class="bg-[#273f2b] relative text-white pt-24 pb:64 h-[30rem]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <section class="bg-[#273f2b] relative text-white pt-24 h-[33rem]">
+    <div class=" flex flex-col items-center gap-y-4 justify-center a max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-3xl md:text-5xl font-bold">
         Get the Real Inside Story from
       </h1>
@@ -79,32 +79,30 @@
         and writing reviews on Resolver.ng now.
       </p>
 
-      <div class="mt-6 flex justify-center">
-        <div class="flex w-[35rem] p-2 bg-white rounded-full shadow-md overflow-hidden">
-          <!-- Search Input  -->
-          <div class="flex items-center w-full">
-            <i class="fas fa-search h-4 w-6 text-gray-400"></i>
-            <input type="text" placeholder="Search for reviews, companies, or categories..."
-              class="w-full ml-2 bg-transparent text-gray-600 placeholder-gray-400 focus:outline-none" />
-          </div>
-
-          <!-- Divider -->
-          <div class="border-l h-auto mx-2"></div>
-
-          <!-- Location Input -->
-          <div class="flex items-center w-full">
-            <i class="fa-solid fa-location-crosshairs h-4 w-6 text-gray-400"></i>
-            <input type="text" placeholder="San Francisco, CA"
-              class="w-full ml-2 bg-transparent text-gray-600 placeholder-gray-400 focus:outline-none" />
-          </div>
-
-          <!-- Search Button -->
-          <button class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition">
-            Search
-          </button>
+      <div class="hidden md:flex items-center bg-gray-100 p-2 rounded-full shadow-sm w-full max-w-lg">
+        <i class="fas fa-search h-4 w-6 text-gray-400"></i>
+        <input type="text" placeholder="Search for reviews, companies, or categories." class="bg-transparent focus:outline-none px-2 text-sm w-full" />
+        <div class="flex items-center border-l border-gray-300 pl-2">
+          <i class="fa-solid fa-location-crosshairs h-5 w-5 text-gray-400"></i>
+            <input type="text" placeholder="San Francisco,CA" class="bg-transparent focus:outline-none text-sm w-32 pl-2" />
         </div>
-      </div>
+        <div class="border-l h-auto mx-2"></div>
+        <button class="bg-green-500 text-white px-6 py-2 rounded-full text-sm ml-2 focus:outline-none hover:bg-green-600 transition">
+            Search
+        </button>
     </div>
+
+    <!-- Mobile version, hidden on desktop -->
+    <div class="flex flex-col md:hidden p-4 rounded-lg shadow-sm w-full max-w-md mx-auto">
+      <div class="relative w-full">
+          <input type="text" placeholder="Search for reviews, companies, or categories..." class="bg-white focus:outline-none px-4 py-3 pl-7 rounded-full text-sm mb-3 shadow-sm w-full pr-10" />
+          <i class="fas fa-search absolute left-0 top-[1.3rem] pl-2 transform -translate-y-1/2 text-gray-400"></i>
+      </div>
+      <button class="bg-green-500 text-white py-3 rounded-full text-sm focus:outline-none hover:bg-green-600 transition shadow-lg">
+          Search
+      </button>
+  </div>
+  
 
     <!-- Star and Thumb Images -->
     <div class="display flex flex-col justify-end absolute bottom-0 left-0 w-1/4 bg-contain bg-no-repeat">
