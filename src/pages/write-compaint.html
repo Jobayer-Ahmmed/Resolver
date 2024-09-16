@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,18 +34,25 @@
   <body class="bg-[#F4F4F4]">
     <header class="bg-white">
       <div
-        class="flex max-w-full w-[1416px] mx-auto py-5 items-center justify-between"
+        class="lg:flex md:flex-row px-5 flex-col max-w-full w-[1416px] mx-auto py-10 items-center justify-between"
       >
-        <nav class="flex items-center gap-10">
-          <div>
+        <nav class="lg:flex lg:flex-row flex-col items-center gap-10">
+          <div class="lg:w-auto w-full flex items-center justify-between">
             <img
-              class="w-[175.407px] h-[32px]"
+              class="w-[175.407px] inline-block h-[32px]"
               src="../assets/images/logo/logo.svg"
+              alt=""
+            />
+            <img
+              id="menu-icon"
+              class="inline-block lg:hidden"
+              src="../assets/images/menubar.svg"
               alt=""
             />
           </div>
           <ul
-            class="text-[#344054] flex items-center gap-6 text-base font-semibold"
+            id="menu"
+            class="text-[#344054] flex lg:flex-row flex-col items-center gap-6 text-base font-semibold"
           >
             <li>
               <a class="px-3 py-2" href="">Home</a>
@@ -67,12 +74,12 @@
             </li>
           </ul>
         </nav>
-        <ul class="flex items-center gap-4">
+        <ul class="lg:flex hidden items-center gap-4">
           <li class="px-2 py-2">
             <button
               class="flex items-center gap-3 py-[10px] px-[14px] rounded-lg border-2"
             >
-              <img class="w-5 h-5" src=".../assets/images/zap.svg" alt="" />
+              <img class="w-5 h-5" src="../assets/images/zap.svg" alt="" />
               <span class="font-semibold">Upgrade now</span>
             </button>
           </li>
@@ -96,7 +103,7 @@
       </div>
       <hr />
       <div
-        class="flex max-w-full w-[1416px] mx-auto py-5 items-center justify-between"
+        class="lg:flex max-w-full md:w-[1416px] mx-auto py-5 items-center justify-between hidden"
       >
         <ul
           class="text-[#344054] flex items-center gap-6 text-base font-semibold"
@@ -285,7 +292,7 @@
     <!-- Complaint end  -->
     <!-- Resolver Support start -->
     <section
-      class="max-w-full md:mb-[180px] md:w-[1416px] w-full mx-auto py-[90px] space-y-14"
+      class="max-w-full md:mb-[90px ] md:w-[1416px] w-full mx-auto py-[90px] space-y-14"
     >
       <div
         class="flex md:w-[600px] mx-auto flex-col item-center justify-center gap-4 mb-11 text-center"
@@ -305,7 +312,10 @@
           <div
             class="md:w-[150px] w-[120px] md:h-[150px] h-[120px] mx-auto md:mb-8 mb-4 bg-[#2196F3] flex items-center rounded-full justify-center"
           >
-            <img src="../assets/images/support-icon/mail-receive-02.svg" alt="" />
+            <img
+              src="../assets/images/support-icon/mail-receive-02.svg"
+              alt=""
+            />
           </div>
           <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
             Email
@@ -322,7 +332,10 @@
           <div
             class="md:w-[150px] w-[120px] md:h-[150px] h-[120px] mx-auto md:mb-8 mb-4 bg-[#6F4BE5] flex items-center rounded-full justify-center"
           >
-            <img src="../assets/images/support-icon/customer-service-01.svg" alt="" />
+            <img
+              src="../assets/images/support-icon/customer-service-01.svg"
+              alt=""
+            />
           </div>
           <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
             Live Support
@@ -418,6 +431,7 @@
     </div>
 
     <!-- Popup and Overlay  end -->
+    <script src="../js/main.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -429,7 +443,7 @@
           document.getElementById("popup").classList.remove("hidden");
         });
 
-        const closeButton = document.getElementById("closePopup");
+        const closeButton = document.getElementById("overlay");
         closeButton.addEventListener("click", function () {
           document.getElementById("popup").classList.add("hidden");
           document.getElementById("overlay").classList.add("hidden");

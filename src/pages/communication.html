@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -32,20 +32,27 @@
     </script>
   </head>
   <body class="bg-[#F4F4F4]">
-    <header class="bg-white">
+    <!-- <header class="bg-white">
       <div
-        class="flex max-w-full w-[1416px] mx-auto py-5 items-center justify-between"
+        class="lg:flex md:flex-row px-5 flex-col max-w-full w-[1416px] mx-auto py-10 items-center justify-between"
       >
-        <nav class="flex items-center gap-10">
-          <div>
+        <nav class="lg:flex  lg:flex-row flex-col items-center gap-10">
+          <div class="lg:w-auto  w-full flex items-center justify-between">
             <img
-              class="w-[175.407px] h-[32px]"
+              class="w-[175.407px] inline-block h-[32px]"
               src="../assets/images/logo/logo.svg"
+              alt=""
+            />
+            <img
+              id="menu-icon"
+              class="inline-block lg:hidden"
+              src="../assets/images/menubar.svg"
               alt=""
             />
           </div>
           <ul
-            class="text-[#344054] flex items-center gap-6 text-base font-semibold"
+            id="menu"
+            class="text-[#344054] flex lg:flex-row flex-col items-center gap-6 text-base font-semibold"
           >
             <li>
               <a class="px-3 py-2" href="">Home</a>
@@ -67,7 +74,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="flex items-center gap-4">
+        <ul class="lg:flex hidden items-center gap-4">
           <li class="px-2 py-2">
             <button
               class="flex items-center gap-3 py-[10px] px-[14px] rounded-lg border-2"
@@ -96,7 +103,7 @@
       </div>
       <hr />
       <div
-        class="flex max-w-full w-[1416px] mx-auto py-5 items-center justify-between"
+        class="lg:flex max-w-full md:w-[1416px] mx-auto py-5 items-center justify-between hidden"
       >
         <ul
           class="text-[#344054] flex items-center gap-6 text-base font-semibold"
@@ -124,10 +131,39 @@
           </li>
         </ul>
       </div>
-    </header>
-    <section class="bg-[#F6FBFD] mb-16">
+    </header> -->
+    <section class="bg-[#F6FBFD] lg:mb-16 mb-6">
       <div class="max-w-full w-[1416px] mx-auto py-10">
-        <div class="flex flex-col items-center justify-center gap-4">
+        <!-- Mobile Dropdown -->
+        <div class="lg:hidden block px-5">
+          <h2 class="text-primary text-2xl mb-4 font-semibold">Settings</h2>
+          <p
+            for=""
+            class="w-full mb-6 flex items-center border py-2 px-3 border-gray-300 rounded-lg"
+          >
+            <img
+              class="inline-block"
+              src="../assets/images/search-lg.svg"
+              alt=""
+            />
+            <input
+              placeholder="Search"
+              class="outline-none border-none w-full"
+              type="text"
+            />
+          </p>
+          <select
+            id="tabs"
+            class="w-full bg-white border border-gray-300 rounded-lg py-2 px-3"
+          >
+            <option value="userInformation">User Information</option>
+            <option value="communication">Communication</option>
+            <option value="privacySettings">Privacy Settings</option>
+          </select>
+        </div>
+
+        <!-- Desktop Buttons -->
+        <div class="lg:flex hidden flex-col items-center justify-center gap-4">
           <img
             class="rounded-full w-[120px] h-[120px]"
             src="../assets/images/user.png"
@@ -138,11 +174,12 @@
           </h2>
           <p class="flex items-center gap-2">
             <img class="w-5 h-5" src="../assets/images/location.svg" alt="" />
-            <span class="text-primary">San Francisco,CA</span>
+            <span class="text-primary">San Francisco, CA</span>
           </p>
         </div>
+
         <div
-          class="bg-white mt-8 flex items-center gap-3 px-4 border rounded-lg py-2"
+          class="bg-white mt-8 lg:flex hidden items-center gap-3 px-4 border rounded-lg py-2"
         >
           <button
             id="userInterface"
@@ -165,26 +202,35 @@
         </div>
       </div>
     </section>
-    <section class="max-w-full w-[1416px] mx-auto">
+
+    <section class="max-w-full lg:w-[1416px] px-5 w-full mx-auto">
       <!-- Communication tab start -->
       <div class="block" id="communicationTab">
-        <div class="bg-white mb-16 p-8 rounded-[10px] shadow">
+        <div class="bg-white mb-16 lg:p-8 p-3 rounded-[10px] shadow">
           <div class="pb-5 border-b mb-8">
             <h2 class="text-primary font-semibold text-lg">Communication</h2>
             <p class="text-secondary">
               Update your Communication settings here.
             </p>
           </div>
-          <div class="grid grid-cols-2 gap-y-10 gap-x-8">
+          <div
+            class="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-10 lg:gap-x-8 gap-6"
+          >
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
-                <p class="text-[#69747B]">When a user sent you a complaints</p>
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Complaints
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
+                  When a user sent you a complaints
+                </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -199,16 +245,20 @@
             </div>
 
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Reply</h2>
-                <p class="text-[#69747B]">
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Reply
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
                   Get notification when someone replied you
                 </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -223,14 +273,20 @@
             </div>
 
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
-                <p class="text-[#69747B]">When a user sent you a complaints</p>
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Complaints
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
+                  When a user sent you a complaints
+                </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -244,16 +300,20 @@
               </div>
             </div>
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Reply</h2>
-                <p class="text-[#69747B]">
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Reply
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
                   Get notification when someone replied you
                 </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -267,14 +327,20 @@
               </div>
             </div>
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
-                <p class="text-[#69747B]">When a user sent you a complaints</p>
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Complaints
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
+                  When a user sent you a complaints
+                </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -289,16 +355,20 @@
             </div>
 
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Reply</h2>
-                <p class="text-[#69747B]">
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Reply
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
                   Get notification when someone replied you
                 </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -313,14 +383,20 @@
             </div>
 
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
-                <p class="text-[#69747B]">When a user sent you a complaints</p>
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Complaints
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
+                  When a user sent you a complaints
+                </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -334,16 +410,20 @@
               </div>
             </div>
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Reply</h2>
-                <p class="text-[#69747B]">
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Reply
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
                   Get notification when someone replied you
                 </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -357,14 +437,20 @@
               </div>
             </div>
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
-                <p class="text-[#69747B]">When a user sent you a complaints</p>
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Complaints
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
+                  When a user sent you a complaints
+                </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -379,16 +465,20 @@
             </div>
 
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Reply</h2>
-                <p class="text-[#69747B]">
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Reply
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
                   Get notification when someone replied you
                 </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -403,14 +493,20 @@
             </div>
 
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
-                <p class="text-[#69747B]">When a user sent you a complaints</p>
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Complaints
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
+                  When a user sent you a complaints
+                </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -424,16 +520,20 @@
               </div>
             </div>
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Reply</h2>
-                <p class="text-[#69747B]">
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Reply
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
                   Get notification when someone replied you
                 </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -448,21 +548,29 @@
             </div>
           </div>
         </div>
-        <div class="bg-white mb-16 p-8 rounded-[10px] shadow">
+        <div class="bg-white mb-16 lg:p-8 p-3 rounded-[10px] shadow">
           <div class="pb-5 border-b mb-8">
             <h2 class="text-primary font-semibold text-lg">Messages</h2>
             <p class="text-secondary">Keep in touch with your members</p>
           </div>
-          <div class="grid grid-cols-2 pb-10 gap-y-10 gap-x-8">
+          <div
+            class="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-10 lg:gap-x-8 gap-6"
+          >
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
-                <p class="text-[#69747B]">When a user sent you a complaints</p>
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Complaints
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
+                  When a user sent you a complaints
+                </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -477,16 +585,20 @@
             </div>
 
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Reply</h2>
-                <p class="text-[#69747B]">
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Reply
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
                   Get notification when someone replied you
                 </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -501,14 +613,20 @@
             </div>
 
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Complaints</h2>
-                <p class="text-[#69747B]">When a user sent you a complaints</p>
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Complaints
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
+                  When a user sent you a complaints
+                </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -522,16 +640,20 @@
               </div>
             </div>
             <div
-              class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+              class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
             >
               <div>
-                <h2 class="text-primary font-medium text-xl">New Reply</h2>
-                <p class="text-[#69747B]">
+                <h2 class="text-primary font-medium lg:text-xl text-base">
+                  New Reply
+                </h2>
+                <p class="text-[#69747B] lg:text-base text-sm">
                   Get notification when someone replied you
                 </p>
               </div>
               <div>
-                <label class="inline-flex items-center me-5 cursor-pointer">
+                <label
+                  class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     value=""
@@ -546,14 +668,16 @@
             </div>
           </div>
           <hr />
-          <div class="flex mt-5 items-center justify-end gap-1">
+          <div
+            class="flex lg:flex-row flex-col mt-5 items-center justify-end gap-1"
+          >
             <button
-              class="w-[270px] text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 h-[48px] px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
+              class="lg:w-[270px] w-full text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 lg:h-[48px] h-16 px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
             >
               Cancel
             </button>
             <button
-              class="w-[270px] text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 h-[48px] px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
+              class="lg:w-[270px] w-full text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 lg:h-[48px] h-16 px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
             >
               Save
             </button>
@@ -571,18 +695,24 @@
           <h2 class="text-primary font-semibold text-lg">Privacy Settings</h2>
           <p class="text-secondary">Keep your settings more secured</p>
         </div>
-        <div class="grid grid-cols-2 pb-10 gap-y-10 gap-x-8">
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-10 lg:gap-x-8 gap-6"
+        >
           <div
-            class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
           >
             <div>
-              <h2 class="text-primary font-medium text-xl">
+              <h2 class="text-primary font-medium lg:text-xl text-base">
                 Anyone can message me
               </h2>
-              <p class="text-[#69747B]">When a user sent you a message</p>
+              <p class="text-[#69747B] lg:text-base text-sm">
+                When a user sent you a message
+              </p>
             </div>
             <div>
-              <label class="inline-flex items-center me-5 cursor-pointer">
+              <label
+                class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+              >
                 <input type="checkbox" value="" class="sr-only peer" checked />
                 <div
                   class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
@@ -592,18 +722,20 @@
           </div>
 
           <div
-            class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
           >
             <div>
-              <h2 class="text-primary font-medium text-xl">
+              <h2 class="text-primary font-medium lg:text-xl text-base">
                 Keep my profile private
               </h2>
-              <p class="text-[#69747B]">
+              <p class="text-[#69747B] lg:text-base text-sm">
                 Your profile will private mode if you turn on enable
               </p>
             </div>
             <div>
-              <label class="inline-flex items-center me-5 cursor-pointer">
+              <label
+                class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+              >
                 <input type="checkbox" value="" class="sr-only peer" checked />
                 <div
                   class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
@@ -613,14 +745,20 @@
           </div>
 
           <div
-            class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
           >
             <div>
-              <h2 class="text-primary font-medium text-xl">New Complaints</h2>
-              <p class="text-[#69747B]">When a user sent you a complaints</p>
+              <h2 class="text-primary font-medium lg:text-xl text-base">
+                New Complaints
+              </h2>
+              <p class="text-[#69747B] lg:text-base text-sm">
+                When a user sent you a complaints
+              </p>
             </div>
             <div>
-              <label class="inline-flex items-center me-5 cursor-pointer">
+              <label
+                class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+              >
                 <input type="checkbox" value="" class="sr-only peer" checked />
                 <div
                   class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
@@ -629,16 +767,20 @@
             </div>
           </div>
           <div
-            class="flex shadow-3xl py-4 px-6 rounded-2xl items-center gap-6 justify-between"
+            class="flex shadow-3xl lg:py-4 py-2 lg:px-6 px-2 rounded-2xl items-center gap-6 justify-between"
           >
             <div>
-              <h2 class="text-primary font-medium text-xl">New Reply</h2>
-              <p class="text-[#69747B]">
+              <h2 class="text-primary font-medium lg:text-xl text-base">
+                New Reply
+              </h2>
+              <p class="text-[#69747B] lg:text-base text-sm">
                 Get notification when someone replied you
               </p>
             </div>
             <div>
-              <label class="inline-flex items-center me-5 cursor-pointer">
+              <label
+                class="inline-flex items-center lg:me-5 me-0 cursor-pointer"
+              >
                 <input type="checkbox" value="" class="sr-only peer" checked />
                 <div
                   class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-[#78EB54] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-[#78EB54] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#78EB54]"
@@ -648,14 +790,16 @@
           </div>
         </div>
         <hr />
-        <div class="flex mt-5 items-center justify-end gap-1">
+        <div
+          class="flex lg:flex-row flex-col mt-5 items-center justify-end gap-1"
+        >
           <button
-            class="w-[270px] text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 h-[48px] px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
+            class="lg:w-[270px] w-full text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 lg:h-[48px] h-16 px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
           >
             Cancel
           </button>
           <button
-            class="w-[270px] text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 h-[48px] px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
+            class="lg:w-[270px] w-full text-primary text-base font-semibold hover:bg-[#78EB54] duration-200 lg:h-[48px] h-16 px-[10px] py-[14px] flex items-center justify-center border shadow-3xl rounded-full"
           >
             Save
           </button>
@@ -664,41 +808,55 @@
       <!-- privacy-setting end tab  -->
     </section>
 
+    <script src="../js/main.js"></script>
     <script>
-      const communicationBtn = document.getElementById("communicationBtn");
-      const communicationTab = document.getElementById("communicationTab");
-      const privacySettingBtn = document.getElementById("privacySettingBtn");
-      const privacySettingTab = document.getElementById("privacySettingTab");
+      document.addEventListener("DOMContentLoaded", function () {
+        const communicationBtn = document.getElementById("communicationBtn");
+        const communicationTab = document.getElementById("communicationTab");
+        const privacySettingBtn = document.getElementById("privacySettingBtn");
+        const privacySettingTab = document.getElementById("privacySettingTab");
+        const tabsDropdown = document.getElementById("tabs");
 
-      console.log(
-        communicationBtn,
-        communicationTab,
-        privacySettingBtn,
-        privacySettingTab
-      );
+        // Function to switch tabs
+        function switchTab(activeBtn, activeTab, inactiveTab) {
+          // Add active class to the active tab and remove from the other
+          activeTab.classList.add("block");
+          activeTab.classList.remove("hidden");
+          inactiveTab.classList.add("hidden");
+          inactiveTab.classList.remove("block");
+        }
 
-      // Function to switch tabs
-      function switchTab(activeBtn, activeTab, inactiveTab) {
-        // Add active class to the active tab and remove from the other
-        activeTab.classList.add("block");
-        activeTab.classList.remove("hidden");
-        inactiveTab.classList.add("hidden");
-        inactiveTab.classList.remove("block");
-
-        // Optional: you can also toggle active state for buttons
-      }
-
-      // By default, show the communication tab when the page loads
-      document.addEventListener("DOMContentLoaded", () => {
+        // By default, show the communication tab when the page loads
         switchTab(communicationBtn, communicationTab, privacySettingTab);
-      });
 
-      privacySettingBtn.addEventListener("click", () => {
-        switchTab(privacySettingBtn, privacySettingTab, communicationTab);
-      });
-      // Set up click event listeners to switch tabs when buttons are clicked
-      communicationBtn.addEventListener("click", () => {
-        switchTab(communicationBtn, communicationTab, privacySettingTab);
+        privacySettingBtn.addEventListener("click", () => {
+          switchTab(privacySettingBtn, privacySettingTab, communicationTab);
+        });
+
+        communicationBtn.addEventListener("click", () => {
+          switchTab(communicationBtn, communicationTab, privacySettingTab);
+        });
+
+        // Handle dropdown change for mobile
+        tabsDropdown.addEventListener("change", function () {
+          const selectedValue = this.value.toLowerCase(); // Ensure value is lowercase
+
+          console.log("Selected value:", selectedValue);
+
+          if (selectedValue === "privacysettings") {
+            console.log("Switching to Privacy Settings");
+            switchTab(privacySettingBtn, privacySettingTab, communicationTab);
+          } else if (selectedValue === "communication") {
+            console.log("Switching to Communication");
+            switchTab(communicationBtn, communicationTab, privacySettingTab);
+          } else if (selectedValue === "userinformation") {
+            console.log("Switching to User Information");
+            switchTab(userInterfaceBtn, userInformationTab, [
+              communicationTab,
+              privacySettingTab,
+            ]);
+          }
+        });
       });
     </script>
   </body>
