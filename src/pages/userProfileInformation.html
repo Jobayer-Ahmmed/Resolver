@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome cdn link ========== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- font awesome cdn link end ========== -->
+    <!-- link up css start =================== -->
+    <link rel="stylesheet" href="../css/profileInformation.css" />
+    <!-- link up css end =================== -->
+    <style></style>
+  </head>
+  <body>
+    <main class="bg-[#F4F4F4] h-full">
+      <!-- profile intro section start ===================================== -->
+      <section class="bg-[#F6FBFD]">
+        <section class="lg:block hidden bg-[#F6FBFD] py-16">
+          <div
+            class="container mx-auto px-4 flex flex-col justify-center items-center"
+          >
+            <div class="flex flex-col justify-center items-center">
+              <div><img src="../assets/images/charlie.png" alt="" /></div>
+              <h2 class="text-3xl font-medium my-2">Charlie Henderson</h2>
+              <p>
+                <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm"></i>
+                <span>San Francisco,CA</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- profile inside nav start =============================== -->
+          <nav class="px-4 relative lg:px-20">
+            <div class="absolute -top-24 left-16">
+              <img
+                src="../assets/profileInformationImages/insideLogo.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="text-[#667085] border rounded-[10px] border-[#EAECF0] px-4 w-full bg-white font-semibold py-2 mt-10"
+            >
+              <button
+                class="px-4 py-2 shadow-md text-[#344054] border border-[#818B9C] rounded-md"
+              >
+                Profile Information
+              </button>
+              <button class="px-4 py-2">Companies</button>
+              <button class="px-4 py-2">My Companies</button>
+              <button class="px-4 py-2">My Reviews</button>
+              <button class="px-4 py-2">History of Complaints</button>
+            </div>
+          </nav>
+          <!-- profile inside nav end =============================== -->
+        </section>
+      </section>
+      <!-- profile intro section end ===================================== -->
+
+      <!-- Profile information  section start ======================== -->
+
+      <section class="px-4 lg:px-20 container mx-auto pt-12 pb-24">
+        <section class="bg-[#FFF] rounded-lg shadow-md flex justify-center">
+          <!-- form section start =========================== -->
+          <form class="pt-6 pb-10 lg:py-10 container px-3 lg:px-0 lg:ml-44 max-w-2xl">
+
+            <!-- profile search and select responsive screen ================== -->
+             <div class="space-y-5 mb-12 md:hidden" >
+                <h1 class="text-[#101828] font-semibold text-2xl " >Profiles</h1>
+ 
+                <div class="space-y-6 " >
+                    <div class="px-3 flex items-center gap-2  py-2 border border-[#D0D5DD] rounded-lg shadow-sm" >
+                        <span class="  text-[#667085]" >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input class="w-full outline-none" type="text">
+                    </div>
+                    <div
+                  class="w-full shadow-sm px-3 gap-1 flex py-2 border border-[#D0D5DD] rounded-lg"
+                >
+                  <select class="outline-none font-medium text-[16px] w-full" name="" id="">
+                    <option selected disabled>Profile Information</option>
+                   
+                  </select>
+                </div>
+                </div>
+             </div>
+            <!-- profile search and select responsive screen end ================== -->
+
+            <!-- profile information div  title with slogan =================== -->
+            <div class="border-b space-y-1 pb-4 border-[#EAECF0]">
+              <h2 class="text-[#273F2B] font-semibold text-lg">
+                Profile Information
+              </h2>
+              <p class="text-[#475467] font-normal text-sm">
+                Update your photo and personal details here.
+              </p>
+            </div>
+            <!-- profile information div title with slogan end=================== -->
+            <!-- Your photo div start ================================== -->
+            <div
+              class="border-b py-4 gap-8 border-[#EAECF0] flex lg:flex-row flex-col justify-between"
+            >
+              <!-- left side title with picture ============ -->
+              <div
+                class="flex lg:flex-row flex-col space-y-5 flex-1 justify-between items-stretch"
+              >
+                <div>
+                  <h2 class="text-[#344054] font-semibold text-sm">
+                    Your photo
+                    <span class="text-[#98A2B3]"
+                      ><i class="fa-regular fa-circle-question"></i
+                    ></span>
+                  </h2>
+                  <p class="text-[#475467] font-normal text-sm">
+                    This will be displayed on your profile.
+                  </p>
+                </div>
+                <div class="max-w-16">
+                  <img class="hidden lg:block"  src="../assets/images/charlie.png" alt="" />
+                  <img class="lg:hidden" src="../assets/profileInformationImages/Avatar.png" alt="" />
+                </div>
+              </div>
+              <!-- left side title with picture end ============ -->
+
+              <!-- right side pic upload drag n drop ========================= -->
+              <div
+                class="border lg:border-2 py-4 px-6 gap-3 border-[#EAECF0] lg:border-[#78EB54] rounded-xl flex flex-col items-center justify-center"
+              >
+                <!-- upload icon ========= -->
+                <div class="">
+                  <img
+                    src="../assets/profileInformationImages/Featured icon.png"
+                    alt=""
+                  />
+                </div>
+
+                <!-- upload icon end ========= -->
+                <!-- file and title ==================== -->
+                <div class="flex relative gap-6 items-end">
+                  <div class="text-[#475467] space-y-1">
+                    <h3 class="font-normal text-sm">
+                      <span class="text-[#78EB54] font-bold"
+                        >Click to upload</span
+                      >
+                      or drag and drop
+                    </h3>
+                    <p class="font-normal text-xs">
+                      SVG, PNG, JPG or GIF (max. 800x400px)
+                    </p>
+                  </div>
+                  <!-- file picture ========= -->
+                  <div class="relative hidden lg:block">
+                    <span class="text-[#D0D5DD] text-4xl"
+                      ><i class="fa-regular fa-file"></i
+                    ></span>
+                    <span
+                      class="absolute -left-3 bottom-1.5 rounded bg-[#4CAF50] text-white px-1 py-0.5 font-bold text-[10px]"
+                      >JPG</span
+                    >
+                    <img
+                      class="absolute -bottom-1 left-4"
+                      src="../assets/profileInformationImages/Cursor.png"
+                      alt=""
+                    />
+                  </div>
+                  <!-- file picture end ========= -->
+                   <!-- logo of resolver =================== -->
+                    <img class="absolute -right-[147px] md:hidden top-7" src="../assets/profileInformationImages/insideLogo.png" alt="">
+                   <!-- logo of resolver end =================== -->
+
+
+                </div>
+
+                <!-- file and title end ==================== -->
+              </div>
+              <!-- right side pic upload drag n drop end ========================= -->
+            </div>
+            <!-- Your photo div end ================================== -->
+
+            <!-- name input start ================== -->
+            <div
+              class="flex justify-between text-[#344054] py-4 border-b border-[#EAECF0]"
+            >
+              <h2 class="font-semibold text-sm flex-1 hidden lg:block">Name</h2>
+              <div class="flex lg:flex-row flex-col gap-3 items-start flex-1">
+                <div class="space-y-1 w-full lg:w-fit">
+                  <label class="font-medium text-sm block" for="">
+                    First Name
+                  </label>
+                  <input
+                    class="outline-none shadow-sm w-full lg:w-fit px-3 py-2 border border-[#D0D5DD] rounded-lg"
+                    type="text"
+                    placeholder="Oliva"
+                  />
+                </div>
+                <div class="space-y-1 w-full lg:w-fit">
+                  <label class="font-medium text-sm block" for="">
+                    Last Name
+                  </label>
+                  <input
+                    class="outline-none shadow-sm px-3 w-full lg:w-fit py-2 border border-[#D0D5DD] rounded-lg"
+                    type="text"
+                    placeholder="Rhye"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- name with input end ================== -->
+
+            <!-- email input start ================== -->
+            <div
+              class="flex justify-between text-[#344054] py-4 border-b border-[#EAECF0]"
+            >
+              <h2 class="font-semibold text-sm flex-1 lg:block hidden">
+                Email address
+              </h2>
+              <div class="w-full lg:w-[63%] space-y-1">
+                <label class="font-medium text-sm lg:hidden" for="">
+                  Email address
+                </label>
+                <div
+                  class="w-full px-3 shadow-sm gap-1 flex py-2 border border-[#D0D5DD] rounded-lg"
+                >
+                  <span class="text-[#818B9C]"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></span>
+                  <input
+                    class="outline-none w-full"
+                    type="email"
+                    placeholder="charlie@henderson.com"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- email with input end ================== -->
+
+            <!-- Gender input start ================== -->
+            <div
+              class="flex justify-between text-[#344054] py-4 border-b border-[#EAECF0]"
+            >
+              <h2 class="font-semibold text-sm flex-1 lg:block hidden">
+                Gender
+              </h2>
+              <div class="w-full lg:w-[63%] space-y-1">
+                <label class="font-medium text-sm lg:hidden" for="">
+                  Gender
+                </label>
+                <div
+                  class="w-full shadow-sm px-3 gap-1 flex py-2 border border-[#D0D5DD] rounded-lg"
+                >
+                  <select class="outline-none w-full" name="" id="">
+                    <option selected disabled>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- gender  input end ================== -->
+            <!-- phone number input start ================== -->
+            <div
+              class="flex justify-between text-[#344054] py-4 border-b border-[#EAECF0]"
+            >
+              <h2 class="font-semibold text-sm flex-1 lg:block hidden">
+                Phone Number
+              </h2>
+              <div class="w-full lg:w-[63%] space-y-1">
+                <label class="font-medium text-sm lg:hidden" for="">
+                  Phone Number
+                </label>
+                <div
+                  class="w-full px-3 shadow-sm gap-1 flex py-2 border border-[#D0D5DD] rounded-lg"
+                >
+                  <select class="w-fit max-w-14" name="" id="">
+                    <option value="us">US</option>
+                    <option value="us">Bangladesh</option>
+                    <option value="us">Finland</option>
+                  </select>
+                  <input
+                    class="outline-none w-full"
+                    type="email"
+                    placeholder="+1 (555) 000-0000"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Phone number  input end ================== -->
+            <!-- password input start ================== -->
+            <div
+              class="flex justify-between text-[#344054] py-4 border-b border-[#EAECF0]"
+            >
+              <h2 class="font-semibold text-sm flex-1 hidden lg:block">
+                Password
+              </h2>
+              <div
+                class="flex lg:flex-row flex-col w-full lg:max-w-[63%] gap-3 items-start flex-1"
+              >
+                <div class="relative space-y-1 w-full lg:w-fit">
+                  <label class="font-medium text-sm block" for="">
+                    New Password
+                  </label>
+                  <div
+                    class="flex shadow-sm w-full lg:w-fit px-3 py-2 border border-[#D0D5DD] rounded-lg"
+                  >
+                    <input
+                      class="outline-none w-full lg:w-fit"
+                      type="password"
+                      placeholder="*****"
+                    />
+                    <span class="absolute right-2 text-[#818B9C]"
+                      ><i class="fa-regular fa-eye-slash"></i
+                    ></span>
+                  </div>
+                </div>
+                <div class="space-y-1 relative w-full lg:w-fit">
+                  <label class="font-medium text-sm block" for="">
+                    Confirm Password
+                  </label>
+                  <div
+                    class="flex shadow-sm w-full lg:w-fit px-3 py-2 border border-[#D0D5DD] rounded-lg"
+                  >
+                    <input
+                      class="outline-none w-full lg:w-fit"
+                      type="password"
+                      placeholder="****"
+                    />
+                    <span class="text-[#818B9C] absolute right-2"
+                      ><i class="fa-regular fa-eye-slash"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- password with input end ================== -->
+            <!-- Companies Associated input start ================== -->
+            <div
+              class="flex justify-between text-[#344054] py-4 border-b border-[#EAECF0]"
+            >
+              <h2 class="font-semibold text-sm flex-1 lg:block hidden">
+                Companies Associated
+              </h2>
+              <div class="w-full lg:w-[63%] space-y-1">
+                <label class="font-medium text-sm lg:hidden" for="">
+                  Companies Associated
+                </label>
+                <div
+                  class="w-full shadow-sm px-3 gap-1 flex py-2 border border-[#D0D5DD] rounded-lg"
+                >
+                  <select class="outline-none w-full" name="" id="">
+                    <option selected disabled>Select</option>
+                    <option value="com">Company A</option>
+                    <option value="com">Company B</option>
+                    <option value="com">Company C</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Companies Associated input end ================== -->
+            <!-- Primary language input start ================== -->
+            <div
+              class="flex justify-between text-[#344054] py-4 border-b border-[#EAECF0]"
+            >
+              <h2 class="font-semibold text-sm flex-1 lg:block hidden">
+                Primary Language
+              </h2>
+              <div class="w-full lg:w-[63%] space-y-1">
+                <label class="font-medium text-sm lg:hidden" for="">
+                  Primary Language
+                </label>
+                <div
+                  class="w-full shadow-sm px-3 gap-1 flex items-center py-2 border border-[#D0D5DD] rounded-lg"
+                >
+                  <span
+                    ><img
+                      src="../assets/profileInformationImages/AU.png"
+                      alt=""
+                  /></span>
+                  <select class="outline-none w-full" name="" id="">
+                    <option value="com">Australia</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Primary language input end ================== -->
+
+            <!-- Bio input start ======================= -->
+            <div class="border-b border-[#EAECF0] py-4">
+              <div
+                class="flex lg:flex-row flex-col space-y-4 justify-between text-[#344054]"
+              >
+                <div>
+                  <h2 class="font-semibold text-sm flex-1">Bio</h2>
+                  <p class="text-[#475467] font-normal text-sm">
+                    Write a short introduction.
+                  </p>
+                </div>
+
+                <div class="w-full lg:w-[63%] space-y-5">
+                  <div class="flex lg:flex-row flex-col w-full gap-2">
+                    <div class="space-y-1 w-full">
+                      <select
+                        class="shadow-sm px-3 w-full py-2 border border-[#D0D5DD] rounded-lg"
+                        name=""
+                        id=""
+                      >
+                        <option value="">Regular</option>
+                        <option value="">Bold</option>
+                        <option value="">Italic</option>
+                      </select>
+                    </div>
+                    <div class="space-y-1 w-full flex items-center">
+                      <button>
+                        <img
+                          src="../assets/profileInformationImages/bold.png"
+                          alt=""
+                        />
+                      </button>
+                      <button>
+                        <img
+                          src="../assets/profileInformationImages/italic.png"
+                          alt=""
+                        />
+                      </button>
+                      <button>
+                        <img
+                          src="../assets/profileInformationImages/copy.png"
+                          alt=""
+                        />
+                      </button>
+                      <button>
+                        <img
+                          src="../assets/profileInformationImages/menu.png"
+                          alt=""
+                        />
+                      </button>
+                      <button>
+                        <img
+                          src="../assets/profileInformationImages/menu.png"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- text area start =================== -->
+                  <div class="">
+                    <textarea
+                      class="border border-[#D0D5DD] outline-none p-2 rounded-lg w-full"
+                      rows="5"
+                      name=""
+                      id=""
+                      placeholder="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development.
+                    "
+                    ></textarea>
+                    <p class="text-[#475467] text-sm font-normal">
+                      275 characters left
+                    </p>
+                  </div>
+                  <!-- text area end =================== -->
+                </div>
+              </div>
+              <div class="mt-6 flex gap-2">
+                <input
+                  class="checkbox-green text-white"
+                  type="checkbox"
+                  name=""
+                  id=""
+                />
+                <p class="text-[#4B4B4B] font-medium text-sm">
+                  By clicking this you will agree with Resolver.NG terms &
+                  conditions applied.
+                </p>
+              </div>
+            </div>
+            <!-- Bio input end ======================= -->
+             <!-- button =============== -->
+            <div class=" flex flex-col-reverse lg:flex-row items-center gap-3 justify-center pt-5" >
+              <button
+                class="font-semibold text-[16px] text-[#273F2B] border border-[#D0D5DD] w-full lg:w-[270px] h-[48px] rounded-[32px]"
+              >
+                Cancel
+              </button>
+              <button
+              class="font-semibold bg-[#78EB54]  text-[16px] text-[#273F2B] border border-[#D0D5DD] w-full lg:w-[270px] h-[48px] rounded-[32px]"
+            >
+            Save
+            </button>
+            </div>
+          </form>
+          <!-- form section end === =========================== -->
+        </section>
+      </section>
+      <!-- Profile information  section end ======================== -->
+    </main>
+  </body>
+</html>
