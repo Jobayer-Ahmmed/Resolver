@@ -15,8 +15,8 @@
     <div
         class="hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
         <div>
-            <button class="px-4 py-2">Dashboard</button>
-            <button class="px-4 py-2 border border-black rounded  text-black">Profiles</button>
+            <button class="px-4 py-2 border border-black rounded  text-black">Admin Dashboard</button>
+            <button class="px-4 py-2 ">Company profile</button>
             <button class="px-4 py-2 ">Settings</button>
         </div>
         <div class="border-2 border-gray-300 rounded py-2 px-4">
@@ -29,55 +29,66 @@
         <div class="xl:hidden block mb-10"><i class="fa-solid fa-arrow-left mr-2 "></i><span
                 class="text-lg font-semibold">Back</span></div>
         <div class="mb-10 flex flex-col justify-center items-center xl:w-[600px] w-full mx-auto gap-3">
-            <h1 class="text-4xl font-semibold text-center">Submit Your Review</h1>
+            <h1 class="text-4xl font-semibold text-center">Add a Company</h1>
             <p class="text-center ">Whether you need to file a complaint, post a review, tell us about a misleading
-                advertisement, or report
-                a scam, you're in the right place.</p>
+                advertisement, or report a scam, you're in the right place.</p>
         </div>
-        <div class="xl:w-[800px] mx-auto shadow-xl bg-white p-4 pb-10 rounded-lg ">
-            <h2 class="text-xl font-semibold">Write a review</h2>
-            <div class="mt-7">
-                <h6 class="font-medium mb-3">Rate your recent experience</h6>
-                <div>
-                    <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
-                    <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
-                    <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
-                    <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
-                    <i class="fa-solid fa-star text-white bg-gray-300 p-2 rounded-sm"></i>
-                </div>
-            </div>
-            <div class="mt-5">
-                <h6 class="font-medium">Tell us about your experience</h6>
-                <textarea class="mt-2 p-4 w-full border-2 border-gray-300 rounded"
-                    placeholder="This is where you write your review. Explain what happened, and leave out offensive words. Keep your feedback honest, helpful, and constructive."
-                    name="" id="" rows="5"></textarea>
-                <p class="text-right">0/100</p>
-            </div>
+        <div class=" xl:w-[800px] mx-auto shadow-xl bg-white px-4 py-16 rounded-lg ">
+            <h2 class="text-xl font-semibold ">Add a Company</h2>
+
             <div>
-                <h5 class="font-medium">Tell us about your experience</h5>
-                <div class="mt-2 p-3 flex items-center w-full border-2 border-gray-300 rounded">
-                    <input class="w-full" placeholder="Write the title of your review here" type="text" name="" id="">
-                    <i class="fa-regular fa-circle-question"></i>
+                <div class=" font-medium mt-10 mb-2">
+                    <p>Company Name</p>
+                </div>
+                <div class="rounded border-2 py-2 px-2 border-gray-400 w-full flex items-center gap-2">
+                    <input class="w-full outline-none" type="email" placeholder="Enter company name" name="" id="">
+                    <i class="fa-regular fa-circle-question text-gray-400"></i>
                 </div>
             </div>
-            <div class="mt-5">
-                <h5 class="font-medium mb-2">Upload Files (Optional)</h5>
-                <div
-                    class="flex flex-col justify-center items-center px-4 py-8 text-sm font-semibold  w-full border-2 border-gray-300 rounded">
-                    <img src="../assets/images//upload-cloud.png" alt="">
-                    <p class="my-2"><span class="text-[#4CAF50]">Click to upload</span><span>or drag and drop</span></p>
-                    <p>SVG, PNG, JPG or GIF (max. 800x400px)</p>
+            <hr class="my-5">
+            <div class="w-full  flex xl:flex-row flex-col justify-center gap-5 ">
+                <div class="xl:w-1/2 w-full font-medium">
+                    <div class="mb-2"><p>Email</p></div>
+                    <div class="w-full rounded border-2 py-2 px-2 border-gray-400 flex items-center gap-2">
+                        <i class="fa-regular fa-envelope text-gray-400"></i>
+                        <input type="email" placeholder="Enter email address" name="" id="">
+                    </div>
                 </div>
+                <div class="xl:w-1/2 w-full font-medium">
+                    <div class=" mb-2 ">
+                        <p>Phone Number</p>
+                    </div>
+                    <div class="w-full rounded border-2 py-2 px-2 border-gray-400 flex items-center gap-2">
+                        <select class="outline-none">
+                            <option value="">US</option>
+                            <option value="">BAN</option>
+                        </select>
+                        <input class="outline-none" type="text" value="Enter phone number" name="" id="">
+                    </div>
+                </div>
+
             </div>
-            <div class="mt-5 flex flex-col gap-2 ">
-                <div><input type="checkbox" name="first" id="first"> <label for="first">Forward my review to
-                        authorities.</label></div>
-                <div><input type="checkbox" name="second" id="second"> <label for="second">I confirm this review is
-                        about my own genuine experience.</label></div>
+            <hr class="my-5">
+            <div class="w-full  flex xl:flex-row flex-col justify-center gap-5 ">
+                <div class="xl:w-1/2 w-full font-medium">
+                    <div class="mb-2"><p>Company Type (Sector)</p></div>
+                    <select name="" id=""  class="w-full rounded border-2 py-2 px-2 border-gray-400 flex items-center gap-2">
+                        <option value="">Enter company type</option>
+                    </select>
+                </div>
+                <div class="xl:w-1/2 w-full font-medium">
+                    <div class="mb-2"><p>Company Type</p></div>
+                    <select name="" id=""  class="w-full rounded border-2 py-2 px-2 border-gray-400 flex items-center gap-2">
+                        <option value="">Enter company type</option>
+                    </select>
+                </div>
+
+
             </div>
-            <button
-                class="my-8 xl:w-auto w-full  px-10 py-3 rounded-full bg-[#78EB54] text-black text-lg font-semibold">Submit
-                Complaint</button>
+
+        </div>
+
+
 
         </div>
         <div class="mt-20">
@@ -89,7 +100,8 @@
             </div>
             <div class="mt-10 grid xl:grid-cols-3 grid-cols-1 gap-10">
                 <div class="flex flex-col justify-center items-center xl:w-96 w-full">
-                    <div><img class="bg-[#2196F3] p-12  rounded-full" src="../assets/images/mail-receive.png" alt=""></div>
+                    <div><img class="bg-[#2196F3] p-12  rounded-full" src="../../assets/images/mail-receive.png" alt="">
+                    </div>
                     <h4 class="text-center text-2xl font-semibold mt-2 mb-3">Email</h4>
                     <p class="text-center">
                         <span>We are here to assist you with any questions or concerns you may have. Please don't
@@ -98,7 +110,8 @@
                     </p>
                 </div>
                 <div class="flex flex-col justify-center items-center xl:w-96 w-full">
-                    <div><img class="bg-[#6F4BE5] p-12  rounded-full" src="../assets/images/customer-service.png" alt=""></div>
+                    <div><img class="bg-[#6F4BE5] p-12  rounded-full" src="../../assets/images/customer-service.png"
+                            alt=""></div>
                     <h4 class="text-center text-2xl font-semibold mt-2 mb-3">Email</h4>
                     <p class="text-center">
                         <span>We are here to assist you with any questions or concerns you may have. Please don't
@@ -107,7 +120,7 @@
                     </p>
                 </div>
                 <div class="flex flex-col justify-center items-center xl:w-96 w-full">
-                    <div><img class="bg-[#FF9066] p-12  rounded-full" src="../assets/images/telephone.png" alt=""></div>
+                    <div><img class="bg-[#FF9066] p-12  rounded-full" src="../../assets/images/telephone.png" alt=""></div>
                     <h4 class="text-center text-2xl font-semibold mt-2 mb-3">Email</h4>
                     <p class="text-center">
                         <span>We are here to assist you with any questions or concerns you may have. Please don't
@@ -119,21 +132,26 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Review section -->
     <section class="container xl:px-20 px-4 flex xl:flex-row flex-col justify-between bg-[#ECEFEE] py-24">
         <div>
             <h1 class="text-4xl font-medium text-[#273F2B] xl:mb-3 mb-4 xl:text-left text-center">Your Next Review is
-                <br class="xl:hidden block"> Just <br class="xl:block hidden"> Around the Corner</h1>
+                <br class="xl:hidden block"> Just <br class="xl:block hidden"> Around the Corner
+            </h1>
             <p class="xl:text-left text-center">We're currently out of suggestions for you. Keep using Yelp, and we'll
                 have <br class="xl:block hidden"> new recommendations for
                 you
                 soon.</p>
-            <button class="xl:w-auto w-full  xl:mt-10 xl:my-0 my-9 px-10 py-3 rounded-full bg-[#78EB54] text-black text-lg font-semibold"><span class="xl:block hidden">Join Our Community</span><span class="block xl:hidden">Write First Review</span></button>
+            <button
+                class="xl:w-auto w-full  xl:mt-10 xl:my-0 my-9 px-10 py-3 rounded-full bg-[#78EB54] text-black text-lg font-semibold"><span
+                    class="xl:block hidden">Join Our Community</span><span class="block xl:hidden">Write First
+                    Review</span></button>
         </div>
         <div class="relative">
-            <div><img class="w-[400px] rounded-xl" src="../assets//images//review_gay.png" alt=""></div>
-            <div class="absolute bottom-0 xl:-left-16 left-1/2 -translate-x-1/2 xl:-translate-x-0 -mb-8 xl:-mb-0  xl:w-[360px] w-80 bg-[#78EB54] flex justify-between items-center p-3 pr-5 rounded-full">
+            <div><img class="w-[400px] rounded-xl" src="../../assets//images//review_gay.png" alt=""></div>
+            <div
+                class="absolute bottom-0 xl:-left-16 left-1/2 -translate-x-1/2 xl:-translate-x-0 -mb-8 xl:-mb-0  xl:w-[360px] w-80 bg-[#78EB54] flex justify-between items-center p-3 pr-5 rounded-full">
                 <div class="bg-white w-16 xl:w-20 h-10 flex justify-between items-center px-4 rounded-full ">
                     <div class="w-2 h-2 rounded-full bg-gray-700"></div>
                     <div class="w-2 h-2 rounded-full bg-gray-700"></div>

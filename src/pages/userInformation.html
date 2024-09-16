@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- sub menu -->
+    <div
+        class="hidden lg:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
+        <div>
+            <button class="px-4 py-2">Dashboard</button>
+            <button class="px-4 py-2">Profiles</button>
+            <button class="px-4 py-2 border border-black rounded  text-black ">Settings</button>
+        </div>
+        <div class="border-2 border-gray-300 rounded py-2 px-4">
+            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+            <input type="text" class="border-collapse outline-none" placeholder="Search" name="" id="">
+        </div>
+    </div>
+    <!-- review intro section responsive -->
+    <section class="lg:hidden  bg-[#F4F4F4] px-4 flex justify-center items-center py-7">
+        <div class="bg-white p-4 w-full rounded-xl">
+
+            <h2 class="mb-5  text-2xl font-medium">Settings</h2>
+
+            <div class="">
+                <div class="flex justify-between gap-2">
+                    <div
+                        class="w-full  flex justify-start items-center gap-3 border-2 border-gray-300 rounded-xl pl-5 py-3">
+                        <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+                        <input type="text" class="outline-none border-collapse w-full rounded-full" placeholder="Search"
+                            name="" id="">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <select
+                class="mt-5 w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-3  border-2 border-gray-400 rounded-lg p">
+                <option class="px-4 py-2">User Information</option>
+                <option class="px-4 py-2">My Reviews</option>
+                <option class="px-4 py-2">History of Complaints</option>
+                <option class="px-4 py-2">Companies</option>
+                <option class="px-4 py-2">My Companies</option>
+            </select>
+
+
+
+
+
+
+        </div>
+
+    </section>
+    <!-- profile intro section -->
+    <section class="lg:block hidden bg-[#F6FBFD] py-16 ">
+        <div class="container mx-auto px-4 flex flex-col justify-center items-center">
+            <div class="flex flex-col justify-center items-center">
+                <div><img src="../assets/images/charlie.png" alt=""></div>
+                <h2 class="text-3xl font-medium my-2">Charlie Henderson</h2>
+                <p>
+                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
+                    <span>San Francisco,CA</span>
+                </p>
+            </div>
+            <div class="flex justify-start w-full"><img src="../assets/images/green-plus.png" alt=""></div>
+            <div class="text-gray-500 w-full bg-white  font-semibold px-5 py-2 mt-5">
+                <button class="px-4 py-2">Profile Information</button>
+                <button class="px-4 py-2">Companies</button>
+                <button class="px-4 py-2">My Companies</button>
+                <button class="px-4 py-2">My Reviews</button>
+                <button class="px-4 py-2 border border-gray-400 rounded text-black">History of Complaints</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- profile Information section -->
+    <section class="container xl:px-20 px-4">
+        <div class="xl:w-[1000px] w-full mx-auto bg-white p-4 xl:p-10 xl:px-32 ">
+            <div>
+                <h5 class="text-lg font-medium">Profile Information</h5>
+                <p>Update your photo and personal details here.</p>
+            </div>
+            <hr class="my-5">
+            <div class="flex xl:flex-row flex-col gap-10 justify-between">
+                <div>
+                    <div class="flex items-center text-lg font-medium">
+                        <h5>your photo</h5><i class="fa-regular fa-circle-question text-gray-500 mt-1"></i>
+                    </div>
+                    <p>This will be displayed on your profile.</p>
+                </div>
+                <div class="xl:hidden flex justify-between w-full">
+                    <div><img class="w-20" src="../assets/images/charlie.png" alt=""></div>
+                    <div><img src="../assets/images/green-plus.png" alt=""></div>
+                </div>
+                <div class="flex justify-center gap-3">
+                    <img class="w-16 h-16 xl:block hidden" src="../assets/images/charlie.png" alt="">
+                    <div
+                        class="flex items-end p-4 xl:py-8 text-sm font-semibold  w-full border-2 border-gray-300 rounded">
+                        <div class="flex flex-col justify-center items-center">
+                            <img src="../assets/images//upload-cloud.png" alt="">
+                            <p class="my-2"><span class="text-[#4CAF50]">Click to upload</span><span>or drag and
+                                    drop</span>
+                            </p>
+                            <p>SVG, PNG, JPG or GIF (max. 800x400px)</p>
+                        </div>
+                        <img class="w-20 h-20" src="../assets/images/jpg.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-5">
+            <div class=" font-medium flex justify-between">
+                <div class="xl:block hidden">
+                    <p>Name</p>
+                </div>
+                <div class=" xl:w-[500px] w-full flex xl:flex-row flex-col justify-between xl:gap-0 gap-5">
+                    <div>
+                        <p class="mb-1">First Name</p>
+                        <input class="border-2 border-gray-400 p-2 rounded xl:w-auto w-full " type="text"
+                            placeholder="Oliva" name="" id="">
+                    </div>
+                    <div>
+                        <p class="mb-1">Last Name</p>
+                        <input class="border-2 border-gray-400 p-2 rounded xl:w-auto w-full" type="text"
+                            placeholder="Rhye" name="" id="">
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class=" font-medium  flex xl:flex-row flex-col justify-between">
+                <div class=" xl:mb-0 mb-1">
+                    <p>Email address</p>
+                </div>
+                <div class="xl:w-[500px] rounded border-2 py-2 px-2 border-gray-400 w-full flex items-center gap-2">
+                    <i class="fa-regular fa-envelope text-gray-400"></i>
+                    <input type="email" placeholder="charlie@henderson.com" name="" id="">
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class=" font-medium  flex xl:flex-row flex-col justify-between">
+                <div class=" xl:mb-0 mb-1">
+                    <p>Gender</p>
+                </div>
+
+                <select class="xl:w-[500px]  py-2 px-2 w-full border-2 border-gray-400 rounded">
+                    <option value="">Select Gender</option>
+                    <option value="">Select Gender</option>
+                </select>
+
+            </div>
+            <hr class="my-5">
+            <div class=" font-medium  flex xl:flex-row flex-col justify-between">
+                <div class=" xl:mb-0 mb-1 ">
+                    <p>Phone Number</p>
+                </div>
+                <div class="xl:w-[500px]  py-2 px-2 w-full border-2 border-gray-400 rounded">
+                    <select class="outline-none">
+                        <option value="">US</option>
+                        <option value="">BAN</option>
+                    </select>
+                    <input class="outline-none" type="text" value="+1 (555) 000-0000" name="" id="">
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class=" font-medium flex justify-between">
+                <div class="xl:block hidden">
+                    <p>Password</p>
+                </div>
+                <div class=" xl:w-[500px] w-full flex xl:flex-row flex-col justify-between xl:gap-0 gap-5">
+                    <div>
+                        <p class="mb-1">New Password</p>
+                        <div class="flex items-center border-2 border-gray-400 p-2 rounded xl:w-auto w-full">
+                            <input class="outline-none w-full " type="password" placeholder="*********" name="" id="">
+                            <i class="fa-solid fa-eye-slash  text-gray-400"></i>
+                        </div>
+
+                    </div>
+                    <div>
+                        <p class="mb-1">Confirm Password</p>
+                        <div class="flex items-center border-2 border-gray-400 p-2 rounded xl:w-auto w-full">
+                            <input class="outline-none w-full " type="password" placeholder="*********" name="" id="">
+                            <i class="fa-solid fa-eye-slash  text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class=" font-medium  flex xl:flex-row flex-col justify-between">
+                <div class=" xl:mb-0 mb-1">
+                    <p>Companies Associated</p>
+                </div>
+
+                <select class="xl:w-[500px]  py-2 px-2 w-full border-2 border-gray-400 rounded">
+                    <option value="">Select</option>
+                    <option value="">Select</option>
+                </select>
+
+            </div>
+            <hr class="my-5">
+            <div class=" font-medium  flex xl:flex-row flex-col justify-between">
+                <div class=" xl:mb-0 mb-1">
+                    <p>Primary Language</p>
+                </div>
+
+                <select class="xl:w-[500px]  py-2 px-2 w-full border-2 border-gray-400 rounded">
+                    <option value="">Australia</option>
+                    <option value="">Australia</option>
+                </select>
+
+            </div>
+            <hr class="my-5">
+            <div class="  flex xl:flex-row flex-col justify-between">
+                <div class=" xl:mb-0 mb-1">
+                    <p class="font-medium">Bio</p>
+                    <small class="font-normal">Write a short introduction.</small>
+                </div>
+                <div class="xl:w-[500px] w-full">
+                    <div class="flex xl:flex-row flex-col gap-5 mb-5 xl:mb-2">
+                        <select class="outline-none py-2 px-2 xl:w-1/2 w-full border-2 border-gray-400 rounded" name="" id="">
+                            <option value="">Regular</option>
+                            <option value="">Regular</option>
+                        </select>
+                        <div class="py-2 px-2 xl:w-1/2 w-full xl:border-0 border-2 border-gray-400 rounded">
+                            <img src="../assets/images/Icons.png" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <textarea class="outline-none py-2 px-2 w-full border-2 border-gray-400 rounded" rows="6" name="" id="">I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development.
+                        </textarea>
+                        <small>275 characters left</small>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <hr class="my-5">
+            <div>
+                <input type="checkbox" name="" id=""> <label for="">By clicking this you will agree with Resolver.NG
+                    terms & conditions applied.</label>
+            </div>
+            <hr class="my-5">
+
+
+            <div class="flex xl:flex-row flex-col justify-end gap-5">
+                <button
+                    class="px-20  py-2 xl:w-auto w-full rounded-full font-semibold border border-gray-400">Cancel</button>
+                <button class="px-20  py-2 xl:w-auto w-full rounded-full font-semibold bg-[#78EB54]">Save</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
