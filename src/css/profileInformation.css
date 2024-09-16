@@ -1,0 +1,5 @@
+@layer utilities {
+    .checkbox-green {
+        accent-color: #78EB54; /* Tailwind's yellow-400 color */
+    }
+}
