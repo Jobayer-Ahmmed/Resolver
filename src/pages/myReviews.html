@@ -1,0 +1,319 @@
+
+<!-- created by Jobayer Ahmmed -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- sub menu -->
+    <div
+        class="hidden lg:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
+        <div>
+            <button class="px-4 py-2">Dashboard</button>
+            <button class="px-4 py-2 border border-black rounded  text-black">Profiles</button>
+            <button class="px-4 py-2 ">Settings</button>
+        </div>
+        <div class="border-2 border-gray-300 rounded py-2 px-4">
+            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+            <input type="text" class="border-collapse outline-none" placeholder="Search" name="" id="">
+        </div>
+    </div>
+    <!-- review intro section responsive -->
+    <section class="lg:hidden  bg-[#F4F4F4] px-4 flex justify-center items-center py-7">
+        <div class="bg-white p-4 w-full rounded-xl">
+            <h2 class="mb-5  text-2xl font-medium">Profiles</h2>
+            <select
+                class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
+                <option class="px-4 py-2">My Reviews</option>
+                <option class="px-4 py-2">History of Complaints</option>
+                <option class="px-4 py-2">Profile Information</option>
+                <option class="px-4 py-2">Companies</option>
+                <option class="px-4 py-2">My Companies</option>
+            </select>
+
+            <div class=" my-5">
+                <h1 class="text-[#273F2B] text-xl font-medium mb-2">My Reviews</h1>
+                <p class="text-[#818B9C]">Keep track of your reviews</p>
+            </div>
+
+            <div class="">
+                <div class="flex justify-between gap-2">
+                    <div
+                        class="w-full  flex justify-start items-center gap-3 border-2 border-gray-300 rounded-xl pl-5 py-3">
+                        <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+                        <input type="text" class="outline-none border-collapse w-full rounded-full" placeholder="Search"
+                            name="" id="">
+
+                    </div>
+                    <div class="border border-gray-400 flex justify-center items-center px-4 rounded-xl"><img
+                            class="w-7" src="../assets/images/filter-lines.png" alt=""></div>
+                </div>
+
+                <input type="submit"
+                    class="mt-5 w-full h-[52px] bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold"
+                    value="+ Write Complaint" name="" id="">
+            </div>
+        </div>
+
+    </section>
+    <!-- Secondary sub menu -->
+    <section class="lg:block hidden container px-4 lg:px-20 bg-[#F6FBFD] py-16 ">
+        <div class="container mx-auto px-4 flex flex-col justify-center items-center">
+            <div class="flex flex-col justify-center items-center">
+                <div><img src="../assets/images/charlie.png" alt=""></div>
+                <h2 class="text-3xl font-medium my-2">Charlie Henderson</h2>
+                <p>
+                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
+                    <span>San Francisco,CA</span>
+                </p>
+            </div>
+            <div class="text-gray-500 w-full bg-white  font-semibold px-5 py-2 mt-10">
+                <button class="px-4 py-2">Profile Information</button>
+                <button class="px-4 py-2">Companies</button>
+                <button class="px-4 py-2">My Companies</button>
+                <button class="px-4 py-2">My Reviews</button>
+                <button class="px-4 py-2 border border-gray-400 text-black">History of Complaints</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- reviews section -->
+    <section class=" container lg:px-20 px-4 bg-[#F4F4F4] pt-16 pb-24">
+        <div class="bg-white p-4 rounded-lg ">
+            <div class="lg:flex justify-between hidden ">
+                <div class=" my-5">
+                    <div class="flex justify-center  gap-3 ">
+                        <h1 class="text-[#273F2B] text-xl font-medium mb-2">My Reviews</h1> <small
+                            class="border border-gray-300 rounded px-2 py-[2px] ">202 reviews</small>
+                    </div>
+                    <p class="text-[#818B9C]">Keep track of your reviews</p>
+                </div>
+
+                <!-- reviews Search bar -->
+                <div class=" flex justify-between items-center gap-5">
+                    <div class="flex justify-between  gap-5">
+                        <div
+                            class="w-96 h-12 flex justify-start items-center gap-3 border-2 border-gray-300 rounded-xl pl-5 py-3">
+                            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+                            <input type="text" class="outline-none border-collapse w-full rounded-full"
+                                placeholder="Search" name="" id="">
+
+                        </div>
+                        <div class="h-12 border border-gray-400 flex justify-center items-center px-4 rounded-xl">
+                            <img class="w-7" src="../assets/images/filter-lines.png" alt="">
+                            <span class="ml-2 text-lg">Filters</span>
+                        </div>
+                    </div>
+
+                    <input type="submit"
+                        class="w-full h-12 bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold"
+                        value="+ Write Complaint" name="" id="">
+                </div>
+            </div>
+
+            <!-- reviews cards -->
+            <div>
+                <div class="p-10 rounded-lg shadow-2xl">
+                    <div class="flex justify-between">
+                        <div class="flex gap-2">
+                            <div><img src="../assets/images/cameron.png" alt=""></div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Cameron Williamson</h3>
+                                <p>5 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-star text-[#78EB54]"></i>
+                            <p>4.9</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-5 mb-3">
+                        <h5 class="texl-lg font-medium">Ocean Villa</h5>
+                        <button class="lg:block hidden">See all photos</button>
+                    </div>
+                    <div class="flex gap-5">
+                        <img class="w-20" src="../assets//images/drawing_room.png" alt="">
+                        <img class="w-20" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
+                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                    </div>
+                    <div class="mt-4 mb-10">
+                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                            interface and robust feature set perfectly match the requirements of Dramatically improved
+                            our ability to manage contracts accurately and quickly. The intuitive interface and robust
+                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                    </div>
+                    <div class="flex gap-5">
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                    </div>
+
+                </div>
+                <div class="p-10 rounded-lg shadow-2xl">
+                    <div class="flex justify-between">
+                        <div class="flex gap-2">
+                            <div><img src="../assets/images/cameron.png" alt=""></div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Cameron Williamson</h3>
+                                <p>5 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-star text-[#78EB54]"></i>
+                            <p>4.9</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-5 mb-3">
+                        <h5 class="texl-lg font-medium">Ocean Villa</h5>
+                        <button class="lg:block hidden">See all photos</button>
+                    </div>
+                    <div class="flex gap-5">
+                        <img class="w-20" src="../assets//images/drawing_room.png" alt="">
+                        <img class="w-20" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
+                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                    </div>
+                    <div class="mt-4 mb-10">
+                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                            interface and robust feature set perfectly match the requirements of Dramatically improved
+                            our ability to manage contracts accurately and quickly. The intuitive interface and robust
+                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                    </div>
+                    <div class="flex gap-5">
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                    </div>
+
+                </div>
+                <div class="p-10 rounded-lg shadow-2xl">
+                    <div class="flex justify-between">
+                        <div class="flex gap-2">
+                            <div><img src="../assets/images/cameron.png" alt=""></div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Cameron Williamson</h3>
+                                <p>5 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-star text-[#78EB54]"></i>
+                            <p>4.9</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-5 mb-3">
+                        <h5 class="texl-lg font-medium">Ocean Villa</h5>
+                        <button class="lg:block hidden">See all photos</button>
+                    </div>
+                    <div class="flex gap-5">
+                        <img class="w-20" src="../assets//images/drawing_room.png" alt="">
+                        <img class="w-20" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
+                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                    </div>
+                    <div class="mt-4 mb-10">
+                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                            interface and robust feature set perfectly match the requirements of Dramatically improved
+                            our ability to manage contracts accurately and quickly. The intuitive interface and robust
+                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                    </div>
+                    <div class="flex gap-5">
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                    </div>
+
+                </div>
+                <div class="p-10 rounded-lg shadow-2xl">
+                    <div class="flex justify-between">
+                        <div class="flex gap-2">
+                            <div><img src="../assets/images/cameron.png" alt=""></div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Cameron Williamson</h3>
+                                <p>5 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-star text-[#78EB54]"></i>
+                            <p>4.9</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-5 mb-3">
+                        <h5 class="texl-lg font-medium">Ocean Villa</h5>
+                        <button class="lg:block hidden">See all photos</button>
+                    </div>
+                    <div class="flex gap-5">
+                        <img class="w-20" src="../assets//images/drawing_room.png" alt="">
+                        <img class="w-20" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
+                        <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
+                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                    </div>
+                    <div class="mt-4 mb-10">
+                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                            interface and robust feature set perfectly match the requirements of Dramatically improved
+                            our ability to manage contracts accurately and quickly. The intuitive interface and robust
+                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                    </div>
+                    <div class="flex gap-5">
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+            <!-- page number -->
+            <div class="mt-10 flex justify-between ">
+                <div class="lg:hidden block">
+                    <i class="fa-solid fa-arrow-left border border-gray-400 py-2 px-3 shadow-lg rounded"></i>
+                </div>
+                <div>
+                    <p>Page 1 of 10</p>
+                </div>
+                <div class="hidden lg:flex lg:gap-3">
+                    <button class="border border-gray-400 rounded px-4 py-1">Previous</button>
+                    <button class="border border-gray-400 rounded px-4 py-1">Next</button>
+                </div>
+                <div class="lg:hidden block">
+                    <i class="fa-solid fa-arrow-right border border-gray-400 py-2 px-3 shadow-lg rounded"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
