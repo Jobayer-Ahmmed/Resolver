@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- sub menu -->
+    <div
+        class="hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
+        <div>
+            <button class="px-4 py-2">Admin Dashboard</button>
+            <button class="px-4 py-2  border border-black rounded  text-black">Company profile</button>
+            <button class="px-4 py-2 ">Settings</button>
+        </div>
+        <div class="border-2 border-gray-300 rounded py-2 px-4">
+            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+            <input type="text" class="border-collapse outline-none" placeholder="Search" name="" id="">
+        </div>
+    </div>
+    <!-- profile intro section -->
+    <section class="xl:block hidden bg-[#F6FBFD] px-20 py-16 ">
+        <div class="container mx-auto px-4 flex flex-col justify-center items-center">
+            <div class="flex flex-col justify-center items-center">
+                <div><img src="../../assets/businessSideImages/hill.png" alt=""></div>
+                <h2 class="text-3xl font-medium my-3">Amazon Fireflex</h2>
+                <p class="border border-green-200 rounded-full py-2 px-5 shadow">
+                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
+                    <span>San Francisco,CA</span>
+                </p>
+            </div>
+            <div class="text-gray-500 w-full bg-white  font-semibold px-3 shadow-lg rounded py-2 mt-10">
+                <button class="px-4 py-2">Dashboard</button>
+                <button class="px-4 py-2">List of Companies</button>
+                <button class="px-4 py-2">Reviews</button>
+                <button class="px-4 py-2">Performance</button>
+                <button class="px-4 py-2 border border-gray-400 text-black rounded">Analytics</button>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
