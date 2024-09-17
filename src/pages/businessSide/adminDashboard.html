@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome cdn link ========== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- font awesome cdn link end ========== -->
+  </head>
+  <body>
+    <!-- inside admin Dashboard Navbar section start =================== -->
+    <section>
+      <nav
+        class="px-4 flex border-b border-t mt-3 border-[#EAECF0] w-full bg-white items-center justify-between relative lg:px-20"
+      >
+        <div class="text-[#344054] rounded-[10px] font-semibold py-2">
+          <!-- nav route ===================== -->
+          <button
+          class="px-4 py-2  text-[#182230] border border-[#818B9C] rounded-md"
+        >
+        Admin Dashboard
+        </button>
+          <button class="px-4 py-2">Company profile</button>
+          
+          <button class="px-4 py-2">Settings</button>
+          
+          <!-- nav route end ===================== -->
+        </div>
+        <!-- search bar input ================ -->
+        <div>
+            <div class="px-4 flex items-center gap-2  py-2 border border-[#D0D5DD] rounded-lg shadow-sm" >
+                <span class="  text-[#667085]" >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input class="w-full outline-none" placeholder="Search" type="text">
+            </div>
+        </div>
+        <!-- search bar input end ================ -->
+      </nav>
+    </section>
+    <!-- inside admin Dashboard Navbar section end =================== -->
+    <main>
+      <!-- profile intro section start ===================================== -->
+      <section class="bg-[#F6FBFD]">
+        <section class="lg:block hidden bg-[#F6FBFD] py-16">
+          <div
+            class="container mx-auto px-4 flex flex-col justify-center items-center"
+          >
+            <div class="flex flex-col justify-center items-center">
+              <div>
+                <img src="../../assets/adminDashboard/image 4.png" alt="" />
+              </div>
+              <h2 class="text-3xl font-medium my-2 text-[#273F2B]">
+                Adam Smith
+              </h2>
+              <p class="border border-[#78EB54] rounded-[100px] px-6 py-2">
+                <i class="fa-solid fa-location-dot text-[#273F2B] text-sm"></i>
+                <span>San Francisco,CA</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- profile inside nav start =============================== -->
+          <nav class="px-4 relative lg:px-20">
+            <div class="absolute -top-24 left-16">
+              <img
+                src="../assets/profileInformationImages/insideLogo.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="text-[#667085] border rounded-[10px] border-[#EAECF0] px-4 w-full bg-white font-semibold py-2 mt-10"
+            >
+              <button class="px-4 py-2">Today</button>
+              <button
+                class="px-4 py-2 shadow-md text-[#344054] border border-[#818B9C] rounded-md"
+              >
+                This Week
+              </button>
+              <button class="px-4 py-2">This Month</button>
+              <button class="px-4 py-2">Yearly</button>
+            </div>
+          </nav>
+          <!-- profile inside nav end =============================== -->
+        </section>
+      </section>
+      <!-- profile intro section end ===================================== -->
+    </main>
+  </body>
+</html>
