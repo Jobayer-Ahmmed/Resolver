@@ -1,153 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/96ee5d0221.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Web App</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
-</head>
-
-<body class="bg-gray-100">
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
-        <div class="bg-white rounded-lg shadow-lg p-8 md:flex md:space-x-8">
+  <body class="">
+    <section class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex bg-white">
+        <div class="bg-white p-8 md:flex md:space-x-2 w-full">
           
-          <!-- Left Review Section (You can adjust this for review content) -->
-          <div class="relative flex-shrink-0">
-            <div class="w-72 h-72 bg-green-300 rounded-full flex items-center justify-center overflow-hidden">
-              <!-- You can place your image or content here -->
-              <p class="text-lg text-gray-700">Your Image or Content</p>
+          <!-- Left Review Section (Hidden on mobile) -->
+          <div class="hidden md:block w-full md:w-1/2 md:flex md:flex-start justify-center">
+            <div class="w-[50vw] h-[50vw] max-w-[35rem] max-h-[35rem] bg-green-300 rounded-full flex items-center justify-center overflow-hidden">
+              <img src="../assets/images/Signup-image.png" alt="signup-image" class="w-full h-auto" />
             </div>
           </div>
       
           <!-- Right Form Section -->
-          <div class="min-h-screen flex items-center justify-center bg-gray-50">
-            <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl">
-              
-              <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Create Account</h2>
-          
+          <div class="w-full md:w-1/2 bg-white md:bg-gray-50 min-h-screen flex flex-col items-center justify-center">
+            <!-- Form Container -->
+            <div class="bg-white md:shadow-lg rounded-lg md:p-8 w-full max-w-3xl p-4">
+                <div class="md:hidden ">
+                    <a href="#" class="flex justify-start">
+                      <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+                      <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
+                    </a>
+                  </div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gray-800 text-start">Create Account</h2>
+      
               <form action="#" method="POST" class="space-y-6">
-          
                 <!-- Grid for Input Fields -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  
                   <!-- First Name -->
                   <div>
                     <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
-                    <input type="text" id="first-name" placeholder="Enter your first name" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                    <input type="text" placeholder="Enter your first name" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
                   </div>
-          
+      
                   <!-- Last Name -->
                   <div>
                     <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
-                    <input type="text" id="last-name" placeholder="Enter your last name" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                    <input type="text" id="last-name" placeholder="Enter your last name" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
                   </div>
-          
+      
                   <!-- Email Address -->
                   <div>
                     <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                    <input type="email" id="email" placeholder="Enter your email" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                    <input type="email" id="email" placeholder="Enter your email" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
                   </div>
-          
+      
                   <!-- Phone Number -->
-                  <div>
+                  <div class="w-full">
                     <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
                     <div class="flex">
-                      <select class="rounded-l-lg border-gray-300 focus:border-green-500 focus:ring-green-500">
-                        <option>BD +88</option>
+                      <!-- Country Code & Flag -->
+                      <select class="rounded-l-lg px-2 py-3 border border-gray-300 border-r-0 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 flag-select">
+                        <option value="BD">🇧🇩 +88</option>
+                        <option value="US">🇺🇸 +1</option>
+                        <option value="IN">🇮🇳 +91</option>
                       </select>
-                      <input type="text" id="phone" placeholder="+088" class="mt-1 block w-full rounded-r-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                      <!-- Phone Number Input -->
+                      <input type="tel" id="phone" placeholder="Enter phone number" class="w-full px-4 py-3 border-t border-b border-r border-gray-300 rounded-r-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
                     </div>
                   </div>
-          
+      
                   <!-- Password -->
                   <div>
                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                     <div class="relative">
-                      <input type="password" id="password" placeholder="Enter your password" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                      <input type="password" id="password" placeholder="Enter your password" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
                       <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 cursor-pointer">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A6.375 6.375 0 119.375 12.5a1.125 1.125 0 00-.875 1.75"></path>
-                        </svg>
+                        <img src="../assets/images/Icon/close-eyes.png" alt="eye-icon" class="h-5 w-5" />
                       </span>
                     </div>
                   </div>
-          
+      
                   <!-- Confirm Password -->
                   <div>
                     <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
                     <div class="relative">
-                      <input type="password" id="confirm-password" placeholder="Confirm password" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                      <input type="password" id="confirm-password" placeholder="Confirm password" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
                       <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 cursor-pointer">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A6.375 6.375 0 119.375 12.5a1.125 1.125 0 00-.875 1.75"></path>
-                        </svg>
+                        <img src="../assets/images/Icon/close-eyes.png" alt="eye-icon" class="h-5 w-5" />
                       </span>
                     </div>
                   </div>
-          
+      
                   <!-- Gender -->
-                  <div>
-                    <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
-                    <select id="gender" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                  <div class="w-full">
+                    <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">Gender</label>
+                    <select id="gender" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
                       <option>Select gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
                     </select>
                   </div>
-          
+      
                   <!-- Companies Associated -->
-                  <div>
-                    <label for="companies" class="block text-sm font-medium text-gray-700">Companies Associated</label>
-                    <select id="companies" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+                  <div class="w-full">
+                    <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">Companies Associated</label>
+                    <select id="gender" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
                       <option>Select company</option>
+                      <option>Company 1</option>
+                      <option>Company 2</option>
+                      <option>Company 3</option>
                     </select>
                   </div>
                 </div>
-          
+      
                 <!-- Terms Checkbox -->
                 <div class="mt-6">
                   <label class="inline-flex items-center">
-                    <input type="checkbox" class="rounded border-gray-300 text-green-500 focus:ring-green-500">
+                    <input type="checkbox" class="rounded border-gray-300 text-green-500 focus:ring-green-500" />
                     <span class="ml-2 text-sm text-gray-700">By clicking this you will agree with Resolver.NG terms & conditions applied.</span>
                   </label>
                 </div>
-          
+      
                 <!-- Create Account Button -->
                 <div class="mt-6">
                   <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg shadow-lg transition">Create Account</button>
                 </div>
               </form>
-          
+      
               <!-- Divider -->
               <div class="mt-6 flex items-center justify-between">
                 <span class="border-t w-1/5 lg:w-1/4"></span>
                 <p class="text-sm text-gray-500 text-center">Or using other method</p>
                 <span class="border-t w-1/5 lg:w-1/4"></span>
               </div>
-          
+      
               <!-- Social Login -->
-              <div class="mt-6 flex justify-center space-x-4">
+              <div class="hidden mdLblock mt-6 flex justify-center space-x-4">
                 <button class="bg-white border border-gray-300 rounded-lg p-3">
-                  <img src="path_to_facebook_icon.png" alt="Facebook" class="h-6 w-6">
+                  <img src="../assets/images/Layer_1.png" alt="facebook" class="h-6 w-6" />
                 </button>
                 <button class="bg-white border border-gray-300 rounded-lg p-3">
-                  <img src="path_to_google_icon.png" alt="Google" class="h-6 w-6">
+                  <img src="../assets/images/Social_Icons.png" alt="Google" class="h-6 w-6" />
                 </button>
               </div>
-          
+
+              <div class="md:hidden mt-6 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="bg-white border flex items-center justify-center border-gray-300 rounded-lg p-3 w-full sm:w-auto space-x-2">
+                  <img src="../assets/images/Layer_1.png" alt="facebook" class="h-6 w-6" />
+                  <span class="text-gray-700">Sign up with Google</span>
+                </button>
+                <button class="bg-white border flex items-center justify-center border-gray-300 rounded-lg p-3 w-full sm:w-auto space-x-2">
+                  <img src="../assets/images/Social_Icons.png" alt="Google" class="h-6 w-6" />
+                  <span class="text-gray-700">Sign up with Facebook</span>
+                </button>
+              </div>
+      
               <!-- Sign In Link -->
               <div class="mt-6 text-center">
-                <p class="text-sm text-gray-500">Already have an account? <a href="#" class="text-green-500 hover:underline">Sign In</a></p>
+                <p class="text-sm text-gray-500">Already have an account? <a href="../pages/signin.html" class="text-green-500 hover:underline">Sign In</a></p>
               </div>
             </div>
           </div>
-          
         </div>
-      </div>
+      </section>
       
-  
-    
-    
-  <script src="../src/assets/js/main.js"></script>
-</body>
 
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

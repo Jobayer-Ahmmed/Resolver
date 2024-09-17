@@ -22,6 +22,9 @@ const categories = [
 const firstCategoryGrid = document.getElementById("firstCategoryGrid");
 const secondCategoryGrid = document.getElementById("secondCategoryGrid");
 
+
+
+
 // Function to render categories
 function renderCategories() {
   // Clear existing content
@@ -90,3 +93,9 @@ renderCategories();
 
 // Re-render categories when the window is resized
 window.addEventListener("resize", renderCategories);
+
+
+
+
+
+
