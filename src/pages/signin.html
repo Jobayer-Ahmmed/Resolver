@@ -1,72 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Web App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      src="https://kit.fontawesome.com/96ee5d0221.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body class="">
-    <section class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 min-h-screen  flex bg-white">
-        <div class="bg-white p-8 md:flex md:space-x-8 w-full">
-          
-          <!-- Left Review Section (Hidden on mobile) -->
-          <div class="hidden md:block w-full md:w-1/2 md:flex md:flex justify-center items-center">
-            <div class="w-[50vw] h-[50vw] max-w-[35rem] max-h-[35rem] bg-green-300 rounded-full flex  overflow-hidden">
-              <img src="../assets/images/Signup-image.png" alt="signup-image" class="w-full h-auto" />
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Web App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
+</head>
+
+<body class=" relative">
+  <header class="bg-white shadow-md hidden md:block">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex-shrink-0">
+          <!-- Logo -->
+          <a href="#" class="flex items-center">
+            <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+            <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">Home</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center space-x-4">
+          <!-- Sign In -->
+          <a href="../pages/signin.html" class="text-gray-900 hover:text-green-500 transition">Sign In</a>
+
+          <!-- Sign Up -->
+          <a href="../pages/signup.html" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden">
+      <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Home</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+        <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Form section -->
+  <section class="max-w-full mx-auto px-4 py-12 sm:px-6 lg:px-8 flex bg-[#f4f4f4]">
+    <div class=" md:p-8 md:flex md:space-x-8 w-full">
+
+      <!-- Left Review Section (Hidden on mobile) -->
+      <div class="hidden md:block w-full md:w-1/2 md:flex md:flex justify-center items-center">
+        <div class="w-[50vw] h-[50vw] max-w-[35rem] max-h-[35rem] bg-green-300 rounded-full flex  overflow-hidden">
+          <img src="../assets/images/Signup-image.png" alt="signup-image" class="w-full h-auto" />
+        </div>
+      </div>
+
+      <!-- Right Form Section -->
+      <div class="w-full md:w-1/2 flex flex-col items-center justify-center">
+        <!-- Form Container -->
+        <div class="md:bg-white g rounded-lg md:p-8 w-full max-w-3xl">
+          <div class="md:hidden ">
+            <a href="#" class="flex justify-start">
+              <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+              <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
+            </a>
           </div>
-      
-          <!-- Right Form Section -->
-          <div class="w-full md:w-1/2 bg-white min-h-screen flex flex-col items-center justify-center">
-            <!-- Form Container -->
-            <div class="bg-white md:shadow-lg rounded-lg md:p-8 w-full max-w-3xl p-4">
-                <div class="md:hidden ">
-                    <a href="#" class="flex justify-start">
-                      <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
-                      <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
-                    </a>
-                  </div>
-              <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gray-800 text-start">Login into your account</h2>
-      
-              <form action="#" method="POST" class="space-y-6">
-                <!-- Grid for Input Fields -->
-                <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
-                  
-      
-                  <!-- Email Address -->
-                  <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                    <input type="email" id="email" placeholder="Enter your email" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
-                  </div>
-      
-                 
-      
-                  <!-- Password -->
-                  <div>
-                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                    <div class="relative">
-                      <input type="password" id="password" placeholder="Enter your password" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
-                      <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 cursor-pointer">
-                        <img src="../assets/images/Icon/close-eyes.png" alt="eye-icon" class="h-5 w-5" />
-                      </span>
-                    </div>
-                  </div>
-<!-- Terms Checkbox -->
-<div class="mt-6 flex justify-between">
-    <label class="inline-flex items-center">
-      <input type="checkbox" class="rounded border-gray-300 text-green-500 focus:ring-green-500" />
-      <span class="ml-2 text-sm text-gray-700">Keep me signed in</span>
-    </label>
-    <p class="text-sm text-gray-700">Forgotten password</p>
-  </div>
-                  <!-- Social Login -->
-              <div class="hidden mdLblock mt-6 flex justify-center space-x-4">
+          <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gray-800 text-start">Login into your account</h2>
+
+          <form action="#" method="POST" class="space-y-6">
+            <!-- Grid for Input Fields -->
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+
+
+              <!-- Email Address -->
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
+              </div>
+
+
+
+              <!-- Password -->
+              <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <div class="relative">
+                  <input type="password" id="password" placeholder="Enter your password"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm md:shadow-none focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
+                  <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 cursor-pointer">
+                    <img src="../assets/images/Icon/close-eyes.png" alt="eye-icon" class="h-5 w-5" />
+                  </span>
+                </div>
+              </div>
+              <!-- Terms Checkbox -->
+              <div class="mt-6 flex justify-between">
+                <label class="inline-flex items-center">
+                  <input type="checkbox" class="rounded border-gray-300 text-green-500 focus:ring-green-500" />
+                  <span class="ml-2 text-sm text-gray-700">Keep me signed in</span>
+                </label>
+                <p class="text-sm text-gray-700">Forgotten password</p>
+              </div>
+              <!-- Social Login -->
+              <div class="mt-6">
+                <button type="submit" class="w-full bg-[#78eb54] text-black py-3 rounded-3xl shadow-lg transition">Create Account</button>
+              </div>
+
+              <!-- <div class="hidden md:block mt-6 flex justify-center space-x-4">
                 <button class="bg-white border border-gray-300 rounded-lg p-3">
                   <img src="../assets/images/Layer_1.png" alt="facebook" class="h-6 w-6" />
                 </button>
@@ -76,27 +137,136 @@
               </div>
 
               <div class="md:hidden mt-6 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <button class="bg-white border flex items-center justify-center border-gray-300 rounded-lg p-3 w-full sm:w-auto space-x-2">
+                <button
+                  class="bg-white border flex items-center justify-center border-gray-300 rounded-lg p-3 w-full sm:w-auto space-x-2">
                   <img src="../assets/images/Layer_1.png" alt="facebook" class="h-6 w-6" />
                   <span class="text-gray-700">Sign up with Google</span>
                 </button>
-                <button class="bg-white border flex items-center justify-center border-gray-300 rounded-lg p-3 w-full sm:w-auto space-x-2">
+                <button
+                  class="bg-white border flex items-center justify-center border-gray-300 rounded-lg p-3 w-full sm:w-auto space-x-2">
                   <img src="../assets/images/Social_Icons.png" alt="Google" class="h-6 w-6" />
                   <span class="text-gray-700">Sign up with Facebook</span>
                 </button>
-              </div>
-    
-        
+              </div> -->
+
+
               <!-- Sign up Link -->
               <div class="mt-6 text-center">
-                <p class="text-sm text-gray-500">Already have an account? <a href="../pages/signup.html" class="text-green-500 hover:underline">Sign up</a></p>
+                <p class="text-sm text-gray-500">Already have an account? <a href="../pages/signup.html"
+                    class="text-green-500 hover:underline">Sign up</a></p>
               </div>
+            </div>
+            </form>
+        </div>
+      </div>
+  </section>
+
+  <footer class=" bg-white text-white relative">
+    <div class=" bg-[#052e26] md:rounded-t-3xl ">
+      <div class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8  rounded">
+        <!-- Upper and Lower Footer: Combined Grid Layout -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+    
+          <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+          <div class="col-span-2 sm:col-span-1">
+            <div class="flex-shrink-0 mb-4">
+              <!-- Logo -->
+              <a href="#" class="flex items-center">
+                <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+                <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
+              </a>
+            </div>
+            <p class="mb-4 w-[14rem] sm:w-full">Fun, engaging and authentic Platform</p>
+            <div class="flex space-x-4">
+              <a href="#"><img src="../assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5"></a>
+              <a href="#"><img src="../assets/images/Icon/youtube.png" alt="YouTube" class="h-5"></a>
+              <a href="#"><img src="../assets/images/Icon/twitter.png" alt="Twitter" class="h-5"></a>
+              <a href="#"><img src="../assets/images/Icon/facebook.png" alt="Facebook" class="h-5"></a>
+            </div>
+          </div>
+    
+          <!-- Product Links -->
+          <div>
+            <h4 class="font-bold mb-4">Product</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">About us</a></li>
+              <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+              <li><a href="#" class="hover:text-green-400">Contact</a></li>
+              <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+              <li><a href="#" class="hover:text-green-400">Log in</a></li>
+            </ul>
+          </div>
+    
+          <!-- Resources Links -->
+          <div>
+            <h4 class="font-bold mb-4">Resources</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">Learn</a></li>
+              <li><a href="#" class="hover:text-green-400">Videos</a></li>
+              <li><a href="#" class="hover:text-green-400">Help Center</a></li>
+              <li><a href="#" class="hover:text-green-400">Webinar Glossary</a></li>
+            </ul>
+          </div>
+    
+          <!-- More Links -->
+          <div>
+            <h4 class="font-bold mb-4">More</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">Our story</a></li>
+              <li><a href="#" class="hover:text-green-400">We’re hiring</a></li>
+              <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
+              <li><a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a></li>
+            </ul>
+          </div>
+  
+          <div class="block md:hidden">
+            <h4 class="font-bold mb-4">More</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">Trust Center</a></li>
+              <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
+              <li><a href="#" class="hover:text-green-400">Status</a></li>
+              <li><a href="#" class="hover:text-green-400">Legal</a></li>
+              <li><a href="#" class="hover:text-green-400">Do Not Sell My Info</a></li>
+              <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+            </ul>
+          </div>
+    
+        </div>
+  
+        <div class="border-t border-gray-600 py-4">
+          <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0">
+            <!-- Left Section: Links -->
+           <div class="hidden md:block">
+            <div class="flex flex-wrap justify-center sm:justify-start space-x-6">
+              <a href="#" class="hover:text-green-400">Trust Center</a>
+              <a href="#" class="hover:text-green-400">Privacy Policy</a>
+              <a href="#" class="hover:text-green-400">Status</a>
+              <a href="#" class="hover:text-green-400">Legal</a>
+              <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
+              <a href="#" class="hover:text-green-400">Opt out</a>
+            </div>
+           </div>
+        
+            <!-- Right Section: Copyright -->
+            <div class="text-center sm:text-right">
+              <p>© All rights reserved by Resolver NG.</p>
             </div>
           </div>
         </div>
-      </section>
-      
+    
+        <!-- Star Icon (Absolute Positioned) -->
+        <div class="absolute top-24 md:top-8 right-12 transform translate-x-1/4 -translate-y-1/4">
+          <img src="../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
+        </div>
+    
+      </div>
+    </div>
+    
+  </footer>
 
-    <script src="../assets/js/main.js"></script>
-  </body>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
 </html>
