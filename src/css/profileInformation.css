@@ -3,3 +3,29 @@
         accent-color: #78EB54; /* Tailwind's yellow-400 color */
     }
 }
+
+   /* Style the progress bar */
+   progress {
+    appearance: none; /* Removes the default browser styling */
+    -webkit-appearance: none;
+    width: 100%; /* Full width */
+    height: 1rem; /* Equivalent to h-4 in Tailwind (16px) */
+  }
+
+  /* Inactive (background) color for WebKit browsers (Chrome, Safari) */
+  progress::-webkit-progress-bar {
+    background-color: #e5e7eb; /* Inactive background (Tailwind bg-gray-200) */
+    border-radius: 0.25rem; /* Optional: rounded corners */
+  }
+
+  /* Active (filled) color for WebKit browsers */
+  progress::-webkit-progress-value {
+    background-color: #4caf50; /* Active color (Tailwind bg-green-500) */
+    border-radius: 0.25rem; /* Optional: rounded corners */
+  }
+
+ /* Active color for Firefox */
+ progress::-moz-progress-bar {
+    background-color: #4caf50; /* Active color (Tailwind bg-green-500) */
+    border-radius: 0.25rem; /* Optional: rounded corners */
+  }
