@@ -8,7 +8,15 @@ module.exports = {
       spacing: {
         '35': '35rem',
     },
+    fontFamily: {
+      inter: ["Inter", "sans-serif"],
+  },
+  container: {
+    center: true,
+    padding: "8rem",
+},
   },
   plugins: [],
 }
 }
+    
