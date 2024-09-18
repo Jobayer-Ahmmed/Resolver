@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- sub menu -->
+    <div
+        class="hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
+        <div>
+            <button class="px-4 py-2">Dashboard</button>
+            <button class="px-4 py-2 border border-black rounded  text-black">Profiles</button>
+            <button class="px-4 py-2 ">Settings</button>
+        </div>
+        <div class="border-2 border-gray-300 rounded py-2 px-4">
+            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+            <input type="text" class="border-collapse outline-none" placeholder="Search" name="" id="">
+        </div>
+    </div>
+    <!-- title section -->
+    <section class="bg-[#F6FBFD] py-10 px-20 xl:flex justify-start items-center gap-5 hidden">
+        <p><i class="fa-solid fa-arrow-left p-2 bg-white shadow-md"></i></p>
+        <p class="text-3xl font-medium">Complaint Tracking</p>
+    </section>
+    <!-- -->
+    <section class=" container xl:px-20 px-4 bg-[#B5B5B5] py-10 xl:py-20">
+        <!-- steps -->
+<div class="flex justify-between items-end  bg-white xl:px-10 px-4 py-10 rounded ">
+    <div class="flex xl:flex-col flex-row gap-5 xl:gap-0">
+        <div class="flex xl:flex-row flex-col items-center text-white">
+            <div>
+                <div class="w-7 h-7 flex justify-center items-center rounded-full bg-[#4CAF50]"><i
+                        class="fa-solid fa-check"></i></div>
+            </div>
+            <div class="xl:w-full xl:h-1 w-1 h-16 bg-[#4CAF50]"></div>
+            <div>
+                <div class="w-7 h-7 flex justify-center items-center rounded-full bg-[#4CAF50]"><i
+                        class="fa-solid fa-check"></i></div>
+            </div>
+            <div class="xl:w-full xl:h-1 w-1 h-16 bg-[#4CAF50]"></div>
+            <div>
+                <div class="w-7 h-7 flex justify-center items-center rounded-full bg-[#4CAF50]"><i
+                        class="fa-solid fa-check"></i></div>
+            </div>
+            <div class="xl:w-full xl:h-1 w-1 h-16 bg-[#4CAF50]"></div>
+            <div>
+                <div class="w-7 h-7 flex justify-center items-center rounded-full bg-[#4CAF50]"><span
+                        class="bg-white w-2 h-2 rounded-full"></span></div>
+            </div>
+        </div>
+        <div class="flex  xl:flex-row flex-col  justify-between mt-5 font-medium">
+            <p>Submitted</p>
+            <p>Assigned to resolver</p>
+            <p>Assign to regulator</p>
+            <p>Resolved</p>
+        </div>
+    </div>
+<img class="-mb-8 -mr-3 xl:hidden block" src="../assets/images/green-plus.png" alt="">
+</div>
+
+        <!-- Complaint explanation -->
+        <div class="mt-10 bg-white  xl:px-10 px-4 py-10 rounded ">
+            <div class="flex flex-col xl:flex-row xl:justify-between gap-5 xl:gap-0">
+                <div class="flex gap-2">
+                    <div class=" flex justify-start xl:justify-center items-center gap-3">
+                        <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
+                        </div>
+                        <div>
+                            <div class="flex justify-center items-center gap-2">
+                                <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
+                                <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex flex-col  xl:gap-2">
+                    <p class="font-medium">Tracking number</p>
+                    <p>#569874</p>
+                </div>
+            </div>
+            <div class="mt-5">
+                <h4 class="text-2xl font-medium mb-1">Issues with Installation</h4>
+                <p>Complaint resolution is crucial to good customer service. Eventually, it leads to the company or
+                    brand’s good name recognition and reputation, bringing more customers and profit.
+                    Quickly handling and resolving client complaints may enhance the procedures and reputation of your
+                    company. You should expect a consumer complaint to come in at some point for your company. Your
+                    clients will remain loyal if you handle the situation positively and constructively.</p>
+            </div>
+            <div class="mt-5 flex xl:flex-row flex-col xl:justify-between ">
+                <div>
+                    <p class="text-lg">Complaint Status</p>
+                    <div class="flex justify-star items-center mt-2 gap-3">
+                        <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
+                        <p class="text-[#666] font-medium">Resolved</p>
+                    </div>
+                </div>
+                <div class="flex gap-2 items-center text-[#949494]">
+                    <div>
+                        <p>Submitted on</p>
+                    </div>
+                    <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
+                    <div>
+                        <p>1 Apr 2024</p>
+                    </div>
+                    <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
+                    <div>
+                        <p>3PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FFQ -->
+        <div class="mt-10 bg-white  xl:px-10 px-4 py-10 rounded ">
+            <!-- 1st ffq -->
+            <div>
+                <div class="flex  items-start xl:items-center gap-2">
+                    <div>
+                        <i class="fa-regular fa-comment-dots text-green-500 text-xl font-medium"></i>
+                    </div>
+                    <h4 class=" text-xl font-medium mb-2">The BBB will send your complaint to the business and request
+                        their response.</h4>
+                </div>
+                <p>We have asked the business to reply promptly, but some disputes may take longer than others to
+                    conclude. Please be patient to ensure that your concerns are addressed. Once a response is
+                    received from the business, normally within 14 days, we will notify you via email and ask for
+                    your feedback.</p>
+            </div>
+            <!-- 2nd ffq -->
+            <div class="mt-5">
+                <div class="flex  items-start xl:items-center gap-2">
+                    <div>
+                        <i class="fa-regular fa-handshake text-green-500 text-xl font-medium"></i>
+                    </div>
+                    <h4 class=" text-xl font-medium mb-2">What if I do not agree with the response from the business?
+                    </h4>
+                </div>
+                <p>We have asked the business to reply promptly, but some disputes may take longer than others to
+                    conclude. Please be patient to ensure that your concerns are addressed. Once a response is
+                    received from the business, normally within 14 days, we will notify you via email and ask for
+                    your feedback.</p>
+            </div>
+            <!-- 3rd ffq -->
+            <div class="mt-5">
+                <div class="flex items-start xl:items-center gap-2">
+                    <div>
+                        <i class="fa-solid fa-gear  text-green-500"></i>
+                    </div>
+                    <h4 class=" text-xl font-medium mb-2">What happens if a business does not respond?</h4>
+                </div>
+                <p>We have asked the business to reply promptly, but some disputes may take longer than others to
+                    conclude. Please be patient to ensure that your concerns are addressed. Once a response is
+                    received from the business, normally within 14 days, we will notify you via email and ask for
+                    your feedback.</p>
+            </div>
+        </div>
+
+        <!-- notice -->
+        <div class="mt-10 bg-white  xl:px-10 px-4 py-10 rounded ">
+            <h4 class="mb-2 font-medium">Notice:</h4>
+            <div class="mb-2">
+                <div class="flex gap-2 items-start xl:items-center">
+                    <i class="fa-regular fa-circle-check text-[#4CAF50]"></i>
+                    <p>Your complaint cannot be changed, edited or deleted once it has been submitted.</p>
+                </div>
+            </div>
+            <div class="mb-2">
+                <div class="flex gap-2 items-start xl:items-center">
+                    <i class="fa-regular fa-circle-check text-[#4CAF50]"></i>
+                    <p>An exact copy of your complaint will be sent to the business.</p>
+                </div>
+            </div>
+            <div class="mb-2">
+                <div class="flex gap-2 items-start xl:items-center">
+                    <i class="fa-regular fa-circle-check text-[#4CAF50]"></i>
+                    <p>Your complaint cannot be changed, edited or deleted once it has been submitted.</p>
+                </div>
+            </div>
+            <div class="mb-2">
+                <div class="flex gap-2 items-start xl:items-center">
+                    <i class="fa-regular fa-circle-check text-[#4CAF50]"></i>
+                    <p>An exact copy of your complaint will be sent to the business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Review section -->
+    <section class="container xl:px-20 px-4 flex xl:flex-row flex-col justify-between bg-[#ECEFEE] py-24">
+        <div>
+            <h1 class="text-4xl font-medium text-[#273F2B] xl:mb-3 mb-4 xl:text-left text-center">Your Next Review is
+                <br class="xl:hidden block"> Just <br class="xl:block hidden"> Around the Corner
+            </h1>
+            <p class="xl:text-left text-center">We're currently out of suggestions for you. Keep using Yelp, and we'll
+                have <br class="xl:block hidden"> new recommendations for
+                you
+                soon.</p>
+            <button
+                class="xl:w-auto w-full  xl:mt-10 xl:my-0 my-9 px-10 py-3 rounded-full bg-[#78EB54] text-black text-lg font-semibold"><span
+                    class="xl:block hidden">Join Our Community</span><span class="block xl:hidden">Write First
+                    Review</span></button>
+        </div>
+        <div class="relative">
+            <div><img class="w-[400px] rounded-xl" src="../assets/images/review_gay.png" alt=""></div>
+            <div
+                class="absolute bottom-0 xl:-left-16 left-1/2 -translate-x-1/2 xl:-translate-x-0 -mb-8 xl:-mb-0  xl:w-[360px] w-80 bg-[#78EB54] flex justify-between items-center p-3 pr-5 rounded-full">
+                <div class="bg-white w-16 xl:w-20 h-10 flex justify-between items-center px-4 rounded-full ">
+                    <div class="w-2 h-2 rounded-full bg-gray-700"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-700"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-700"></div>
+                </div>
+                <p class="text-[#26422B] text-xl xl:text-2xl font-bold">Share your thought</p>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
