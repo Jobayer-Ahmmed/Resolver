@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function showAlert() {
     alert("Button clicked!");
 
@@ -18,12 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-<<<<<<< HEAD
-=======
->>>>>>> souravbsk
-=======
 
-// Mobile Menu Trigger
 const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
 
@@ -31,7 +26,6 @@ const mobileMenuButton = document.getElementById('mobile-menu-button');
     mobileMenu.classList.toggle('hidden');
   });
 
-// Mobile Category 
 const categories = [
   { title: "Easiest Admin", date: "Fall 2024" },
   { title: "Fastest Implementation", date: "Summer 2024" },
@@ -120,8 +114,3 @@ window.addEventListener("resize", renderCategories);
 
 
 
-
-
-
->>>>>>> 3c69ac620c985bf886ad12e5c013376e4a7672f8
->>>>>>> 52f7d51d2721e392eb341d23637c7452e71e6ab1
