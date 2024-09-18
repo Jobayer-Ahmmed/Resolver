@@ -2,96 +2,845 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Web App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Web App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-gray-100">
-    <nav class="bg-white shadow-lg py-4">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <!-- Logo -->
-            <div class="text-2xl font-bold text-green-500">Resolver</div>
-
-            <!-- Nav Links (Hidden on mobile, shown on desktop) -->
-            <div class="overhidden hidden md:flex space-x-6 text-gray-600">
-                <a href="#" class="hover:text-green-500">Home</a>
-                <a href="#" class="hover:text-green-500">How It Works</a>
-                <a href="#" class="hover:text-green-500">Read Reviews</a>
-                <a href="#" class="hover:text-green-500">Write Review</a>
-                <a href="#" class="hover:text-green-500">About Us</a>
-                <a href="#" class="hover:text-green-500">Contact</a>
-            </div>
-
-            <!-- Sign In and Sign Up Buttons -->
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="#" class="text-gray-600 hover:text-green-500">Sign In</a>
-                <a href="#" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Sign Up</a>
-            </div>
-
-            <!-- Mobile Menu Icon -->
-            <div class="md:hidden">
-                <button class="text-gray-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-            </div>
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex-shrink-0">
+          <!-- Logo -->
+          <a href="#" class="flex items-center">
+            <img src="./src/assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+            <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
+          </a>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-green-900 text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Get the Real Inside Story from </br><span
-                    class="text-green-400">Shoppers Like You</span></h1>
-            <p class="text-lg md:text-xl mb-8">Discover and share your reviews on Resolver.ng today. Start reading and
-                writing reviews on Resolver.ng now.</p>
-              <div class=" flex flex-col md:flex-row items-center border-2 rounded-full pl-5 p-1.5 max-w-full md:max-w-md mx-auto bg-white gap-2 md:gap-1">
-                <div class="flex items-center w-full md:w-auto">
-                  <i class="fa-solid fa-search text-[#9CA3AF]"></i>
-                  <input type="text" placeholder="Search for reviews, companies, or categories..." class="flex-grow px-2 py-2 text-sm focus:outline-none w-full" />
-                </div>
-              
-                <!-- Hidden on mobile, visible on medium and larger screens -->
-                <div class="hidden md:flex items-center border-l border-gray-300 pr-2 pl-2">
-                  <i class="fa-solid fa-location-dot text-[#9CA3AF]"></i>
-                  <span class="ml-2 text-sm text-gray-700">San Francisco, CA</span>
-                </div>
-              
-                <button class="w-full md:w-auto bg-green-400 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-green-500 focus:outline-none">
-                  Search
-                </button>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">Home</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+          <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center space-x-4">
+          <!-- Sign In -->
+          <a href="./src/pages/signin.html" class="text-gray-900 hover:text-green-500 transition">Sign In</a>
+
+          <!-- Sign Up -->
+          <a href="./src/pages/signup.html" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden">
+      <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Home</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+        <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="bg-[#273f2b] relative text-white pt-24 h-[33rem]">
+    <div class=" flex flex-col items-center gap-y-4 justify-center a max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold">
+        Get the Real Inside Story from
+      </h1>
+      <h2 class="text-3xl md:text-5xl font-bold text-green-500">
+        Shoppers Like You
+      </h2>
+      <p class="mt-4 text-sm md:text-base">
+        Discover and share your reviews on Resolver.ng today. Start reading<br />
+        and writing reviews on Resolver.ng now.
+      </p>
+
+      <div class="hidden md:flex items-center bg-gray-100 p-2 rounded-full shadow-sm w-full max-w-lg">
+        <i class="fas fa-search h-4 w-6 text-gray-400"></i>
+        <input type="text" placeholder="Search for reviews, companies, or categories." class="bg-transparent focus:outline-none px-2 text-sm w-full" />
+        <div class="flex items-center border-l border-gray-300 pl-2">
+          <i class="fa-solid fa-location-crosshairs h-5 w-5 text-gray-400"></i>
+            <input type="text" placeholder="San Francisco,CA" class="bg-transparent focus:outline-none text-sm w-32 pl-2" />
+        </div>
+        <div class="border-l h-auto mx-2"></div>
+        <button class="bg-green-500 text-white px-6 py-2 rounded-full text-sm ml-2 focus:outline-none hover:bg-green-600 transition">
+            Search
+        </button>
+    </div>
+
+    <!-- Mobile version, hidden on desktop -->
+    <div class="flex flex-col md:hidden p-4 rounded-lg shadow-sm w-full max-w-md mx-auto">
+      <div class="relative w-full">
+          <input type="text" placeholder="Search for reviews, companies, or categories..." class="bg-white focus:outline-none px-4 py-3 pl-7 rounded-full text-sm mb-3 shadow-sm w-full pr-10" />
+          <i class="fas fa-search absolute left-0 top-[1.3rem] pl-2 transform -translate-y-1/2 text-gray-400"></i>
+      </div>
+      <button class="bg-green-500 text-white py-3 rounded-full text-sm focus:outline-none hover:bg-green-600 transition shadow-lg">
+          Search
+      </button>
+  </div>
+  
+
+    <!-- Star and Thumb Images -->
+    <div class="display flex flex-col justify-end absolute bottom-0 left-0 w-1/4 bg-contain bg-no-repeat">
+      <img src="./src/assets/images/hand-holding-star-removebg1.png" alt="Logo" class="h-16 md:h-64 w-auto" />
+    </div>
+    <div class="absolute bottom-0 right-0 w-1/4 bg-contain bg-no-repeat transform -scale-x-100">
+      <img src="./src/assets/images/hand-holding-star-removebg1.png" alt="Logo" class="h-16 md:h-64 w-auto" />
+    </div>
+  </section>
+
+  <!-- Logo Section -->
+  <section class="py-12 bg-white">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-500 text-sm md:text-base mb-4">
+        Trusted by leading brands across frontline industries
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4 items-center justify-center">
+        <div class="flex items-center justify-center">
+          <img src="./src/assets/images/Logo1.png" alt="Logo 1" class="h-8 grayscale hover:grayscale-0" />
+        </div>
+
+        <div class="flex items-center justify-center">
+          <img src="./src/assets/images/Logo2.png" alt="Logo 2" class="h-8 grayscale hover:grayscale-0" />
+        </div>
+
+        <div class="flex items-center justify-center">
+          <img src="./src/assets/images/Logo3.png" alt="Logo 3" class="h-8 grayscale hover:grayscale-0" />
+        </div>
+
+        <div class="flex items-center justify-center">
+          <img src="./src/assets/images/Logo4.png" alt="Logo 4" class="h-8 grayscale hover:grayscale-0" />
+        </div>
+
+        <div class="flex items-center justify-center">
+          <img src="./src/assets/images/Logo5.png" alt="Logo 5" class="h-8 grayscale hover:grayscale-0" />
+        </div>
+
+        <div class="flex items-center justify-center">
+          <img src="./src/assets/images/Logo6.png" alt="Logo 6" class="h-8 grayscale hover:grayscale-0" />
+        </div>
+
+        <div class="flex items-center justify-center">
+          <img src="./src/assets/images/Logo7.png" alt="Logo 7" class="h-8 grayscale hover:grayscale-0" />
+        </div>
+
+        <div class="flex items-center justify-center">
+          <img src="./src/assets/images/Logo8.png" alt="Logo 8" class="h-8 grayscale hover:grayscale-0" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Resolver Works -->
+  <section class="md:py-32 py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h4 class="text-blue-500 text-sm mb-2">How it works</h4>
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">
+        How Resolver Works
+      </h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-12">
+        Resolver software is a type of software tool used for data analysis
+        and reporting. It is designed to help businesses, organizations.
+      </p>
+
+      <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8">
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 mb-4">
+            <img src="./src/assets/images/sky.png" alt="complaints" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            Submitting Complaints
+          </h3>
+          <p class="text-gray-500 text-sm max-w-xs">
+            Explore honest reviews from real shoppers to make informed
+            decisions. Find out what others are saying about products and
+            services.
+          </p>
+        </div>
+
+        <div class="hidden md:block text-3xl text-blue-400">
+          <img src="./src/assets/images/Arrow-sky.png" alt="arrow-sky" />
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 mb-4">
+            <img src="./src/assets/images/purple.png" alt="tracking" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Tracking Them</h3>
+          <p class="text-gray-500 text-sm max-w-xs">
+            Share your own experiences with our community. Help others by
+            providing detailed feedback on your purchases and interactions.
+          </p>
+        </div>
+
+        <div class="hidden md:block text-3xl text-blue-400">
+          <img src="./src/assets/images/Arrow-pruple.png" alt="arrow-purple" />
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 mb-4">
+            <img src="./src/assets/images/greeen.png" alt="resolution" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Resolution</h3>
+          <p class="text-gray-500 text-sm max-w-xs">
+            Use the insights from reviews to choose the best products and
+            services. Our platform helps you make decisions you can trust.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Make your voice hard -->
+  <section class="relative bg-[#273f2b] md:pt-32">
+    <!-- Top Left Background Image -->
+    <div class="hidden md:block absolute top-0 left-0 w-32 h-32 opacity-40" style="
+          background-image: url('./src/assets/images/floral.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+        "></div>
+
+    <!-- Bottom Right Background Image -->
+    <div class="hidden md:block absolute bottom-0 right-0 w-32 h-32 opacity-40" style="
+          background-image: url('./src/assets/images/floral.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+        "></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
+      <!-- Image Section (now comes second on mobile) -->
+      <div class="mt-16 md:mb-0 md:mt-0 md:w-1/2">
+        <div class="relative">
+          <img src="./src//assets/images/make-your-voice-heard.png" alt="Person with laptop" class="w-full h-auto" />
+        </div>
+      </div>
+      <!-- Text Section (now comes first on mobile) -->
+      <div class="md:w-1/2 text-white flex flex-col items-center md:items-start md:ml-12 mt-8 md:mt-0">
+        <h2 class="text-3xl font-bold mb-4 text-center md:text-left">
+          Make your voice heard
+        </h2>
+        <p class="text-lg mb-6 text-center md:text-left">
+          Resolver NG is a review platform that's open to everyone. Share your
+          experiences to help others make better choices and encourage
+          companies to up their game.
+        </p>
+        <a href="#"
+          class="bg-green-500 text-white py-3 px-6 rounded-full hover:bg-green-600 transition w-full md:w-auto text-center">
+          Join Our Community
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review Section -->
+  <section class="md:py-32 py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h4 class="text-blue-500 text-sm mb-2">Reviews</h4>
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Recent Review</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-12">
+        Help others by providing detailed feedback on your purchases and interactions.
+      </p>
+
+      <!-- Review Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Single Review Card (repeat as needed) -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <!-- Review Card Header -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+              <img src="./src/assets/images/reveiw-profile-image.png" alt="User Avatar"
+                class="w-10 h-10 rounded-full mr-3">
+              <div>
+                <h5 class="font-bold text-gray-800 text-start">Cameron Williamson</h5>
+                <p class="text-sm text-gray-400 text-start">5 minutes ago</p>
               </div>
+            </div>
+            <div class="flex items-center">
+              <img src="./src/assets/images/star.png" alt="star" class="h-5 w-5" />
+              <span class="text-green-500 font-bold mr-1">4.9</span>
+            </div>
+          </div>
 
+          <div class="flex justify-between mb-2">
+            <h4 class="font-semibold text-lg text-gray-800 text-start">Ocean Villa</h4>
+            <h5 class="font-light text-xs text-gray-400">See all photos</h5>
+          </div>
 
-            
-            <!-- <div class="mt-10 flex justify-center items-center space-x-4">
-                <div class="flex space-x-1">
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8 text-yellow-500"
-                        viewBox="0 0 20 20">
-                        <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.043 3.206a1 1 0 00.95.69h3.356c.969 0 1.371 1.24.588 1.81l-2.717 1.973a1 1 0 00-.364 1.118l1.043 3.206c.3.921-.755 1.688-1.54 1.118l-2.717-1.973a1 1 0 00-1.175 0l-2.717 1.973c-.784.57-1.838-.197-1.54-1.118l1.043-3.206a1 1 0 00-.364-1.118L2.64 8.633c-.783-.57-.38-1.81.588-1.81h3.356a1 1 0 00.95-.69l1.043-3.206z" />
-                    </svg>
-                    
-                </div>
+          <!-- Review Images -->
+          <div class="flex space-x-2 mb-4">
+            <img src="./src/assets/images/review-image1.png" alt="Review Image"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/review-image2.png" alt="Review Image"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/review-image3.png" alt="Review Image"
+              class="w-1/3 h-20 object-cover rounded-lg">
+          </div>
 
-                
-                <div class="flex space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-10 h-10" viewBox="0 0 20 20">
-                        <path
-                            d="M2 10h4v7H2v-7zM14 10h-4v7h4v-7zM14 4H9v3h5V4zm6 3H16v3h4V7zm-4 3v7h-2V10h-4V9.156L15.68 5.61A1 1 0 0015 4V2a1 1 0 00-1-1H8.263a2 2 0 00-1.197.403L4.26 3.714 3 4.76V10h2V5.531l3.309-.829a1 1 0 01.622.186l3.42 3.025v6.087h3v-7H18z" />
-                    </svg>
-                </div>
-            </div>  -->
+          <!-- Review Content -->
+          <p class="text-sm text-gray-500 mb-4 text-start">
+            Dramatically improved our ability to manage contracts accurately and quickly. The intuitive interface and
+            robust feature set perfectly match the requirements of
+            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+          </p>
+
+          <!-- Action Icons -->
+          <div class="flex justify-between text-gray-400 text-sm">
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/thumbs-up.png" alt="thumbs-up" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/ai-idea.png" alt="ai-idea" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/in-love.png" alt="in-love" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/sad-02.png" alt="sad" class="h-5 w-5" />
+            </button>
+          </div>
         </div>
-    </section>
 
-    <script src="../src/assets/js/main.js"></script>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <!-- Review Card Header -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+              <img src="./src/assets/images/reveiw-profile-image.png" alt="User Avatar"
+                class="w-10 h-10 rounded-full mr-3">
+              <div>
+                <h5 class="font-bold text-gray-800 text-start">Cameron Williamson</h5>
+                <p class="text-sm text-gray-400 text-start">5 minutes ago</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="./src/assets/images/star.png" alt="star" class="h-5 w-5" />
+              <span class="text-green-500 font-bold mr-1">4.9</span>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-2">
+            <h4 class="font-semibold text-lg text-gray-800 text-start">Ocean Villa</h4>
+            <h5 class="font-light text-xs text-gray-400">See all photos</h5>
+          </div>
+
+          <!-- Review Images -->
+          <div class="flex space-x-2 mb-4">
+            <img src="./src/assets/images/restaurant-1.png" alt="restaurant-1"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/restaurant-2.png" alt="restaurant-2"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/restaurant-3.png" alt="restaurant-3"
+              class="w-1/3 h-20 object-cover rounded-lg">
+          </div>
+
+          <!-- Review Content -->
+          <p class="text-sm text-gray-500 mb-4 text-start">
+            Dramatically improved our ability to manage contracts accurately and quickly. The intuitive interface and
+            robust feature set perfectly match the requirements of
+            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+          </p>
+
+          <!-- Action Icons -->
+          <div class="flex justify-between text-gray-400 text-sm">
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/thumbs-up.png" alt="thumbs-up" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/ai-idea.png" alt="ai-idea" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/in-love.png" alt="in-love" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/sad-02.png" alt="sad" class="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <!-- Review Card Header -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+              <img src="./src/assets/images/reveiw-profile-image.png" alt="User Avatar"
+                class="w-10 h-10 rounded-full mr-3">
+              <div>
+                <h5 class="font-bold text-gray-800 text-start">Cameron Williamson</h5>
+                <p class="text-sm text-gray-400 text-start">5 minutes ago</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="./src/assets/images/star.png" alt="star" class="h-5 w-5" />
+              <span class="text-green-500 font-bold mr-1">4.9</span>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-2">
+            <h4 class="font-semibold text-lg text-gray-800 text-start">Ocean Villa</h4>
+            <h5 class="font-light text-xs text-gray-400">See all photos</h5>
+          </div>
+
+          <!-- Review Images -->
+          <div class="flex space-x-2 mb-4">
+            <img src="./src/assets/images/food-cart1.png" alt="food-cart1"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/food-cart2.png" alt="food-cart2"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/food-cart3.png" alt="food-cart3"
+              class="w-1/3 h-20 object-cover rounded-lg">
+          </div>
+
+          <!-- Review Content -->
+          <p class="text-sm text-gray-500 mb-4 text-start">
+            Dramatically improved our ability to manage contracts accurately and quickly. The intuitive interface and
+            robust feature set perfectly match the requirements of
+            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+          </p>
+
+          <!-- Action Icons -->
+          <div class="flex justify-between text-gray-400 text-sm">
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/thumbs-up.png" alt="thumbs-up" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/ai-idea.png" alt="ai-idea" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/in-love.png" alt="in-love" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/sad-02.png" alt="sad" class="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <!-- Review Card Header -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+              <img src="./src/assets/images/reveiw-profile-image.png" alt="User Avatar"
+                class="w-10 h-10 rounded-full mr-3">
+              <div>
+                <h5 class="font-bold text-gray-800 text-start">Cameron Williamson</h5>
+                <p class="text-sm text-gray-400 text-start">5 minutes ago</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="./src/assets/images/star.png" alt="star" class="h-5 w-5" />
+              <span class="text-green-500 font-bold mr-1">4.9</span>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-2">
+            <h4 class="font-semibold text-lg text-gray-800 text-start">Ocean Villa</h4>
+            <h5 class="font-light text-xs text-gray-400">See all photos</h5>
+          </div>
+
+          <!-- Review Images -->
+          <div class="flex space-x-2 mb-4">
+            <img src="./src/assets/images/review-image1.png" alt="Review Image"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/review-image2.png" alt="Review Image"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/review-image3.png" alt="Review Image"
+              class="w-1/3 h-20 object-cover rounded-lg">
+          </div>
+
+          <!-- Review Content -->
+          <p class="text-sm text-gray-500 mb-4 text-start">
+            Dramatically improved our ability to manage contracts accurately and quickly. The intuitive interface and
+            robust feature set perfectly match the requirements of
+            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+          </p>
+
+          <!-- Action Icons -->
+          <div class="flex justify-between text-gray-400 text-sm">
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/thumbs-up.png" alt="thumbs-up" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/ai-idea.png" alt="ai-idea" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/in-love.png" alt="in-love" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/sad-02.png" alt="sad" class="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <!-- Review Card Header -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+              <img src="./src/assets/images/reveiw-profile-image.png" alt="User Avatar"
+                class="w-10 h-10 rounded-full mr-3">
+              <div>
+                <h5 class="font-bold text-gray-800 text-start">Cameron Williamson</h5>
+                <p class="text-sm text-gray-400 text-start">5 minutes ago</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="./src/assets/images/star.png" alt="star" class="h-5 w-5" />
+              <span class="text-green-500 font-bold mr-1">4.9</span>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-2">
+            <h4 class="font-semibold text-lg text-gray-800 text-start">Ocean Villa</h4>
+            <h5 class="font-light text-xs text-gray-400">See all photos</h5>
+          </div>
+
+          <!-- Review Images -->
+          <div class="flex space-x-2 mb-4">
+            <img src="./src/assets/images/restaurant-1.png" alt="restaurant-1"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/restaurant-2.png" alt="restaurant-2"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/restaurant-3.png" alt="restaurant-3"
+              class="w-1/3 h-20 object-cover rounded-lg">
+          </div>
+
+          <!-- Review Content -->
+          <p class="text-sm text-gray-500 mb-4 text-start">
+            Dramatically improved our ability to manage contracts accurately and quickly. The intuitive interface and
+            robust feature set perfectly match the requirements of
+            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+          </p>
+
+          <!-- Action Icons -->
+          <div class="flex justify-between text-gray-400 text-sm">
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/thumbs-up.png" alt="thumbs-up" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/ai-idea.png" alt="ai-idea" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/in-love.png" alt="in-love" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/sad-02.png" alt="sad" class="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <!-- Review Card Header -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+              <img src="./src/assets/images/reveiw-profile-image.png" alt="User Avatar"
+                class="w-10 h-10 rounded-full mr-3">
+              <div>
+                <h5 class="font-bold text-gray-800 text-start">Cameron Williamson</h5>
+                <p class="text-sm text-gray-400 text-start">5 minutes ago</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="./src/assets/images/star.png" alt="star" class="h-5 w-5" />
+              <span class="text-green-500 font-bold mr-1">4.9</span>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-2">
+            <h4 class="font-semibold text-lg text-gray-800 text-start">Ocean Villa</h4>
+            <h5 class="font-light text-xs text-gray-400">See all photos</h5>
+          </div>
+
+          <!-- Review Images -->
+          <div class="flex space-x-2 mb-4">
+            <img src="./src/assets/images/food-cart1.png" alt="food-cart1"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/food-cart2.png" alt="food-cart2"
+              class="w-1/3 h-20 object-cover rounded-lg">
+            <img src="./src/assets/images/food-cart3.png" alt="food-cart3"
+              class="w-1/3 h-20 object-cover rounded-lg">
+          </div>
+
+          <!-- Review Content -->
+          <p class="text-sm text-gray-500 mb-4 text-start">
+            Dramatically improved our ability to manage contracts accurately and quickly. The intuitive interface and
+            robust feature set perfectly match the requirements of
+            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+          </p>
+
+          <!-- Action Icons -->
+          <div class="flex justify-between text-gray-400 text-sm">
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/thumbs-up.png" alt="thumbs-up" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/ai-idea.png" alt="ai-idea" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/in-love.png" alt="in-love" class="h-5 w-5" />
+            </button>
+            <button class="flex items-center">
+              <img src="./src/assets/images/Icon/sad-02.png" alt="sad" class="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="text-white flex flex-col items-center mt-8">
+        <a href="#"
+          class="bg-green-500 text-white py-3 px-6 rounded-full hover:bg-green-600 transition w-full md:w-auto text-center">
+          View all
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="bg-green-100 md:py-32 py-12 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Category Title -->
+      <h4 class="text-blue-500 text-sm mb-2">Categories</h4>
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Explore Our Categories</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-12">
+        Resolver is a user-friendly platform for reading, writing, and sharing reviews. Access a vast database of feedback to make informed decisions and contribute your own insights to help others.
+      </p>
+  
+      <!-- First Section for Categories -->
+      <div id="firstCategoryGrid" class="flex flex-wrap justify-center gap-4 mb-8"></div>
+  
+      <!-- Second Section for Categories -->
+      <div id="secondCategoryGrid" class="flex flex-wrap justify-center gap-4 mb-8"></div>
+  
+      <!-- View All Button -->
+      <div class="mt-8">
+        <a href="#" class="bg-green-500 text-white py-3 px-8 rounded-full hover:bg-green-600 transition">
+          View All
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About us -->
+  <section class="md:py-32 py-12  bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 md:gap-20">
+      <!-- About Us Title -->
+      <div class="text-center px-4 sm:px-6 lg:px-8">
+        <h4 class="text-blue-500 text-sm mb-2">About us</h4>
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Resolving Your Concerns, <br> One Step at a Time</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">
+          At Resolver, we swiftly and effectively resolve your concerns. We ensure clear communication between consumers and businesses, delivering the outcomes you deserve.
+        </p>
+      </div>
+  
+      <!-- Image and Stats Section -->
+      <div class="bg-[#f9fafb] rounded-lg px-4 sm:px-6 pt-12  md:p-24 flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
+        <!-- Image Section (First on desktop, Second on mobile) -->
+        <div class="md:w-1/2 md:mr-8">
+          <img src="./src/assets/images/about-us.png" alt="Discussion Image" class="w-full h-auto rounded-lg">
+        </div>
+      
+        <!-- Stats Section (Second on desktop, First on mobile) -->
+        <div class="md:w-1/2 flex flex-col gap-6 text-left">
+          <div>
+            <h4 class="text-blue-500 text-center text-sm md:text-start mb-2">Build better, growth faster</h4>
+          <h3 class="lg:w-[30rem] text-2xl text-center md:text-start md:text-4xl font-bold text-gray-800 mb-4">We’re only just getting started on our journey</h3>
+          </div>
+      
+          <!-- Stats Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Single Stat -->
+            <div class="text-center md:text-left">
+              <p class="text-4xl font-extrabold text-green-400 mb-1">400+</p>
+              <p class="text-gray-500 text-sm">Clients Satisfied</p>
+            </div>
+            <div class="text-center md:text-left">
+              <p class="text-4xl font-extrabold text-green-400 mb-1">600%</p>
+              <p class="text-gray-500 text-sm">Return on investment</p>
+            </div>
+            <div class="text-center md:text-left">
+              <p class="text-4xl font-extrabold text-green-400 mb-1">10k</p>
+              <p class="text-gray-500 text-sm">Global downloads</p>
+            </div>
+            <div class="text-center md:text-left">
+              <p class="text-4xl font-extrabold text-green-400 mb-1">200+</p>
+              <p class="text-gray-500 text-sm">5-star reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Call to action-->
+  <section class="bg-white relative ">
+    <div class="max-w-7xl mx-auto  lg:px-8 md:gap-20">
+      <div class="bg-[#d8f7bc] md:rounded-lg px-4 sm:px-6 pt-12 pb-12 md:p-24 flex flex-col gap-4 md:gap-0 md:items-center md:justify-between">
+        <div class="text-center">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Let’s Start Something Great!</h2>
+          <p class="text-gray-600 mb-6 md:w-[25rem]">Sign up with your email address to be informed about discounts and new all campaigns!</p>
+        </div>
+        <!-- Email Input and Button -->
+        <div class="hidden sm:block">
+          <div class="flex flex-col justify-center">
+            <div class="flex items-center bg-white p-1 shadow-lg rounded-full overflow-hidden w-full max-w-lg mx-auto">
+              <input type="email" placeholder="Enter your email" class="flex-1 py-3 px-4 text-gray-700 focus:outline-none rounded-full">
+              <button class="bg-green-500 text-white py-3 px-6 hover:bg-green-600 transition rounded-full ml-2">Free Trial</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- For Mobile View (shown on screens below sm) -->
+        <div class="block sm:hidden">
+          <div class="flex flex-col sm:flex-row items-center max-w-lg mx-auto">
+            <input type="email" placeholder="Enter your email" class="flex-1 w-full md:w-auto py-3 px-4 mb-4 sm:mb-0 sm:mr-4 text-gray-700 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+            <a href="#"
+          class="bg-green-500 text-white py-3 px-6 rounded-full hover:bg-green-600 transition w-full md:w-auto text-center">
+          Free Trial
+        </a>
+          </div>
+        </div>
+        
+    
+        <!-- Thumbs Up Icon -->
+        <div class="absolute top-4 right-4 sm:top-8 sm:right-96">
+          <img src="./src/assets/images/3d-thumbs-up.png" alt="Thumbs Up Icon" class="md:h-24 md:w-24 h-12 w-12">
+        </div>
+      
+        </div>
+      </div>
+  </section>
+  
+  <!-- Footer Section -->
+  <footer class="md:pt-32 pt-12 bg-white text-white relative">
+    <div class=" bg-[#052e26] md:rounded-t-3xl ">
+      <div class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8  rounded">
+        <!-- Upper and Lower Footer: Combined Grid Layout -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+    
+          <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+          <div class="col-span-2 sm:col-span-1">
+            <div class="flex-shrink-0 mb-4">
+              <!-- Logo -->
+              <a href="#" class="flex items-center">
+                <img src="./src/assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+                <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
+              </a>
+            </div>
+            <p class="mb-4 w-[14rem] sm:w-full">Fun, engaging and authentic Platform</p>
+            <div class="flex space-x-4">
+              <a href="#"><img src="./src/assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5"></a>
+              <a href="#"><img src="./src/assets/images/Icon/youtube.png" alt="YouTube" class="h-5"></a>
+              <a href="#"><img src="./src/assets/images/Icon/twitter.png" alt="Twitter" class="h-5"></a>
+              <a href="#"><img src="./src/assets/images/Icon/facebook.png" alt="Facebook" class="h-5"></a>
+            </div>
+          </div>
+    
+          <!-- Product Links -->
+          <div>
+            <h4 class="font-bold mb-4">Product</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">About us</a></li>
+              <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+              <li><a href="#" class="hover:text-green-400">Contact</a></li>
+              <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+              <li><a href="#" class="hover:text-green-400">Log in</a></li>
+            </ul>
+          </div>
+    
+          <!-- Resources Links -->
+          <div>
+            <h4 class="font-bold mb-4">Resources</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">Learn</a></li>
+              <li><a href="#" class="hover:text-green-400">Videos</a></li>
+              <li><a href="#" class="hover:text-green-400">Help Center</a></li>
+              <li><a href="#" class="hover:text-green-400">Webinar Glossary</a></li>
+            </ul>
+          </div>
+    
+          <!-- More Links -->
+          <div>
+            <h4 class="font-bold mb-4">More</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">Our story</a></li>
+              <li><a href="#" class="hover:text-green-400">We’re hiring</a></li>
+              <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
+              <li><a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a></li>
+            </ul>
+          </div>
+  
+          <div class="block md:hidden">
+            <h4 class="font-bold mb-4">More</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">Trust Center</a></li>
+              <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
+              <li><a href="#" class="hover:text-green-400">Status</a></li>
+              <li><a href="#" class="hover:text-green-400">Legal</a></li>
+              <li><a href="#" class="hover:text-green-400">Do Not Sell My Info</a></li>
+              <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+            </ul>
+          </div>
+    
+        </div>
+  
+        <div class="border-t border-gray-600 py-4">
+          <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0">
+            <!-- Left Section: Links -->
+           <div class="hidden md:block">
+            <div class="flex flex-wrap justify-center sm:justify-start space-x-6">
+              <a href="#" class="hover:text-green-400">Trust Center</a>
+              <a href="#" class="hover:text-green-400">Privacy Policy</a>
+              <a href="#" class="hover:text-green-400">Status</a>
+              <a href="#" class="hover:text-green-400">Legal</a>
+              <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
+              <a href="#" class="hover:text-green-400">Opt out</a>
+            </div>
+           </div>
+        
+            <!-- Right Section: Copyright -->
+            <div class="text-center sm:text-right">
+              <p>© All rights reserved by Resolver NG.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Star Icon (Absolute Positioned) -->
+        <div class="absolute top-24 md:top-40 right-12 transform translate-x-1/4 -translate-y-1/4">
+          <img src="./src/assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
+        </div>
+    
+      </div>
+    </div>
+    
+  </footer>
+  
+  
+  
+
+
+  <script src="./src/js/main.js"></script>
 </body>
 
 </html>
