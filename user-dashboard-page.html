@@ -29,7 +29,7 @@
     <body class="bg-gray-100 container font-inter px-20">
         <!-- Navigation -->
         <nav
-            class="flex justify-between items-center mb-10 border-t border-b py-4"
+            class="sm:flex justify-between items-center mb-10 border-t border-b py-4 hidden"
         >
             <div class="flex space-x-4">
                 <button
@@ -72,7 +72,7 @@
         </nav>
 
         <!-- User Profile -->
-        <div class="text-center my-10 mt-4">
+        <div class="text-center my-10 mt-4 hidden sm:block">
             <img
                 src="./src/images/image 3.png"
                 alt="Profile Picture"
@@ -110,8 +110,53 @@
             </div>
         </div>
 
+        <!-- Mobile Dashboard -->
+        <div
+            class="flex items-center justify-center bg-gray-100 w-full my-4 min-w-sm sm:hidden"
+        >
+            <div class="p-4 bg-white shadow rounded-lg w-full">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-2xl font-bold font-inter py-2">
+                        Dashboard
+                    </h2>
+                </div>
+                <div class="flex space-x-2 items-center gap-4">
+                    <div
+                        class="border border-gray-200 rounded-md flex items-center py-2 divide-x-2"
+                    >
+                        <button class="px-3 text-sm font-medium text-gray-800">
+                            24h
+                        </button>
+                        <button class="px-3 text-sm font-medium text-gray-800">
+                            7d
+                        </button>
+                        <button class="px-3 text-sm font-medium text-gray-800">
+                            30d
+                        </button>
+                        <button class="px-3 text-sm font-medium text-gray-800">
+                            12m
+                        </button>
+                    </div>
+                    <svg
+                        class="w-8 h-8 text-gray-600 border border-gray-200 rounded-md p-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"
+                        ></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
         <!-- Complaints Dashboard -->
-        <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="bg-white rounded-lg shadow-md p-6 hidden sm:block">
             <div
                 class="flex flex-col md:flex-row justify-between items-center mb-6 border-2 border-r-0 border-l-0 border-t-gray-200 border-b-gray-200 py-4"
             >
@@ -1427,7 +1472,7 @@
 
         <!-- Time Period Tabs -->
         <div
-            class="flex space-x-4 my-8 px-4 bg-white rounded-lg shadow-lg py-3"
+            class="sm:flex space-x-4 my-8 px-4 bg-white rounded-lg shadow-lg py-3 hidden"
         >
             <button class="text-gray-600 px-2 py-1 rounded-md font-medium">
                 Today
@@ -1905,6 +1950,479 @@
                             </svg>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Complaints Mobile Section -->
+        <div class="bg-gray-100  sm:hidden w-full my-2">
+            <div class="mx-auto bg-white rounded-xl shadow-md overflow-hidden min-w-full">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h1 class="text-2xl font-semibold">All Complaints</h1>
+                        <button class="text-gray-400">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4">
+                        Keep track of your company ratings.
+                    </p>
+                    <div class="flex space-x-2 mb-4">
+                        <button
+                            class="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center text-sm"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                                />
+                            </svg>
+                            Export
+                        </button>
+                        <button
+                            class="px-4 py-2 bg-green-500 text-white rounded-md flex items-center text-sm"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 4v16m8-8H4"
+                                />
+                            </svg>
+                            Write Complaint
+                        </button>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="relative flex-grow">
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-sm"
+                            />
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 text-gray-400 absolute left-3 top-2"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                                />
+                            </svg>
+                        </div>
+                        <button
+                            class="ml-2 p-2 border border-gray-300 rounded-md"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 text-gray-400"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex space-x-2 mb-4">
+                        <button
+                            class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md text-sm font-medium"
+                        >
+                            View all
+                        </button>
+                        <button
+                            class="px-4 py-2 bg-white text-gray-600 rounded-md text-sm font-medium"
+                        >
+                            Resolved
+                        </button>
+                        <button
+                            class="px-4 py-2 bg-white text-gray-600 rounded-md text-sm font-medium"
+                        >
+                            Unresolved
+                        </button>
+                    </div>
+                    <div class="space-y-4">
+                        <!-- Repeat this block for each complaint -->
+                        <div
+                            class="flex justify-between items-center py-3 border-b"
+                        >
+                            <div>
+                                <h3 class="font-medium">Mobile App</h3>
+                                <p class="text-sm text-gray-500">
+                                    ID : #010203
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">22 Jun 2024</p>
+                                <p class="text-xs text-yellow-500">
+                                    Customer data
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p
+                                    class="text-sm text-green-500 flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 10l7-7m0 0l7 7m-7-7v18"
+                                        />
+                                    </svg>
+                                    High
+                                </p>
+                                <p class="text-xs text-blue-500">In Progress</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center py-3 border-b"
+                        >
+                            <div>
+                                <h3 class="font-medium">Mobile App</h3>
+                                <p class="text-sm text-gray-500">
+                                    ID : #010203
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">22 Jun 2024</p>
+                                <p class="text-xs text-yellow-500">
+                                    Customer data
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p
+                                    class="text-sm text-green-500 flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 10l7-7m0 0l7 7m-7-7v18"
+                                        />
+                                    </svg>
+                                    High
+                                </p>
+                                <p class="text-xs text-blue-500">In Progress</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center py-3 border-b"
+                        >
+                            <div>
+                                <h3 class="font-medium">Mobile App</h3>
+                                <p class="text-sm text-gray-500">
+                                    ID : #010203
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">22 Jun 2024</p>
+                                <p class="text-xs text-yellow-500">
+                                    Customer data
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p
+                                    class="text-sm text-green-500 flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 10l7-7m0 0l7 7m-7-7v18"
+                                        />
+                                    </svg>
+                                    High
+                                </p>
+                                <p class="text-xs text-blue-500">In Progress</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center py-3 border-b"
+                        >
+                            <div>
+                                <h3 class="font-medium">Mobile App</h3>
+                                <p class="text-sm text-gray-500">
+                                    ID : #010203
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">22 Jun 2024</p>
+                                <p class="text-xs text-yellow-500">
+                                    Customer data
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p
+                                    class="text-sm text-green-500 flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 10l7-7m0 0l7 7m-7-7v18"
+                                        />
+                                    </svg>
+                                    High
+                                </p>
+                                <p class="text-xs text-blue-500">In Progress</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center py-3 border-b"
+                        >
+                            <div>
+                                <h3 class="font-medium">Mobile App</h3>
+                                <p class="text-sm text-gray-500">
+                                    ID : #010203
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">22 Jun 2024</p>
+                                <p class="text-xs text-yellow-500">
+                                    Customer data
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p
+                                    class="text-sm text-green-500 flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 10l7-7m0 0l7 7m-7-7v18"
+                                        />
+                                    </svg>
+                                    High
+                                </p>
+                                <p class="text-xs text-blue-500">In Progress</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center py-3 border-b"
+                        >
+                            <div>
+                                <h3 class="font-medium">Mobile App</h3>
+                                <p class="text-sm text-gray-500">
+                                    ID : #010203
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">22 Jun 2024</p>
+                                <p class="text-xs text-yellow-500">
+                                    Customer data
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p
+                                    class="text-sm text-green-500 flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 10l7-7m0 0l7 7m-7-7v18"
+                                        />
+                                    </svg>
+                                    High
+                                </p>
+                                <p class="text-xs text-blue-500">In Progress</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center py-3 border-b"
+                        >
+                            <div>
+                                <h3 class="font-medium">Mobile App</h3>
+                                <p class="text-sm text-gray-500">
+                                    ID : #010203
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">22 Jun 2024</p>
+                                <p class="text-xs text-yellow-500">
+                                    Customer data
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p
+                                    class="text-sm text-green-500 flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 10l7-7m0 0l7 7m-7-7v18"
+                                        />
+                                    </svg>
+                                    High
+                                </p>
+                                <p class="text-xs text-blue-500">In Progress</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center py-3 border-b"
+                        >
+                            <div>
+                                <h3 class="font-medium">Mobile App</h3>
+                                <p class="text-sm text-gray-500">
+                                    ID : #010203
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm">22 Jun 2024</p>
+                                <p class="text-xs text-yellow-500">
+                                    Customer data
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <p
+                                    class="text-sm text-green-500 flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 10l7-7m0 0l7 7m-7-7v18"
+                                        />
+                                    </svg>
+                                    High
+                                </p>
+                                <p class="text-xs text-blue-500">In Progress</p>
+                            </div>
+                        </div>
+                        <!-- Repeat the above block for more complaints -->
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center px-6 py-4 bg-gray-50 border-t"
+                >
+                    <button class="flex items-center text-gray-600">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 mr-2"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M15 19l-7-7 7-7"
+                            />
+                        </svg>
+                    </button>
+                    <span class="text-sm text-gray-600">Page 1 of 10</span>
+                    <button class="flex items-center text-gray-600">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 ml-2"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
