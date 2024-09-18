@@ -4,10 +4,10 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      spacing: {
-        '35': '35rem',
+    screens: {
+      
     },
+<<<<<<< HEAD
     fontFamily: {
       inter: ["Inter", "sans-serif"],
   },
@@ -15,6 +15,9 @@ module.exports = {
     center: true,
     padding: "8rem",
 },
+=======
+    extend: {
+>>>>>>> 52f7d51d2721e392eb341d23637c7452e71e6ab1
   },
   plugins: [],
 }
