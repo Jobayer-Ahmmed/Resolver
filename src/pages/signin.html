@@ -10,20 +10,20 @@
 </head>
 
 <body class=" relative">
-  <header class="bg-white shadow-md hidden md:block">
+  <header class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
         <div class="flex-shrink-0">
           <!-- Logo -->
           <a href="#" class="flex items-center">
-            <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+            <img src="..//assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
             <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
           </a>
         </div>
 
         <!-- Desktop Menu -->
-        <nav class="hidden md:flex space-x-8">
-          <a href="#" class="text-gray-900 hover:text-green-500 transition">Home</a>
+        <nav class="hidden lg:flex space-x-8">
+          <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
           <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
           <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
           <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
@@ -31,7 +31,7 @@
           <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
         </nav>
 
-        <div class="hidden md:flex items-center space-x-4">
+        <div class="hidden lg:flex items-center space-x-4">
           <!-- Sign In -->
           <a href="../pages/signin.html" class="text-gray-900 hover:text-green-500 transition">Sign In</a>
 
@@ -41,7 +41,7 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="md:hidden flex items-center">
+        <div class="lg:hidden flex items-center">
           <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -53,33 +53,34 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden">
-      <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Home</a>
+    <div id="mobile-menu" class="lg:hidden hidden">
+      <nav class="px-2 pt-2 pb-3 flex flex-col gap-4 sm:px-3">
+        <a href="../../index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
-        <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+        <a href="../pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+        <a href="../pages/signup.html" class="block text-gray-900 hover:text-green-500 transition">Sign Up</a>
       </nav>
     </div>
   </header>
 
   <!-- Form section -->
   <section class="max-w-full mx-auto px-4 py-12 sm:px-6 lg:px-8 flex bg-[#f4f4f4]">
-    <div class=" md:p-8 md:flex md:space-x-8 w-full">
+    <div class=" lg:p-8 lg:flex lg:space-x-8 w-full">
 
       <!-- Left Review Section (Hidden on mobile) -->
-      <div class="hidden md:block w-full md:w-1/2 md:flex md:flex justify-center items-center">
-        <div class="w-[50vw] h-[50vw] max-w-[35rem] max-h-[35rem] bg-green-300 rounded-full flex  overflow-hidden">
-          <img src="../assets/images/Signup-image.png" alt="signup-image" class="w-full h-auto" />
+      <div class="hidden lg:block w-full md:w-1/2 lg:flex lg:flex justify-center items-center">
+        <div
+          class="w-[50vw] h-[50vw] max-w-[35rem] max-h-[35rem] bg-green-300 rounded-full flex items-center justify-center overflow-hidden">
+          <img src="../assets/images/Signup-image.png" alt="signup-image" class="w-[80%] h-[80%] object-contain" />
         </div>
       </div>
 
       <!-- Right Form Section -->
-      <div class="w-full md:w-1/2 flex flex-col items-center justify-center">
+      <div class="w-full lg:w-1/2 flex flex-col items-center justify-center">
         <!-- Form Container -->
         <div class="md:bg-white g rounded-lg md:p-8 w-full max-w-3xl">
           <div class="md:hidden ">
@@ -125,32 +126,11 @@
               </div>
               <!-- Social Login -->
               <div class="mt-6">
-                <button type="submit"
-                  class="w-full bg-[#78eb54] text-black py-3 rounded-3xl shadow-lg transition">Create Account</button>
+                <a class="w-full text-center block bg-[#78eb54] hover:bg-green-600 text-black py-3 rounded-3xl shadow-lg transition"
+                  href="../../src/pages/user-dashboard-page.html">
+                  Sign In
+                </a>
               </div>
-
-              <!-- <div class="hidden md:block mt-6 flex justify-center space-x-4">
-                <button class="bg-white border border-gray-300 rounded-lg p-3">
-                  <img src="../assets/images/Layer_1.png" alt="facebook" class="h-6 w-6" />
-                </button>
-                <button class="bg-white border border-gray-300 rounded-lg p-3">
-                  <img src="../assets/images/Social_Icons.png" alt="Google" class="h-6 w-6" />
-                </button>
-              </div>
-
-              <div class="md:hidden mt-6 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <button
-                  class="bg-white border flex items-center justify-center border-gray-300 rounded-lg p-3 w-full sm:w-auto space-x-2">
-                  <img src="../assets/images/Layer_1.png" alt="facebook" class="h-6 w-6" />
-                  <span class="text-gray-700">Sign up with Google</span>
-                </button>
-                <button
-                  class="bg-white border flex items-center justify-center border-gray-300 rounded-lg p-3 w-full sm:w-auto space-x-2">
-                  <img src="../assets/images/Social_Icons.png" alt="Google" class="h-6 w-6" />
-                  <span class="text-gray-700">Sign up with Facebook</span>
-                </button>
-              </div> -->
-
 
               <!-- Sign up Link -->
               <div class="mt-6 text-center">
@@ -163,6 +143,7 @@
       </div>
   </section>
 
+  <!--Footer section -->
   <footer class=" bg-white text-white relative">
     <div class=" bg-[#052e26] md:rounded-t-3xl ">
       <div class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8  rounded">
@@ -195,7 +176,7 @@
               <li><a href="#" class="hover:text-green-400">FAQs</a></li>
               <li><a href="#" class="hover:text-green-400">Contact</a></li>
               <li><a href="#" class="hover:text-green-400">Pricing</a></li>
-              <li><a href="#" class="hover:text-green-400">Log in</a></li>
+              <li><a href="../pages/signin.html" class="hover:text-green-400">Log in</a></li>
             </ul>
           </div>
 

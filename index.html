@@ -22,8 +22,8 @@
         </div>
 
         <!-- Desktop Menu -->
-        <nav class="hidden md:flex space-x-8">
-          <a href="#" class="text-gray-900 hover:text-green-500 transition">Home</a>
+        <nav class="hidden lg:flex space-x-8">
+          <a href="./index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
           <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
           <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
           <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
@@ -31,7 +31,7 @@
           <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
         </nav>
 
-        <div class="hidden md:flex items-center space-x-4">
+        <div class="hidden lg:flex items-center space-x-4">
           <!-- Sign In -->
           <a href="./src/pages/signin.html" class="text-gray-900 hover:text-green-500 transition">Sign In</a>
 
@@ -41,7 +41,7 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="md:hidden flex items-center">
+        <div class="lg:hidden flex items-center">
           <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -53,16 +53,16 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden">
-      <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Home</a>
+    <div id="mobile-menu" class="lg:hidden hidden">
+      <nav class="px-2 pt-2 pb-3 flex flex-col gap-4 sm:px-3">
+        <a href="./index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
-        <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+        <a href="./src/pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+        <a href="./src/pages/signup.html" class="block text-gray-900 hover:text-green-500 transition">Sign Up</a>
       </nav>
     </div>
   </header>
@@ -190,7 +190,7 @@
           </p>
         </div>
 
-        <div class="hidden md:block text-3xl text-blue-400">
+        <div class="hidden md:block text-3xl text-blue-400 pb-28">
           <img src="./src/assets/images/Arrow-sky.png" alt="arrow-sky" />
         </div>
 
@@ -205,7 +205,7 @@
           </p>
         </div>
 
-        <div class="hidden md:block text-3xl text-blue-400">
+        <div class="hidden md:block text-3xl text-blue-400 pb-28">
           <img src="./src/assets/images/Arrow-pruple.png" alt="arrow-purple" />
         </div>
 
@@ -442,6 +442,7 @@
             </button>
           </div>
         </div>
+
         <div class="bg-white rounded-lg shadow-md p-6">
           <!-- Review Card Header -->
           <div class="flex items-center justify-between mb-4">
@@ -630,10 +631,8 @@
 
       <!-- First Section for Categories -->
       <div id="firstCategoryGrid" class="flex flex-wrap justify-center gap-4 mb-8"></div>
-
       <!-- Second Section for Categories -->
       <div id="secondCategoryGrid" class="flex flex-wrap justify-center gap-4 mb-8"></div>
-
       <!-- View All Button -->
       <div class="mt-8">
         <a href="#" class="bg-green-500 text-white py-3 px-8 rounded-full hover:bg-green-600 transition">
@@ -731,13 +730,10 @@
             </a>
           </div>
         </div>
-
-
         <!-- Thumbs Up Icon -->
         <div class="absolute top-4 right-4 sm:top-8 sm:right-96">
           <img src="./src/assets/images/3d-thumbs-up.png" alt="Thumbs Up Icon" class="md:h-24 md:w-24 h-12 w-12">
         </div>
-
       </div>
     </div>
   </section>
@@ -775,7 +771,7 @@
               <li><a href="#" class="hover:text-green-400">FAQs</a></li>
               <li><a href="#" class="hover:text-green-400">Contact</a></li>
               <li><a href="#" class="hover:text-green-400">Pricing</a></li>
-              <li><a href="#" class="hover:text-green-400">Log in</a></li>
+              <li><a href="./src/pages/signin.html" class="hover:text-green-400">Log in</a></li>
             </ul>
           </div>
 
