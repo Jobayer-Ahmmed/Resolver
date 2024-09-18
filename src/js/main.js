@@ -1,9 +1,9 @@
 function showAlert() {
     alert("Button clicked!");
-<<<<<<< HEAD
+
 }
-=======
-}
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon");
@@ -17,4 +17,3 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
->>>>>>> souravbsk

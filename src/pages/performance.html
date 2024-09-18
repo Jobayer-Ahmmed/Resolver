@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#273F2B",
+              secondary: "#4B4B4B",
+            },
+            boxShadow: {
+              "3xl": "0px 10px 40px 0px rgba(32, 32, 35, 0.08)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#F4F4F4]">
+ 
+    <section class="bg-[#F6FBFD] lg:mb-16 mb-6">
+      <div class="max-w-full w-[1416px] mx-auto py-10">
+        <!-- Mobile Dropdown -->
+        <div class="lg:hidden block px-5">
+          <h2 class="text-primary text-2xl mb-4 font-semibold">
+            Company profile
+          </h2>
+          <p
+            for=""
+            class="w-full mb-6 flex items-center border py-2 px-3 border-gray-300 rounded-lg"
+          >
+            <img
+              class="inline-block"
+              src="../assets/images/search-lg.svg"
+              alt=""
+            />
+            <input
+              placeholder="Search"
+              class="outline-none border-none w-full"
+              type="text"
+            />
+          </p>
+          <select
+            id="tabs"
+            class="w-full bg-white border border-gray-300 rounded-lg py-2 px-3"
+          >
+            <option value="performance">performance</option>
+            <option value="privacySettings">Privacy Settings</option>
+          </select>
+        </div>
+
+        <!-- Desktop Buttons -->
+        <div class="lg:flex hidden flex-col items-center justify-center gap-4">
+          <img
+            class="rounded-full w-[120px] h-[120px]"
+            src="../assets/images/profile.png"
+            alt=""
+          />
+          <h2 class="text-center text-primary text-[32px] font-medium">
+            Amazon Fireflex
+          </h2>
+          <p
+            style="background-color: rgba(120, 235, 84, 0.05)"
+            class="flex py-2 px-4 border border-[#78EB54] rounded-full items-center gap-2"
+          >
+            <img class="w-5 h-5" src="../assets/images/location.svg" alt="" />
+            <span class="text-primary">San Francisco, CA</span>
+          </p>
+        </div>
+
+        <div
+          class="bg-white mt-8 lg:flex hidden items-center gap-3 px-4 border rounded-lg py-2"
+        >
+          <button
+            id="userInterface"
+            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+          >
+            Dashboard
+          </button>
+          <button
+            id="performance Btn"
+            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+          >
+            List of Companies
+          </button>
+          <button
+            id="privacySettingBtn"
+            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+          >
+            Reviews
+          </button>
+          <button
+            id="PerformanceBtn"
+            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+          >
+            Performance
+          </button>
+          <button
+            id="PerformanceBtn"
+            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+          >
+            Analytics
+          </button>
+        </div>
+        <div class="grid lg:grid-cols-4 px-3 gap-6">
+          <div class="bg-white mt-8 p-6 border rounded-lg">
+            <h2 class="text-primary text-base font-semibold mb-6">
+              Resolved Complaints
+            </h2>
+            <div class="flex items-end gap-4 justify-between">
+              <div class="shrink-0">
+                <h3 class="lg:text-4xl text-3xl font-semibold mb-4">2,420</h3>
+                <p class="flex items-center gap-2">
+                  <span
+                    ><img
+                      class="w-5 h-5"
+                      src="../assets/images/arrow-up.svg"
+                      alt=""
+                  /></span>
+                  <span class="text-[#079455] font-medium">40px</span> vs last
+                  month
+                </p>
+              </div>
+              <div>
+                <img src="../assets/images/chart-mini.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="bg-white mt-8 p-6 border rounded-lg">
+            <h2 class="text-primary text-base font-semibold mb-6">
+              Resolved Complaints
+            </h2>
+            <div class="flex items-end gap-4 justify-between">
+              <div class="shrink-0">
+                <h3 class="lg:text-4xl text-3xl font-semibold mb-4">2,420</h3>
+                <p class="flex items-center gap-2">
+                  <span
+                    ><img
+                      class="w-5 h-5"
+                      src="../assets/images/arrow-up.svg"
+                      alt=""
+                  /></span>
+                  <span class="text-[#079455] font-medium">40px</span> vs last
+                  month
+                </p>
+              </div>
+              <div>
+                <img src="../assets/images/chart-mini.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="bg-white mt-8 p-6 border rounded-lg">
+            <h2 class="text-primary text-base font-semibold mb-6">
+              Resolved Complaints
+            </h2>
+            <div class="flex items-end gap-4 justify-between">
+              <div class="shrink-0">
+                <h3 class="lg:text-4xl text-3xl font-semibold mb-4">2,420</h3>
+                <p class="flex items-center gap-2">
+                  <span
+                    ><img
+                      class="w-5 h-5"
+                      src="../assets/images/arrow-up.svg"
+                      alt=""
+                  /></span>
+                  <span class="text-[#079455] font-medium">40px</span> vs last
+                  month
+                </p>
+              </div>
+              <div>
+                <img src="../assets/images/chart-mini.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="bg-white mt-8 p-6 border rounded-lg">
+            <h2 class="text-primary text-base font-semibold mb-6">
+              Resolved Complaints
+            </h2>
+            <div class="flex items-end gap-4 justify-between">
+              <div class="shrink-0">
+                <h3 class="lg:text-4xl text-3xl font-semibold mb-4">2,420</h3>
+                <p class="flex items-center gap-2">
+                  <span
+                    ><img
+                      class="w-5 h-5"
+                      src="../assets/images/arrow-up.svg"
+                      alt=""
+                  /></span>
+                  <span class="text-[#079455] font-medium">40px</span> vs last
+                  month
+                </p>
+              </div>
+              <div>
+                <img src="../assets/images/chart-mini.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-full lg:w-[1416px] mb-14 px-3 w-full mx-auto">
+      <!-- performance tab start -->
+      <div class="block" id="performanceTab">
+        <div
+          class="bg-white lg:space-y-8 space-y-4 lg:p-8 p-3 rounded-[10px] shadow"
+        >
+          <div class="">
+            <h2 class="text-primary font-semibold text-lg">Performance</h2>
+            <p class="text-secondary">
+              Your current performance summary and activity.
+            </p>
+          </div>
+          <hr />
+
+          <div
+            class="flex lg:flex-row flex-col items-center justify-between gap-4"
+          >
+            <div>
+              <p
+                for=""
+                class="w-full hidden lg:w-96 mb-6 lg:flex items-center border py-2 px-3 border-gray-300 rounded-lg"
+              >
+                <img
+                  class="inline-block"
+                  src="../assets/images/search-lg.svg"
+                  alt=""
+                />
+                <input
+                  placeholder="Search"
+                  class="outline-none border-none w-full"
+                  type="text"
+                />
+              </p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div
+                class="relative inline-block border rounded-lg px-[10px] py-[14px] bg-white"
+              >
+                <select
+                  class="appearance-none outline-none bg-transparent text-secondary font-medium pr-8"
+                >
+                  <option value="weekly">Weekly</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="yearly">Yearly</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M5 7.5L10 12.5L15 7.5"
+                      stroke="#818B9C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <button
+                class="border flex items-center gap-2 px-[10px] py-[14px] rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M5 10H15M2.5 5H17.5M7.5 15H12.5"
+                    stroke="#818B9C"
+                    stroke-width="1.66667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Filters</span>
+              </button>
+              <button
+                class="border rounded-lg lg:px-[10px] lg:hidden block p-2 lg:py-[14px]"
+              >
+                <img
+                  class="inline-block"
+                  src="../assets/images/search-lg.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="flex lg:flex-row flex-col items-end justify-between">
+            <!-- Y Axis -->
+            <div
+              class="lg:flex hidden text-[#64748B] col-span-1 flex-col justify-between h-52 text-right mr-4"
+            >
+              <div>000</div>
+              <div>000</div>
+              <div>000</div>
+              <div>000</div>
+              <div>0</div>
+            </div>
+
+            <!-- Chart Content -->
+            <div class="flex w-full flex-col">
+              <div
+                class="flex items-end justify-around w-full space-x-4 mb-4 border-b pb-4"
+              >
+                <!-- Each Bar -->
+                <div
+                  class="flex flex-col-reverse lg:w-12 w-6 bg-gray-100 border border-gray-300"
+                >
+                  <div class="bg-lime-300" style="height: 30px"></div>
+                  <div class="bg-green-400" style="height: 40px"></div>
+                  <div class="bg-teal-800" style="height: 30px"></div>
+                </div>
+                <div
+                  class="flex flex-col-reverse lg:w-12 w-6 bg-gray-100 border border-gray-300"
+                >
+                  <div class="bg-lime-300" style="height: 61px"></div>
+                  <div class="bg-green-400" style="height: 61px"></div>
+                  <div class="bg-teal-800" style="height: 61px"></div>
+                </div>
+                <div
+                  class="flex flex-col-reverse lg:w-12 w-6 bg-gray-100 border border-gray-300"
+                >
+                  <div class="bg-lime-300" style="height: 75px"></div>
+                  <div class="bg-green-400" style="height: 75px"></div>
+                  <div class="bg-teal-800" style="height: 75px"></div>
+                </div>
+                <div
+                  class="flex flex-col-reverse lg:w-12 w-6 bg-gray-100 border border-gray-300"
+                >
+                  <div class="bg-lime-300" style="height: 55px"></div>
+                  <div class="bg-green-400" style="height: 55px"></div>
+                  <div class="bg-teal-800" style="height: 86px"></div>
+                </div>
+                <div
+                  class="flex flex-col-reverse lg:w-12 w-6 bg-gray-100 border border-gray-300"
+                >
+                  <div class="bg-lime-300" style="height: 20px"></div>
+                  <div class="bg-green-400" style="height: 50px"></div>
+                  <div class="bg-teal-800" style="height: 30px"></div>
+                </div>
+                <div
+                  class="flex flex-col-reverse lg:w-12 w-6 bg-gray-100 border border-gray-300"
+                >
+                  <div class="bg-lime-300" style="height: 25px"></div>
+                  <div class="bg-green-400" style="height: 35px"></div>
+                  <div class="bg-teal-800" style="height: 40px"></div>
+                </div>
+              </div>
+
+              <!-- Labels -->
+              <div class="flex justify-around text-center">
+                <div>Sat</div>
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+              </div>
+            </div>
+
+            <!-- Legend -->
+            <div
+              class="lg:ml-6 self-start flex lg:w-auto w-full lg:justify-normal justify-between mt-3 lg:flex-col flex-row items-center lg:space-y-2"
+            >
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-lime-300 mr-2"></div>
+                <div>Resolved</div>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-green-400 mr-2"></div>
+                <div>Received</div>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-teal-800 mr-2"></div>
+                <div>Others</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- performance tab end -->
+    </section>
+    <section
+      class="max-w-full grid lg:grid-cols-2 gap-14 lg:w-[1416px] mb-14 px-3 w-full mx-auto"
+    >
+      <div class="bg-white space-y-8 lg:p-8 p-3 rounded-[10px] shadow">
+        <div
+          class="flex lg:flex-row flex-col lg:items-center justify-between gap-4"
+        >
+          <h2 class="text-primary font-semibold text-lg">Top 5 Performers</h2>
+          <div class="flex items-center gap-3">
+            <div
+              class="relative inline-block border rounded-lg px-[10px] py-[14px] bg-white"
+            >
+              <select
+                class="appearance-none outline-none bg-transparent text-secondary font-medium pr-8"
+              >
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M5 7.5L10 12.5L15 7.5"
+                    stroke="#818B9C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <button
+              class="border flex items-center gap-2 px-[10px] py-[14px] rounded-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M5 10H15M2.5 5H17.5M7.5 15H12.5"
+                  stroke="#818B9C"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Filters</span>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white space-y-8 lg:p-8 p-3 rounded-[10px] shadow">
+        <div
+          class="flex lg:flex-row flex-col lg:items-center justify-between gap-4"
+        >
+          <h2 class="text-primary font-semibold text-lg">Top 5 Performers</h2>
+          <div class="flex items-center gap-3">
+            <div
+              class="relative inline-block border rounded-lg px-[10px] py-[14px] bg-white"
+            >
+              <select
+                class="appearance-none outline-none bg-transparent text-secondary font-medium pr-8"
+              >
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M5 7.5L10 12.5L15 7.5"
+                    stroke="#818B9C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <button
+              class="border flex items-center gap-2 px-[10px] py-[14px] rounded-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M5 10H15M2.5 5H17.5M7.5 15H12.5"
+                  stroke="#818B9C"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Filters</span>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+          <div class="flex relative items-center py-4 border-t gap-3">
+            <img
+              class="w-12 h-12 rounded-full"
+              src="../assets/images/image1.png"
+              alt=""
+            />
+            <div class="">
+              <h2 class="text-primary lg:text-xl font-medium">
+                Ali Baba Express
+              </h2>
+              <p class="text-secondary lg:text-base text-sm">
+                <span class="lg:inline hidden">Resolver</span>
+                <span class="lg:static absolute -translate-y-1/2 right-0"
+                  >Score 4.9</span
+                >
+                <span class="lg:inline hidden">|</span> 1,251 Issues resolved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-full lg:w-[1416px] mb-14 px-5 w-full mx-auto">
+      <!-- Company Profiles tab start -->
+      <div class="block" id="Company ProfilesTab">
+        <div
+          class="bg-white lg:space-y-8 space-y-4 lg:p-8 p-3 rounded-[10px] shadow"
+        >
+          <div class="">
+            <h2 class="text-primary font-semibold text-lg">Company Profiles</h2>
+            <p class="text-secondary">
+              Your current Company Profiles summary and activity.
+            </p>
+          </div>
+          <hr />
+          <div>
+            <div class="py-3 border-b">
+              <div class="flex lg:flex-row flex-col items-center gap-3">
+                <img
+                  class="w-16 h-16 rounded-full"
+                  src="../assets/images/image1.png"
+                  alt=""
+                />
+                <div class="space-y-2 lg:text-left text-center">
+                  <h2 class="text-primary lg:text-xl font-medium">
+                    Ali Baba Express
+                  </h2>
+                  <p class="text-secondary">
+                    Resolver Score 4.9 | 1,251 Issues resolved
+                  </p>
+                  <p class="text-[#191D23] font-medium">New York, CA</p>
+                </div>
+              </div>
+              <div class="py-4 flex lg:flex-row flex-col items-center gap-3">
+                <ul class="flex border-r pr-4 items-center gap-2">
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.9974 18.3337C14.5998 18.3337 18.3307 14.6027 18.3307 10.0003C18.3307 5.39795 14.5998 1.66699 9.9974 1.66699C5.39502 1.66699 1.66406 5.39795 1.66406 10.0003C1.66406 14.6027 5.39502 18.3337 9.9974 18.3337Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M6.66406 10.0003C6.66406 15.0003 9.9974 18.3337 9.9974 18.3337C9.9974 18.3337 13.3307 15.0003 13.3307 10.0003C13.3307 5.00033 9.9974 1.66699 9.9974 1.66699C9.9974 1.66699 6.66406 5.00033 6.66406 10.0003Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.5 12.5H2.5"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.5 7.5H2.5"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M3.14541 9.95233C2.3554 8.57474 1.97394 7.44989 1.74393 6.30967C1.40375 4.62331 2.18224 2.976 3.47188 1.92489C4.01694 1.48064 4.64175 1.63243 4.96406 2.21066L5.69171 3.51609C6.26847 4.5508 6.55684 5.06815 6.49964 5.61665C6.44245 6.16515 6.05354 6.61188 5.2757 7.50534L3.14541 9.95233ZM3.14541 9.95233C4.74449 12.7406 7.25393 15.2514 10.0454 16.8523M10.0454 16.8523C11.423 17.6423 12.5478 18.0238 13.6881 18.2538C15.3744 18.594 17.0217 17.8155 18.0728 16.5258C18.5171 15.9808 18.3653 15.356 17.7871 15.0337L16.4816 14.306C15.4469 13.7292 14.9296 13.4409 14.3811 13.4981C13.8326 13.5552 13.3858 13.9442 12.4924 14.722L10.0454 16.8523Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.83594 7.08301L8.28762 8.53251C9.71694 9.37759 10.2883 9.37759 11.7176 8.53251L14.1693 7.08301"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M1.6772 11.23C1.73168 13.7846 1.75892 15.0619 2.70153 16.0081C3.64413 16.9544 4.95601 16.9873 7.57976 17.0532C9.19682 17.0939 10.798 17.0939 12.4151 17.0532C15.0388 16.9873 16.3507 16.9544 17.2932 16.0081C18.2359 15.0619 18.2632 13.7846 18.3176 11.23C18.3352 10.4086 18.3352 9.59202 18.3176 8.77068C18.2632 6.21604 18.2359 4.93873 17.2932 3.99254C16.3507 3.04635 15.0388 3.01339 12.4151 2.94747C10.798 2.90683 9.19682 2.90683 7.57975 2.94746C4.95601 3.01338 3.64413 3.04633 2.70153 3.99253C1.75892 4.93873 1.73168 6.21603 1.6772 8.7706C1.65968 9.59202 1.65968 10.4086 1.6772 11.23Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <ul
+                  class="flex flex-wrap justify-center text-secondary list-inside list-disc items-center gap-2"
+                >
+                  <li>Bank</li>
+                  <li>Financial Consultant</li>
+                  <li>Federal Credit Union</li>
+                </ul>
+              </div>
+            </div>
+            <div class="py-3 border-b">
+              <div class="flex lg:flex-row flex-col items-center gap-3">
+                <img
+                  class="w-16 h-16 rounded-full"
+                  src="../assets/images/image1.png"
+                  alt=""
+                />
+                <div class="space-y-2 lg:text-left text-center">
+                  <h2 class="text-primary lg:text-xl font-medium">
+                    Ali Baba Express
+                  </h2>
+                  <p class="text-secondary">
+                    Resolver Score 4.9 | 1,251 Issues resolved
+                  </p>
+                  <p class="text-[#191D23] font-medium">New York, CA</p>
+                </div>
+              </div>
+              <div class="py-4 flex lg:flex-row flex-col items-center gap-3">
+                <ul class="flex border-r pr-4 items-center gap-2">
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.9974 18.3337C14.5998 18.3337 18.3307 14.6027 18.3307 10.0003C18.3307 5.39795 14.5998 1.66699 9.9974 1.66699C5.39502 1.66699 1.66406 5.39795 1.66406 10.0003C1.66406 14.6027 5.39502 18.3337 9.9974 18.3337Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M6.66406 10.0003C6.66406 15.0003 9.9974 18.3337 9.9974 18.3337C9.9974 18.3337 13.3307 15.0003 13.3307 10.0003C13.3307 5.00033 9.9974 1.66699 9.9974 1.66699C9.9974 1.66699 6.66406 5.00033 6.66406 10.0003Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.5 12.5H2.5"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.5 7.5H2.5"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M3.14541 9.95233C2.3554 8.57474 1.97394 7.44989 1.74393 6.30967C1.40375 4.62331 2.18224 2.976 3.47188 1.92489C4.01694 1.48064 4.64175 1.63243 4.96406 2.21066L5.69171 3.51609C6.26847 4.5508 6.55684 5.06815 6.49964 5.61665C6.44245 6.16515 6.05354 6.61188 5.2757 7.50534L3.14541 9.95233ZM3.14541 9.95233C4.74449 12.7406 7.25393 15.2514 10.0454 16.8523M10.0454 16.8523C11.423 17.6423 12.5478 18.0238 13.6881 18.2538C15.3744 18.594 17.0217 17.8155 18.0728 16.5258C18.5171 15.9808 18.3653 15.356 17.7871 15.0337L16.4816 14.306C15.4469 13.7292 14.9296 13.4409 14.3811 13.4981C13.8326 13.5552 13.3858 13.9442 12.4924 14.722L10.0454 16.8523Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.83594 7.08301L8.28762 8.53251C9.71694 9.37759 10.2883 9.37759 11.7176 8.53251L14.1693 7.08301"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M1.6772 11.23C1.73168 13.7846 1.75892 15.0619 2.70153 16.0081C3.64413 16.9544 4.95601 16.9873 7.57976 17.0532C9.19682 17.0939 10.798 17.0939 12.4151 17.0532C15.0388 16.9873 16.3507 16.9544 17.2932 16.0081C18.2359 15.0619 18.2632 13.7846 18.3176 11.23C18.3352 10.4086 18.3352 9.59202 18.3176 8.77068C18.2632 6.21604 18.2359 4.93873 17.2932 3.99254C16.3507 3.04635 15.0388 3.01339 12.4151 2.94747C10.798 2.90683 9.19682 2.90683 7.57975 2.94746C4.95601 3.01338 3.64413 3.04633 2.70153 3.99253C1.75892 4.93873 1.73168 6.21603 1.6772 8.7706C1.65968 9.59202 1.65968 10.4086 1.6772 11.23Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <ul
+                  class="flex flex-wrap justify-center text-secondary list-inside list-disc items-center gap-2"
+                >
+                  <li>Bank</li>
+                  <li>Financial Consultant</li>
+                  <li>Federal Credit Union</li>
+                </ul>
+              </div>
+            </div>
+            <div class="py-3 border-b">
+              <div class="flex lg:flex-row flex-col items-center gap-3">
+                <img
+                  class="w-16 h-16 rounded-full"
+                  src="../assets/images/image1.png"
+                  alt=""
+                />
+                <div class="space-y-2 lg:text-left text-center">
+                  <h2 class="text-primary lg:text-xl font-medium">
+                    Ali Baba Express
+                  </h2>
+                  <p class="text-secondary">
+                    Resolver Score 4.9 | 1,251 Issues resolved
+                  </p>
+                  <p class="text-[#191D23] font-medium">New York, CA</p>
+                </div>
+              </div>
+              <div class="py-4 flex lg:flex-row flex-col items-center gap-3">
+                <ul class="flex border-r pr-4 items-center gap-2">
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.9974 18.3337C14.5998 18.3337 18.3307 14.6027 18.3307 10.0003C18.3307 5.39795 14.5998 1.66699 9.9974 1.66699C5.39502 1.66699 1.66406 5.39795 1.66406 10.0003C1.66406 14.6027 5.39502 18.3337 9.9974 18.3337Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M6.66406 10.0003C6.66406 15.0003 9.9974 18.3337 9.9974 18.3337C9.9974 18.3337 13.3307 15.0003 13.3307 10.0003C13.3307 5.00033 9.9974 1.66699 9.9974 1.66699C9.9974 1.66699 6.66406 5.00033 6.66406 10.0003Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.5 12.5H2.5"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.5 7.5H2.5"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M3.14541 9.95233C2.3554 8.57474 1.97394 7.44989 1.74393 6.30967C1.40375 4.62331 2.18224 2.976 3.47188 1.92489C4.01694 1.48064 4.64175 1.63243 4.96406 2.21066L5.69171 3.51609C6.26847 4.5508 6.55684 5.06815 6.49964 5.61665C6.44245 6.16515 6.05354 6.61188 5.2757 7.50534L3.14541 9.95233ZM3.14541 9.95233C4.74449 12.7406 7.25393 15.2514 10.0454 16.8523M10.0454 16.8523C11.423 17.6423 12.5478 18.0238 13.6881 18.2538C15.3744 18.594 17.0217 17.8155 18.0728 16.5258C18.5171 15.9808 18.3653 15.356 17.7871 15.0337L16.4816 14.306C15.4469 13.7292 14.9296 13.4409 14.3811 13.4981C13.8326 13.5552 13.3858 13.9442 12.4924 14.722L10.0454 16.8523Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.83594 7.08301L8.28762 8.53251C9.71694 9.37759 10.2883 9.37759 11.7176 8.53251L14.1693 7.08301"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M1.6772 11.23C1.73168 13.7846 1.75892 15.0619 2.70153 16.0081C3.64413 16.9544 4.95601 16.9873 7.57976 17.0532C9.19682 17.0939 10.798 17.0939 12.4151 17.0532C15.0388 16.9873 16.3507 16.9544 17.2932 16.0081C18.2359 15.0619 18.2632 13.7846 18.3176 11.23C18.3352 10.4086 18.3352 9.59202 18.3176 8.77068C18.2632 6.21604 18.2359 4.93873 17.2932 3.99254C16.3507 3.04635 15.0388 3.01339 12.4151 2.94747C10.798 2.90683 9.19682 2.90683 7.57975 2.94746C4.95601 3.01338 3.64413 3.04633 2.70153 3.99253C1.75892 4.93873 1.73168 6.21603 1.6772 8.7706C1.65968 9.59202 1.65968 10.4086 1.6772 11.23Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <ul
+                  class="flex flex-wrap justify-center text-secondary list-inside list-disc items-center gap-2"
+                >
+                  <li>Bank</li>
+                  <li>Financial Consultant</li>
+                  <li>Federal Credit Union</li>
+                </ul>
+              </div>
+            </div>
+            <div class="py-3 border-b">
+              <div class="flex lg:flex-row flex-col items-center gap-3">
+                <img
+                  class="w-16 h-16 rounded-full"
+                  src="../assets/images/image1.png"
+                  alt=""
+                />
+                <div class="space-y-2 lg:text-left text-center">
+                  <h2 class="text-primary lg:text-xl font-medium">
+                    Ali Baba Express
+                  </h2>
+                  <p class="text-secondary">
+                    Resolver Score 4.9 | 1,251 Issues resolved
+                  </p>
+                  <p class="text-[#191D23] font-medium">New York, CA</p>
+                </div>
+              </div>
+              <div class="py-4 flex lg:flex-row flex-col items-center gap-3">
+                <ul class="flex border-r pr-4 items-center gap-2">
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.9974 18.3337C14.5998 18.3337 18.3307 14.6027 18.3307 10.0003C18.3307 5.39795 14.5998 1.66699 9.9974 1.66699C5.39502 1.66699 1.66406 5.39795 1.66406 10.0003C1.66406 14.6027 5.39502 18.3337 9.9974 18.3337Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M6.66406 10.0003C6.66406 15.0003 9.9974 18.3337 9.9974 18.3337C9.9974 18.3337 13.3307 15.0003 13.3307 10.0003C13.3307 5.00033 9.9974 1.66699 9.9974 1.66699C9.9974 1.66699 6.66406 5.00033 6.66406 10.0003Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.5 12.5H2.5"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.5 7.5H2.5"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M3.14541 9.95233C2.3554 8.57474 1.97394 7.44989 1.74393 6.30967C1.40375 4.62331 2.18224 2.976 3.47188 1.92489C4.01694 1.48064 4.64175 1.63243 4.96406 2.21066L5.69171 3.51609C6.26847 4.5508 6.55684 5.06815 6.49964 5.61665C6.44245 6.16515 6.05354 6.61188 5.2757 7.50534L3.14541 9.95233ZM3.14541 9.95233C4.74449 12.7406 7.25393 15.2514 10.0454 16.8523M10.0454 16.8523C11.423 17.6423 12.5478 18.0238 13.6881 18.2538C15.3744 18.594 17.0217 17.8155 18.0728 16.5258C18.5171 15.9808 18.3653 15.356 17.7871 15.0337L16.4816 14.306C15.4469 13.7292 14.9296 13.4409 14.3811 13.4981C13.8326 13.5552 13.3858 13.9442 12.4924 14.722L10.0454 16.8523Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.83594 7.08301L8.28762 8.53251C9.71694 9.37759 10.2883 9.37759 11.7176 8.53251L14.1693 7.08301"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M1.6772 11.23C1.73168 13.7846 1.75892 15.0619 2.70153 16.0081C3.64413 16.9544 4.95601 16.9873 7.57976 17.0532C9.19682 17.0939 10.798 17.0939 12.4151 17.0532C15.0388 16.9873 16.3507 16.9544 17.2932 16.0081C18.2359 15.0619 18.2632 13.7846 18.3176 11.23C18.3352 10.4086 18.3352 9.59202 18.3176 8.77068C18.2632 6.21604 18.2359 4.93873 17.2932 3.99254C16.3507 3.04635 15.0388 3.01339 12.4151 2.94747C10.798 2.90683 9.19682 2.90683 7.57975 2.94746C4.95601 3.01338 3.64413 3.04633 2.70153 3.99253C1.75892 4.93873 1.73168 6.21603 1.6772 8.7706C1.65968 9.59202 1.65968 10.4086 1.6772 11.23Z"
+                          stroke="#4B4B4B"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <ul
+                  class="flex flex-wrap justify-center text-secondary list-inside list-disc items-center gap-2"
+                >
+                  <li>Bank</li>
+                  <li>Financial Consultant</li>
+                  <li>Federal Credit Union</li>
+                </ul>
+              </div>
+            </div>
+         
+       
+          </div>
+          <hr />
+          <div class="flex items-center justify-between gap-3">
+            <p>Page 1 of 10</p>
+            <div class="flex lg:flex-row flex-col items-center gap-3">
+              <button
+                class="text-sm text-[#344054] px-3 py-2 rounded-lg border"
+              >
+                Previous
+              </button>
+              <buttlg:text-left text-centeron
+                class="text-sm text-[#344054] px-3 py-2 rounded-lg border"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Company Profiles tab end -->
+    </section>
+    <!-- Footer Section -->
+    <footer class="md:pt-32 pt-12 text-white relative">
+      <div class="bg-[#052e26] md:rounded-t-3xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded">
+          <!-- Upper and Lower Footer: Combined Grid Layout -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+            <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+            <div class="col-span-2 sm:col-span-1">
+              <div class="flex-shrink-0 mb-4">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                  <img
+                    src="./src/assets/images/logo.png"
+                    alt="Logo"
+                    class="h-8 w-auto"
+                  />
+                  <span class="ml-2 text-lg font-bold text-green-600"
+                    >Resolver</span
+                  >
+                </a>
+              </div>
+              <p class="mb-4 w-[14rem] sm:w-full">
+                Fun, engaging and authentic Platform
+              </p>
+              <div class="flex space-x-4">
+                <a href="#"
+                  ><img
+                    src="./src/assets/images/Icon/linkedin.png"
+                    alt="LinkedIn"
+                    class="h-5"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./src/assets/images/Icon/youtube.png"
+                    alt="YouTube"
+                    class="h-5"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./src/assets/images/Icon/twitter.png"
+                    alt="Twitter"
+                    class="h-5"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./src/assets/images/Icon/facebook.png"
+                    alt="Facebook"
+                    class="h-5"
+                /></a>
+              </div>
+            </div>
+
+            <!-- Product Links -->
+            <div>
+              <h4 class="font-bold mb-4">Product</h4>
+              <ul>
+                <li><a href="#" class="hover:text-green-400">About us</a></li>
+                <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+                <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+                <li><a href="#" class="hover:text-green-400">Log in</a></li>
+              </ul>
+            </div>
+
+            <!-- Resources Links -->
+            <div>
+              <h4 class="font-bold mb-4">Resources</h4>
+              <ul>
+                <li><a href="#" class="hover:text-green-400">Learn</a></li>
+                <li><a href="#" class="hover:text-green-400">Videos</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Help Center</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Webinar Glossary</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- More Links -->
+            <div>
+              <h4 class="font-bold mb-4">More</h4>
+              <ul>
+                <li><a href="#" class="hover:text-green-400">Our story</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400">We’re hiring</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Resolver NG</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400"
+                    >Resolver NG Satisfaction</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="block md:hidden">
+              <h4 class="font-bold mb-4">More</h4>
+              <ul>
+                <li>
+                  <a href="#" class="hover:text-green-400">Trust Center</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Resolver NG</a>
+                </li>
+                <li><a href="#" class="hover:text-green-400">Status</a></li>
+                <li><a href="#" class="hover:text-green-400">Legal</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400"
+                    >Do Not Sell My Info</a
+                  >
+                </li>
+                <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-600 py-4">
+            <div
+              class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
+            >
+              <!-- Left Section: Links -->
+              <div class="hidden md:block">
+                <div
+                  class="flex flex-wrap justify-center sm:justify-start space-x-6"
+                >
+                  <a href="#" class="hover:text-green-400">Trust Center</a>
+                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                  <a href="#" class="hover:text-green-400">Status</a>
+                  <a href="#" class="hover:text-green-400">Legal</a>
+                  <a href="#" class="hover:text-green-400"
+                    >Do Not Sell My Info</a
+                  >
+                  <a href="#" class="hover:text-green-400">Opt out</a>
+                </div>
+              </div>
+
+              <!-- Right Section: Copyright -->
+              <div class="text-center sm:text-right">
+                <p>© All rights reserved by Resolver NG.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Star Icon (Absolute Positioned) -->
+          <div
+            class="absolute top-24 md:top-40 right-12 transform translate-x-1/4 -translate-y-1/4"
+          >
+            <img
+              src="./src/assets/images/3d-star.png"
+              alt="Star Icon"
+              class="h-32 w-32"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const performanceBtn = document.getElementById("performanceBtn");
+        const performanceTab = document.getElementById("performanceTab");
+        const privacySettingBtn = document.getElementById("privacySettingBtn");
+        const privacySettingTab = document.getElementById("privacySettingTab");
+        const tabsDropdown = document.getElementById("tabs");
+
+        // Function to switch tabs
+        function switchTab(activeBtn, activeTab, inactiveTab) {
+          // Add active class to the active tab and remove from the other
+          activeTab.classList.add("block");
+          activeTab.classList.remove("hidden");
+          inactiveTab.classList.add("hidden");
+          inactiveTab.classList.remove("block");
+        }
+
+        // By default, show the performance tab when the page loads
+        switchTab(performanceBtn, performanceTab, privacySettingTab);
+
+        privacySettingBtn.addEventListener("click", () => {
+          switchTab(privacySettingBtn, privacySettingTab, performanceTab);
+        });
+
+        performanceBtn.addEventListener("click", () => {
+          switchTab(performanceBtn, performanceTab, privacySettingTab);
+        });
+
+        // Handle dropdown change for mobile
+        tabsDropdown.addEventListener("change", function () {
+          const selectedValue = this.value.toLowerCase(); // Ensure value is lowercase
+
+          console.log("Selected value:", selectedValue);
+
+          if (selectedValue === "privacysettings") {
+            console.log("Switching to Privacy Settings");
+            switchTab(privacySettingBtn, privacySettingTab, performanceTab);
+          } else if (selectedValue === "performance") {
+            console.log("Switching to performance");
+            switchTab(performanceBtn, performanceTab, privacySettingTab);
+          } else if (selectedValue === "userinformation") {
+            console.log("Switching to User Information");
+            switchTab(userInterfaceBtn, userInformationTab, [
+              performanceTab,
+              privacySettingTab,
+            ]);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
