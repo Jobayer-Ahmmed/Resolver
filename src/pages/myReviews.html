@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +16,9 @@
         class="hidden lg:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
         <div>
             <a class="px-4 py-2" href="./user-dashboard-page.html">Dashboard</a>
-            <a class="px-4 py-2  border border-black rounded  text-black" href="./userProfileInformation.html">Profile</a>
-            <a  class="px-4 py-2" href="./userInformation.html">Settings</a>
+            <a class="px-4 py-2  border border-black rounded  text-black"
+                href="./userProfileInformation.html">Profile</a>
+            <a class="px-4 py-2" href="./userInformation.html">Settings</a>
 
         </div>
         <div class="border-2 border-gray-300 rounded py-2 px-4">
@@ -31,9 +31,9 @@
         <div class="bg-white p-4 w-full rounded-xl">
             <h2 class="mb-5  text-2xl font-medium">Profiles</h2>
 
-            <select
-                 id="navSelect" class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
-                 <option value="./myReviews.html" class="px-4 py-2">My Reviews</option>
+            <select id="navSelect"
+                class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
+                <option value="./myReviews.html" class="px-4 py-2">My Reviews</option>
                 <option value="./user-dashboard-page.html" class="px-4 py-2">History of Complaints</option>
                 <option value="./userProfileInformation.html" class="px-4 py-2">Profile Information</option>
                 <option value="./profile-companies-page.html" class="px-4 py-2">Companies</option>
@@ -57,10 +57,9 @@
                     <div class="border border-gray-400 flex justify-center items-center px-4 rounded-xl"><img
                             class="w-7" src="../assets/images/filter-lines.png" alt=""></div>
                 </div>
-
-                <input type="submit"
-                    class="mt-5 w-full h-[52px] bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold"
-                    value="+ Write Complaint" name="" id="">
+                    <a href="./submitYourReview.html"
+                    class="mt-5 block text-center w-full h-[52px] bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold">Write
+                    Review</a>
             </div>
         </div>
 
@@ -115,16 +114,16 @@
                         </div>
                     </div>
 
-                    <input type="submit"
-                        class="w-full h-12 bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold"
-                        value="+ Write Complaint" name="" id="">
+                    <a href="./submitYourReview.html"
+                        class="w-full h-12 bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold">Write
+                        Review</a>
                 </div>
             </div>
 
             <!-- reviews cards -->
             <div class="flex flex-col gap-5">
                 <!-- 1st card -->
-                <div  class="p-10 rounded-lg shadow-lg  border border-gray-200">
+                <div class="p-10 rounded-lg shadow-lg  border border-gray-200">
                     <div class="flex justify-between">
                         <div class="flex gap-2">
                             <div><img src="../assets/images/cameron.png" alt=""></div>
@@ -150,24 +149,36 @@
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
-                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                        <div class="lg:hidden flex justify-center items-center">
+                            <p class="text-gray-500 text-xl font-semibold">More 5+</p>
+                        </div>
                     </div>
                     <div class="mt-4 mb-10">
-                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                        <span>Dramatically improved our ability to manage contracts accurately and quickly. The
+                            intuitive
                             interface and robust feature set perfectly match the requirements of Dramatically improved
                             our ability to manage contracts accurately and quickly. The intuitive interface and robust
-                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                            feature set perfectly match the requirements of <span
+                                class="text-blue-600 lg:inline hidden">Read more</span><span
+                                class="lg:hidden inline">...</span></span>
                     </div>
                     <div class="flex gap-5">
-                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i
+                                class="fa-solid fa-arrow-right"></i></p>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/ShareAlt.png" alt="">SHARE</button>
                     </div>
 
                 </div>
                 <!-- 2nd card -->
-                <div  class="p-10 rounded-lg shadow-lg  border border-gray-200">
+                <div class="p-10 rounded-lg shadow-lg  border border-gray-200">
                     <div class="flex justify-between">
                         <div class="flex gap-2">
                             <div><img src="../assets/images/cameron.png" alt=""></div>
@@ -193,24 +204,36 @@
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
-                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                        <div class="lg:hidden flex justify-center items-center">
+                            <p class="text-gray-500 text-xl font-semibold">More 5+</p>
+                        </div>
                     </div>
                     <div class="mt-4 mb-10">
-                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                        <span>Dramatically improved our ability to manage contracts accurately and quickly. The
+                            intuitive
                             interface and robust feature set perfectly match the requirements of Dramatically improved
                             our ability to manage contracts accurately and quickly. The intuitive interface and robust
-                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                            feature set perfectly match the requirements of <span
+                                class="text-blue-600 lg:inline hidden">Read more</span><span
+                                class="lg:hidden inline">...</span></span>
                     </div>
                     <div class="flex gap-5">
-                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i
+                                class="fa-solid fa-arrow-right"></i></p>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/ShareAlt.png" alt="">SHARE</button>
                     </div>
 
                 </div>
                 <!-- 3rd card -->
-                <div  class="p-10 rounded-lg shadow-lg  border border-gray-200">
+                <div class="p-10 rounded-lg shadow-lg  border border-gray-200">
                     <div class="flex justify-between">
                         <div class="flex gap-2">
                             <div><img src="../assets/images/cameron.png" alt=""></div>
@@ -236,24 +259,36 @@
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
-                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                        <div class="lg:hidden flex justify-center items-center">
+                            <p class="text-gray-500 text-xl font-semibold">More 5+</p>
+                        </div>
                     </div>
                     <div class="mt-4 mb-10">
-                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                        <span>Dramatically improved our ability to manage contracts accurately and quickly. The
+                            intuitive
                             interface and robust feature set perfectly match the requirements of Dramatically improved
                             our ability to manage contracts accurately and quickly. The intuitive interface and robust
-                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                            feature set perfectly match the requirements of <span
+                                class="text-blue-600 lg:inline hidden">Read more</span><span
+                                class="lg:hidden inline">...</span></span>
                     </div>
                     <div class="flex gap-5">
-                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i
+                                class="fa-solid fa-arrow-right"></i></p>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/ShareAlt.png" alt="">SHARE</button>
                     </div>
 
                 </div>
                 <!-- 4th card -->
-                <div  class="p-10 rounded-lg shadow-lg  border border-gray-200">
+                <div class="p-10 rounded-lg shadow-lg  border border-gray-200">
                     <div class="flex justify-between">
                         <div class="flex gap-2">
                             <div><img src="../assets/images/cameron.png" alt=""></div>
@@ -279,26 +314,38 @@
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
-                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                        <div class="lg:hidden flex justify-center items-center">
+                            <p class="text-gray-500 text-xl font-semibold">More 5+</p>
+                        </div>
                     </div>
                     <div class="mt-4 mb-10">
-                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                        <span>Dramatically improved our ability to manage contracts accurately and quickly. The
+                            intuitive
                             interface and robust feature set perfectly match the requirements of Dramatically improved
                             our ability to manage contracts accurately and quickly. The intuitive interface and robust
-                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                            feature set perfectly match the requirements of <span
+                                class="text-blue-600 lg:inline hidden">Read more</span><span
+                                class="lg:hidden inline">...</span></span>
                     </div>
                     <div class="flex gap-5">
-                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i
+                                class="fa-solid fa-arrow-right"></i></p>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/ShareAlt.png" alt="">SHARE</button>
                     </div>
 
                 </div>
 
             </div>
 
-            
+
             <!-- page number -->
             <div class="mt-10 flex justify-between ">
                 <div class="lg:hidden block">

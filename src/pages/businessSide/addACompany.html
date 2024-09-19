@@ -14,10 +14,10 @@
     <!-- sub menu -->
     <div
         class="hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
-        <div>
-            <button class="px-4 py-2 border border-black rounded  text-black">Admin Dashboard</button>
-            <button class="px-4 py-2 ">Company profile</button>
-            <button class="px-4 py-2 ">Settings</button>
+        <div>          
+            <a class="px-4 py-2  border border-black rounded  text-black" href="../adminDashboard.html">Admin Dashboard</a>
+            <a class="px-4 py-2" href="../businessSide/CompanyProfile/companyProfile.html">Company profile</a>
+            <a  class="px-4 py-2" href="../admin-information.html">Settings</a>
         </div>
         <div class="border-2 border-gray-300 rounded py-2 px-4">
             <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
@@ -26,8 +26,10 @@
     </div>
     <!-- write review section -->
     <section class=" container xl:px-20 px-4 bg-[#F4F4F4] pt-16 pb-24">
-        <div class="xl:hidden block mb-10"><i class="fa-solid fa-arrow-left mr-2 "></i><span
-                class="text-lg font-semibold">Back</span></div>
+        <a href="./adminDashboard.html" class="xl:hidden block mb-10">
+            <i class="fa-solid fa-arrow-left mr-2 "></i>
+            <span class="text-lg font-semibold">Back</span>
+        </a>
         <div class="mb-10 flex flex-col justify-center items-center xl:w-[600px] w-full mx-auto gap-3">
             <h1 class="text-4xl font-semibold text-center">Add a Company</h1>
             <p class="text-center ">Whether you need to file a complaint, post a review, tell us about a misleading
