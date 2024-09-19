@@ -16,7 +16,7 @@
         <div class="flex-shrink-0">
           <!-- Logo -->
           <a href="#" class="flex items-center">
-            <img src="../assets/images/logoHeaderFooter/logoHeader.png" alt="Logo" class="h-8 w-auto" />
+            <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
             <span class="ml-2 text-lg font-bold text-black">Resolver</span>
           </a>
         </div>
@@ -255,7 +255,7 @@
             <div class="flex-shrink-0 mb-4">
               <!-- Logo -->
               <a href="#" class="flex items-center">
-                <img src="../assets/images/logoHeaderFooter/logoHeader.png" alt="Logo" class="h-8 w-auto" />
+                <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
                 <span class="ml-2 text-xl font-bold text-white">Resolver</span>
               </a>
             </div>
@@ -368,7 +368,59 @@
     </div>
   </footer>
 
-  <script src="../js/main.js"></script>
+
+  <!-- Pop up button -->
+  <div class="fixed top-[47rem] right-0 sm:bottom-0 sm:top-[35.5rem] sm:left-[12rem]">
+    <!-- Floating Action Button -->
+    <button id="fab-btn"
+      class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg">
+      <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+    </button>
+
+    <!-- Pop-up Menu (Initially hidden) -->
+    <div id="popup-menu" class="hidden">
+      <div class="flex flex-col bg-white shadow-lg rounded-lg py-6  absolute -top-48 -left-64 sm:-top-52 sm:left-16 ">
+
+        <button id="close-popup"
+          class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64">
+          <img src="../assets/images/Icon/cancel-circle.png" alt="cancel-circle" class="h-8 w-auto" />
+        </button>
+
+        <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
+          <img src="../assets/images/Icon/pop-up-star.png" alt="pop-up-star" class="h-4 w-auto" />
+          <span class="text-gray-800">Write Review</span>
+        </button>
+
+        <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
+          <img src="../assets/images/Icon/pop-up-idea.png" alt="pop-up-idea" class="h-4 w-auto" />
+          <span class="text-gray-800">Resolve an Issue</span>
+        </button>
+
+        <button class="flex items-center space-x-2 px-6 py-2 w-60">
+          <img src="../assets/images/Icon/pop-up-infinity.png" alt="pop-up-infinity" class="h-4 w-auto" />
+          <span class="text-gray-800">Price Comparison</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const fabBtn = document.getElementById('fab-btn');
+    const popupMenu = document.getElementById('popup-menu');
+    const closePopup = document.getElementById('close-popup');
+
+    // Toggle the popup menu visibility on the floating action button click
+    fabBtn.addEventListener('click', () => {
+      popupMenu.classList.toggle('hidden');
+    });
+
+    // Hide the popup when the close button is clicked
+    closePopup.addEventListener('click', () => {
+      popupMenu.classList.add('hidden');
+    });
+  </script>
+
 </body>
 
 </html>

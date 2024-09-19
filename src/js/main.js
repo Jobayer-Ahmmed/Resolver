@@ -1,30 +1,26 @@
-
 function showAlert() {
-    alert("Button clicked!");
-
+  alert("Button clicked!");
 }
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.getElementById("menu-icon");
-    const menu = document.getElementById("menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const menu = document.getElementById("menu");
 
-    menuIcon.addEventListener("click", function () {
-      if (menu.classList.contains("hidden")) {
-        menu.classList.remove("hidden");
-      } else {
-        menu.classList.add("hidden");
-      }
-    });
+  menuIcon.addEventListener("click", function () {
+    if (menu.classList.contains("hidden")) {
+      menu.classList.remove("hidden");
+    } else {
+      menu.classList.add("hidden");
+    }
   });
+});
 
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
 
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
+mobileMenuButton.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
 
 const categories = [
   { title: "Easiest Admin", date: "Fall 2024" },
@@ -34,14 +30,11 @@ const categories = [
   { title: "Best Innovation", date: "Spring 2024" },
   { title: "Most User-Friendly", date: "Fall 2024" },
   { title: "Top Rated", date: "Winter 2024" },
-  { title: "Best Experience", date: "Winter 2024" }
+  { title: "Best Experience", date: "Winter 2024" },
 ];
 
 const firstCategoryGrid = document.getElementById("firstCategoryGrid");
 const secondCategoryGrid = document.getElementById("secondCategoryGrid");
-
-
-
 
 // Function to render categories
 function renderCategories() {
@@ -112,11 +105,26 @@ renderCategories();
 // Re-render categories when the window is resized
 window.addEventListener("resize", renderCategories);
 
-
-
 function navigateToPage(select) {
   const value = select.value;
   if (value) {
-      window.location.href = value;
+    window.location.href = value;
   }
 }
+
+
+
+// Toggle the popup menu visibility on the floating action button click
+const fabBtn = document.getElementById("fab-btn");
+const popupMenu = document.getElementById("popup-menu");
+const closePopup = document.getElementById("close-popup");
+
+
+fabBtn.addEventListener("click", () => {
+  popupMenu.classList.toggle("hidden");
+});
+
+// Hide the popup when the close button is clicked
+closePopup.addEventListener("click", () => {
+  popupMenu.classList.add("hidden");
+});

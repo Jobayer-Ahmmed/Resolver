@@ -151,12 +151,7 @@
 
           <!-- profile inside nav start =============================== -->
           <nav class="px-4 relative lg:px-20">
-            <div class="absolute -top-24 left-16">
-              <img
-                src="../assets/profileInformationImages/insideLogo.png"
-                alt=""
-              />
-            </div>
+           
             <div
               class="text-[#667085] border rounded-[10px] border-[#EAECF0] px-4 w-full bg-white font-semibold py-4 mt-10"
             >
@@ -304,13 +299,7 @@
                   </div>
                   <!-- file picture end ========= -->
                 </div>
-                <!-- logo of resolver =================== -->
-                <img
-                  class="absolute -right-9 md:hidden -bottom-12"
-                  src="../assets/profileInformationImages/insideLogo.png"
-                  alt=""
-                />
-                <!-- logo of resolver end =================== -->
+                  
                 <!-- file and title end ==================== -->
               </div>
               <!-- right side pic upload drag n drop end ========================= -->
@@ -742,6 +731,64 @@
     </div>
 
   </footer>
+
+  <!-- Pop up button -->
+  <div
+  class="fixed right-5 bottom-11  sm:left-5 sm:bottom-11 "
+>
+  <!-- Floating Action Button -->
+  <button
+    id="fab-btn"
+    class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg"
+  >
+    <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+  </button>
+
+  <!-- Pop-up Menu (Initially hidden) -->
+  <div id="popup-menu" class="hidden">
+    <div
+      class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16"
+    >
+      <button
+        id="close-popup"
+        class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64"
+      >
+        <img
+          src="../assets/images/Icon/cancel-circle.png"
+          alt="cancel-circle"
+          class="h-8 w-auto"
+        />
+      </button>
+
+      <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
+        <img
+          src="../assets/images/Icon/pop-up-star.png"
+          alt="pop-up-star"
+          class="h-4 w-auto"
+        />
+        <span class="text-gray-800">Write Review</span>
+      </button>
+
+      <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
+        <img
+          src="../assets/images/Icon/pop-up-idea.png"
+          alt="pop-up-idea"
+          class="h-4 w-auto"
+        />
+        <span class="text-gray-800">Resolve an Issue</span>
+      </button>
+
+      <button class="flex items-center space-x-2 px-6 py-2 w-60">
+        <img
+          src="../assets/images/Icon/pop-up-infinity.png"
+          alt="pop-up-infinity"
+          class="h-4 w-auto"
+        />
+        <span class="text-gray-800">Price Comparison</span>
+      </button>
+    </div>
+  </div>
+</div>
     <script src="../js/linkup.js" ></script>
   </body>
 </html>

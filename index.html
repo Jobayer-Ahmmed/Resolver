@@ -16,7 +16,7 @@
         <div class="flex-shrink-0">
           <!-- Logo -->
           <a href="#" class="flex items-center">
-            <img src="./src/assets/images/logoHeaderFooter/logoHeader.png" alt="Logo" class="h-8 w-auto" />
+            <img src="./src/assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
             <span class="ml-2  font-bold text-xl text-black">Resolver</span>
           </a>
         </div>
@@ -106,9 +106,9 @@
             class="bg-white focus:outline-none px-4 py-3 pl-7 rounded-full text-sm mb-3 shadow-sm w-full pr-10" />
           <i class="fas fa-search absolute left-0 top-[1.3rem] pl-2 transform -translate-y-1/2 text-gray-400"></i>
         </div>
-        <button id="search-btn" class="bg-green-500 text-white py-3 rounded-full text-sm focus:outline-none hover:bg-green-600 transition shadow-lg">
+        <a href="./searchResult.html" class="bg-green-500 text-white py-3 rounded-full text-sm focus:outline-none hover:bg-green-600 transition shadow-lg">
           Search
-        </button>
+        </a>
       </div>
 
       <!-- Modal Structure (Initially Hidden) -->
@@ -874,7 +874,7 @@
             <div class="flex-shrink-0 mb-4">
               <!-- Logo -->
               <a href="#" class="flex items-center">
-                <img src="./src/assets/images/logoHeaderFooter/logoHeader.png" alt="Logo" class="h-8 w-auto" />
+                <img src="./src/assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
                 <span class="ml-2 text-xl font-bold text-white">Resolver</span>
               </a>
             </div>
@@ -967,6 +967,41 @@
     </div>
 
   </footer>
+
+
+ <!-- Pop up button -->
+
+  <div class="fixed top-[47rem] right-0 sm:bottom-0 sm:top-[35.5rem] sm:left-[12rem]">
+    <!-- Floating Action Button -->
+    <button id="fab-btn" class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg">
+      <img src="./src/assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+    </button>
+  
+    <!-- Pop-up Menu (Initially hidden) -->
+    <div id="popup-menu" class="hidden flex flex-col bg-white shadow-lg rounded-lg py-6  absolute -top-48 -left-64 sm:-top-52 sm:left-16 ">
+
+      <button id="close-popup" class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64">
+        <img src="./src/assets/images/Icon/cancel-circle.png" alt="cancel-circle" class="h-8 w-auto" />
+      </button>
+      
+      <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
+        <img src="./src/assets/images/Icon/pop-up-star.png" alt="pop-up-star" class="h-4 w-auto" />
+        <span class="text-gray-800">Write Review</span>
+      </button>
+
+      <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
+        <img src="./src/assets/images/Icon/pop-up-idea.png" alt="pop-up-idea" class="h-4 w-auto" />
+        <span class="text-gray-800">Resolve an Issue</span>
+      </button>
+
+      <button class="flex items-center space-x-2 px-6 py-2 w-60">
+        <img src="./src/assets/images/Icon/pop-up-infinity.png" alt="pop-up-infinity" class="h-4 w-auto" />
+        <span class="text-gray-800">Price Comparison</span>
+      </button>
+    </div>
+  </div>
+  
+  
 
 
 
