@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Re</title>
+    <title>Resover | History of complaints</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
@@ -17,10 +17,10 @@
     <!-- sub menu -->
     <div
         class="hidden xl:flex justify-between items-center container mx-auto px-20 text-gray-700  bg-white  font-semibold  py-3 mt-10">
-        <div>
-            <button class="px-4 py-2">Dashboard</button>
-            <button class="px-4 py-2 border border-black rounded  text-black">Profiles</button>
-            <button class="px-4 py-2 ">Settings</button>
+        <div>          
+            <a class="px-4 py-2" href="./user-dashboard-page.html">Dashboard</a>
+            <a class="px-4 py-2  border border-black rounded  text-black" href="./userProfileInformation.html">Profile</a>
+            <a  class="px-4 py-2" href="./userInformation.html">Settings</a>
         </div>
         <div class="border-2 border-gray-300 rounded py-2 px-4">
             <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
@@ -32,12 +32,12 @@
         <div class="bg-white p-4 w-full rounded-xl">
             <h2 class="mb-5  text-2xl font-medium">Profiles</h2>
             <select
-                class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
-                <option class="px-4 py-2">History of Complaints</option>
-                <option class="px-4 py-2">Profile Information</option>
-                <option class="px-4 py-2">Companies</option>
-                <option class="px-4 py-2">My Companies</option>
-                <option class="px-4 py-2">My Reviews</option>
+                 id="navSelect" class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
+                <option value="./user-dashboard-page.html" class="px-4 py-2">History of Complaints</option>
+                <option value="./userProfileInformation.html" class="px-4 py-2">Profile Information</option>
+                <option value="./profile-companies-page.html" class="px-4 py-2">Companies</option>
+                <option value="./profile-complaints-page.html" class="px-4 py-2">My Companies</option>
+                <option value="./myReviews.html" class="px-4 py-2">My Reviews</option>
             </select>
 
             <div class=" my-5">
@@ -74,12 +74,12 @@
                 </div>
                 <img class="-mb-8 -ml-3 absolute bottom-0 xl:block hidden" src="../assets/images/green-plus.png" alt="">
             </div>
-            <div class="text-gray-500 container mx-auto bg-white rounded shadow  font-semibold px-5 py-2 mt-10">
-                <button class="px-4 py-2">Profile Information</button>
-                <button class="px-4 py-2">Companies</button>
-                <button class="px-4 py-2">My Companies</button>
-                <button class="px-4 py-2">My Reviews</button>
-                <button class="px-4 py-2 border border-gray-400 text-black rounded">History of Complaints</button>
+            <div class="text-gray-500 container mx-auto bg-white rounded shadow  font-semibold px-5 py-5 mt-10">
+                <a href="./userProfileInformation.html" class="px-4 py-2">Profile Information</a>
+                <a href="./profile-companies-page.html" class="px-4 py-2">Companies</a>
+                <a href="./profile-complaints-page.html" class="px-4 py-2">My Companies</a>
+                <a href="./myReviews.html" class="px-4 py-2 ">My Reviews</a>
+                <a href="./historyOfComplaints.html" class="px-4 py-2 border border-gray-400 text-black rounded">History of Complaints</a>
             </div>
         </div>
 
@@ -809,6 +809,8 @@
             </div>
         </div>
     </section>
+
+    <script src="../js/linkup.js"></script>
 </body>
 
 </html>

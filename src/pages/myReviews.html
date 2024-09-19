@@ -16,9 +16,10 @@
     <div
         class="hidden lg:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
         <div>
-            <button class="px-4 py-2">Dashboard</button>
-            <button class="px-4 py-2 border border-black rounded  text-black">Profiles</button>
-            <button class="px-4 py-2 ">Settings</button>
+            <a class="px-4 py-2" href="./user-dashboard-page.html">Dashboard</a>
+            <a class="px-4 py-2  border border-black rounded  text-black" href="./userProfileInformation.html">Profile</a>
+            <a  class="px-4 py-2" href="./userInformation.html">Settings</a>
+
         </div>
         <div class="border-2 border-gray-300 rounded py-2 px-4">
             <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
@@ -29,13 +30,14 @@
     <section class="lg:hidden  bg-[#F4F4F4] px-4 flex justify-center items-center py-7">
         <div class="bg-white p-4 w-full rounded-xl">
             <h2 class="mb-5  text-2xl font-medium">Profiles</h2>
+
             <select
-                class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
-                <option class="px-4 py-2">My Reviews</option>
-                <option class="px-4 py-2">History of Complaints</option>
-                <option class="px-4 py-2">Profile Information</option>
-                <option class="px-4 py-2">Companies</option>
-                <option class="px-4 py-2">My Companies</option>
+                 id="navSelect" class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
+                 <option value="./myReviews.html" class="px-4 py-2">My Reviews</option>
+                <option value="./user-dashboard-page.html" class="px-4 py-2">History of Complaints</option>
+                <option value="./userProfileInformation.html" class="px-4 py-2">Profile Information</option>
+                <option value="./profile-companies-page.html" class="px-4 py-2">Companies</option>
+                <option value="./profile-complaints-page.html" class="px-4 py-2">My Companies</option>
             </select>
 
             <div class=" my-5">
@@ -74,12 +76,12 @@
                     <span>San Francisco,CA</span>
                 </p>
             </div>
-            <div class="text-gray-500 w-full bg-white  font-semibold px-5 py-2 mt-10">
-                <button class="px-4 py-2">Profile Information</button>
-                <button class="px-4 py-2">Companies</button>
-                <button class="px-4 py-2">My Companies</button>
-                <button class="px-4 py-2">My Reviews</button>
-                <button class="px-4 py-2 border border-gray-400 text-black rounded">History of Complaints</button>
+            <div class="text-gray-500 w-full bg-white  font-semibold px-5 py-5 mt-10">
+                <a href="./userProfileInformation.html" class="px-4 py-2">Profile Information</a>
+                <a href="./profile-companies-page.html" class="px-4 py-2">Companies</a>
+                <a href="./profile-complaints-page.html" class="px-4 py-2">My Companies</a>
+                <a href="./myReviews.html" class="px-4 py-2  border border-gray-400 text-black rounded">My Reviews</a>
+                <a href="./historyOfComplaints.html" class="px-4 py-2">History of Complaints</a>
             </div>
         </div>
 
@@ -316,7 +318,7 @@
 
         </div>
     </section>
-
+    <script src="../js/linkup.js"></script>
 </body>
 
 </html>
