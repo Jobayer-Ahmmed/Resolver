@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resover | History of complaints</title>
+    <title>Resover | Complaint History</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
@@ -139,7 +139,7 @@
     <!-- profile intro section -->
     <section class="xl:block hidden container mx-auto bg-[#F6FBFD] py-16 ">
         <div class=" mx-20 flex flex-col justify-center items-center">
-            <div class="w-full relative">
+            <div class="w-full ">
                 <div class="flex flex-col justify-center items-center">
                     <div><img src="../assets/images/charlie.png" alt=""></div>
                     <h2 class="text-3xl font-medium my-2">Charlie Henderson</h2>
@@ -148,7 +148,7 @@
                         <span>San Francisco,CA</span>
                     </p>
                 </div>
-                <img class="-mb-8 -ml-3 absolute bottom-0 xl:block hidden" src="../assets/images/green-plus.png" alt="">
+                
             </div>
             <div class="text-gray-500 container mx-auto bg-white rounded shadow  font-semibold px-5 py-5 mt-10">
                 <a href="./userProfileInformation.html" class="px-4 py-2">Profile Information</a>
@@ -163,7 +163,32 @@
 
 
     <!-- compaint section  -->
-    <section class=" container xl:px-20 px-4 xl:pt-10 xl:pb-32  bg-[#F4F4F4] ">
+    <section class="relative container xl:px-20 px-4 xl:pt-10 xl:pb-32  bg-[#F4F4F4] ">   
+<!-- green icon btn -->
+<div class="xl:block hidden dropdown dropdown-top absolute top-16 left-0">
+    <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-left" onclick="toggleDropdown('dropdown-menu-left')" />
+    <ul id="dropdown-menu-left" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 left-10 shadow relative">
+        <li class="flex justify-end">
+            <button class="absolute top-0 -left-10 btn btn-xs btn-circle border-2 border-black" onclick="closeDropdown('dropdown-menu-left')">&times;</button>
+        </li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
+    </ul>
+</div>
+
+<!-- green icon btn responsive -->
+<div class="xl:hidden block dropdown dropdown-top absolute top-56 right-8">
+    <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-right" onclick="toggleDropdown('dropdown-menu-right')" />
+    <ul id="dropdown-menu-right" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 right-6 shadow relative">
+        <li class="flex justify-end"></li>
+        <button class="absolute top-0 -right-10 btn btn-xs btn-circle border-2 border-black" onclick="closeDropdown('dropdown-menu-right')">&times;</button>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
+    </ul>
+</div>
+          
         <div class="xl:bg-white px-5 pt-5 pb-10 shadow">
             <div class="hidden xl:flex justify-center items-center ">
                 <div class=" xl:w-[700px] text-center ">
@@ -234,9 +259,8 @@
                         </div>
                     </div>
                     <div class="my-5">
-                        <div class="flex justify-between relative">
+                        <div class="flex justify-between ">
                             <h3 class="text-lg text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                            <img class="xl:hidden block absolute -bottom-7 -right-12" src="../assets/images/green-plus.png" alt="">
                         </div>
                         <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
                             leads to the company or
@@ -857,7 +881,7 @@
                     <i class="fa-solid fa-arrow-right border border-gray-400 py-2 px-3 shadow-lg rounded"></i>
                 </div>
             </div>
-
+        </div>
     </section>
 
 
@@ -990,6 +1014,21 @@
     
       </footer>
 
+
+    <script>
+        function toggleDropdown(menuId) {
+         const dropdown = document.getElementById(menuId);
+         if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+             dropdown.style.display = 'block';
+         } else {
+             dropdown.style.display = 'none';
+         }
+     }
+     
+     function closeDropdown(menuId) {
+         document.getElementById(menuId).style.display = 'none';
+     }
+         </script>
     <script src="../js/linkup.js"></script>
 </body>
 

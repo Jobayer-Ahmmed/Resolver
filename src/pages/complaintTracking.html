@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resolver | Complaint Tracking</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
@@ -107,7 +107,31 @@
         <p class="text-3xl font-medium">Complaint Tracking</p>
     </section>
     <!-- -->
-    <section class=" container xl:px-20 px-4 bg-[#B5B5B5] py-10 xl:py-20">
+    <section class="relative container xl:px-20 px-4 bg-[#B5B5B5] py-10 xl:py-20">
+<!-- green icon btn -->
+<div class="xl:block hidden dropdown dropdown-top absolute top-28 left-0">
+    <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-left" onclick="toggleDropdown('dropdown-menu-left')" />
+    <ul id="dropdown-menu-left" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 left-10 shadow relative">
+        <li class="flex justify-end">
+            <button class="absolute top-0 -left-10 btn btn-xs btn-circle border-2 border-black" onclick="closeDropdown('dropdown-menu-left')">&times;</button>
+        </li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
+    </ul>
+</div>
+
+<!-- green icon btn responsive -->
+<div class="xl:hidden block dropdown dropdown-top absolute top-[710px] right-5">
+    <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-right" onclick="toggleDropdown('dropdown-menu-right')" />
+    <ul id="dropdown-menu-right" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 right-6 shadow relative">
+        <li class="flex justify-end"></li>
+        <button class="absolute top-0 -right-10 btn btn-xs btn-circle border-2 border-black" onclick="closeDropdown('dropdown-menu-right')">&times;</button>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
+    </ul>
+</div>
         <div class=" bg-white xl:px-10 px-4 py-10 rounded">
             <!-- go back -->
             <a href="./historyOfComplaints.html" class="py-10 px-2 flex justify-start items-center gap-3 xl:hidden">
@@ -145,7 +169,7 @@
                         <p>Resolved</p>
                     </div>
                 </div>
-                <img class="-mb-8 -mr-3 xl:hidden block" src="../assets/images/green-plus.png" alt="">
+
             </div>
         </div>
 
@@ -282,6 +306,7 @@
     </section>
     <!-- Review section -->
     <section class="container xl:px-20 px-4 flex xl:flex-row flex-col justify-between bg-[#ECEFEE] py-24">
+
         <div>
             <h1 class="text-4xl font-medium text-[#273F2B] xl:mb-3 mb-4 xl:text-left text-center">Your Next Review is
                 <br class="xl:hidden block"> Just <br class="xl:block hidden"> Around the Corner
@@ -413,6 +438,20 @@
 
   </footer>
 
+<script>
+    function toggleDropdown(menuId) {
+     const dropdown = document.getElementById(menuId);
+     if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+         dropdown.style.display = 'block';
+     } else {
+         dropdown.style.display = 'none';
+     }
+ }
+ 
+ function closeDropdown(menuId) {
+     document.getElementById(menuId).style.display = 'none';
+ }
+     </script>
 </body>
 
 </html>
