@@ -114,3 +114,9 @@ window.addEventListener("resize", renderCategories);
 
 
 
+function navigateToPage(select) {
+  const value = select.value;
+  if (value) {
+      window.location.href = value;
+  }
+}

@@ -166,13 +166,20 @@
                   </div>
   
                   <!-- Dropdown -->
-                  <div>
+                  <!-- <div>
                       <select class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none">
-                          <option>Communication</option>
-                          <option>Notifications</option>
-                          <option>Privacy</option>
+                        <option value="">Select an Option</option>
+                        <option value="communication.html">Communication</option>
+                        <option value="notifications.html">Notifications</option>
+                        <option value="./privacySettings.html">Privacy</option>
                       </select>
-                  </div>
+                  </div> -->
+                  <select class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none" onchange="navigateToPage(this)">
+                    <option value="" disabled selected>Select an Option</option>
+                    <option value="settingsCommunication.html">Communication</option>
+                    <option value="notifications.html">Notifications</option>
+                    <option value="privacySettings.html">Privacy</option>
+                </select>
               </div>
           </div>
       </div>
@@ -200,9 +207,9 @@
     <div class="mt-8 bg-white w-full max-w-7xl">
       <div class="border rounded-lg py-2 border-gray-200">
         <nav class=" flex sm:px-6 lg:px-2 justify-start items-center space-x-8" aria-label="Tabs">
-          <a href="#" class="text-gray-900 px-3 py-2 font-medium text-sm rounded-lg hover:bg-gray-100 focus:outline-none">User Information</a>
-          <a href="#" class="text-gray-900 px-3 py-2 font-medium text-sm border rounded-lg border-gray-200 hover:bg-gray-100 focus:outline-none">Communication</a>
-          <a href="#" class="text-gray-900 px-3 py-2 font-medium text-sm rounded-lg hover:bg-gray-100 focus:outline-none ">Privacy Settings</a>
+          <a href="./userInformation.html" class="text-gray-900 px-3 py-2 font-medium text-sm rounded-lg hover:bg-gray-100 focus:outline-none">User Information</a>
+          <a href="./settingsCommunication.html" class="text-gray-900 px-3 py-2 font-medium text-sm border rounded-lg border-gray-200 hover:bg-gray-100 focus:outline-none">Communication</a>
+          <a href="./privacySettings.html" class="text-gray-900 px-3 py-2 font-medium text-sm rounded-lg hover:bg-gray-100 focus:outline-none ">Privacy Settings</a>
         </nav>
       </div>
     </div>
