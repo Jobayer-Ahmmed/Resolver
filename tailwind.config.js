@@ -4,9 +4,8 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      spacing: {
-        '35': '35rem',
+    screens: {
+      
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
@@ -18,5 +17,5 @@ module.exports = {
   },
   plugins: [],
 }
-}
+
     

@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- css link ==================== -->
+  <link rel="stylesheet" href="../../../css/profileInformation.css" />
+
+  <!-- font awesome cdn link ========== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- font awesome cdn link end ========== -->
+</head>
+
+<body class="lg:bg-[#F4F4F4] bg-[#F5F7F9]">
+  <header class="bg-white border-b border-gray-200 relative z-20 w-full">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-20 w-full">
+      <div class="flex justify-between h-16 items-center w-full">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="flex items-center">
+            <img
+              src="../../../assets/logoHeaderAndFooter/logoHeader.png"
+              alt="Logo"
+              class="h-8 w-auto"
+            />
+           
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex space-x-4">
+          <a href="#" class="text-gray-900 hover:text-green-500 transition"
+            >Home</a
+          >
+          <a href="#" class="text-gray-900 hover:text-green-500 transition"
+            >How It Works</a
+          >
+          <a href="#" class="text-gray-900 hover:text-green-500 transition"
+            >Read Reviews</a
+          >
+          <a href="#" class="text-gray-900 hover:text-green-500 transition"
+            >Write Review</a
+          >
+          <a href="#" class="text-gray-900 hover:text-green-500 transition"
+            >About Us</a
+          >
+          <a href="#" class="text-gray-900 hover:text-green-500 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Right-side buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <!-- Upgrade Now Button -->
+          <a
+            href="#"
+            class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center"
+          >
+            <img
+              src="../../../assets/images/Icon/thunder.png"
+              alt="thunder-icon"
+              class="h-5 w-5 mr-2"
+            />
+            Upgrade now
+          </a>
+
+          <!-- Icons: Bell, Gear, Profile -->
+          <div class="flex space-x-4">
+            <button class="text-gray-900 hover:text-green-500 transition">
+              <img
+                src="../../../assets/images/Icon/settings-01.png"
+                alt="settings-icon"
+                class="h-5 w-5 mr-2"
+              />
+            </button>
+
+            <button class="text-gray-900 hover:text-green-500 transition">
+              <img
+                src="../../../assets/images/Icon/bell.png"
+                alt="bell-icon"
+                class="h-5 w-5 mr-2"
+              />
+            </button>
+
+            <div class="flex items-center">
+              <img
+                src="../../../assets/adminDashboard/image 4.png"
+                alt="settings-profile-image"
+                class="h-8 w-8 rounded-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center">
+          <button
+            id="mobile-menu-button"
+            class="text-gray-900 focus:outline-none"
+          >
+            <svg
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden"
+    >
+      <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a
+          href="#"
+          class="block text-gray-900 hover:text-green-500 transition"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="block text-gray-900 hover:text-green-500 transition"
+          >How It Works</a
+        >
+        <a
+          href="#"
+          class="block text-gray-900 hover:text-green-500 transition"
+          >Read Reviews</a
+        >
+        <a
+          href="#"
+          class="block text-gray-900 hover:text-green-500 transition"
+          >Write Review</a
+        >
+        <a
+          href="#"
+          class="block text-gray-900 hover:text-green-500 transition"
+          >About Us</a
+        >
+        <a
+          href="#"
+          class="block text-gray-900 hover:text-green-500 transition"
+          >Contact</a
+        >
+        <a
+          href="#"
+          class="block text-gray-900 hover:text-green-500 transition"
+          >Sign In</a
+        >
+        <a
+          href="#"
+          class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition"
+          >Sign Up</a
+        >
+      </nav>
+    </div>
+  </header>
+  <!-- inside Companies profile Navbar section start =================== -->
+  <section class="hidden lg:block">
+    <nav
+      class="px-4 flex border-b container mx-auto  border-[#EAECF0]  bg-white items-center justify-between relative lg:px-20">
+      <div class="text-[#344054] rounded-[10px] font-semibold py-4">
+        <!-- nav route ===================== -->
+       
+        <a class="px-4 py-2" href="../adminDashboard.html">Admin Dashboard</a>
+        <a class="px-4 py-2 text-[#182230] border border-[#818B9C] rounded-md" href="./companyProfile.html">Company profile</a>
+        <a class="px-4 py-2" href="../../admin-information.html">Settings</a>
+
+        <!-- nav route end ===================== -->
+      </div>
+      <!-- search bar input ================ -->
+      <div class="lg:min-w-[19rem] " >
+        <div class="px-4 flex items-center gap-2 py-2 border border-[#D0D5DD] rounded-lg shadow-sm">
+          <span class="text-[#667085]">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input class="w-full outline-none" placeholder="Search" type="text" />
+        </div>
+      </div>
+      <!-- search bar input end ================ -->
+    </nav>
+  </section>
+  <!-- inside Companies profile pages Navbar section end =================== -->
+  <main class="lg:bg-[#F4F4F4] bg-[#F5F7F9]">
+    <!-- profile intro section start ===================================== -->
+    <section class="bg-[#F6FBFD] pb-5 lg:py-16 lg:pb-5">
+      <div class="container hidden mx-auto px-4 lg:flex flex-col justify-center items-center">
+        <div class="flex flex-col justify-center items-center">
+          <div>
+            <img src="../../../assets/companyProfile/image 3.png" alt="" />
+          </div>
+          <h2 class="text-3xl font-medium my-2 text-[#273F2B]">
+            Amazon Fireflex
+          </h2>
+          <p style="background-color: rgba(120, 235, 84, 0.05)"
+            class="border border-[#78EB54] text-[#273F2B] rounded-[100px] px-6 py-2">
+            <i class="fa-solid fa-location-dot text-[#273F2B] text-sm"></i>
+            <span>San Francisco,CA</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- profile inside nav start =============================== -->
+      <nav class="px-4 relative container mx-auto lg:block hidden lg:px-20">
+        <div
+          class="text-[#667085] border rounded-[10px] border-[#EAECF0] px-4 w-full bg-white font-semibold py-2 mt-10">
+          <a href="../adminDashboard.html" class="px-4 py-2" >Dashboard</a>
+          <a  class="px-4 py-2" href="./listOfCompany.html">List of Companies</a>
+          <a class="px-4 py-2  shadow-md text-[#344054] border border-[#818B9C] rounded-md" href="./adminReviews.html">Reviews</a>
+          <a class="px-4 py-2" href="../../performance.html">Performance</a>
+          <a class="px-4 py-2" href="../analytics.html">Analytics</a>
+        </div>
+      </nav>
+      <!-- profile inside nav end =============================== -->
+
+      <!-- Admin dashboard stats =============================== -->
+      <section class="px-4 hidden my-6 md:grid lg:grid-cols-3 container mx-auto gap-5 lg:px-20">
+        <!-- card 1 number of companies start ======================= -->
+        <div class="bg-[#FFF] shadow-md rounded-md p-4 space-y-8">
+          <!-- title and 3dot ================ -->
+          <div class="flex justify-between items-center">
+            <h5 class="text-[#101828] font-semibold text-base">
+              Number of Reviews
+            </h5>
+            <span class="text-[#98A2B3]"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+          </div>
+          <!-- title and 3dot end ================ -->
+          <!-- count and line =================== -->
+          <div class="flex justify-between">
+            <!-- left side ================ -->
+            <div class="space-y-3">
+              <h3 class="text-[#101828] font-semibold text-4xl">2,420</h3>
+              <div class="flex gap-2">
+                <div class="text-[#079455] font-medium text-sm">
+                  <span class=""><i class="fa-solid fa-arrow-up"></i></span>
+                  <span> 40% </span>
+                </div>
+                <span class="font-medium text-sm text-[#475467]">vs last month</span>
+              </div>
+            </div>
+            <!-- left side end ================ -->
+
+            <!-- right side line ========== -->
+            <div class="relative">
+              <img class="" src="../../../assets/adminDashboard/Line1.png" alt="" />
+              <img class="absolute left-20 top-2" src="../../../assets/adminDashboard/Dot.png" alt="" />
+            </div>
+            <!-- right side line end ============ -->
+          </div>
+          <!-- count and line end =================== -->
+        </div>
+        <!-- card 1 number of companies end ======================= -->
+        <!-- card 2 number of companies start ======================= -->
+        <div class="bg-[#FFF] shadow-md rounded-md p-4 space-y-8">
+          <!-- title and 3dot ================ -->
+          <div class="flex justify-between items-center">
+            <h5 class="text-[#101828] font-semibold text-base">
+              Positive Reviews
+            </h5>
+            <span class="text-[#98A2B3]"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+          </div>
+          <!-- title and 3dot end ================ -->
+          <!-- count and line =================== -->
+          <div class="flex justify-between">
+            <!-- left side ================ -->
+            <div class="space-y-3">
+              <h3 class="text-[#101828] font-semibold text-4xl">316</h3>
+              <div class="flex gap-2">
+                <div class="text-[#079455] font-medium text-sm">
+                  <span class=""><i class="fa-solid fa-arrow-up"></i></span>
+                  <span> 20% </span>
+                </div>
+                <span class="font-medium text-sm text-[#475467]">vs last month</span>
+              </div>
+            </div>
+            <!-- left side end ================ -->
+
+            <!-- right side line ========== -->
+            <div class="relative">
+              <img src="../../../assets/adminDashboard/Line1.png" alt="" />
+              <img class="absolute left-20 top-2" src="../../../assets/adminDashboard/Dot.png" alt="" />
+            </div>
+            <!-- right side line end ============ -->
+          </div>
+          <!-- count and line end =================== -->
+        </div>
+        <!-- card 2 number of companies end ======================= -->
+        <!-- card 3 number of companies start ======================= -->
+        <div class="bg-[#FFF] shadow-md rounded-md p-4 space-y-8">
+          <!-- title and 3dot ================ -->
+          <div class="flex justify-between items-center">
+            <h5 class="text-[#101828] font-semibold text-base">
+              Negative Reviews
+            </h5>
+            <span class="text-[#98A2B3]"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+          </div>
+          <!-- title and 3dot end ================ -->
+          <!-- count and line =================== -->
+          <div class="flex justify-between">
+            <!-- left side ================ -->
+            <div class="space-y-3">
+              <h3 class="text-[#101828] hidden md:block font-semibold text-4xl">
+                210
+              </h3>
+              <h3 class="text-[#101828] md:hidden font-semibold text-4xl">
+                1,210
+              </h3>
+              <div class="flex gap-2">
+                <div class="text-[#D92D20] font-medium text-sm">
+                  <span class=""><i class="fa-solid fa-arrow-down"></i></span>
+                  <span> 10% </span>
+                </div>
+                <span class="font-medium text-sm text-[#475467]">vs last month</span>
+              </div>
+            </div>
+            <!-- left side end ================ -->
+
+            <!-- right side line ========== -->
+            <div class="relative">
+              <img src="../../../assets/adminDashboard/Line.png" alt="" />
+              <img class="absolute right-10 top-5" src="../../../assets/adminDashboard/Dot2.png" alt="" />
+            </div>
+            <!-- right side line end ============ -->
+          </div>
+          <!-- count and line end =================== -->
+        </div>
+        <!-- card 3 number of companies end ======================= -->
+      </section>
+      <!-- Admin dashboard stats end =============================== -->
+    </section>
+    <!-- profile intro section end ===================================== -->
+
+    <!-- Review and their header section start ========================== -->
+    <section class="md:px-4 container mx-auto mb-10 lg:mb-24 lg:px-20">
+      <section class="lg:bg-white lg:pb-4 lg:rounded-lg">
+        <!-- header section ====================== -->
+        <section class="md:mt-12 mt-3 mb-6 md:mb-0 md:bg-white rounded-md">
+          <div class="px-4">
+            <!-- companies title and search, filter, import button ================= -->
+            <div
+              class="flex gap-4 shadow-md md:shadow-none space-y-2 md:space-y-4 md:flex-row rounded-md md:rounded-t-md flex-col justify-between lg:items-baseline bg-white py-4 px-4 lg:px-0 md:border-b border-[#EAECF0]">
+              <!-- Mobile screen company profile selector ========== -->
+              <div class="space-y-3 mb-3 md:hidden">
+                <h1 class="text-[#101828] font-semibold text-2xl">
+                  Company profile
+                </h1>
+
+                <div>
+                  <select class="border border-[#D0D5DD] bg-[#FFF] outline-none shadow-md w-full rounded-lg px-4 py-2" name="" id="navSelect">
+                    <option value="./adminReviews.html">Reviews</option>
+                    <option value="../adminDashboard.html">Dashboard</option>
+                    <option value="./listOfCompany.html">List of Companies</option>
+                    <option value="../../performance.html">Performance</option>
+                    <option value="../analytics.html">Analytics</option>
+                </select>
+                </div>
+              </div>
+              <!-- Mobile screen company profile selector end ========== -->
+
+
+
+
+               <div class="md:hidden flex flex-col gap-4">
+
+                <div class="bg-[#FFF] shadow-md rounded-md p-4 space-y-4 md:space-y-8">
+                  <!-- Title and 3-dot menu -->
+                  <div class="flex justify-between items-center">
+                    <h5 class="text-[#101828] font-semibold text-base">Positive Reviews</h5>
+                    <span class="text-[#98A2B3]">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </span>
+                  </div>
+                  <!-- Count and line -->
+                  <div class="flex justify-between items-center">
+                    <!-- Left side (count and percentage) -->
+                    <div class="space-y-3">
+                      <h3 class="text-[#101828] font-semibold text-2xl md:text-4xl">316</h3>
+                      <div class="flex gap-2">
+                        <div class="text-[#079455] font-medium text-sm">
+                          <span><i class="fa-solid fa-arrow-up"></i></span>
+                          <span> 20% </span>
+                        </div>
+                        <span class="font-medium text-sm text-[#475467]">vs last month</span>
+                      </div>
+                    </div>
+                    <!-- Right side (line chart) -->
+                    <div class="relative">
+                      <img class="" src="../../../assets/adminDashboard/Line1.png" alt="" />
+                      <img class="absolute left-20 top-2" src="../../../assets/adminDashboard/Dot.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="bg-[#FFF] shadow-md rounded-md p-4 space-y-4 md:space-y-8">
+                  <!-- Title and 3-dot menu -->
+                  <div class="flex justify-between items-center">
+                    <h5 class="text-[#101828] font-semibold text-base">Positive Reviews</h5>
+                    <span class="text-[#98A2B3]">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </span>
+                  </div>
+                  <!-- Count and line -->
+                  <div class="flex justify-between items-center">
+                    <!-- Left side (count and percentage) -->
+                    <div class="space-y-3">
+                      <h3 class="text-[#101828] font-semibold text-2xl md:text-4xl">316</h3>
+                      <div class="flex gap-2">
+                        <div class="text-[#079455] font-medium text-sm">
+                          <span><i class="fa-solid fa-arrow-up"></i></span>
+                          <span> 20% </span>
+                        </div>
+                        <span class="font-medium text-sm text-[#475467]">vs last month</span>
+                      </div>
+                    </div>
+                    <!-- Right side (line chart) -->
+                    <div class="relative">
+                      <img class="" src="../../../assets/adminDashboard/Line1.png" alt="" />
+                      <img class="absolute left-20 top-2" src="../../../assets/adminDashboard/Dot.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="bg-[#FFF] shadow-md rounded-md p-4 space-y-4 md:space-y-8">
+                  <!-- Title and 3-dot menu -->
+                  <div class="flex justify-between items-center">
+                    <h5 class="text-[#101828] font-semibold text-base">Positive Reviews</h5>
+                    <span class="text-[#98A2B3]">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </span>
+                  </div>
+                  <!-- Count and line -->
+                  <div class="flex justify-between items-center">
+                    <!-- Left side (count and percentage) -->
+                    <div class="space-y-3">
+                      <h3 class="text-[#101828] font-semibold text-2xl md:text-4xl">316</h3>
+                      <div class="flex gap-2">
+                        <div class="text-[#079455] font-medium text-sm">
+                          <span><i class="fa-solid fa-arrow-up"></i></span>
+                          <span> 20% </span>
+                        </div>
+                        <span class="font-medium text-sm text-[#475467]">vs last month</span>
+                      </div>
+                    </div>
+                    <!-- Right side (line chart) -->
+                    <div class="relative">
+                      <img src="../../../assets/adminDashboard/Line.png" alt="" />
+                      <img class="absolute left-20 top-2" src="../../../assets/adminDashboard/Dot.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                   
+               </div>
+
+              <!-- left side title ============== -->
+              <div class="flex justify-between">
+                <div class="md:space-y-2">
+                  <h3 class="text-lg font-semibold text-[#273F2B] flex items-center gap-2">
+                    <span>List of Companies</span>
+                    <span class="font-medium text-sm hidden md:block text-[#344054] border 
+                        px-2 py-1 border-[#D0D5DD] rounded-lg shadow-md">202 Reviews</span>
+                  </h3>
+                  <p class="text-[#475467] font-normal text-sm">
+                    Keep track of your Companies.
+                  </p>
+                </div>
+                <div class="hidden">
+                  <span class="text-[#98A2B3]"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                </div>
+              </div>
+              <!-- left side title end ============== -->
+              <!-- right side button start =============== -->
+              <div class="flex lg:flex-row flex-col items-start gap-4">
+                <!-- search field filter ========== -->
+                <div class="flex items-center w-full md:w-fit gap-3">
+                  <!-- search bar input ================ -->
+                  <div class="flex-1">
+                    <div class="px-4 flex items-center gap-2 py-2 border border-[#D0D5DD] rounded-lg shadow-md">
+                      <span class="text-[#667085]">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </span>
+                      <input class="w-full outline-none bg-transparent" placeholder="Search" type="text" />
+                    </div>
+                  </div>
+                  <!-- search bar input end ================ -->
+                  <!-- Responsive  filter button ========== -->
+                  <button
+                    class="shadow-md md:hidden text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2">
+                    <span><img src="../../../assets/adminDashboard/filter-lines.png" alt="" /></span>
+                    <span class="hidden lg:block">Filters</span>
+                  </button>
+                  <!-- Responsive filter button ========== -->
+                </div>
+                <!-- search field end ========== -->
+                <!-- filter button ========== -->
+                <button
+                  class="shadow-md hidden text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 md:flex items-center gap-2">
+                  <span><img src="../../../assets/adminDashboard/filter-lines.png" alt="" /></span>
+                  <span class="hidden lg:block">Filters</span>
+                </button>
+                <!-- filter button ========== -->
+              </div>
+              <!-- right side button     end =============== -->
+            </div>
+            <!-- companies title and export import button end ================= -->
+          </div>
+        </section>
+        <!-- header section end ====================== -->
+        <!-- main Reviews card section start ================= -->
+
+        <section class="px-4 pb-4 mt-8 space-y-8">
+          <!-- total reviews card  start =================== -->
+
+          <div class="bg-[#FFF] px-4 py-4 lg:p-4 shadow-md rounded-lg">
+            <!-- upper layer start ================== -->
+            <div class="flex flex-col sm:flex-row justify-between py-3 lg:py-5 
+                border-[#EAECF0] border-b">
+              <!-- left side heading start ===================== -->
+              <div class="flex flex-col sm:flex-row sm:items-center gap-2 ">
+                <span>
+                  <img src="../../../assets/listed-of-companies-2/Star 6.png" alt="" />
+                </span>
+                <div>
+                  <h2 class="font-medium text-[#273F2B] sm:text-2xl">
+                    4.8 (230 reviews)
+                  </h2>
+                  <p class="sm:hidden text-xs">Listed Date 24.07.2024</p>
+                </div>
+              </div>
+
+
+              <!-- left side heading end ===================== -->
+              <!-- right side sort field start =========== -->
+              <div class="flex flex-col sm:flex-row sm:items-center gap-2 mt-4">
+                <h3 class="text-[#4D585F] font-bold sm:font-medium text-lg sm:text-sm">Sort by:</h3>
+                <select class="text-[#4D585F] font-semibold text-sm sm:text-xs px-3 rounded-lg
+                    sm:rounded-[4px] py-2 sm:py-1.5  outline-none border border-[#969EA3]" name="" id="">
+                  <option value="">NEWEST</option>
+                  <option value="">OLD</option>
+                </select>
+
+              </div>
+              <!-- right side sort field end =========== -->
+            </div>
+            <!-- upper layer end ================== -->
+            <!-- mid layer start============ -->
+            <div class="sm:py-5 pt-5 pb-2">
+              <!-- progress bar 1 start ============== -->
+              <div class="flex items-center gap-4 lg:gap-12 justify-between">
+                <!-- left side text ======= -->
+                <div class="flex items-center min-w-20 gap-2">
+                  <span>
+                    <input checked class="checkbox-green" type="checkbox" />
+                  </span>
+                  <h1 class="font-medium text-[#4D585F] text-sm">
+                    Excellent
+                  </h1>
+                </div>
+                <!-- left side text end === -->
+                <!-- progress bar ============= -->
+                <div class="flex-1">
+                  <div class="w-full bg-[#EFF2F4] h-4">
+                    <div class="bg-[#78EB54] h-4" style="width: 62%"></div>
+                  </div>
+                </div>
+                <!-- progress bar end ============= -->
+                <!-- percentage ================= -->
+                <div class="max-w-5 lg:max-w-0 lg:min-w-10" >
+                  <h2 class="text-[#4D585F] font-medium text-sm">62%</h2>
+                </div>
+                <!-- percentage ================= -->
+              </div>
+              <!-- progress bar 1 end ============== -->
+              <!-- progress bar 2 start ============== -->
+              <div class="flex items-center  gap-4 lg:gap-12 justify-between">
+                <!-- left side text ======= -->
+                <div class="flex min-w-20 items-center gap-2">
+                  <span>
+                    <input disabled class="checkbox-green" type="checkbox" />
+                  </span>
+                  <h1 class="font-medium text-[#4D585F] text-sm">Great</h1>
+                </div>
+                <!-- left side text end === -->
+                <!-- progress bar ============= -->
+                <div class="flex-1">
+                  <div class="w-full bg-[#EFF2F4] h-4">
+                    <div class="bg-[#969EA3] h-4" style="width: 26%"></div>
+                  </div>
+                </div>
+                <!-- progress bar end ============= -->
+                <!-- percentage ================= -->
+                <div  class="max-w-5 lg:max-w-0 lg:min-w-10" >
+                  <h2 class="text-[#4D585F]  font-medium text-sm">26%</h2>
+                </div>
+                <!-- percentage ================= -->
+              </div>
+              <!-- progress bar 2 end ============== -->
+              <!-- progress bar 3 start ============== -->
+              <div class="flex items-center gap-4 lg:gap-12 justify-between">
+                <!-- left side text ======= -->
+                <div class="flex min-w-20 items-center gap-2">
+                  <span>
+                    <input disabled class="checkbox-green" type="checkbox" />
+                  </span>
+                  <h1 class="font-medium text-[#4D585F] text-sm">Average</h1>
+                </div>
+                <!-- left side text end === -->
+                <!-- progress bar ============= -->
+                <div class="flex-1">
+                  <div class="w-full bg-[#EFF2F4] h-4">
+                    <div class="bg-[#969EA3] h-4" style="width: 12%"></div>
+                  </div>
+                </div>
+                <!-- progress bar end ============= -->
+                <!-- percentage ================= -->
+                <div  class=" max-w-5 lg:max-w-0 lg:min-w-10" >
+                  <h2 class="text-[#4D585F] font-medium text-sm">12%</h2>
+                </div>
+                <!-- percentage ================= -->
+              </div>
+              <!-- progress bar 3 end ============== -->
+              <!-- progress bar 4 start ============== -->
+              <div class="flex items-center gap-4 lg:gap-12 justify-between">
+                <!-- left side text ======= -->
+                <div class="flex min-w-20 items-center gap-2">
+                  <span>
+                    <input disabled class="checkbox-green" type="checkbox" />
+                  </span>
+                  <h1 class="font-medium text-[#4D585F] text-sm">Poor</h1>
+                </div>
+                <!-- left side text end === -->
+                <!-- progress bar ============= -->
+                <div class="flex-1">
+                  <div class="w-full bg-[#EFF2F4] h-4">
+                    <div class="bg-[#969EA3] h-4" style="width: 6%"></div>
+                  </div>
+                </div>
+                <!-- progress bar end ============= -->
+                <!-- percentage ================= -->
+                <div  class="max-w-5 lg:max-w-0 lg:min-w-10" >
+                  <h2 class="text-[#4D585F] font-medium text-sm">6%</h2>
+                </div>
+                <!-- percentage ================= -->
+              </div>
+              <!-- progress bar 4 end ============== -->
+              <!-- progress bar 5 start ============== -->
+              <div class="flex items-center gap-4 lg:gap-12 justify-between">
+                <!-- left side text ======= -->
+                <div class="flex min-w-20 items-center gap-2">
+                  <span>
+                    <input disabled class="checkbox-green" type="checkbox" />
+                  </span>
+                  <h1 class="font-medium text-[#4D585F] text-sm">Bad</h1>
+                </div>
+                <!-- left side text end === -->
+                <!-- progress bar ============= -->
+                <div class="flex-1">
+                  <div class="w-full bg-[#EFF2F4] h-4">
+                    <div class="bg-[#969EA3] h-4" style="width: 2%"></div>
+                  </div>
+                </div>
+                <!-- progress bar end ============= -->
+                <!-- percentage ================= -->
+                <div  class="max-w-5 lg:max-w-0 lg:min-w-10 " >
+                  <h2 class="text-[#4D585F] font-medium text-sm">2%</h2>
+                </div>
+                <!-- percentage ================= -->
+              </div>
+              <!-- progress bar 5 end ============== -->
+            </div>
+            <!-- mid layer end ============ -->
+
+            <!-- bottom layer start ======================= -->
+            <div>
+              <div class="px-4 flex items-center gap-2 py-2 border border-[#969EA3] rounded-lg">
+                <span class="text-[#667085]">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input class="w-full outline-none bg-transparent" placeholder="Add a comment..." type="text" />
+              </div>
+            </div>
+            <!-- bottom layer end ======================= -->
+          </div>
+          <!-- Total reviews card   end =================== -->
+
+          <!-- Card 1 start ===================== -->
+          <div class="bg-[#FFF] px-4 lg:p-4  py-4 lg:py-6 shadow-md rounded-lg">
+            <!-- upper layer start ================== -->
+            <div class="flex justify-between lg:pb-4 border-[#EAECF0] lg:border-b">
+              <!-- left side heading start ===================== -->
+              <div class="flex items-center gap-2">
+                <span>
+                  <img src="../../../assets/listed-of-companies-2/Group 21.png" alt="" />
+                </span>
+                <div class="lg:space-y-1">
+                  <h2 class="font-semibold text-[#273F2B] text-base">
+                    Vivien Lokossou
+                  </h2>
+                  <p class="text-[#4D585F] font-medium text-xs ">
+                    France
+                  </p>
+                </div>
+
+              </div>
+              <!-- left side heading end ===================== -->
+              <!-- right side  start =========== -->
+              <div class="flex items-center gap-2">
+                <h3 class="text-[#69747B] font-medium text-sm">Apr 19, 2024</h3>
+
+              </div>
+              <!-- right side  end =========== -->
+            </div>
+            <!-- upper layer end ================== -->
+
+            <!-- mid layer start ======================= -->
+            <div class="py-4 space-y-1 border-b border-[#EAECF0]">
+              <!-- part 1 start ================= -->
+              <div class="flex items-center gap-1 mb-2">
+                <img src="../../../assets/listed-of-companies-2/Group1.png" alt="">
+                <img src="../../../assets/listed-of-companies-2/Group1.png" alt="">
+                <img src="../../../assets/listed-of-companies-2/Group1.png" alt="">
+                <img src="../../../assets/listed-of-companies-2/Group1.png" alt="">
+                <img src="../../../assets/listed-of-companies-2/Group1.png" alt="">
+              </div>
+              <!-- part 1 end ================= -->
+              <!-- part 2 start ================ -->
+              <h2 class="text-[#1A2227] font-medium text-lg ">
+                Fermentum Venenatis Tortor
+              </h2>
+              <!-- part 2 end ================ -->
+              <!-- part 3 start ================ -->
+              <p class="text-[#4D585F] font-normal text-base ">
+                Consequat voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+                reprehenderit.
+              </p>
+              <!-- part 3 end ================ -->
+            </div>
+            <!-- mid layer end ======================= -->
+            <!-- bottom layer start ==================== -->
+            <div class="py-2 sm:py-4">
+              <div class="font-semibold text-sm lg:w-fit sm:text-xs uppercase flex justify-between sm:gap-4 text-[#969EA3]">
+                <p class="text-[#78EB54]  ">
+                  Reply
+                </p>
+                <span>|</span>
+                <div class="flex items-center gap-1">
+                  <img src="../../../assets/listed-of-companies-2/Heart.png" alt="">
+                  <span>Like</span>
+                </div>
+                <span>|</span>
+                <div class="flex items-center gap-1">
+                  <img src="../../../assets/listed-of-companies-2/share.png" alt="">
+                  <span>Share</span>
+                </div>
+               
+                <div class="flex items-center gap-1">
+                  <img src="../../../assets/listed-of-companies-2/solve.png" alt="">
+                  <span>Resolve</span>
+                </div>
+
+              </div>
+
+              <!-- Reply layer start ====================== -->
+              <div style="background-color: rgba(233, 246, 255, 0.50);"
+                class="px-4 pt-4 flex flex-col sm:flex-row justify-between pb-8 mt-4 border-l-[3px] border-[#2196F3]">
+                <!-- left side part 1 start ================= -->
+                <div class="space-y-3">
+                  <div class="flex gap-3">
+                    <img src="../../../assets/listed-of-companies-2/Forward.png" class="h-5 w-5" alt="">
+                    <h2 class="text-[#818B9C] font-bold text-sm ">Reply from Satoshi Nakamoto</h2>
+                  </div>
+
+                  <p class="text-[#818B9C] font-normal text-sm sm:ml-10 ">
+                    Hearing from happy customers like you makes us feel great.
+                    Thank you for sharing your experience! If you need further help, reach out any time!
+                  </p>
+                </div>
+                <!-- left side part 1 end ================= -->
+                <!-- right side text ================ -->
+                <div class="min-w-fit">
+                  <p class="text-sm font-medium text-right text-[#69747B]">Apr 19, 2024</p>
+                </div>
+                <!-- right side text end ================ -->
+              </div>
+              <!-- Reply layer end ====================== -->
+
+            </div>
+            <!-- bottom layer start ==================== -->
+          </div>
+          <!-- Card 1 end ===================== -->
+
+           <!-- Card 2 start ===================== -->
+           <div class="bg-[#FFF] px-4 lg:p-4 py-4 lg:py-6 shadow-md rounded-lg">
+            <!-- upper layer start ================== -->
+            <div class="flex justify-between lg:pb-4 border-[#EAECF0] lg:border-b">
+              <!-- left side heading start ===================== -->
+              <div class="flex items-center gap-2">
+                <span>
+                  <img src="../../../assets/listed-of-companies-2/Group 23.png" alt="" />
+                </span>
+                <div class="lg:space-y-1">
+                  <h2 class="font-semibold text-[#273F2B] text-base">
+                    Daniel Kpobli
+                  </h2>
+                  <p class="text-[#4D585F] font-medium text-xs ">
+                    Australia
+                  </p>
+                </div>
+
+              </div>
+              <!-- left side heading end ===================== -->
+              <!-- right side  start =========== -->
+              <div class="flex items-center gap-2">
+                <h3 class="text-[#69747B] font-medium text-sm">Apr 19, 2024</h3>
+
+              </div>
+              <!-- right side  end =========== -->
+            </div>
+            <!-- upper layer end ================== -->
+
+            <!-- mid layer start ======================= -->
+            <div class="py-4 space-y-1 border-b border-[#EAECF0]">
+              <!-- part 1 start ================= -->
+              <div class="flex items-center gap-1 mb-2">
+                <img src="../../../assets/listed-of-companies-2/Group2.png" alt="">
+                <img src="../../../assets/listed-of-companies-2/Group2.png" alt="">
+                <img src="../../../assets/listed-of-companies-2/Group2.png" alt="">
+                <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+                <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+              </div>
+              <!-- part 1 end ================= -->
+              <!-- part 2 start ================ -->
+              <h2 class="text-[#1A2227] font-medium text-lg ">
+                Parturient Venenatis Etiam
+              </h2>
+              <!-- part 2 end ================ -->
+              <!-- part 3 start ================ -->
+              <p class="text-[#4D585F] font-normal text-base ">
+                Consequat voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+                reprehenderit.
+              </p>
+              <!-- part 3 end ================ -->
+            </div>
+            <!-- mid layer end ======================= -->
+            <!-- bottom layer start ==================== -->
+            <div class="py-2 sm:py-4">
+              <div class="font-semibold text-sm lg:w-fit sm:text-xs uppercase flex justify-between sm:gap-4 text-[#969EA3]">
+                <p class="text-[#78EB54]  ">
+                  Reply
+                </p>
+                <span>|</span>
+                <div class="flex items-center gap-1">
+                  <img src="../../../assets/listed-of-companies-2/Heart.png" alt="">
+                  <span>Like</span>
+                </div>
+                <span>|</span>
+                <div class="flex items-center gap-1">
+                  <img src="../../../assets/listed-of-companies-2/share.png" alt="">
+                  <span>Share</span>
+                </div>
+              
+               
+                <div class=" text-transparent items-center gap-1">
+                  
+                  <span>RRResolve</span>
+                </div>
+
+              </div>
+
+             
+
+            </div>
+            <!-- bottom layer start ==================== -->
+          </div>
+          <!-- Card 2 end ===================== -->
+
+            <!-- Card 3 start ===================== -->
+            <div class="bg-[#FFF] px-4 lg:p-4 py-4 lg:py-6 shadow-md rounded-lg">
+                <!-- upper layer start ================== -->
+                <div class="flex justify-between lg:pb-4 border-[#EAECF0] lg:border-b">
+                  <!-- left side heading start ===================== -->
+                  <div class="flex items-center gap-2">
+                    <span>
+                      <img src="../../../assets/listed-of-companies-2/Group 25.png" alt="" />
+                    </span>
+                    <div class="lg:space-y-1">
+                      <h2 class="font-semibold text-[#273F2B] text-base">
+                        Anita Azonde
+                      </h2>
+                      <p class="text-[#4D585F] font-medium text-xs ">
+                        United States
+                      </p>
+                    </div>
+    
+                  </div>
+                  <!-- left side heading end ===================== -->
+                  <!-- right side  start =========== -->
+                  <div class="flex items-center gap-2">
+                    <h3 class="text-[#69747B] font-medium text-sm">Apr 19, 2024</h3>
+    
+                  </div>
+                  <!-- right side  end =========== -->
+                </div>
+                <!-- upper layer end ================== -->
+    
+                <!-- mid layer start ======================= -->
+                <div class="py-4 space-y-1 border-b border-[#EAECF0]">
+                  <!-- part 1 start ================= -->
+                  <div class="flex items-center gap-1 mb-2">
+                    <img src="../../../assets/listed-of-companies-2/Group4.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group4.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group4.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group4.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+                  </div>
+                  <!-- part 1 end ================= -->
+                  <!-- part 2 start ================ -->
+                  <h2 class="text-[#1A2227] font-medium text-lg ">
+                    Fermentum Venenatis Tortor
+                  </h2>
+                  <!-- part 2 end ================ -->
+                  <!-- part 3 start ================ -->
+                  <p class="text-[#4D585F] font-normal text-base ">
+                    Consequat voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+                    reprehenderit.
+                  </p>
+                  <!-- part 3 end ================ -->
+                </div>
+                <!-- mid layer end ======================= -->
+                <!-- bottom layer start ==================== -->
+                <div class="py-2 sm:py-4">
+                  <div class="font-semibold text-sm lg:w-fit sm:text-xs uppercase flex justify-between sm:gap-4 text-[#969EA3]">
+                    <p class="text-[#78EB54]  ">
+                      Reply
+                    </p>
+                    <span>|</span>
+                    <div class="flex items-center gap-1">
+                      <img src="../../../assets/listed-of-companies-2/Heart.png" alt="">
+                      <span>Like</span>
+                    </div>
+                    <span>|</span>
+                    <div class="flex items-center gap-1">
+                      <img src="../../../assets/listed-of-companies-2/share.png" alt="">
+                      <span>Share</span>
+                    </div>
+                  
+                   
+                    <div class=" text-transparent items-center gap-1">
+                      
+                      <span>RRResolve</span>
+                    </div>
+    
+                  </div>
+    
+                 
+    
+                </div>
+                <!-- bottom layer start ==================== -->
+              </div>
+              <!-- Card 3 end ===================== -->
+                <!-- Card 4 start ===================== -->
+            <div class="bg-[#FFF] px-4 lg:p-4 py-4 lg:py-6 shadow-md rounded-lg">
+                <!-- upper layer start ================== -->
+                <div class="flex justify-between lg:pb-4 border-[#EAECF0] lg:border-b">
+                  <!-- left side heading start ===================== -->
+                  <div class="flex items-center gap-2">
+                    <span>
+                      <img src="../../../assets/listed-of-companies-2/Group 10.png" alt="" />
+                    </span>
+                    <div class="lg:space-y-1">
+                      <h2 class="font-semibold text-[#273F2B] text-base">
+                        Gaël Lokossou
+                      </h2>
+                      <p class="text-[#4D585F] font-medium text-xs ">
+                        Germany
+                      </p>
+                    </div>
+    
+                  </div>
+                  <!-- left side heading end ===================== -->
+                  <!-- right side  start =========== -->
+                  <div class="flex items-center gap-2">
+                    <h3 class="text-[#69747B] font-medium text-sm">Apr 19, 2024</h3>
+    
+                  </div>
+                  <!-- right side  end =========== -->
+                </div>
+                <!-- upper layer end ================== -->
+    
+                <!-- mid layer start ======================= -->
+                <div class="py-4 space-y-1 border-b border-[#EAECF0]">
+                  <!-- part 1 start ================= -->
+                  <div class="flex items-center gap-1 mb-2">
+                    <img src="../../../assets/listed-of-companies-2/Group6.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+                  </div>
+                  <!-- part 1 end ================= -->
+                  <!-- part 2 start ================ -->
+                  <h2 class="text-[#1A2227] font-medium text-lg ">
+                    Inceptos
+                  </h2>
+                  <!-- part 2 end ================ -->
+                  <!-- part 3 start ================ -->
+                  <p class="text-[#4D585F] font-normal text-base ">
+                    Consequat voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+                    reprehenderit.
+                  </p>
+                  <!-- part 3 end ================ -->
+                </div>
+                <!-- mid layer end ======================= -->
+                <!-- bottom layer start ==================== -->
+                <div class="py-2 sm:py-4">
+                  <div class="font-semibold text-sm lg:w-fit sm:text-xs uppercase flex justify-between sm:gap-4 text-[#969EA3]">
+                    <p class="text-[#78EB54]  ">
+                      Reply
+                    </p>
+                    <span>|</span>
+                    <div class="flex items-center gap-1">
+                      <img src="../../../assets/listed-of-companies-2/Heart.png" alt="">
+                      <span>Like</span>
+                    </div>
+                    <span>|</span>
+                    <div class="flex items-center gap-1">
+                      <img src="../../../assets/listed-of-companies-2/share.png" alt="">
+                      <span>Share</span>
+                    </div>
+                  
+                   
+                    <div class=" text-transparent items-center gap-1">
+                      
+                      <span>RRResolve</span>
+                    </div>
+    
+                  </div>
+    
+                 
+    
+                </div>
+                <!-- bottom layer start ==================== -->
+              </div>
+              <!-- Card 4 end ===================== -->
+
+               <!-- Card 5 start ===================== -->
+            <div class="bg-[#FFF] px-4 lg:p-4 py-4 lg:py-6 shadow-md rounded-lg">
+                <!-- upper layer start ================== -->
+                <div class="flex justify-between lg:pb-4 border-[#EAECF0] lg:border-b">
+                  <!-- left side heading start ===================== -->
+                  <div class="flex items-center gap-2">
+                    <span>
+                      <img src="../../../assets/listed-of-companies-2/Group 16.png" alt="" />
+                    </span>
+                    <div class="lg:space-y-1">
+                      <h2 class="font-semibold text-[#273F2B] text-base">
+                        Euloge Fatoke
+                      </h2>
+                      <p class="text-[#4D585F] font-medium text-xs ">
+                        Germany
+                      </p>
+                    </div>
+    
+                  </div>
+                  <!-- left side heading end ===================== -->
+                  <!-- right side  start =========== -->
+                  <div class="flex items-center gap-2">
+                    <h3 class="text-[#69747B] font-medium text-sm">Apr 19, 2024</h3>
+    
+                  </div>
+                  <!-- right side  end =========== -->
+                </div>
+                <!-- upper layer end ================== -->
+    
+                <!-- mid layer start ======================= -->
+                <div class="py-4 space-y-1 border-b border-[#EAECF0]">
+                  <!-- part 1 start ================= -->
+                  <div class="flex items-center gap-1 mb-2">
+                    <img src="../../../assets/listed-of-companies-2/Group5.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group5.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+                    <img src="../../../assets/listed-of-companies-2/Group3.png" alt="">
+                  </div>
+                  <!-- part 1 end ================= -->
+                  <!-- part 2 start ================ -->
+                  <h2 class="text-[#1A2227] font-medium text-lg ">
+                    Vestibulum
+                  </h2>
+                  <!-- part 2 end ================ -->
+                  <!-- part 3 start ================ -->
+                  <p class="text-[#4D585F] font-normal text-base ">
+                    Consequat voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+                    reprehenderit.
+                  </p>
+                  <!-- part 3 end ================ -->
+                </div>
+                <!-- mid layer end ======================= -->
+                <!-- bottom layer start ==================== -->
+                <div class="py-2 sm:py-4">
+                  <div class="font-semibold text-sm lg:w-fit sm:text-xs uppercase flex justify-between sm:gap-4 text-[#969EA3]">
+                    <p class="text-[#78EB54]  ">
+                      Reply
+                    </p>
+                    <span>|</span>
+                    <div class="flex items-center gap-1">
+                      <img src="../../../assets/listed-of-companies-2/Heart.png" alt="">
+                      <span>Like</span>
+                    </div>
+                    <span>|</span>
+                    <div class="flex items-center gap-1">
+                      <img src="../../../assets/listed-of-companies-2/share.png" alt="">
+                      <span>Share</span>
+                    </div>
+                  
+                   
+                    <div class=" text-transparent items-center gap-1">
+                      
+                      <span>RRResolve</span>
+                    </div>
+    
+                  </div>
+    
+                 
+    
+                </div>
+                <!-- bottom layer start ==================== -->
+              </div>
+              <!-- Card 5 end ===================== -->
+        
+
+
+          </div>
+
+
+
+
+
+        </section>
+        <!-- main card end ======================== -->
+        <!-- pagination start ======================== -->
+        <section class="px-4 my-4">
+          <section class="hidden border-t shadow-md px-2 border-[#EAECF0] md:flex justify-between py-3">
+            <div>
+              <h3 class="text-[#344054] font-medium text-sm">Page 1 of 10</h3>
+            </div>
+            <!-- button start ============ -->
+            <div class="flex items-center gap-2">
+              <button
+                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2">
+                <span>Previous</span>
+              </button>
+              <button
+                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2">
+                <span>Next</span>
+              </button>
+            </div>
+          </section>
+        </section>
+        <!-- pagination end ======================== -->
+
+        <!-- responsive pagination ====================== -->
+        <section class="px-4">
+          <section class="md:hidden mt-4 border-t border-[#EAECF0] flex items-center justify-between py-4">
+            <button
+              class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2">
+              <span><i class="fa-solid fa-arrow-left"></i></span>
+            </button>
+            <div>
+              <h3 class="text-[#344054] font-medium text-sm">Page 1 of 10</h3>
+            </div>
+            <button
+              class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2">
+              <span><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+          </section>
+        </section>
+        <!-- responsive pagination end ====================== -->
+        <!-- main Reviews card section end ================= -->
+      </section>
+    </section>
+    <!-- Review and their header section end========================== -->
+  </main>
+
+
+  <!-- Footer Section -->
+  <footer class="bg-white mt-5 text-white relative">
+    <div class="bg-[#052e26] md:rounded-t-3xl">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 rounded">
+        <!-- Upper and Lower Footer: Combined Grid Layout -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+          <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+          <div class="col-span-2 sm:col-span-1">
+            <div class="flex-shrink-0 mb-4">
+              <!-- Logo -->
+              <a href="#" class="flex items-center">
+                <img
+                  src="../../../assets/logoHeaderAndFooter/logoFooter .png"
+                  alt="Logo"
+                  class="h-8 w-auto"
+                />
+                
+              </a>
+            </div>
+            <p class="mb-4 w-[14rem] sm:w-full">
+              Fun, engaging and authentic Platform
+            </p>
+            <div class="flex space-x-4">
+              <a href="#"
+                ><img
+                  src="../../../assets/images/Icon/linkedin.png"
+                  alt="LinkedIn"
+                  class="h-5"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../../../assets/images/Icon/youtube.png"
+                  alt="YouTube"
+                  class="h-5"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../../../assets/images/Icon/twitter.png"
+                  alt="Twitter"
+                  class="h-5"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../../../assets/images/Icon/facebook.png"
+                  alt="Facebook"
+                  class="h-5"
+              /></a>
+            </div>
+          </div>
+
+          <!-- Product Links -->
+          <div>
+            <h4 class="font-bold mb-4">Product</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">About us</a></li>
+              <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+              <li><a href="#" class="hover:text-green-400">Contact</a></li>
+              <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+              <li>
+                <a href="../../signin.html" class="hover:text-green-400"
+                  >Log in</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Resources Links -->
+          <div>
+            <h4 class="font-bold mb-4">Resources</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">Learn</a></li>
+              <li><a href="#" class="hover:text-green-400">Videos</a></li>
+              <li>
+                <a href="#" class="hover:text-green-400">Help Center</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Webinar Glossary</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- More Links -->
+          <div>
+            <h4 class="font-bold mb-4">More</h4>
+            <ul>
+              <li><a href="#" class="hover:text-green-400">Our story</a></li>
+              <li>
+                <a href="#" class="hover:text-green-400">We’re hiring</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Resolver NG</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400"
+                  >Resolver NG Satisfaction</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="block md:hidden">
+            <h4 class="font-bold mb-4">More</h4>
+            <ul>
+              <li>
+                <a href="#" class="hover:text-green-400">Trust Center</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Resolver NG</a>
+              </li>
+              <li><a href="#" class="hover:text-green-400">Status</a></li>
+              <li><a href="#" class="hover:text-green-400">Legal</a></li>
+              <li>
+                <a href="#" class="hover:text-green-400"
+                  >Do Not Sell My Info</a
+                >
+              </li>
+              <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-600 py-4">
+          <div
+            class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
+          >
+            <!-- Left Section: Links -->
+            <div class="hidden md:block">
+              <div
+                class="flex flex-wrap justify-center sm:justify-start space-x-6"
+              >
+                <a href="#" class="hover:text-green-400">Trust Center</a>
+                <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                <a href="#" class="hover:text-green-400">Status</a>
+                <a href="#" class="hover:text-green-400">Legal</a>
+                <a href="#" class="hover:text-green-400"
+                  >Do Not Sell My Info</a
+                >
+                <a href="#" class="hover:text-green-400">Opt out</a>
+              </div>
+            </div>
+
+            <!-- Right Section: Copyright -->
+            <div class="text-center sm:text-right">
+              <p>© All rights reserved by Resolver NG.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Star Icon (Absolute Positioned) -->
+        <div
+          class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4"
+        >
+          <img
+            src="../../../assets/images/3d-star.png"
+            alt="Star Icon"
+            class="h-32 w-32"
+          />
+        </div>
+      </div>
+    </div>
+  </footer>
+ 
+  <script src="../../../js/linkup.js" ></script>
+</body>
+
+</html>
