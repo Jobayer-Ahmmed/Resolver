@@ -1,24 +1,101 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resolver | My Reviews</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+            <!-- navbar -->
+            <header class="bg-white border-b border-gray-200 relative z-20 container pt-5">
+                <div class=" mx-auto px-4  xl:px-20 container">
+                    <div class="flex justify-between h-16 items-center w-full">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0">
+                            <a href="#" class="flex items-center">
+                                <img src="../assets/images/logo_and_name.png" alt="logo">
+                            </a>
+                        </div>
+            
+                        <!-- Desktop Menu -->
+                        <nav class="hidden xl:flex space-x-4">
+                            <a href="#" class="text-gray-900 hover:text-green-500 transition">Home</a>
+                            <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
+                            <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+                            <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
+                            <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+                            <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
+                        </nav>
+            
+                        <!-- Right-side buttons -->
+                        <div class="hidden md:flex items-center space-x-4">
+                            <!-- Upgrade Now Button -->
+                            <a href="#"
+                                class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
+                                <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
+                                Upgrade now
+                            </a>
+            
+                            <!-- Icons: Bell, Gear, Profile -->
+                            <div class="flex space-x-4">
+                                <button class="text-gray-900 hover:text-green-500 transition">
+                                    <img src="../assets/images/Icon/settings-01.png" alt="settings-icon"
+                                        class="h-5 w-5 mr-2" />
+                                </button>
+            
+                                <button class="text-gray-900 hover:text-green-500 transition">
+                                    <img src="../assets/images/Icon/bell.png" alt="bell-icon" class="h-5 w-5 mr-2" />
+                                </button>
+            
+                                <div class="flex items-center">
+                                    <img src="../assets/adminDashboard/image 4.png" alt="settings-profile-image"
+                                        class="h-8 w-8 rounded-full" />
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Mobile Menu Button -->
+                        <div class="xl:hidden flex items-center">
+                            <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="xl:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
+                    <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Home</a>
+                        <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
+                        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+                        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
+                        <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
+                        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
+                        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+                        <a href="#"
+                            class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+                    </nav>
+                </div>
+            </header>
     <!-- sub menu -->
     <div
         class="hidden lg:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
         <div>
-            <button class="px-4 py-2">Dashboard</button>
-            <button class="px-4 py-2 border border-black rounded  text-black">Profiles</button>
-            <button class="px-4 py-2 ">Settings</button>
+            <a class="px-4 py-2" href="./user-dashboard-page.html">Dashboard</a>
+            <a class="px-4 py-2  border border-black rounded  text-black"
+                href="./userProfileInformation.html">Profile</a>
+            <a class="px-4 py-2" href="./userInformation.html">Settings</a>
+
         </div>
         <div class="border-2 border-gray-300 rounded py-2 px-4">
             <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
@@ -29,13 +106,14 @@
     <section class="lg:hidden  bg-[#F4F4F4] px-4 flex justify-center items-center py-7">
         <div class="bg-white p-4 w-full rounded-xl">
             <h2 class="mb-5  text-2xl font-medium">Profiles</h2>
-            <select
+
+            <select id="navSelect"
                 class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
-                <option class="px-4 py-2">My Reviews</option>
-                <option class="px-4 py-2">History of Complaints</option>
-                <option class="px-4 py-2">Profile Information</option>
-                <option class="px-4 py-2">Companies</option>
-                <option class="px-4 py-2">My Companies</option>
+                <option value="./myReviews.html" class="px-4 py-2">My Reviews</option>
+                <option value="./user-dashboard-page.html" class="px-4 py-2">History of Complaints</option>
+                <option value="./userProfileInformation.html" class="px-4 py-2">Profile Information</option>
+                <option value="./profile-companies-page.html" class="px-4 py-2">Companies</option>
+                <option value="./profile-complaints-page.html" class="px-4 py-2">My Companies</option>
             </select>
 
             <div class=" my-5">
@@ -55,10 +133,9 @@
                     <div class="border border-gray-400 flex justify-center items-center px-4 rounded-xl"><img
                             class="w-7" src="../assets/images/filter-lines.png" alt=""></div>
                 </div>
-
-                <input type="submit"
-                    class="mt-5 w-full h-[52px] bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold"
-                    value="+ Write Complaint" name="" id="">
+                    <a href="./submitYourReview.html"
+                    class="mt-5 block text-center w-full h-[52px] bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold">Write
+                    Review</a>
             </div>
         </div>
 
@@ -74,19 +151,44 @@
                     <span>San Francisco,CA</span>
                 </p>
             </div>
-            <div class="text-gray-500 w-full bg-white  font-semibold px-5 py-2 mt-10">
-                <button class="px-4 py-2">Profile Information</button>
-                <button class="px-4 py-2">Companies</button>
-                <button class="px-4 py-2">My Companies</button>
-                <button class="px-4 py-2">My Reviews</button>
-                <button class="px-4 py-2 border border-gray-400 text-black rounded">History of Complaints</button>
+            <div class="text-gray-500 w-full bg-white  font-semibold px-5 py-5 mt-10">
+                <a href="./userProfileInformation.html" class="px-4 py-2">Profile Information</a>
+                <a href="./profile-companies-page.html" class="px-4 py-2">Companies</a>
+                <a href="./profile-complaints-page.html" class="px-4 py-2">My Companies</a>
+                <a href="./myReviews.html" class="px-4 py-2  border border-gray-400 text-black rounded">My Reviews</a>
+                <a href="./historyOfComplaints.html" class="px-4 py-2">History of Complaints</a>
             </div>
         </div>
 
     </section>
 
     <!-- reviews section -->
-    <section class=" container lg:px-20 px-4 bg-[#F4F4F4] pt-16 pb-24">
+    <section class="relative container lg:px-20 px-4 bg-[#F4F4F4] pt-16 pb-24">
+<!-- green icon btn -->
+<div class="xl:block hidden dropdown dropdown-top absolute top-16 left-0">
+    <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-left" onclick="toggleDropdown('dropdown-menu-left')" />
+    <ul id="dropdown-menu-left" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 left-10 shadow relative">
+        <li class="flex justify-end">
+            <button class="absolute top-0 -left-10 btn btn-xs btn-circle border-2 border-black" onclick="closeDropdown('dropdown-menu-left')">&times;</button>
+        </li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
+    </ul>
+</div>
+
+<!-- green icon btn responsive -->
+<div class="xl:hidden block dropdown dropdown-top absolute top-48 right-5">
+    <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-right" onclick="toggleDropdown('dropdown-menu-right')" />
+    <ul id="dropdown-menu-right" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 right-6 shadow relative">
+        <li class="flex justify-end"></li>
+        <button class="absolute top-0 -right-10 btn btn-xs btn-circle border-2 border-black" onclick="closeDropdown('dropdown-menu-right')">&times;</button>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
+    </ul>
+</div>
+
         <div class="bg-white p-4 rounded-lg ">
             <div class="lg:flex justify-between hidden ">
                 <div class=" my-5">
@@ -113,16 +215,16 @@
                         </div>
                     </div>
 
-                    <input type="submit"
-                        class="w-full h-12 bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold"
-                        value="+ Write Complaint" name="" id="">
+                    <a href="./submitYourReview.html"
+                        class="w-full h-12 bg-[#78EB54] px-5 py-2  rounded-xl text-[#273F2B] text-xl font-semibold">Write
+                        Review</a>
                 </div>
             </div>
 
             <!-- reviews cards -->
             <div class="flex flex-col gap-5">
                 <!-- 1st card -->
-                <div  class="p-10 rounded-lg shadow-lg  border border-gray-200">
+                <div class="p-10 rounded-lg shadow-lg  border border-gray-200">
                     <div class="flex justify-between">
                         <div class="flex gap-2">
                             <div><img src="../assets/images/cameron.png" alt=""></div>
@@ -148,24 +250,36 @@
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
-                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                        <div class="lg:hidden flex justify-center items-center">
+                            <p class="text-gray-500 text-xl font-semibold">More 5+</p>
+                        </div>
                     </div>
                     <div class="mt-4 mb-10">
-                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                        <span>Dramatically improved our ability to manage contracts accurately and quickly. The
+                            intuitive
                             interface and robust feature set perfectly match the requirements of Dramatically improved
                             our ability to manage contracts accurately and quickly. The intuitive interface and robust
-                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                            feature set perfectly match the requirements of <span
+                                class="text-blue-600 lg:inline hidden">Read more</span><span
+                                class="lg:hidden inline">...</span></span>
                     </div>
                     <div class="flex gap-5">
-                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i
+                                class="fa-solid fa-arrow-right"></i></p>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/ShareAlt.png" alt="">SHARE</button>
                     </div>
 
                 </div>
                 <!-- 2nd card -->
-                <div  class="p-10 rounded-lg shadow-lg  border border-gray-200">
+                <div class="p-10 rounded-lg shadow-lg  border border-gray-200">
                     <div class="flex justify-between">
                         <div class="flex gap-2">
                             <div><img src="../assets/images/cameron.png" alt=""></div>
@@ -191,24 +305,36 @@
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
-                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                        <div class="lg:hidden flex justify-center items-center">
+                            <p class="text-gray-500 text-xl font-semibold">More 5+</p>
+                        </div>
                     </div>
                     <div class="mt-4 mb-10">
-                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                        <span>Dramatically improved our ability to manage contracts accurately and quickly. The
+                            intuitive
                             interface and robust feature set perfectly match the requirements of Dramatically improved
                             our ability to manage contracts accurately and quickly. The intuitive interface and robust
-                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                            feature set perfectly match the requirements of <span
+                                class="text-blue-600 lg:inline hidden">Read more</span><span
+                                class="lg:hidden inline">...</span></span>
                     </div>
                     <div class="flex gap-5">
-                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i
+                                class="fa-solid fa-arrow-right"></i></p>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/ShareAlt.png" alt="">SHARE</button>
                     </div>
 
                 </div>
                 <!-- 3rd card -->
-                <div  class="p-10 rounded-lg shadow-lg  border border-gray-200">
+                <div class="p-10 rounded-lg shadow-lg  border border-gray-200">
                     <div class="flex justify-between">
                         <div class="flex gap-2">
                             <div><img src="../assets/images/cameron.png" alt=""></div>
@@ -234,24 +360,36 @@
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
-                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                        <div class="lg:hidden flex justify-center items-center">
+                            <p class="text-gray-500 text-xl font-semibold">More 5+</p>
+                        </div>
                     </div>
                     <div class="mt-4 mb-10">
-                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                        <span>Dramatically improved our ability to manage contracts accurately and quickly. The
+                            intuitive
                             interface and robust feature set perfectly match the requirements of Dramatically improved
                             our ability to manage contracts accurately and quickly. The intuitive interface and robust
-                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                            feature set perfectly match the requirements of <span
+                                class="text-blue-600 lg:inline hidden">Read more</span><span
+                                class="lg:hidden inline">...</span></span>
                     </div>
                     <div class="flex gap-5">
-                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i
+                                class="fa-solid fa-arrow-right"></i></p>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/ShareAlt.png" alt="">SHARE</button>
                     </div>
 
                 </div>
                 <!-- 4th card -->
-                <div  class="p-10 rounded-lg shadow-lg  border border-gray-200">
+                <div class="p-10 rounded-lg shadow-lg  border border-gray-200">
                     <div class="flex justify-between">
                         <div class="flex gap-2">
                             <div><img src="../assets/images/cameron.png" alt=""></div>
@@ -277,26 +415,38 @@
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/bed_room.png" alt="">
                         <img class="lg:block hidden" src="../assets//images/ocean.png" alt="">
-                        <div class="lg:hidden flex justify-center items-center"><p class="text-gray-500 text-xl font-semibold">More 5+</p></div>
+                        <div class="lg:hidden flex justify-center items-center">
+                            <p class="text-gray-500 text-xl font-semibold">More 5+</p>
+                        </div>
                     </div>
                     <div class="mt-4 mb-10">
-                        <span >Dramatically improved our ability to manage contracts accurately and quickly. The intuitive
+                        <span>Dramatically improved our ability to manage contracts accurately and quickly. The
+                            intuitive
                             interface and robust feature set perfectly match the requirements of Dramatically improved
                             our ability to manage contracts accurately and quickly. The intuitive interface and robust
-                            feature set perfectly match the requirements of <span class="text-blue-600 lg:inline hidden">Read more</span><span class="lg:hidden inline">...</span></span>
+                            feature set perfectly match the requirements of <span
+                                class="text-blue-600 lg:inline hidden">Read more</span><span
+                                class="lg:hidden inline">...</span></span>
                     </div>
                     <div class="flex gap-5">
-                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i class="fa-solid fa-arrow-right"></i></p>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/pencil.png" alt="">EDIT</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/Delete.png" alt="">DELETE</button>
-                        <button class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img src="../assets/images/ShareAlt.png" alt="">SHARE</button>
+                        <p class="lg:hidden flex items-center gap-2 text-lg font-medium">Read More <i
+                                class="fa-solid fa-arrow-right"></i></p>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/pencil.png" alt="">EDIT</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/Delete.png" alt="">DELETE</button>
+                        <button
+                            class="hidden lg:flex justify-center items-center gap-2 border border-gray-500 px-4 py-1 shadow-lg rounded"><img
+                                src="../assets/images/ShareAlt.png" alt="">SHARE</button>
                     </div>
 
                 </div>
 
             </div>
 
-            
+
             <!-- page number -->
             <div class="mt-10 flex justify-between ">
                 <div class="lg:hidden block">
@@ -316,7 +466,128 @@
 
         </div>
     </section>
+      <!-- footer -->
+      <footer class=" bg-white mt-5 text-white relative">
+        <div class=" bg-[#052e26] md:rounded-t-3xl ">
+          <div class="container  mx-auto px-4  xl:px-20  rounded">
+            <!-- Upper and Lower Footer: Combined Grid Layout -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+    
+              <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+              <div class="col-span-2 sm:col-span-1">
+                <div class="flex-shrink-0 mb-4">
+                  <!-- Logo -->
+                  <a href="#" class="flex items-center">
+                    <img src="../assets/images/logo_and_name_footer.png" alt="">
+                  </a>
+                </div>
+                <p class="mb-4 w-[14rem] sm:w-full">Fun, engaging and authentic Platform</p>
+                <div class="flex space-x-4">
+                  <a href="#"><img src="../assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5"></a>
+                  <a href="#"><img src="../assets/images/Icon/youtube.png" alt="YouTube" class="h-5"></a>
+                  <a href="#"><img src="../assets/images/Icon/twitter.png" alt="Twitter" class="h-5"></a>
+                  <a href="#"><img src="../assets/images/Icon/facebook.png" alt="Facebook" class="h-5"></a>
+                </div>
+              </div>
+    
+              <!-- Product Links -->
+              <div>
+                <h4 class="font-bold mb-4">Product</h4>
+                <ul>
+                  <li><a href="#" class="hover:text-green-400">About us</a></li>
+                  <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+                  <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                  <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+                  <li><a href="../signin.html" class="hover:text-green-400">Log in</a></li>
+                </ul>
+              </div>
+    
+              <!-- Resources Links -->
+              <div>
+                <h4 class="font-bold mb-4">Resources</h4>
+                <ul>
+                  <li><a href="#" class="hover:text-green-400">Learn</a></li>
+                  <li><a href="#" class="hover:text-green-400">Videos</a></li>
+                  <li><a href="#" class="hover:text-green-400">Help Center</a></li>
+                  <li><a href="#" class="hover:text-green-400">Webinar Glossary</a></li>
+                </ul>
+              </div>
+    
+              <!-- More Links -->
+              <div>
+                <h4 class="font-bold mb-4">More</h4>
+                <ul>
+                  <li><a href="#" class="hover:text-green-400">Our story</a></li>
+                  <li><a href="#" class="hover:text-green-400">We’re hiring</a></li>
+                  <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
+                  <li><a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a></li>
+                </ul>
+              </div>
+    
+              <div class="block md:hidden">
+                <h4 class="font-bold mb-4">More</h4>
+                <ul>
+                  <li><a href="#" class="hover:text-green-400">Trust Center</a></li>
+                  <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
+                  <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
+                  <li><a href="#" class="hover:text-green-400">Status</a></li>
+                  <li><a href="#" class="hover:text-green-400">Legal</a></li>
+                  <li><a href="#" class="hover:text-green-400">Do Not Sell My Info</a></li>
+                  <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+                </ul>
+              </div>
+    
+            </div>
+    
+            <div class="border-t border-gray-600 py-4">
+              <div
+                class="container mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0">
+                <!-- Left Section: Links -->
+                <div class="hidden md:block">
+                  <div class="flex flex-wrap justify-center sm:justify-start space-x-6">
+                    <a href="#" class="hover:text-green-400">Trust Center</a>
+                    <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-green-400">Status</a>
+                    <a href="#" class="hover:text-green-400">Legal</a>
+                    <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
+                    <a href="#" class="hover:text-green-400">Opt out</a>
+                  </div>
+                </div>
+    
+                <!-- Right Section: Copyright -->
+                <div class="text-center sm:text-right">
+                  <p>© All rights reserved by Resolver NG.</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Star Icon (Absolute Positioned) -->
+            <div class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4">
+              <img src="../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
+            </div>
+    
+          </div>
+        </div>
+    
+      </footer>
 
+    
+    <script>
+        function toggleDropdown(menuId) {
+         const dropdown = document.getElementById(menuId);
+         if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+             dropdown.style.display = 'block';
+         } else {
+             dropdown.style.display = 'none';
+         }
+     }
+     
+     function closeDropdown(menuId) {
+         document.getElementById(menuId).style.display = 'none';
+     }
+         </script>
+
+    <script src="../js/linkup.js"></script>
 </body>
 
 </html>

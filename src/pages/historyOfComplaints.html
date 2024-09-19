@@ -1,12 +1,12 @@
 <!-- created by Jobayer Ahmmed -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Re</title>
+    <title>Resover | Complaint History</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
@@ -14,13 +14,89 @@
 </head>
 
 <body>
+        <!-- navbar -->
+        <header class="bg-white border-b border-gray-200 relative z-20 container pt-5">
+            <div class=" mx-auto px-4  xl:px-20 container">
+                <div class="flex justify-between h-16 items-center w-full">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <a href="#" class="flex items-center">
+                            <img src="../assets/images/logo_and_name.png" alt="logo">
+                        </a>
+                    </div>
+        
+                    <!-- Desktop Menu -->
+                    <nav class="hidden xl:flex space-x-4">
+                        <a href="#" class="text-gray-900 hover:text-green-500 transition">Home</a>
+                        <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
+                        <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+                        <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
+                        <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+                        <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
+                    </nav>
+        
+                    <!-- Right-side buttons -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <!-- Upgrade Now Button -->
+                        <a href="#"
+                            class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
+                            <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
+                            Upgrade now
+                        </a>
+        
+                        <!-- Icons: Bell, Gear, Profile -->
+                        <div class="flex space-x-4">
+                            <button class="text-gray-900 hover:text-green-500 transition">
+                                <img src="../assets/images/Icon/settings-01.png" alt="settings-icon"
+                                    class="h-5 w-5 mr-2" />
+                            </button>
+        
+                            <button class="text-gray-900 hover:text-green-500 transition">
+                                <img src="../assets/images/Icon/bell.png" alt="bell-icon" class="h-5 w-5 mr-2" />
+                            </button>
+        
+                            <div class="flex items-center">
+                                <img src="../assets/adminDashboard/image 4.png" alt="settings-profile-image"
+                                    class="h-8 w-8 rounded-full" />
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Mobile Menu Button -->
+                    <div class="xl:hidden flex items-center">
+                        <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="xl:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
+                <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#" class="block text-gray-900 hover:text-green-500 transition">Home</a>
+                    <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
+                    <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+                    <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
+                    <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
+                    <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
+                    <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+                    <a href="#"
+                        class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+                </nav>
+            </div>
+        </header>
     <!-- sub menu -->
     <div
         class="hidden xl:flex justify-between items-center container mx-auto px-20 text-gray-700  bg-white  font-semibold  py-3 mt-10">
-        <div>
-            <button class="px-4 py-2">Dashboard</button>
-            <button class="px-4 py-2 border border-black rounded  text-black">Profiles</button>
-            <button class="px-4 py-2 ">Settings</button>
+        <div>          
+            <a class="px-4 py-2" href="./user-dashboard-page.html">Dashboard</a>
+            <a class="px-4 py-2  border border-black rounded  text-black" href="./userProfileInformation.html">Profile</a>
+            <a  class="px-4 py-2" href="./userInformation.html">Settings</a>
         </div>
         <div class="border-2 border-gray-300 rounded py-2 px-4">
             <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
@@ -32,12 +108,12 @@
         <div class="bg-white p-4 w-full rounded-xl">
             <h2 class="mb-5  text-2xl font-medium">Profiles</h2>
             <select
-                class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
-                <option class="px-4 py-2">History of Complaints</option>
-                <option class="px-4 py-2">Profile Information</option>
-                <option class="px-4 py-2">Companies</option>
-                <option class="px-4 py-2">My Companies</option>
-                <option class="px-4 py-2">My Reviews</option>
+                 id="navSelect" class="w-full outline-none  text-gray-500  bg-white  font-semibold px-5 py-2  border-2 border-gray-400 rounded-lg p">
+                <option value="./user-dashboard-page.html" class="px-4 py-2">History of Complaints</option>
+                <option value="./userProfileInformation.html" class="px-4 py-2">Profile Information</option>
+                <option value="./profile-companies-page.html" class="px-4 py-2">Companies</option>
+                <option value="./profile-complaints-page.html" class="px-4 py-2">My Companies</option>
+                <option value="./myReviews.html" class="px-4 py-2">My Reviews</option>
             </select>
 
             <div class=" my-5">
@@ -47,15 +123,15 @@
                     transparency
                     and timely updates on each stage of the resolution process.</p>
             </div>
-            <div class="">
+            <div class=" flex flex-col gap-2">
                 <div class="flex justify-start items-center gap-3 border-2 border-gray-300 rounded-full pl-5 py-3">
                     <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
                     <input type="text" class="outline-none border-collapse w-full rounded-full"
                         placeholder="Search for reviews, companies" name="" id="">
                 </div>
-                <input type="submit"
-                    class="mt-2 w-full h-[52px] bg-[#78EB54] px-5 py-2 rounded-full text-[#273F2B] text-xl font-semibold"
-                    value="Search" name="" id="">
+                    <a href="./complaintTracking.html"    class="block text-center  w-full h-[52px] bg-[#78EB54]  py-2 rounded-full text-[#273F2B] text-xl font-semibold"
+                    >Search </a>
+                    
             </div>
         </div>
 
@@ -63,7 +139,7 @@
     <!-- profile intro section -->
     <section class="xl:block hidden container mx-auto bg-[#F6FBFD] py-16 ">
         <div class=" mx-20 flex flex-col justify-center items-center">
-            <div class="w-full relative">
+            <div class="w-full ">
                 <div class="flex flex-col justify-center items-center">
                     <div><img src="../assets/images/charlie.png" alt=""></div>
                     <h2 class="text-3xl font-medium my-2">Charlie Henderson</h2>
@@ -72,14 +148,14 @@
                         <span>San Francisco,CA</span>
                     </p>
                 </div>
-                <img class="-mb-8 -ml-3 absolute bottom-0 xl:block hidden" src="../assets/images/green-plus.png" alt="">
+                
             </div>
-            <div class="text-gray-500 container mx-auto bg-white rounded shadow  font-semibold px-5 py-2 mt-10">
-                <button class="px-4 py-2">Profile Information</button>
-                <button class="px-4 py-2">Companies</button>
-                <button class="px-4 py-2">My Companies</button>
-                <button class="px-4 py-2">My Reviews</button>
-                <button class="px-4 py-2 border border-gray-400 text-black rounded">History of Complaints</button>
+            <div class="text-gray-500 container mx-auto bg-white rounded shadow  font-semibold px-5 py-5 mt-10">
+                <a href="./userProfileInformation.html" class="px-4 py-2">Profile Information</a>
+                <a href="./profile-companies-page.html" class="px-4 py-2">Companies</a>
+                <a href="./profile-complaints-page.html" class="px-4 py-2">My Companies</a>
+                <a href="./myReviews.html" class="px-4 py-2 ">My Reviews</a>
+                <a href="./historyOfComplaints.html" class="px-4 py-2 border border-gray-400 text-black rounded">History of Complaints</a>
             </div>
         </div>
 
@@ -87,7 +163,32 @@
 
 
     <!-- compaint section  -->
-    <section class=" container xl:px-20 px-4 xl:pt-10 xl:pb-32  bg-[#F4F4F4] ">
+    <section class="relative container xl:px-20 px-4 xl:pt-10 xl:pb-32  bg-[#F4F4F4] ">   
+<!-- green icon btn -->
+<div class="xl:block hidden dropdown dropdown-top absolute top-16 left-0">
+    <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-left" onclick="toggleDropdown('dropdown-menu-left')" />
+    <ul id="dropdown-menu-left" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 left-10 shadow relative">
+        <li class="flex justify-end">
+            <button class="absolute top-0 -left-10 btn btn-xs btn-circle border-2 border-black" onclick="closeDropdown('dropdown-menu-left')">&times;</button>
+        </li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
+    </ul>
+</div>
+
+<!-- green icon btn responsive -->
+<div class="xl:hidden block dropdown dropdown-top absolute top-56 right-8">
+    <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-right" onclick="toggleDropdown('dropdown-menu-right')" />
+    <ul id="dropdown-menu-right" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 right-6 shadow relative">
+        <li class="flex justify-end"></li>
+        <button class="absolute top-0 -right-10 btn btn-xs btn-circle border-2 border-black" onclick="closeDropdown('dropdown-menu-right')">&times;</button>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
+        <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
+    </ul>
+</div>
+          
         <div class="xl:bg-white px-5 pt-5 pb-10 shadow">
             <div class="hidden xl:flex justify-center items-center ">
                 <div class=" xl:w-[700px] text-center ">
@@ -110,9 +211,8 @@
                             <input type="text" class="outline-none border-collapse" placeholder="San Francisco,CA"
                                 name="" id="">
                         </div>
-                        <input type="submit"
-                            class="bg-[#78EB54] px-5 py-2 rounded-full text-[#273F2B] text-xl font-semibold"
-                            value="Search" name="" id="">
+                        <a href="./complaintTracking.html" class="bg-[#78EB54] px-5 py-2 rounded-full text-[#273F2B] text-xl font-semibold"
+                          >Search </a>
                     </div>
                 </div>
             </div>
@@ -159,9 +259,8 @@
                         </div>
                     </div>
                     <div class="my-5">
-                        <div class="flex justify-between relative">
+                        <div class="flex justify-between ">
                             <h3 class="text-lg text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                            <img class="xl:hidden block absolute -bottom-7 -right-12" src="../assets/images/green-plus.png" alt="">
                         </div>
                         <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
                             leads to the company or
@@ -782,7 +881,7 @@
                     <i class="fa-solid fa-arrow-right border border-gray-400 py-2 px-3 shadow-lg rounded"></i>
                 </div>
             </div>
-
+        </div>
     </section>
 
 
@@ -809,6 +908,128 @@
             </div>
         </div>
     </section>
+    
+    <!-- footer -->
+    <footer class=" bg-white mt-5 text-white relative">
+        <div class=" bg-[#052e26] md:rounded-t-3xl ">
+          <div class="container  mx-auto px-4  xl:px-20  rounded">
+            <!-- Upper and Lower Footer: Combined Grid Layout -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+    
+              <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+              <div class="col-span-2 sm:col-span-1">
+                <div class="flex-shrink-0 mb-4">
+                  <!-- Logo -->
+                  <a href="#" class="flex items-center">
+                    <img src="../assets/images/logo_and_name_footer.png" alt="">
+                  </a>
+                </div>
+                <p class="mb-4 w-[14rem] sm:w-full">Fun, engaging and authentic Platform</p>
+                <div class="flex space-x-4">
+                  <a href="#"><img src="../assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5"></a>
+                  <a href="#"><img src="../assets/images/Icon/youtube.png" alt="YouTube" class="h-5"></a>
+                  <a href="#"><img src="../assets/images/Icon/twitter.png" alt="Twitter" class="h-5"></a>
+                  <a href="#"><img src="../assets/images/Icon/facebook.png" alt="Facebook" class="h-5"></a>
+                </div>
+              </div>
+    
+              <!-- Product Links -->
+              <div>
+                <h4 class="font-bold mb-4">Product</h4>
+                <ul>
+                  <li><a href="#" class="hover:text-green-400">About us</a></li>
+                  <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+                  <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                  <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+                  <li><a href="../signin.html" class="hover:text-green-400">Log in</a></li>
+                </ul>
+              </div>
+    
+              <!-- Resources Links -->
+              <div>
+                <h4 class="font-bold mb-4">Resources</h4>
+                <ul>
+                  <li><a href="#" class="hover:text-green-400">Learn</a></li>
+                  <li><a href="#" class="hover:text-green-400">Videos</a></li>
+                  <li><a href="#" class="hover:text-green-400">Help Center</a></li>
+                  <li><a href="#" class="hover:text-green-400">Webinar Glossary</a></li>
+                </ul>
+              </div>
+    
+              <!-- More Links -->
+              <div>
+                <h4 class="font-bold mb-4">More</h4>
+                <ul>
+                  <li><a href="#" class="hover:text-green-400">Our story</a></li>
+                  <li><a href="#" class="hover:text-green-400">We’re hiring</a></li>
+                  <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
+                  <li><a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a></li>
+                </ul>
+              </div>
+    
+              <div class="block md:hidden">
+                <h4 class="font-bold mb-4">More</h4>
+                <ul>
+                  <li><a href="#" class="hover:text-green-400">Trust Center</a></li>
+                  <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
+                  <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
+                  <li><a href="#" class="hover:text-green-400">Status</a></li>
+                  <li><a href="#" class="hover:text-green-400">Legal</a></li>
+                  <li><a href="#" class="hover:text-green-400">Do Not Sell My Info</a></li>
+                  <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+                </ul>
+              </div>
+    
+            </div>
+    
+            <div class="border-t border-gray-600 py-4">
+              <div
+                class="container mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0">
+                <!-- Left Section: Links -->
+                <div class="hidden md:block">
+                  <div class="flex flex-wrap justify-center sm:justify-start space-x-6">
+                    <a href="#" class="hover:text-green-400">Trust Center</a>
+                    <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-green-400">Status</a>
+                    <a href="#" class="hover:text-green-400">Legal</a>
+                    <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
+                    <a href="#" class="hover:text-green-400">Opt out</a>
+                  </div>
+                </div>
+    
+                <!-- Right Section: Copyright -->
+                <div class="text-center sm:text-right">
+                  <p>© All rights reserved by Resolver NG.</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Star Icon (Absolute Positioned) -->
+            <div class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4">
+              <img src="../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
+            </div>
+    
+          </div>
+        </div>
+    
+      </footer>
+
+
+    <script>
+        function toggleDropdown(menuId) {
+         const dropdown = document.getElementById(menuId);
+         if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+             dropdown.style.display = 'block';
+         } else {
+             dropdown.style.display = 'none';
+         }
+     }
+     
+     function closeDropdown(menuId) {
+         document.getElementById(menuId).style.display = 'none';
+     }
+         </script>
+    <script src="../js/linkup.js"></script>
 </body>
 
 </html>
