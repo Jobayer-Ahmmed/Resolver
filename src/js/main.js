@@ -120,3 +120,18 @@ function navigateToPage(select) {
       window.location.href = value;
   }
 }
+
+
+const fabBtn = document.getElementById('fab-btn');
+const popupMenu = document.getElementById('popup-menu');
+const closePopup = document.getElementById('close-popup');
+
+// Toggle the popup menu visibility on the floating action button click
+fabBtn.addEventListener('click', () => {
+  popupMenu.classList.toggle('hidden');
+});
+
+// Hide the popup when the close button is clicked
+closePopup.addEventListener('click', () => {
+  popupMenu.classList.add('hidden');
+});
