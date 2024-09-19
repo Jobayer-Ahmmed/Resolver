@@ -6,6 +6,8 @@ document.getElementById('navSelect').addEventListener('change', function() {
     }
 });
 
+
+// handling popup button ==============
 const fabBtn = document.getElementById('fab-btn');
 const popupMenu = document.getElementById('popup-menu');
 const closePopup = document.getElementById('close-popup');
@@ -19,3 +21,5 @@ fabBtn.addEventListener('click', () => {
 closePopup.addEventListener('click', () => {
   popupMenu.classList.add('hidden');
 });
+
+// handling popup button end ==============
