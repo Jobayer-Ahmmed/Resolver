@@ -32,65 +32,85 @@
     </script>
   </head>
   <body class="bg-[#F4F4F4]">
-    <header class="bg-white shadow-md">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-          <div class="flex-shrink-0">
-            <!-- Logo -->
-            <a href="#" class="flex items-center">
-              <img src="./src/assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
-              <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
-            </a>
+    <header class="bg-white border-b border-gray-200 relative z-20 w-full">
+      <div class="container mx-auto px-4 lg:px-20 w-full">
+          <div class="flex justify-between h-16 items-center w-full">
+              <!-- Logo -->
+              <div class="flex-shrink-0">
+                  <a href="#" class="flex items-center">
+                      <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+                      <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
+                  </a>
+              </div>
+  
+              <!-- Desktop Menu -->
+              <nav class="hidden lg:flex space-x-4">
+                  <a href="#" class="text-gray-900 hover:text-green-500 transition">Home</a>
+                  <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
+                  <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+                  <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
+                  <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+                  <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
+              </nav>
+  
+              <!-- Right-side buttons -->
+              <div class="hidden md:flex items-center space-x-4">
+                  <!-- Upgrade Now Button -->
+                  <a href="#"
+                      class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
+                      <img src="../assets/images//Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
+                      Upgrade now
+                  </a>
+  
+                  <!-- Icons: Bell, Gear, Profile -->
+                  <div class="flex space-x-4">
+                      <button class="text-gray-900 hover:text-green-500 transition">
+                          <img src="../assets/images/Icon/settings-01.png" alt="settings-icon"
+                              class="h-5 w-5 mr-2" />
+                      </button>
+  
+                      <button class="text-gray-900 hover:text-green-500 transition">
+                          <img src="../assets/images/Icon/bell.png" alt="bell-icon" class="h-5 w-5 mr-2" />
+                      </button>
+  
+                      <div class="flex items-center">
+                          <img src="../assets/adminDashboard/image 4.png" alt="settings-profile-image"
+                              class="h-8 w-8 rounded-full" />
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Mobile Menu Button -->
+              <div class="lg:hidden flex items-center">
+                  <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                  </button>
+              </div>
           </div>
-  
-          <!-- Desktop Menu -->
-          <nav class="hidden lg:flex space-x-8">
-            <a href="./index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
-            <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
-            <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-            <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
-            <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
-            <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
-          </nav>
-  
-          <div class="hidden lg:flex items-center space-x-4">
-            <!-- Sign In -->
-            <a href="./src/pages/signin.html" class="text-gray-900 hover:text-green-500 transition">Sign In</a>
-  
-            <!-- Sign Up -->
-            <a href="./src/pages/signup.html"
-              class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
-          </div>
-  
-          <!-- Mobile Menu Button -->
-          <div class="lg:hidden flex items-center">
-            <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
   
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="lg:hidden hidden">
-        <nav class="px-2 pt-2 pb-3 flex flex-col gap-4 sm:px-3">
-          <a href="./index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
-          <a href="./src/pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
-          <a href="./src/pages/signup.html" class="block text-gray-900 hover:text-green-500 transition">Sign Up</a>
-        </nav>
+      <div id="mobile-menu" class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
+          <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <a href="#" class="block text-gray-900 hover:text-green-500 transition">Home</a>
+              <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
+              <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+              <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
+              <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
+              <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
+              <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+              <a href="#"
+                  class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+          </nav>
       </div>
-    </header>
+  </header>
     <section class="bg-white">
       <div
-        class="lg:flex max-w-full md:w-[1416px] mx-auto py-5 items-center justify-between hidden"
+        class="lg:flex max-w-full container lg:px-20 px-4 mx-auto py-5 items-center justify-between hidden"
       >
         <ul
           class="text-[#344054] flex items-center gap-6 text-base font-semibold"
@@ -120,7 +140,7 @@
       </div>
     </section>
     <section class="bg-[#F6FBFD] lg:mb-16 mb-6">
-      <div class="max-w-full w-[1416px] mx-auto py-10">
+      <div class="max-w-full container lg:px-20 px-4 mx-auto py-10">
         <!-- Mobile Dropdown -->
         <div class="lg:hidden block px-5">
           <h2 class="text-primary text-2xl mb-4 font-semibold">Settings</h2>
@@ -167,14 +187,23 @@
         </div>
 
         <div
-          class="bg-white mt-8 lg:flex hidden items-center gap-3 px-4 border rounded-lg py-2"
+          class="bg-white relative mt-8 lg:flex hidden items-center gap-3 px-4 border rounded-lg py-2"
         >
+
+        <div class="fixed top-80 left-10">
+          <img
+            src="../assets/profileInformationImages/insideLogo.png"
+            alt=""
+          />
+        </div>
+         <a href="../pages/userInformation.html">
           <button
-            id="userInterface"
-            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
-          >
-            User Information
-          </button>
+          id="userInterface"
+          class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+        >
+          User Information
+        </button>
+         </a>
           <button
             id="communicationBtn"
             class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
@@ -191,7 +220,7 @@
       </div>
     </section>
 
-    <section class="max-w-full lg:w-[1416px] px-5 w-full mx-auto">
+    <section class="max-w-full container lg:px-20 px-4  w-full mx-auto">
       <!-- Communication tab start -->
       <div class="block" id="communicationTab">
         <div class="bg-white mb-16 lg:p-8 p-3 rounded-[10px] shadow">
@@ -807,16 +836,16 @@
             <div class="flex-shrink-0 mb-4">
               <!-- Logo -->
               <a href="#" class="flex items-center">
-                <img src="./src/assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+                <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
                 <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
               </a>
             </div>
             <p class="mb-4 w-[14rem] sm:w-full">Fun, engaging and authentic Platform</p>
             <div class="flex space-x-4">
-              <a href="#"><img src="./src/assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5"></a>
-              <a href="#"><img src="./src/assets/images/Icon/youtube.png" alt="YouTube" class="h-5"></a>
-              <a href="#"><img src="./src/assets/images/Icon/twitter.png" alt="Twitter" class="h-5"></a>
-              <a href="#"><img src="./src/assets/images/Icon/facebook.png" alt="Facebook" class="h-5"></a>
+              <a href="#"><img src="../assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5"></a>
+              <a href="#"><img src="../assets/images/Icon/youtube.png" alt="YouTube" class="h-5"></a>
+              <a href="#"><img src="../assets/images/Icon/twitter.png" alt="Twitter" class="h-5"></a>
+              <a href="#"><img src="../assets/images/Icon/facebook.png" alt="Facebook" class="h-5"></a>
             </div>
           </div>
 
@@ -893,7 +922,7 @@
 
         <!-- Star Icon (Absolute Positioned) -->
         <div class="absolute top-24 md:top-40 right-12 transform translate-x-1/4 -translate-y-1/4">
-          <img src="./src/assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
+          <img src="../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
         </div>
 
       </div>
