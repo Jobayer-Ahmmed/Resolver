@@ -15,9 +15,12 @@
     <div
         class="hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-10">
         <div>
-            <button class="px-4 py-2">Admin Dashboard</button>
-            <button class="px-4 py-2  border border-black rounded  text-black">Company profile</button>
-            <button class="px-4 py-2 ">Settings</button>
+
+            <a class="px-4 py-2" href="./adminDashboard.html">Admin Dashboard</a>
+            <a class="px-4 py-2   border border-black rounded  text-black"
+                href="../businessSide/CompanyProfile/companyProfile.html">Company profile</a>
+            <a class="px-4 py-2" href="../admin-information.html">Settings</a>
+
         </div>
         <div class="border-2 border-gray-300 rounded py-2 px-4">
             <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
@@ -28,12 +31,12 @@
     <div class="xl:hidden block bg-[#F4F4F4] py-12 px-4">
         <div class="w-full bg-white py-8 px-4 rounded">
             <h4 class="text-2xl font-semibold">Company Profile</h4>
-            <select name="" id="" class="w-full border rounded shadow py-2 px-4  font-medium mt-4">
-                <option value="">Analytics</option>
-                <option value="">Dashboard</option>
-                <option value="">List of Companies</option>
-                <option value="">Reviews</option>
-                <option value="">Performance</option>
+            <select class="border border-[#D0D5DD] bg-[#FFF] outline-none shadow-md w-full rounded-lg px-4 py-2" name="" id="navSelect">
+                <option value="./analytics.html">Analytics</option>
+                <option value="./adminDashboard.html">Dashboard</option>
+                <option value="./CompanyProfile/listOfCompany.html">List of Companies</option>
+                <option value="./CompanyProfile/adminReviews.html">Reviews</option>
+                <option value="../performance.html">Performance</option>
             </select>
         </div>
     </div>
@@ -49,12 +52,13 @@
                     <span>San Francisco,CA</span>
                 </p>
             </div>
-            <div class="text-gray-500 w-full bg-white  font-semibold px-3 shadow-lg rounded py-2 mt-10">
-                <button class="px-4 py-2">Dashboard</button>
-                <button class="px-4 py-2">List of Companies</button>
-                <button class="px-4 py-2">Reviews</button>
-                <button class="px-4 py-2">Performance</button>
-                <button class="px-4 py-2 border border-gray-400 text-black rounded">Analytics</button>
+            <div class="text-gray-500 w-full bg-white  font-semibold px-3 shadow-lg rounded py-5 mt-10">
+                <a href="./adminDashboard.html" class="px-4 py-2" >Dashboard</a>
+                <a  class="px-4 py-2" href="./CompanyProfile/listOfCompany.html">List of Companies</a>
+                <a class="px-4 py-2" href="./CompanyProfile/adminReviews.html">Reviews</a>
+                <a class="px-4 py-2" href="../performance.html">Performance</a>
+                <a class="px-4 py-2  shadow-md text-[#344054] border border-[#818B9C] rounded-md" href="./analytics.html">Analytics</a>
+
             </div>
         </div>
 
@@ -633,7 +637,7 @@
                                 <p class="mt-1 text-blue-800">In Progress</p>
                             </td>
                         </tr>
-                      
+
                     </tbody>
                 </table>
             </div>
@@ -643,6 +647,14 @@
 
 
 
+    <script>
+        document.getElementById('navSelect').addEventListener('change', function() {
+            var selectedValue = this.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        });
+    </script>
 
 
 </body>

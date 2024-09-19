@@ -23,14 +23,14 @@
         >
           <div class="text-[#344054] rounded-[10px] font-semibold py-2">
             <!-- nav route ===================== -->
-            <button class="px-4 py-2">Admin Dashboard</button>
+             <a class="px-4 py-2" href="../adminDashboard.html">Admin Dashboard</a>
             <button
               class="px-4 py-2 text-[#182230] border border-[#818B9C] rounded-md"
             >
             Company profile
             </button>
   
-            <button class="px-4 py-2">Settings</button>
+          <a  class="px-4 py-2" href="../../admin-information.html">Settings</a>
   
             <!-- nav route end ===================== -->
           </div>
@@ -87,11 +87,10 @@
           >
           Dashboard
           </button>
-              <button class="px-4 py-2">List of Companies</button>
-            
-              <button class="px-4 py-2">Reviews</button>
-              <button class="px-4 py-2">Performance</button>
-              <button class="px-4 py-2">Analytics</button>
+              <a class="px-4 py-2" href="./listOfCompany.html">List of Companies</a>
+              <a class="px-4 py-2" href="./adminReviews.html">Reviews</a>
+              <a class="px-4 py-2" href="../../performance.html">Performance</a>
+              <a class="px-4 py-2" href="../analytics.html">Analytics</a>
             </div>
           </nav>
           <!-- profile inside nav end =============================== -->
@@ -107,13 +106,13 @@
                 <h1 class="text-[#101828] font-semibold text-2xl " >Company profile</h1>
 
                 <div>
-                    <select class="border border-[#D0D5DD] bg-[#FFF] outline-none shadow-md w-full rounded-lg px-4 py-2  " name="" id="">
-                        <option value="">Dashboard</option>
-                        <option value="">List of Companies</option>
-                        <option value="">Reviews</option>
-                        <option value="">Performance</option>
-                        <option value="">Analytics</option>
-                    </select>
+                  <select class="border border-[#D0D5DD] bg-[#FFF] outline-none shadow-md w-full rounded-lg px-4 py-2" name="" id="navSelect">
+                    <option value="">Dashboard</option>
+                    <option value="./listOfCompany.html">List of Companies</option>
+                    <option value="./adminReviews.html">Reviews</option>
+                    <option value="../../performance.html">Performance</option>
+                    <option value="../analytics.html">Analytics</option>
+                </select>
                 </div>
 
              </div>
@@ -1763,5 +1762,14 @@
 
 
        </main>
+
+       <script>
+        document.getElementById('navSelect').addEventListener('change', function() {
+            var selectedValue = this.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        });
+    </script>
 </body>
 </html>
