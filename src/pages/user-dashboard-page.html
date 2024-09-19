@@ -32,17 +32,24 @@
             class="sm:flex justify-between items-center mb-10 border-t border-b py-4 hidden"
         >
             <div class="flex space-x-4">
-                <button
+                <a
+                    href="./user-dashboard-page.html"
                     class="border-2 border-gray-400 text-gray-800 px-4 py-2 rounded-md font-medium"
                 >
                     Dashboard
-                </button>
-                <button class="text-gray-600 px-4 py-2 rounded-md font-medium">
+                </a>
+                <a
+                    href="./userProfileInformation.html"
+                    class="text-gray-600 px-4 py-2 rounded-md font-medium"
+                >
                     Profiles
-                </button>
-                <button class="text-gray-600 px-4 py-2 rounded-md font-medium">
+                </a>
+                <a
+                    href="./userInformation.html"
+                    class="text-gray-600 px-4 py-2 rounded-md font-medium"
+                >
                     Settings
-                </button>
+                </a>
             </div>
             <div class="relative">
                 <div
@@ -196,7 +203,8 @@
 
                         Export
                     </button>
-                    <button
+                    <a
+                        href="./write-compaint.html"
                         class="bg-[#4CAF50] text-white rounded-md px-4 py-2 flex items-center"
                     >
                         <svg
@@ -214,7 +222,7 @@
                             />
                         </svg>
                         Write Complaint
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -2003,6 +2011,8 @@
                             Export
                         </button>
                         <button
+                            id="navSelect"
+                            value="./write-compaint.html"
                             class="px-4 py-2 bg-green-500 text-white rounded-md flex items-center text-sm"
                         >
                             <svg
@@ -2428,5 +2438,15 @@
                 </div>
             </div>
         </div>
+        <script>
+            document
+                .getElementById("navSelect")
+                .addEventListener("click", function () {
+                    var selectedValue = this.value;
+                    if (selectedValue) {
+                        window.location.href = selectedValue;
+                    }
+                });
+        </script>
     </body>
 </html>

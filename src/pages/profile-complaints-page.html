@@ -36,21 +36,24 @@
                 class="flex justify-between items-center mb-10 border-t border-b py-4"
             >
                 <div class="flex space-x-4">
-                    <button
+                    <a
+                        href="./user-dashboard-page.html"
                         class="text-gray-800 px-4 py-2 rounded-md font-medium"
                     >
                         Dashboard
-                    </button>
-                    <button
+                    </a>
+                    <a
+                        href="./userProfileInformation.html"
                         class="border-2 border-gray-400 text-gray-600 px-4 py-2 rounded-md font-medium"
                     >
                         Profiles
-                    </button>
-                    <button
+                    </a>
+                    <a
+                        href="./userInformation.html"
                         class="text-gray-600 px-4 py-2 rounded-md font-medium"
                     >
                         Settings
-                    </button>
+                    </a>
                 </div>
                 <div class="relative">
                     <div
@@ -122,23 +125,36 @@
             <div
                 class="flex space-x-4 my-8 px-4 bg-[#F6FBFD] rounded-md border-2 border-gray-150 py-3"
             >
-                <button class="text-gray-600 px-2 py-1 rounded-md font-medium">
+                <a
+                    href="./userProfileInformation.html"
+                    class="text-gray-600 px-2 py-1 rounded-md font-medium"
+                >
                     Profile Information
-                </button>
-                <button class="text-gray-800 px-2 py-1 rounded-md font-medium">
+                </a>
+                <a
+                    href="./profile-companies-page.html"
+                    class="text-gray-800 px-2 py-1 rounded-md font-medium"
+                >
                     Companies
-                </button>
-                <button
+                </a>
+                <a
+                    href="./profile-complaints-page.html"
                     class="border-2 border-gray-400 text-gray-600 px-2 py-1 rounded-md font-medium"
                 >
                     My Complaints
-                </button>
-                <button class="text-gray-600 px-2 py-1 rounded-md font-medium">
+                </a>
+                <a
+                    href="./myReviews.html"
+                    class="text-gray-600 px-2 py-1 rounded-md font-medium"
+                >
                     My Reviews
-                </button>
-                <button class="text-gray-600 px-2 py-1 rounded-md font-medium">
+                </a>
+                <a
+                    href="./historyOfComplaints.html"
+                    class="text-gray-600 px-2 py-1 rounded-md font-medium"
+                >
                     History of Complaints
-                </button>
+                </a>
             </div>
 
             <!-- Company Profile -->
@@ -1725,9 +1741,25 @@
 
                     <div class="relative mb-10">
                         <select
+                            id="navSelect"
                             class="w-full p-2 border border-gray-300 rounded-md appearance-none bg-white text-gray-700 pr-8"
                         >
-                            <option>Companies</option>
+                            <option value="./userProfileInformation.html">
+                                Profile Information
+                            </option>
+                            <option value="./profile-companies-page.html">
+                                Companies
+                            </option>
+                            <option
+                                selected
+                                value="./profile-complaints-page.html"
+                            >
+                                My Complaints
+                            </option>
+                            <option value="./myReviews.html">My Reviews</option>
+                            <option value="./historyOfComplaints.html">
+                                History of Complaints
+                            </option>
                         </select>
                         <div
                             class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
@@ -2807,5 +2839,17 @@
                 </div>
             </div>
         </div>
+
+        <!-- Scripts -->
+        <script>
+            document
+                .getElementById("navSelect")
+                .addEventListener("change", function () {
+                    var selectedValue = this.value;
+                    if (selectedValue) {
+                        window.location.href = selectedValue;
+                    }
+                });
+        </script>
     </body>
 </html>
