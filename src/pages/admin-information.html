@@ -37,16 +37,14 @@
       <div class="container mx-auto px-4 lg:px-20 w-full">
         <div class="flex justify-between h-16 items-center w-full">
           <!-- Logo -->
+          <!-- Logo -->
           <div class="flex-shrink-0">
             <a href="#" class="flex items-center">
               <img
-                src="../assets/images/logo.png"
+                src="../assets/logoHeaderAndFooter/logoHeader.png"
                 alt="Logo"
                 class="h-8 w-auto"
               />
-              <span class="ml-2 text-lg font-bold text-green-600"
-                >Resolver</span
-              >
             </a>
           </div>
 
@@ -191,7 +189,7 @@
     </header>
     <section class="bg-white">
       <div
-        class="lg:flex max-w-full container mx-auto px-4 lg:px-20 py-5 items-center justify-between hidden"
+        class="lg:flex container mx-auto px-4 lg:px-20 py-5 items-center justify-between hidden"
       >
         <ul
           class="text-[#344054] flex items-center gap-6 text-base font-semibold"
@@ -199,14 +197,14 @@
           <li>
             <a
               class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
-              href=""
+              href="../pages/businessSide/adminDashboard.html"
               >Admin Dashboard</a
             >
           </li>
           <li>
             <a
               class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
-              href=""
+              href="../pages/businessSide/CompanyProfile/companyProfile.html"
               >Company profile</a
             >
           </li>
@@ -221,7 +219,7 @@
       </div>
     </section>
     <section class="bg-[#F6FBFD] lg:mb-16 mb-6">
-      <div class="max-w-full container mx-auto px-4 lg:px-20 py-10">
+      <div class="container mx-auto px-4 lg:px-20 py-10">
         <!-- Mobile Dropdown -->
         <div class="lg:hidden block px-5">
           <h2 class="text-primary text-2xl mb-4 font-semibold">
@@ -279,23 +277,27 @@
           >
             Admin Information
           </button>
-          <button
-            id="performance Btn"
-            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
-          >
-            Communication
-          </button>
-          <button
-            id="privacySettingBtn"
-            class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
-          >
-            Privacy Settings
-          </button>
+          <a href="../pages/settingsCommunication.html">
+            <button
+              id="performance Btn"
+              class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+            >
+              Communication
+            </button>
+          </a>
+          <a href="../pages/privacySettings.html">
+            <button
+              id="privacySettingBtn"
+              class="hover:border-2 border-2 border-transparent hover:border-[#818B9C] hover:text-[#344054] duration-150 px-3 font-semibold text-[#667085] py-2 rounded-md"
+            >
+              Privacy Settings
+            </button>
+          </a>
         </div>
       </div>
     </section>
     <!-- profile Information section -->
-    <section class="container xl:px-20 px-4">
+    <section class="container xl:px-20 mb-10 lg:mb-20 mx-auto px-4">
       <div
         class="md:w-[978px] w-full mx-auto rounded-lg bg-white p-4 xl:p-10 xl:px-32"
       >
@@ -547,110 +549,171 @@ I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI desi
         </div>
       </div>
     </section>
-        <!-- Footer Section -->
-        <footer class=" text-white relative">
-          <div class=" bg-[#052e26] md:rounded-t-3xl ">
-            <div class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8  rounded">
-              <!-- Upper and Lower Footer: Combined Grid Layout -->
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
-      
-                <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
-                <div class="col-span-2 sm:col-span-1">
-                  <div class="flex-shrink-0 mb-4">
-                    <!-- Logo -->
-                    <a href="#" class="flex items-center">
-                      <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
-                      <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
-                    </a>
-                  </div>
-                  <p class="mb-4 w-[14rem] sm:w-full">Fun, engaging and authentic Platform</p>
-                  <div class="flex space-x-4">
-                    <a href="#"><img src="../assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5"></a>
-                    <a href="#"><img src="../assets/images/Icon/youtube.png" alt="YouTube" class="h-5"></a>
-                    <a href="#"><img src="../assets/images/Icon/twitter.png" alt="Twitter" class="h-5"></a>
-                    <a href="#"><img src="../assets/images/Icon/facebook.png" alt="Facebook" class="h-5"></a>
-                  </div>
-                </div>
-      
-                <!-- Product Links -->
-                <div>
-                  <h4 class="font-bold mb-4">Product</h4>
-                  <ul>
-                    <li><a href="#" class="hover:text-green-400">About us</a></li>
-                    <li><a href="#" class="hover:text-green-400">FAQs</a></li>
-                    <li><a href="#" class="hover:text-green-400">Contact</a></li>
-                    <li><a href="#" class="hover:text-green-400">Pricing</a></li>
-                    <li><a href="./src/pages/signin.html" class="hover:text-green-400">Log in</a></li>
-                  </ul>
-                </div>
-      
-                <!-- Resources Links -->
-                <div>
-                  <h4 class="font-bold mb-4">Resources</h4>
-                  <ul>
-                    <li><a href="#" class="hover:text-green-400">Learn</a></li>
-                    <li><a href="#" class="hover:text-green-400">Videos</a></li>
-                    <li><a href="#" class="hover:text-green-400">Help Center</a></li>
-                    <li><a href="#" class="hover:text-green-400">Webinar Glossary</a></li>
-                  </ul>
-                </div>
-      
-                <!-- More Links -->
-                <div>
-                  <h4 class="font-bold mb-4">More</h4>
-                  <ul>
-                    <li><a href="#" class="hover:text-green-400">Our story</a></li>
-                    <li><a href="#" class="hover:text-green-400">We’re hiring</a></li>
-                    <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
-                    <li><a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a></li>
-                  </ul>
-                </div>
-      
-                <div class="block md:hidden">
-                  <h4 class="font-bold mb-4">More</h4>
-                  <ul>
-                    <li><a href="#" class="hover:text-green-400">Trust Center</a></li>
-                    <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
-                    <li><a href="#" class="hover:text-green-400">Status</a></li>
-                    <li><a href="#" class="hover:text-green-400">Legal</a></li>
-                    <li><a href="#" class="hover:text-green-400">Do Not Sell My Info</a></li>
-                    <li><a href="#" class="hover:text-green-400">Opt out</a></li>
-                  </ul>
-                </div>
-      
+    <!-- Footer Section -->
+    <footer class="text-white relative">
+      <div class="bg-[#052e26] md:rounded-t-3xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded">
+          <!-- Upper and Lower Footer: Combined Grid Layout -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+            <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+            <div class="col-span-2 sm:col-span-1">
+              <div class="flex-shrink-0 mb-4">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                  <img
+                    src="../assets/images/logo.png"
+                    alt="Logo"
+                    class="h-8 w-auto"
+                  />
+                  <span class="ml-2 text-lg font-bold text-green-600"
+                    >Resolver</span
+                  >
+                </a>
               </div>
-      
-              <div class="border-t border-gray-600 py-4">
-                <div
-                  class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0">
-                  <!-- Left Section: Links -->
-                  <div class="hidden md:block">
-                    <div class="flex flex-wrap justify-center sm:justify-start space-x-6">
-                      <a href="#" class="hover:text-green-400">Trust Center</a>
-                      <a href="#" class="hover:text-green-400">Privacy Policy</a>
-                      <a href="#" class="hover:text-green-400">Status</a>
-                      <a href="#" class="hover:text-green-400">Legal</a>
-                      <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
-                      <a href="#" class="hover:text-green-400">Opt out</a>
-                    </div>
-                  </div>
-      
-                  <!-- Right Section: Copyright -->
-                  <div class="text-center sm:text-right">
-                    <p>© All rights reserved by Resolver NG.</p>
-                  </div>
-                </div>
+              <p class="mb-4 w-[14rem] sm:w-full">
+                Fun, engaging and authentic Platform
+              </p>
+              <div class="flex space-x-4">
+                <a href="#"
+                  ><img
+                    src="../assets/images/Icon/linkedin.png"
+                    alt="LinkedIn"
+                    class="h-5"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="../assets/images/Icon/youtube.png"
+                    alt="YouTube"
+                    class="h-5"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="../assets/images/Icon/twitter.png"
+                    alt="Twitter"
+                    class="h-5"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="../assets/images/Icon/facebook.png"
+                    alt="Facebook"
+                    class="h-5"
+                /></a>
               </div>
-      
-              <!-- Star Icon (Absolute Positioned) -->
-              <div class="absolute top-24 md:top-40 right-12 transform translate-x-1/4 -translate-y-1/4">
-                <img src="../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
-              </div>
-      
+            </div>
+
+            <!-- Product Links -->
+            <div>
+              <h4 class="font-bold mb-4">Product</h4>
+              <ul>
+                <li><a href="#" class="hover:text-green-400">About us</a></li>
+                <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+                <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+                <li>
+                  <a href="./src/pages/signin.html" class="hover:text-green-400"
+                    >Log in</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Resources Links -->
+            <div>
+              <h4 class="font-bold mb-4">Resources</h4>
+              <ul>
+                <li><a href="#" class="hover:text-green-400">Learn</a></li>
+                <li><a href="#" class="hover:text-green-400">Videos</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Help Center</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Webinar Glossary</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- More Links -->
+            <div>
+              <h4 class="font-bold mb-4">More</h4>
+              <ul>
+                <li><a href="#" class="hover:text-green-400">Our story</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400">We’re hiring</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Resolver NG</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400"
+                    >Resolver NG Satisfaction</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="block md:hidden">
+              <h4 class="font-bold mb-4">More</h4>
+              <ul>
+                <li>
+                  <a href="#" class="hover:text-green-400">Trust Center</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Resolver NG</a>
+                </li>
+                <li><a href="#" class="hover:text-green-400">Status</a></li>
+                <li><a href="#" class="hover:text-green-400">Legal</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400"
+                    >Do Not Sell My Info</a
+                  >
+                </li>
+                <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+              </ul>
             </div>
           </div>
-      
-        </footer>
+
+          <div class="border-t border-gray-600 py-4">
+            <div
+              class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
+            >
+              <!-- Left Section: Links -->
+              <div class="hidden md:block">
+                <div
+                  class="flex flex-wrap justify-center sm:justify-start space-x-6"
+                >
+                  <a href="#" class="hover:text-green-400">Trust Center</a>
+                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                  <a href="#" class="hover:text-green-400">Status</a>
+                  <a href="#" class="hover:text-green-400">Legal</a>
+                  <a href="#" class="hover:text-green-400"
+                    >Do Not Sell My Info</a
+                  >
+                  <a href="#" class="hover:text-green-400">Opt out</a>
+                </div>
+              </div>
+
+              <!-- Right Section: Copyright -->
+              <div class="text-center sm:text-right">
+                <p>© All rights reserved by Resolver NG.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Star Icon (Absolute Positioned) -->
+          <div
+            class="absolute top-24 md:top-40 right-12 transform translate-x-1/4 -translate-y-1/4"
+          >
+            <img
+              src="../assets/images/3d-star.png"
+              alt="Star Icon"
+              class="h-32 w-32"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
