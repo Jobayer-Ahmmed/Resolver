@@ -144,19 +144,22 @@
   </section>
 
   <!--Footer section -->
-  <footer class=" bg-white text-white relative">
+  <footer class="md:pt-32 pt-12 bg-white text-white relative">
     <div class=" bg-[#052e26] md:rounded-t-3xl ">
       <div class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8  rounded">
         <!-- Upper and Lower Footer: Combined Grid Layout -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12 lg:py-20">
 
           <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
           <div class="col-span-2 sm:col-span-1">
             <div class="flex-shrink-0 mb-4">
               <!-- Logo -->
               <a href="#" class="flex items-center">
-                <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
-                <span class="ml-2 text-lg font-bold text-white">Resolver</span>
+                <img
+                src="../assets/logoHeaderAndFooter/logoFooter .png"
+                alt="Logo"
+                class="h-8 w-auto"
+              />
               </a>
             </div>
             <p class="mb-4 w-[14rem] sm:w-full">Fun, engaging and authentic Platform</p>
@@ -170,47 +173,73 @@
 
           <!-- Product Links -->
           <div>
-            <h4 class="font-bold mb-4">Product</h4>
-            <ul>
+            <h4 class="font-bold text-xl text-[#FFF] mb-4">Product</h4>
+            <ul class="lg:space-y-5 space-y-4 font-light">
               <li><a href="#" class="hover:text-green-400">About us</a></li>
               <li><a href="#" class="hover:text-green-400">FAQs</a></li>
               <li><a href="#" class="hover:text-green-400">Contact</a></li>
               <li><a href="#" class="hover:text-green-400">Pricing</a></li>
-              <li><a href="../pages/signin.html" class="hover:text-green-400">Log in</a></li>
+              <li>
+                <a href="./signin.html" class="hover:text-green-400"
+                  >Log in</a
+                >
+              </li>
             </ul>
           </div>
 
           <!-- Resources Links -->
           <div>
-            <h4 class="font-bold mb-4">Resources</h4>
-            <ul>
-              <li><a href="#" class="hover:text-green-400">Learn</a></li>
-              <li><a href="#" class="hover:text-green-400">Videos</a></li>
-              <li><a href="#" class="hover:text-green-400">Help Center</a></li>
-              <li><a href="#" class="hover:text-green-400">Webinar Glossary</a></li>
-            </ul>
+            <h4 class="font-bold text-xl text-[#FFF] mb-4">Resources</h4>
+              <ul class="lg:space-y-5 space-y-4 font-light">
+                <li><a href="#" class="hover:text-green-400">Learn</a></li>
+                <li><a href="#" class="hover:text-green-400">Videos</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Help Center</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Webinar Glossary</a>
+                </li>
+              </ul>
           </div>
 
           <!-- More Links -->
           <div>
-            <h4 class="font-bold mb-4">More</h4>
-            <ul>
+            <h4 class="font-bold text-xl text-[#FFF] mb-4">More</h4>
+            <ul class="lg:space-y-5 space-y-4 font-light">
               <li><a href="#" class="hover:text-green-400">Our story</a></li>
-              <li><a href="#" class="hover:text-green-400">We’re hiring</a></li>
-              <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
-              <li><a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a></li>
+              <li>
+                <a href="#" class="hover:text-green-400">We’re hiring</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Resolver NG</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400"
+                  >Resolver NG Satisfaction</a
+                >
+              </li>
             </ul>
           </div>
 
           <div class="block md:hidden">
-            <h4 class="font-bold mb-4">More</h4>
-            <ul>
-              <li><a href="#" class="hover:text-green-400">Trust Center</a></li>
-              <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
-              <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
+            <h4 class="font-bold text-[#FFF] mb-4">Support</h4>
+            <ul class="lg:space-y-5 space-y-4 font-light">
+              <li>
+                <a href="#" class="hover:text-green-400">Trust Center</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Resolver NG</a>
+              </li>
               <li><a href="#" class="hover:text-green-400">Status</a></li>
               <li><a href="#" class="hover:text-green-400">Legal</a></li>
-              <li><a href="#" class="hover:text-green-400">Do Not Sell My Info</a></li>
+              <li>
+                <a href="#" class="hover:text-green-400"
+                  >Do Not Sell My Info</a
+                >
+              </li>
               <li><a href="#" class="hover:text-green-400">Opt out</a></li>
             </ul>
           </div>
@@ -240,7 +269,7 @@
         </div>
 
         <!-- Star Icon (Absolute Positioned) -->
-        <div class="absolute top-24 md:top-8 right-12 transform translate-x-1/4 -translate-y-1/4">
+        <div class="absolute top-24 md:top-40 right-12 transform translate-x-1/4 -translate-y-1/4">
           <img src="../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
         </div>
 
@@ -248,7 +277,6 @@
     </div>
 
   </footer>
-
   <!-- Pop up button -->
   <div class="fixed top-[47rem] right-0 sm:bottom-0 sm:top-[35.5rem] sm:left-[12rem]">
     <!-- Floating Action Button -->

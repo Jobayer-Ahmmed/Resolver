@@ -192,6 +192,7 @@
 
 
     <!-- complaint section -->
+<<<<<<< HEAD
       <!-- table data and there header section start ==================== -->
       <section class="px-4 container mx-auto lg:px-20 ">
         <section class="md:mt-12 mb-20  bg-white shadow-md rounded-md   ">
@@ -977,6 +978,700 @@
                         
                       </tr>
                       <!-- table tr 8 end -================= -->
+=======
+    <section class="container xl:px-20 px-4 bg-[#F4F4F4]">
+        <div class="bg-white py-8 xl:px-8 px-3  rounded-lg shadow-lg">
+            <div class="flex xl:flex-row flex-col justify-center xl:justify-between xl:gap-0 gap-5">
+
+                <div>
+                    <div class="flex  gap-1">
+                        <p class="text-lg font-medium">All Complaints</p> <small
+                            class=" border-2 border-gray-400 rounded px-1 ">240 Complaints</small>
+                    </div>
+                    <p>Keep track of your company ratings.</p>
+                </div>
+
+                <div class="flex gap-5">
+                    <div class="border-2 border-gray-300 px-4 h-10 flex items-center rounded gap-2 font-medium"><img
+                            class="w-4" src="../../assets/images/upload-cloud.png" alt="">Export</div>
+                    <a href="./addACompany.html" class="rounded px-4 h-10 flex items-center font-medium bg-[#78EB54]">+ Add company</a>
+                </div>
+            </div>
+            <hr class="my-5 hidden xl:block">
+            <div class="flex xl:flex-row flex-col justify-center xl:justify-between gap-5 xl:gap-0 xl:mt-0 mt-5">
+                <div class="xl:flex justify-center  hidden ">
+                    <div class="py-2 px-4 border border-gray-400 bg-gray-200 shadow rounded-l">View all</div>
+                    <div class="py-2 px-4 border border-gray-400 shadow">
+
+                        <span>Top Rated Complaints</span>
+                    </div>
+                    <div class="py-2 px-4 border border-gray-400 shadow rounded-r">
+
+                        <span>Under Rated Complaints</span>
+                    </div>
+                </div>
+                <!-- reviews Search bar -->
+                <div class=" flex justify-between items-center gap-5">
+                    <div class="flex justify-between  gap-5">
+                        <div
+                            class="w-full xl:w-96 h-12 flex justify-start items-center gap-3 border-2 border-gray-300 rounded-xl pl-5 py-3">
+                            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+                            <input type="text" class="xl:w-auto  outline-none border-collapse w-full rounded-full"
+                                placeholder="Search" name="" id="">
+
+                        </div>
+                        <div class="h-12 border border-gray-400 flex justify-center items-center px-4 rounded-xl">
+                            <img class="w-7" src="../../assets/images/filter-lines.png" alt="">
+                            <span class="hidden xl:inline ml-2 text-lg">Filters</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- table menu responsive -->
+            <div class="xl:hidden flex justify-center   w-full">
+                <div class="xl:w-auto w-full mt-5 py-2 px-4 border border-gray-400 bg-gray-200 shadow rounded-l">View
+                    all</div>
+                <div class="xl:w-auto w-full mt-5 py-2 px-4 border border-gray-400 shadow">
+                    <span>Resolved</span>
+
+                </div>
+                <div class="xl:w-auto w-full mt-5 py-2 px-4 border border-gray-400 shadow rounded-r">
+                    <span>Unresolved</span>
+
+                </div>
+            </div>
+
+            <!-- table -->
+            <div class="overflow-x-auto mt-5 hidden xl:block">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                        <tr class="bg-base-200">
+                            <th>
+                                <div
+                                    class="text-white bg-green-400 w-4 h-4 rounded flex justify-center items-center text-lg ">
+                                    <span class="mb-2 text-xl ">-</span>
+                                </div>
+                            </th>
+                            <th>ID</th>
+                            <th>Ticket Name</th>
+                            <th>Categories</th>
+                            <th>Date</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="text-[12px]">
+                        <!-- row 1 -->
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>#010203</td>
+                            <td>Mobile App feature</td>
+                            <td>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Customer
+                                    data</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Admin</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
+                            </td>
+                            <td>22 Jun 2024</td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                            </td>
+                            <td class="flex justify-center items-center gap-2 font-medium">
+                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
+                                    <div class="bg-blue-500 h-2.5 rounded-full w-2/3"></div>
+                                </div>
+                                <p>In Progress</p>
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-comments"></i>
+                                <i class="fa-solid fa-pencil ml-4"></i>
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>#010203</td>
+                            <td>Mobile App feature</td>
+                            <td>
+                                <span
+                                    class="bg-purple-100 text-purple-600 py-1 border-2 border-gray-300    rounded-full px-4">Customer
+                                    data</span>
+                                <span
+                                    class=" bg-blue-100 text-blue-600 py-1 border-2 border-gray-300  rounded-full px-4">Admin</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
+                            </td>
+                            <td>22 Jun 2024</td>
+                            <td>
+                                <div
+                                    class="bg-red-100  text-red-600 border-red-300 border-2  px-2 py-1 rounded-full flex justify-center items-center gap-1">
+                                    <i class="fa-solid fa-arrow-down text-[10px] mt-[1px]"></i>
+                                    <p>Low</p>
+                                </div>
+                            </td>
+                            <td class="flex justify-center items-center gap-2 font-medium">
+                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
+                                    <div class="bg-green-400 h-2.5 rounded-full w-2/3"></div>
+                                </div>
+                                <p>Resolved</p>
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-trash-can"></i>
+                                <i class="fa-solid fa-pencil ml-4"></i>
+                            </td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>#010203</td>
+                            <td>Mobile App feature</td>
+                            <td>
+                                <span
+                                    class="bg-purple-100 text-purple-600 py-1 border-2 border-gray-300    rounded-full px-4">Customer
+                                    data</span>
+                                <span
+                                    class=" bg-red-100 text-red-600 py-1 border-2 border-gray-300  rounded-full px-4">Financials</span>
+
+                            </td>
+                            <td>22 Jun 2024</td>
+                            <td>
+                                <div
+                                    class="bg-red-100  text-red-600 border-red-300 border-2  px-2 py-1 rounded-full flex justify-center items-center gap-1">
+                                    <i class="fa-solid fa-arrow-down text-[10px] mt-[1px]"></i>
+                                    <p>Low</p>
+                                </div>
+                            </td>
+                            <td class="flex justify-center items-center gap-2 font-medium">
+                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
+                                    <div class="bg-orange-400 h-2.5 rounded-full w-2/3"></div>
+                                </div>
+                                <p>Pending</p>
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-trash-can"></i>
+                                <i class="fa-solid fa-pencil ml-4"></i>
+                            </td>
+                        </tr>
+                        <!-- row 4 -->
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>#010203</td>
+                            <td>Mobile App feature</td>
+                            <td>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Customer
+                                    data</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Admin</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
+                            </td>
+                            <td>22 Jun 2024</td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                            </td>
+                            <td class="flex justify-center items-center gap-2 font-medium">
+                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
+                                    <div class="bg-blue-500 h-2.5 rounded-full w-2/3"></div>
+                                </div>
+                                <p>In Progress</p>
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-trash-can"></i>
+                                <i class="fa-solid fa-pencil ml-4"></i>
+                            </td>
+                        </tr>
+                        <!-- row 5 -->
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>#010203</td>
+                            <td>Mobile App feature</td>
+                            <td>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Customer
+                                    data</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Admin</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
+                            </td>
+                            <td>22 Jun 2024</td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                            </td>
+                            <td class="flex justify-center items-center gap-2 font-medium">
+                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
+                                    <div class="bg-blue-500 h-2.5 rounded-full w-2/3"></div>
+                                </div>
+                                <p>In Progress</p>
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-trash-can"></i>
+                                <i class="fa-solid fa-pencil ml-4"></i>
+                            </td>
+                        </tr>
+                        <!-- row 6 -->
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>#010203</td>
+                            <td>Mobile App feature</td>
+                            <td>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Customer
+                                    data</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Admin</span>
+                                <span
+                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
+                            </td>
+                            <td>22 Jun 2024</td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                            </td>
+                            <td class="flex justify-center items-center gap-2 font-medium">
+                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
+                                    <div class="bg-blue-500 h-2.5 rounded-full w-2/3"></div>
+                                </div>
+                                <p>In Progress</p>
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-trash-can"></i>
+                                <i class="fa-solid fa-pencil ml-4"></i>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- table responsive-->
+            <div class="overflow-x-auto mt-5 block xl:hidden text-[12px] font-medium">
+                <table class="table">
+                    <tbody class="text-[12px]">
+                        <!-- row 1 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-red-100  text-red-600 border-red-300 border-2  px-2 py-1 rounded-full flex justify-center items-center gap-1">
+                                    <i class="fa-solid fa-arrow-down text-[10px] mt-[1px]"></i>
+                                    <p>Low</p>
+                                </div>
+                                <p class="mt-1 text-yellow-500">Pending</p>
+                            </td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-red-100  text-red-600 border-red-300 border-2  px-2 py-1 rounded-full flex justify-center items-center gap-1">
+                                    <i class="fa-solid fa-arrow-down text-[10px] mt-[1px]"></i>
+                                    <p>Low</p>
+                                </div>
+                                <p class="mt-1 text-green-300">Resolved</p>
+                            </td>
+                        </tr>
+                        <!-- row 4 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+                        <!-- row 5 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+                        <!-- row 6 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+                        <!-- row 7 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+                        <!-- row 8 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+                        <!-- row 9 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+                        <!-- row 10 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+                        <!-- row 11 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+                        <!-- row 12 -->
+                        <tr>
+                            <td>
+                                <p>Mobile App</p>
+                                <p class="mt-1">ID : #010203</p>
+                            </td>
+                            <td>
+                                <p>22 Jun 2024</p>
+                                <p class="mt-1 text-orange-500">Customer data</p>
+                            </td>
+                            <td>
+                                <div
+                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
+                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
+                                    <p>High</p>
+                                </div>
+                                <p class="mt-1 text-blue-800">In Progress</p>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <!-- Footer Section -->
+    <footer class="bg-white text-[#FFFFFFB2] relative">
+        <div class="bg-[#052e26] md:rounded-t-3xl">
+          <div class="container mx-auto px-4 lg:px-20">
+            <!-- Upper and Lower Footer: Combined Grid Layout -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-11 lg:py-20">
+              <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+              <div class="col-span-2 sm:col-span-1">
+                <div class="flex-shrink-0 mb-4">
+                  <!-- Logo -->
+                  <a href="#" class="flex items-center">
+                    <img
+                      src="../../assets/logoHeaderAndFooter/logoFooter .png"
+                      alt="Logo"
+                      class="h-8 w-auto"
+                    />
+                  </a>
+                </div>
+                <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
+                  Fun, engaging and authentic Platform
+                </p>
+                <div class="flex space-x-4">
+                  <a href="#"
+                    ><img
+                      src="../../assets/images/Icon/linkedin.png"
+                      alt="LinkedIn"
+                      class="h-5"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      src="../../assets/images/Icon/youtube.png"
+                      alt="YouTube"
+                      class="h-5"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      src="../../assets/images/Icon/twitter.png"
+                      alt="Twitter"
+                      class="h-5"
+                  /></a>
+                  <a href="#"
+                    ><img
+                      src="../../assets/images/Icon/facebook.png"
+                      alt="Facebook"
+                      class="h-5"
+                  /></a>
+                </div>
+              </div>
+  
+              <!-- Product Links -->
+              <div>
+                <h4 class="font-bold text-xl text-[#FFF] mb-4">Product</h4>
+                <ul class="lg:space-y-5 space-y-4 font-light">
+                  <li><a href="#" class="hover:text-green-400">About us</a></li>
+                  <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+                  <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                  <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+                  <li>
+                    <a href="./signin.html" class="hover:text-green-400"
+                      >Log in</a
+                    >
+                  </li>
+                </ul>
+              </div>
+  
+              <!-- Resources Links -->
+              <div>
+                <h4 class="font-bold text-xl text-[#FFF] mb-4">Resources</h4>
+                <ul class="lg:space-y-5 space-y-4 font-light">
+                  <li><a href="#" class="hover:text-green-400">Learn</a></li>
+                  <li><a href="#" class="hover:text-green-400">Videos</a></li>
+                  <li>
+                    <a href="#" class="hover:text-green-400">Help Center</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-green-400">Webinar Glossary</a>
+                  </li>
+                </ul>
+              </div>
+  
+              <!-- More Links -->
+              <div>
+                <h4 class="font-bold text-xl text-[#FFF] mb-4">More</h4>
+                <ul class="lg:space-y-5 space-y-4 font-light">
+                  <li><a href="#" class="hover:text-green-400">Our story</a></li>
+                  <li>
+                    <a href="#" class="hover:text-green-400">We’re hiring</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-green-400">Resolver NG</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-green-400"
+                      >Resolver NG Satisfaction</a
+                    >
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="block md:hidden">
+                <h4 class="font-bold text-[#FFF] mb-4">Support</h4>
+                <ul class="lg:space-y-5 space-y-4 font-light">
+                  <li>
+                    <a href="#" class="hover:text-green-400">Trust Center</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-green-400">Resolver NG</a>
+                  </li>
+                  <li><a href="#" class="hover:text-green-400">Status</a></li>
+                  <li><a href="#" class="hover:text-green-400">Legal</a></li>
+                  <li>
+                    <a href="#" class="hover:text-green-400"
+                      >Do Not Sell My Info</a
+                    >
+                  </li>
+                  <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="border-t border-gray-600 py-4">
+              <div
+                class="mx-auto text-[#FFF] flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
+              >
+                <!-- Left Section: Links -->
+                <div class="hidden  md:block">
+                  <div
+                    class="flex  flex-wrap justify-center sm:justify-start space-x-6"
+                  >
+                    <a href="#" class="hover:text-green-400">Trust Center</a>
+                    <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-green-400">Status</a>
+                    <a href="#" class="hover:text-green-400">Legal</a>
+                    <a href="#" class="hover:text-green-400"
+                      >Do Not Sell My Info</a
+                    >
+                    <a href="#" class="hover:text-green-400">Opt out</a>
+                  </div>
+                </div>
+  
+                <!-- Right Section: Copyright -->
+                <div class="text-center sm:text-right">
+                  <p>© All rights reserved by Resolver NG.</p>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Star Icon (Absolute Positioned) -->
+            <div
+              class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4"
+            >
+              <img
+                src="../../assets/images/3d-star.png"
+                alt="Star Icon"
+                class="h-32 w-32"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+>>>>>>> souravbsk
 
 
                     </tbody>
