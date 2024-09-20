@@ -1,532 +1,1391 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resolver | Food Price Disply</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script
+            src="https://kit.fontawesome.com/96ee5d0221.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resolver | Food Price Disply</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
-</head>
+    <body>
+        <!-- Header -->
+        <header class="bg-white border-b border-gray-200 relative z-20 w-full">
+            <div class="mx-auto px-4 sm:px-6 lg:px-20 w-full">
+                <div class="flex justify-between h-16 items-center w-full">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <a href="#" class="flex items-center">
+                            <img
+                                src="../../assets/images/logo.png"
+                                alt="Logo"
+                                class="h-8 w-auto"
+                            />
+                            <span class="ml-2 text-lg font-bold text-green-600"
+                                >Resolver</span
+                            >
+                        </a>
+                    </div>
 
-<body>
-    <!-- navbar -->
-    <header class="bg-white border-b border-gray-200 relative z-20 container pt-5">
-        <div class=" mx-auto px-4  xl:px-20 container">
-            <div class="flex justify-between h-16 items-center w-full">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="../../index.html" class="flex items-center">
-                        <img src="../../assets/images/logo_and_name.png" alt="logo">
-                    </a>
+                    <!-- Desktop Menu -->
+                    <nav class="hidden lg:flex space-x-4">
+                        <a
+                            href="../../../index.html"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >Home</a
+                        >
+                        <a
+                            href="#"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >How It Works</a
+                        >
+                        <a
+                            href="#"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >Read Reviews</a
+                        >
+                        <a
+                            href="../submitYourReview.html"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >Write Review</a
+                        >
+                        <a
+                            href="#"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >About Us</a
+                        >
+                        <a
+                            href="../priceDiscovery.html"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >Price Discovery</a
+                        >
+                    </nav>
+
+                    <!-- Right-side buttons -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <!-- Upgrade Now Button -->
+                        <a
+                            href="#"
+                            class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center"
+                        >
+                            <img
+                                src="../../assets/images/Icon/thunder.png"
+                                alt="thunder-icon"
+                                class="h-5 w-5 mr-2"
+                            />
+                            Upgrade now
+                        </a>
+
+                        <!-- Icons: Bell, Gear, Profile -->
+                        <div class="flex space-x-4">
+                            <button
+                                class="text-gray-900 hover:text-green-500 transition"
+                            >
+                                <img
+                                    src="../../assets/images/Icon/settings-01.png"
+                                    alt="settings-icon"
+                                    class="h-5 w-5 mr-2"
+                                />
+                            </button>
+
+                            <!-- Notification Bell and Dropdown -->
+                            <div class="relative flex justify-center">
+                                <button
+                                    id="notification-btn"
+                                    class="focus:outline-none"
+                                >
+                                    <img
+                                        src="../../assets/images/Icon/bell.png"
+                                        alt="Notification Bell"
+                                        class="h-5 w-5"
+                                    />
+                                </button>
+
+                                <!-- Notification Dropdown Menu -->
+                                <div
+                                    id="notification-dropdown"
+                                    class="hidden absolute -right-14 top-12 mt-2 w-[40rem] bg-white shadow-lg rounded-lg z-50"
+                                >
+                                    <!-- Green top border -->
+                                    <div
+                                        class="absolute top-[-10px] left-[36rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]"
+                                    ></div>
+
+                                    <!-- Notifications header -->
+                                    <div
+                                        class="flex justify-between items-center px-4 py-3 border-t-4 border-t-[#2f8379] border-b"
+                                    >
+                                        <h3 class="text-sm font-semibold">
+                                            Notifications
+                                        </h3>
+                                        <div
+                                            class="flex gap-2 justify-center items-center"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="text-sm text-green-500 hover:underline"
+                                                >View All</a
+                                            >
+                                            <img
+                                                src="../../assets/images/profileNotificationIcon/ArrowRight.png"
+                                                alt="ArrowRight"
+                                                class="h-3 w-3"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <!-- Notifications list -->
+                                    <ul class="divide-y divide-gray-200">
+                                        <li
+                                            class="px-4 py-3 flex items-start gap-3"
+                                        >
+                                            <img
+                                                src="../../assets/images/profileNotificationIcon/image1.png"
+                                                alt="User"
+                                                class="h-10 w-10 rounded-full"
+                                            />
+                                            <div class="flex-1">
+                                                <p class="text-sm">
+                                                    <strong
+                                                        >Charlie
+                                                        Henderson</strong
+                                                    >
+                                                    reviewed in
+                                                    <strong
+                                                        >Exploring Animal
+                                                        Prosthesis...</strong
+                                                    >
+                                                </p>
+                                                <p
+                                                    class="text-gray-500 text-xs"
+                                                >
+                                                    August 31, 2024
+                                                </p>
+                                            </div>
+                                            <button
+                                                class="text-gray-500 hover:text-gray-700"
+                                            >
+                                                <img
+                                                    src="../../assets/images/profileNotificationIcon/Close.png"
+                                                    alt="cross"
+                                                    class="h-5 w-5"
+                                                />
+                                            </button>
+                                        </li>
+
+                                        <li
+                                            class="px-4 py-3 flex items-start gap-3"
+                                        >
+                                            <img
+                                                src="../../assets/images/profileNotificationIcon/image2.png"
+                                                alt="User"
+                                                class="h-10 w-10 rounded-full"
+                                            />
+                                            <div class="flex-1">
+                                                <p class="text-sm">
+                                                    <strong
+                                                        >Satoshi
+                                                        Nakamoto</strong
+                                                    >
+                                                    complaint on
+                                                    <strong
+                                                        >International exchange
+                                                        skill event</strong
+                                                    >
+                                                </p>
+                                                <p
+                                                    class="text-gray-500 text-xs"
+                                                >
+                                                    August 31, 2024
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <button
+                                                    class="text-gray-500 hover:text-gray-700"
+                                                >
+                                                    <img
+                                                        src="../../assets/images/profileNotificationIcon/Close.png"
+                                                        alt="cross"
+                                                        class="h-5 w-5"
+                                                    />
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Profile Dropdown -->
+                            <div class="relative">
+                                <div class="flex gap-2">
+                                    <img
+                                        src="../../assets/images/settings-component.png"
+                                        alt="Profile Image"
+                                        class="h-8 w-8 rounded-full"
+                                    />
+                                    <button
+                                        id="profile-dropdown-btn"
+                                        class="focus:outline-none"
+                                    >
+                                        <i
+                                            class="fas fa-chevron-down text-black"
+                                        ></i>
+                                    </button>
+                                </div>
+
+                                <!-- Profile Dropdown Menu -->
+                                <div
+                                    id="profile-dropdown"
+                                    class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50"
+                                >
+                                    <div
+                                        class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]"
+                                    ></div>
+                                    <ul
+                                        class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]"
+                                    >
+                                        <!-- Profile -->
+                                        <li
+                                            class="flex justify-between items-center px-4 py-3 border-b border-gray-200"
+                                        >
+                                            <div
+                                                class="flex items-center space-x-3"
+                                            >
+                                                <i
+                                                    class="fas fa-user text-gray-600"
+                                                ></i>
+                                                <a
+                                                    href="#"
+                                                    class="text-gray-800"
+                                                    >Profile</a
+                                                >
+                                            </div>
+                                            <i
+                                                class="fas fa-chevron-right text-gray-400"
+                                            ></i>
+                                        </li>
+
+                                        <!-- Dashboard -->
+                                        <li
+                                            class="flex justify-between items-center px-4 py-3 bg-gray-100 border-b border-gray-200"
+                                        >
+                                            <div
+                                                class="flex items-center space-x-3"
+                                            >
+                                                <i
+                                                    class="fas fa-th-large text-[#2f8379]"
+                                                ></i>
+                                                <a
+                                                    href="#"
+                                                    class="text-[#2f8379]"
+                                                    >Dashboard</a
+                                                >
+                                            </div>
+                                            <i
+                                                class="fas fa-chevron-right text-[#2f8379]"
+                                            ></i>
+                                        </li>
+
+                                        <!-- Settings -->
+                                        <li
+                                            class="flex justify-between items-center px-4 py-3 border-b border-gray-200"
+                                        >
+                                            <div
+                                                class="flex items-center space-x-3"
+                                            >
+                                                <i
+                                                    class="fas fa-cog text-gray-600"
+                                                ></i>
+                                                <a
+                                                    href="#"
+                                                    class="text-gray-800"
+                                                    >Settings</a
+                                                >
+                                            </div>
+                                            <i
+                                                class="fas fa-chevron-right text-gray-400"
+                                            ></i>
+                                        </li>
+
+                                        <!-- Log Out -->
+                                        <li
+                                            class="flex justify-between px-4 items-center py-3"
+                                        >
+                                            <div
+                                                class="flex items-center space-x-3"
+                                            >
+                                                <i
+                                                    class="fas fa-sign-out-alt text-gray-600"
+                                                ></i>
+                                                <a
+                                                    href="#"
+                                                    class="text-gray-800"
+                                                    >Log Out</a
+                                                >
+                                            </div>
+                                            <i
+                                                class="fas fa-chevron-right text-gray-400"
+                                            ></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden flex items-center">
+                        <button
+                            id="mobile-menu-button"
+                            class="text-gray-900 focus:outline-none"
+                        >
+                            <svg
+                                class="h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Desktop Menu -->
-                <nav class="hidden xl:flex space-x-4">
-                    <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden"
+            >
+                <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a
+                        href="../../../index.html"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Home</a
+                    >
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >How It Works</a
+                    >
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Read Reviews</a
+                    >
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Write Review</a
+                    >
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >About Us</a
+                    >
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Price Discovery</a
+                    >
+                    <a
+                        href="../signin.html"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Sign In</a
+                    >
+                    <a
+                        href="../signup.html"
+                        class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition"
+                        >Sign Up</a
+                    >
                 </nav>
+            </div>
+        </header>
+        <!-- sub menu -->
+        <div
+            class="hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white font-semibold px-20 py-3 mt-5 mb-5"
+        >
+            <div>
+                <a
+                    class="px-4 py-2 border border-black rounded text-black"
+                    href="#"
+                    >Product Price</a
+                >
+                <a class="px-4 py-2" href="#">Market Place</a>
+            </div>
+            <div class="border-2 border-gray-300 rounded py-2 px-4">
+                <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
+                <input
+                    type="text"
+                    class="border-collapse outline-none"
+                    placeholder="Search"
+                    name=""
+                    id=""
+                />
+            </div>
+        </div>
+        <section class="bg-white xl:bg-[#e6e3e3] pb-10">
+            <div class="xl:relative container mx-auto xl:px-20 px-4 xl:py-10">
+                <div
+                    class="mt-10 bg-white xl:px-12 px-4 xl:py-10 xl:py-16 rounded-2xl"
+                >
+                    <!-- banner  -->
+                    <div class="xl:relative">
+                        <!-- banner image -->
+                        <img
+                            src="../../assets/foods/images/food_price_banner.png"
+                            alt=""
+                        />
+                        <!-- banner image gradient -->
+                        <div
+                            class="xl:absolute xl:block xl:bottom-0 w-full xl:p-10 xl:mt-0 mt-5 text-gray-800 xl:text-white"
+                        >
+                            <div class="flex justify-between">
+                                <div>
+                                    <div
+                                        class="flex xl:flex-row flex-col gap-3 xl:gap-5"
+                                    >
+                                        <h2 class="text-3xl font-bold">
+                                            Taco Beller
+                                        </h2>
+                                        <div>
+                                            <i
+                                                class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"
+                                            ></i>
+                                            <i
+                                                class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"
+                                            ></i>
+                                            <i
+                                                class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"
+                                            ></i>
+                                            <i
+                                                class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"
+                                            ></i>
+                                            <i
+                                                class="fa-solid fa-star text-white bg-gray-300 p-2 rounded-sm"
+                                            ></i>
+                                        </div>
+                                        <p>
+                                            <span class="text-3xl font-bold"
+                                                >4.0 </span
+                                            ><small>(1024 Reviews)</small>
+                                        </p>
+                                    </div>
+                                </div>
 
-                <!-- Right-side buttons -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <!-- Upgrade Now Button -->
-                    <a href="#"
-                        class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
-                        <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
-                        Upgrade now
-                    </a>
+                                <div>
+                                    <img
+                                        src="../../assets/foods/icons/arrow-up-right.png"
+                                        class="hidden xl:block"
+                                        alt=""
+                                    />
+                                    <img
+                                        src="../../assets/foods/icons/arrow-up-right_responsive.png"
+                                        class="xl:hidden block"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <p class="mt-3">
+                                Check out the cantina chicken menu. Try our slow
+                                roasted chicken with shredded purple cabbage and
+                                freshly prepared pico de gallo
+                            </p>
+                            <div
+                                class="flex justify-between font-semibold mt-6"
+                            >
+                                <div class="flex gap-5">
+                                    <div class="">
+                                        <div class="flex gap-2">
+                                            <img
+                                                src="../../assets/foods/icons/clock.png"
+                                                class="hidden xl:block"
+                                                alt=""
+                                            />
+                                            <img
+                                                src="../../assets/foods/icons/clock_resonsive.png"
+                                                class="xl:hidden block"
+                                                alt=""
+                                            />
+                                            <p>Open Hour</p>
+                                        </div>
+                                        <p class="mt-3">11:00 AM - 10:00 PM</p>
+                                    </div>
+                                    <div class="gap-4">
+                                        <p>List on</p>
+                                        <p class="mt-3">10 April 2024</p>
+                                    </div>
+                                </div>
+                                <div class="hidden xl:block">
+                                    <p>Food under</p>
+                                    <div class="mt-3 flex gap-2">
+                                        <button
+                                            class="border-2 px-5 py-1 rounded-full"
+                                        >
+                                            Fast-food
+                                        </button>
+                                        <button
+                                            class="border-2 px-5 py-1 rounded-full"
+                                        >
+                                            Coffee
+                                        </button>
+                                        <button
+                                            class="border-2 px-5 py-1 rounded-full"
+                                        >
+                                            Restaurants
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Icons: Bell, Gear, Profile -->
-                    <div class="flex space-x-4">
-                        <button class="text-gray-900 hover:text-green-500 transition">
-                            <img src="../assets/images/Icon/settings-01.png" alt="settings-icon" class="h-5 w-5 mr-2" />
-                        </button>
+                    <!-- item details -->
+                    <div class="mt-12 shadow-xl rounded-xl p-10">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold mb-10 hidden xl:inline-block pb-3 border-b-2 border-green-300"
+                            >
+                                Items Details
+                            </h3>
+                            <div
+                                class="w-full flex xl:flex-row flex-col xl:gap-10 gap-5"
+                            >
+                                <div class="xl:w-1/2 w-full">
+                                    <div class="flex justify-between">
+                                        <div>
+                                            <p class="text-blue-500">
+                                                Highest Price
+                                            </p>
+                                            <p class="text-xl font-bold mt-4">
+                                                $48.30
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="text-blue-500">
+                                                Lowest Price
+                                            </p>
+                                            <p class="text-xl font-bold mt-4">
+                                                $38.30
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="text-blue-500">
+                                                Average Price
+                                            </p>
+                                            <p class="text-xl font-bold mt-4">
+                                                $40.30
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-3" />
+                                    <h1 class="mt-5 text-3xl font-semibold">
+                                        Beef Burger with Resela
+                                    </h1>
+                                    <hr class="mt-3" />
+                                    <p class="mb-5 mt-1">
+                                        Check out the cantina chicken menu. Try
+                                        our slow roasted chicken with shredded
+                                        purple cabbage and freshly prepared pico
+                                        de gallo for a flavorful and craveable
+                                        lunch.
+                                    </p>
+                                    <h4 class="text-2xl font-semibold">
+                                        Taco Bell cantina chicken menu
+                                    </h4>
+                                    <p class="mt-1">
+                                        Check out the cantina chicken menu. Try
+                                        our slow roasted chicken with shredded
+                                        purple cabbage and freshly prepared pico
+                                        de gallo for a flavorful and craveable
+                                        lunch.
+                                    </p>
+                                    <div class="mt-5 flex gap-5">
+                                        <button
+                                            class="px-6 py-2 border-2 shadow-lg rounded-md font-medium"
+                                        >
+                                            <i
+                                                class="fa-regular fa-comments mr-2"
+                                            ></i
+                                            >Chat to us
+                                        </button>
+                                        <button
+                                            class="px-6 py-2 bg-[#78EB54] rounded-md shadow-lg font-medium"
+                                        >
+                                            <i
+                                                class="fa-regular fa-star mr-2"
+                                            ></i
+                                            >Give a Review
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="xl:w-1/2 w-full">
+                                    <img
+                                        class="w-full"
+                                        src="../../assets/foods/images/food_price_banner.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 w-full">
+                            <h2 class="text-2xl font-semibold">
+                                Submit a price
+                            </h2>
+                            <div
+                                class="flex xl:flex-row flex-col gap-5 w-full mt-5"
+                            >
+                                <div class="w-full bg-[#F9FAFB] p-5 rounded-xl">
+                                    <div>
+                                        <img
+                                            src="../../assets/foods/icons/date.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <h5 class="text-xl font-medium mt-5">
+                                        Date of Purchase
+                                    </h5>
+                                    <p class="my-2 text-lg">
+                                        Select your purchase date
+                                    </p>
+                                    <input
+                                        type="date"
+                                        placeholder="Select date"
+                                        class="w-full rounded-md p-2 text-lg"
+                                        name=""
+                                        id=""
+                                    />
+                                </div>
+                                <div class="w-full bg-[#F9FAFB] p-5 rounded-xl">
+                                    <div>
+                                        <img
+                                            src="../../assets/foods/icons/notepad.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <h5 class="text-xl font-medium mt-5">
+                                        Purchase Quantity
+                                    </h5>
+                                    <p class="my-2 text-lg">
+                                        Enter your purchase quantity
+                                    </p>
+                                    <select
+                                        name=""
+                                        id=""
+                                        class="w-full rounded-md p-2 text-lg"
+                                    >
+                                        <option value="">
+                                            Enter your quantity
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="w-full bg-[#F9FAFB] p-5 rounded-xl">
+                                    <div>
+                                        <img
+                                            src="../../assets/foods/icons/location.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <h5 class="text-xl font-medium mt-5">
+                                        Location
+                                    </h5>
+                                    <p class="my-2 text-lg">
+                                        Select your purchase date
+                                    </p>
+                                    <select
+                                        name=""
+                                        id=""
+                                        class="w-full rounded-md p-2 text-lg"
+                                    >
+                                        <option value="">
+                                            Select location
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center mt-10">
+                            <button
+                                class="font-bold bg-[#78EB54] text-center w-full xl:w-[550px] py-3 rounded-full"
+                            >
+                                Search Results
+                                <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
 
-                        <button class="text-gray-900 hover:text-green-500 transition">
-                            <img src="../assets/images/Icon/bell.png" alt="bell-icon" class="h-5 w-5 mr-2" />
-                        </button>
-
-                        <div class="flex items-center">
-                            <img src="../assets/adminDashboard/image 4.png" alt="settings-profile-image"
-                                class="h-8 w-8 rounded-full" />
+                    <!-- Search result for Burger -->
+                    <div class="mt-12 shadow-xl rounded-xl p-10">
+                        <h1 class="text-2xl font-bold">
+                            Search result of 1 beef burger
+                        </h1>
+                        <div class="">
+                            <div class="text-center">
+                                <p class="text-blue-700">Pricing Compare</p>
+                                <h1 class="text-2xl font-semibold mt-3 my-5">
+                                    Beef Burger with Resela
+                                </h1>
+                                <p>
+                                    Check out the cantina chicken menu. Try our
+                                    slow roasted chicken with
+                                    <br class="hidden xl:block" />
+                                    shredded purple cabbage and freshly prepared
+                                </p>
+                            </div>
+                            <div
+                                class="mt-10 flex xl:flex-row flex-col gap-5 justify-between"
+                            >
+                                <!-- left price compare div -->
+                                <div class="w-full">
+                                    <h4 class="text-xl font-semibold mb-5">
+                                        Average Price, $40
+                                    </h4>
+                                    <div class="flex flex-col gap-3">
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>
+                                                Up to 10 individual average
+                                                price
+                                            </p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Basic average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Automatic average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>
+                                                Up to 10 individual average
+                                                price
+                                            </p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Backup average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Individual average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Extra hour average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Basic average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>
+                                                Up to 10 individual average
+                                                price
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- price compare pic div -->
+                                <div class="w-full">
+                                    <img
+                                        src="../../assets/foods/images/food_price_banner_responsive.png"
+                                        class="w-full h-full"
+                                        alt=""
+                                    />
+                                </div>
+                                <!-- right price compare div -->
+                                <div class="w-full">
+                                    <h4 class="text-xl font-semibold mb-5">
+                                        Average Price, $40
+                                    </h4>
+                                    <div class="flex flex-col gap-3">
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>
+                                                Up to 10 individual average
+                                                price
+                                            </p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Basic average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Automatic average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>
+                                                Up to 10 individual average
+                                                price
+                                            </p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Backup average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Individual average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Extra hour average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>Basic average price</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <img
+                                                src="../../assets/foods/icons/check.png"
+                                                alt=""
+                                            />
+                                            <p>
+                                                Up to 10 individual average
+                                                price
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="xl:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
+                <!-- graph -->
+                <div
+                    class="mt-10 bg-white xl:px-12 px-4 xl:py-10 xl:py-16 rounded-2xl"
+                >
+                    <div
+                        class="mb-10 flex flex-col xl:flex-row xl:justify-between"
+                    >
+                        <p class="text-lg font-semibold">Pricing History</p>
+                        <div class="flex gap-4">
+                            <div class="flex justify-center">
+                                <div
+                                    class="py-2 px-4 border border-gray-400 bg-gray-200 shadow rounded-l flex gap-2"
+                                >
+                                    Average
+                                    <span class="hidden xl:block">Price</span>
+                                </div>
+                                <div
+                                    class="py-2 px-4 border border-gray-400 shadow"
+                                >
+                                    <span class="flex gap-2"
+                                        >Highest
+                                        <span class="hidden xl:block"
+                                            >Price</span
+                                        ></span
+                                    >
+                                </div>
+                                <div
+                                    class="py-2 px-4 border border-gray-400 shadow rounded-r"
+                                >
+                                    <span class="flex gap-2"
+                                        >Lowest
+                                        <span class="hidden xl:block"
+                                            >Price</span
+                                        ></span
+                                    >
+                                </div>
+                            </div>
+                            <select
+                                name=""
+                                id=""
+                                class="border-2 border-gray-300 rounded-md px-5 py-2 hidden xl:block"
+                            >
+                                <option value="">Weekly</option>
+                            </select>
+                            <div
+                                class="border border-gray-400 flex justify-center items-center px-4 rounded-xl xl:hidden"
+                            >
+                                <img
+                                    class="w-7"
+                                    src="../../assets/images/filter-lines.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img
+                            src="../../assets/foods/images/line_graph.png"
+                            class="hidden xl:block"
+                            alt="graph"
+                        />
+                        <img
+                            src="../../assets/foods/images/graph_responsive.png"
+                            class="xl:hidden block w-full"
+                            alt="graph"
+                        />
+                        <div class="flex justify-center gap-5 mt-8">
+                            <div class="flex gap-2 items-center">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#78EB54]"
+                                ></div>
+                                <span class="flex gap-2"
+                                    ><span>Average</span>
+                                    <span class="hidden xl:block"
+                                        >Price</span
+                                    ></span
+                                >
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#AF52DE]"
+                                ></div>
+                                <span class="flex gap-2"
+                                    ><span>Highest</span>
+                                    <span class="hidden xl:block"
+                                        >Price</span
+                                    ></span
+                                >
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#FF3B30]"
+                                ></div>
+                                <span class="flex gap-2"
+                                    ><span>Lowest</span>
+                                    <span class="hidden xl:block"
+                                        >Price</span
+                                    ></span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="bg-white text-[#FFFFFFB2] relative md:mt-24">
+            <div class="bg-[#052e26] md:rounded-t-3xl">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 rounded">
+                    <!-- Upper and Lower Footer: Combined Grid Layout -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+                        <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+                        <div class="col-span-2 sm:col-span-1">
+                            <div class="flex-shrink-0 mb-4">
+                                <!-- Logo -->
+                                <a href="#" class="flex items-center">
+                                    <img
+                                        src="../../assets/logoHeaderAndFooter/logoFooter .png"
+                                        alt="Logo"
+                                        class="h-8 w-auto"
+                                    />
+                                </a>
+                            </div>
+                            <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
+                                Fun, engaging and authentic Platform
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    ><img
+                                        src="../../assets/images/Icon/linkedin.png"
+                                        alt="LinkedIn"
+                                        class="h-5"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        src="../../assets/images/Icon/youtube.png"
+                                        alt="YouTube"
+                                        class="h-5"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        src="../../assets/images/Icon/twitter.png"
+                                        alt="Twitter"
+                                        class="h-5"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        src="../../assets/images/Icon/facebook.png"
+                                        alt="Facebook"
+                                        class="h-5"
+                                /></a>
+                            </div>
+                        </div>
+
+                        <!-- Product Links -->
+                        <div>
+                            <h4 class="font-bold mb-4 text-[#FFF]">Product</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >About us</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >FAQs</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Contact</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Pricing</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../signin.html"
+                                        class="hover:text-green-400"
+                                        >Log in</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Resources Links -->
+                        <div>
+                            <h4 class="font-bold mb-4 text-[#FFF]">
+                                Resources
+                            </h4>
+                            <ul>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Learn</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Videos</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Help Center</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Webinar Glossary</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- More Links -->
+                        <div>
+                            <h4 class="font-bold mb-4 text-[#FFF]">More</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Our story</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >We’re hiring</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Resolver NG</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Resolver NG Satisfaction</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="block md:hidden">
+                            <h4 class="font-bold mb-4 text-[#FFF]">Support</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Trust Center</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Privacy Policy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Resolver NG</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Status</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Legal</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Do Not Sell My Info</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Opt out</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-t text-[#FFF] border-gray-600 py-4">
+                        <div
+                            class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
+                        >
+                            <!-- Left Section: Links -->
+                            <div class="hidden md:block">
+                                <div
+                                    class="flex flex-wrap justify-center sm:justify-start space-x-6"
+                                >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Trust Center</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Privacy Policy</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Status</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Legal</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Do Not Sell My Info</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Opt out</a
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Right Section: Copyright -->
+                            <div class="text-center sm:text-right">
+                                <p>© All rights reserved by Resolver NG.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Star Icon (Absolute Positioned) -->
+                    <div
+                        class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4"
+                    >
+                        <img
+                            src="../../assets/images/3d-star.png"
+                            alt="Star Icon"
+                            class="h-32 w-32"
+                        />
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Pop up button -->
+        <div class="fixed right-5 bottom-11 sm:left-5 sm:bottom-11">
+            <!-- Floating Action Button -->
+            <button
+                id="fab-btn"
+                class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg"
+            >
+                <img
+                    src="../../assets/images/logo.png"
+                    alt="Logo"
+                    class="h-8 w-auto"
+                />
+            </button>
+
+            <!-- Pop-up Menu (Initially hidden) -->
+            <div id="popup-menu" class="hidden">
+                <div
+                    class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16"
+                >
+                    <button
+                        id="close-popup"
+                        class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64"
+                    >
+                        <img
+                            src="../../assets/images/Icon/cancel-circle.png"
+                            alt="cancel-circle"
+                            class="h-8 w-auto"
+                        />
+                    </button>
+
+                    <button
+                        class="flex items-center space-x-2 px-6 border-b py-2 w-60"
+                    >
+                        <img
+                            src="../../assets/images/Icon/pop-up-star.png"
+                            alt="pop-up-star"
+                            class="h-4 w-auto"
+                        />
+                        <a
+                            href="../submitYourReview.htmls"
+                            class="text-gray-800"
+                            >Write Review</a
+                        >
+                    </button>
+
+                    <button
+                        class="flex items-center space-x-2 border-b px-6 py-2 w-60"
+                    >
+                        <img
+                            src="../../assets/images/Icon/pop-up-idea.png"
+                            alt="pop-up-idea"
+                            class="h-4 w-auto"
+                        />
+                        <span class="text-gray-800">Resolve an Issue</span>
+                    </button>
+
+                    <button class="flex items-center space-x-2 px-6 py-2 w-60">
+                        <img
+                            src="../../assets/images/Icon/pop-up-infinity.png"
+                            alt="pop-up-infinity"
+                            class="h-4 w-auto"
+                        />
+                        <span class="text-gray-800">Price Comparison</span>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="xl:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
-            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="../../index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
-                <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign
-                    Up</a>
-            </nav>
-        </div>
-          
-    </header>
-    <!-- sub menu -->
-    <div
-        class="hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white  font-semibold px-20 py-3 mt-5 mb-5">
-        <div>
-            <a class="px-4 py-2  border border-black rounded  text-black" href="./userProfileInformation.html">Product
-                Price</a>
-            <a class="px-4 py-2" href="./user-dashboard-page.html">Merket Place</a>
-        </div>
-        <div class="border-2 border-gray-300 rounded py-2 px-4">
-            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
-            <input type="text" class="border-collapse outline-none" placeholder="Search" name="" id="">
-        </div>
-    </div>
-    <section class="bg-white xl:bg-[#e6e3e3] pb-10">
-        <div class="xl:relative container mx-auto xl:px-20 px-4 xl:py-10 ">
+        <script src="../../js/linkup.js"></script>
+        <script>
+            // Profile Dropdown
+            document
+                .getElementById("profile-dropdown-btn")
+                .addEventListener("click", function () {
+                    const dropdown =
+                        document.getElementById("profile-dropdown");
+                    dropdown.classList.toggle("hidden");
+                });
 
-            <!--  -->
-            <div class="mt-10 bg-white  xl:px-12 px-4 xl:py-10 xl:py-16 rounded-2xl ">
-                <!-- banner  -->
-                <div class="xl:relative">
-                    <!-- banner image -->
-                    <img src="../../assets/foods/images/food_price_banner.png" alt="">
-                    <!-- banner image gradient -->
-                    <div
-                        class="xl:absolute xl:block xl:bottom-0 w-full xl:p-10 xl:mt-0 mt-5  text-gray-800 xl:text-white">
-                        <div class="flex  justify-between ">
-                            <div>
-                                <div class="flex xl:flex-row flex-col gap-3 xl:gap-5">
-                                    <h2 class="text-3xl font-bold">Taco Beller</h2>
-                                    <div>
-                                        <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
-                                        <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
-                                        <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
-                                        <i class="fa-solid fa-star text-white bg-[#4CAF50] p-2 rounded-sm"></i>
-                                        <i class="fa-solid fa-star text-white bg-gray-300 p-2 rounded-sm"></i>
-                                    </div>
-                                    <p><span class=" text-3xl font-bold">4.0 </span><small>(1024 Reviews)</small></p>
-                                </div>
-                            </div>
+            // Notification Dropdown
+            document
+                .getElementById("notification-btn")
+                .addEventListener("click", function () {
+                    const dropdown = document.getElementById(
+                        "notification-dropdown"
+                    );
+                    dropdown.classList.toggle("hidden");
+                });
 
-                            <div>
-                                <img src="../../assets/foods/icons/arrow-up-right.png" class="hidden xl:block" alt="">
-                                <img src="../../assets/foods/icons/arrow-up-right_responsive.png"
-                                    class="xl:hidden block" alt="">
-                            </div>
-                        </div>
-                        <p class="mt-3">Check out the cantina chicken menu. Try our slow roasted chicken with shredded
-                            purple
-                            cabbage and freshly prepared pico de gallo
-                        </p>
-                        <div class="flex justify-between font-semibold mt-6">
-                            <div class="flex gap-5">
-                                <div class="">
-                                    <div class="flex gap-2">
-                                        <img src="../../assets/foods/icons/clock.png" class="hidden xl:block" alt="">
-                                        <img src="../../assets/foods/icons/clock_resonsive.png" class="xl:hidden block"
-                                            alt="">
-                                        <p>Open Hour</p>
-                                    </div>
-                                    <p class="mt-3">11:00 AM - 10:00 PM</p>
+            // Close dropdowns when clicking outside
+            window.addEventListener("click", function (e) {
+                const profileDropdown =
+                    document.getElementById("profile-dropdown");
+                const notificationDropdown = document.getElementById(
+                    "notification-dropdown"
+                );
 
-                                </div>
-                                <div class=" gap-4">
-                                    <p>List on</p>
-                                    <p class="mt-3">10 April 2024</p>
-                                </div>
-                            </div>
-                            <div class="hidden xl:block">
-                                <p>Food under</p>
-                                <div class="mt-3 flex gap-2">
-                                    <button class="border-2 px-5 py-1 rounded-full">Fast-food</button>
-                                    <button class="border-2 px-5 py-1 rounded-full">Coffee</button>
-                                    <button class="border-2 px-5 py-1 rounded-full">Restaurants</button>
-                                </div>
-                            </div>
-                        </div>
+                if (
+                    !document
+                        .getElementById("profile-dropdown-btn")
+                        .contains(e.target)
+                ) {
+                    profileDropdown.classList.add("hidden");
+                }
 
-                    </div>
-                </div>
-
-                <!-- item details -->
-                <div class="mt-12 shadow-xl rounded-xl p-10">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-10 hidden xl:inline-block pb-3 border-b-2 border-green-300">
-                            Items Details</h3>
-                        <div class="w-full flex xl:flex-row flex-col xl:gap-10 gap-5">
-                            <div class="xl:w-1/2 w-full">
-                                <div class="flex justify-between">
-                                    <div>
-                                        <p class="text-blue-500">Highest Price</p>
-                                        <p class="text-xl font-bold mt-4 ">$48.30</p>
-                                    </div>
-                                    <div>
-                                        <p class="text-blue-500">Lowest Price</p>
-                                        <p class="text-xl font-bold mt-4">$38.30</p>
-                                    </div>
-                                    <div>
-                                        <p class="text-blue-500">Average Price</p>
-                                        <p class="text-xl font-bold mt-4">$40.30</p>
-                                    </div>
-
-                                </div>
-                                <hr class="mt-3 ">
-                                <h1 class="mt-5 text-3xl font-semibold">Beef Burger with Resela</h1>
-                                <hr class="mt-3">
-                                <p class="mb-5 mt-1">Check out the cantina chicken menu. Try our slow roasted chicken
-                                    with
-                                    shredded purple
-                                    cabbage and freshly prepared pico de gallo for a flavorful and craveable lunch.
-                                </p>
-                                <h4 class="text-2xl font-semibold">Taco Bell cantina chicken menu</h4>
-                                <p class="mt-1">
-                                    Check out the cantina chicken menu. Try our slow roasted chicken with shredded
-                                    purple
-                                    cabbage and freshly prepared pico de gallo for a flavorful and craveable lunch.
-                                </p>
-                                <div class="mt-5 flex gap-5">
-                                    <button class="px-6 py-2 border-2 shadow-lg rounded-md font-medium"><i
-                                            class="fa-regular fa-comments mr-2"></i>Chat to us</button>
-                                    <button class="px-6 py-2 bg-[#78EB54] rounded-md shadow-lg font-medium"><i
-                                            class="fa-regular fa-star mr-2"></i>Give a Review</button>
-                                </div>
-                            </div>
-                            <div class="xl:w-1/2 w-full">
-                                <img class="w-full" src="../../assets/foods/images/food_price_banner.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-10 w-full">
-                        <h2 class="text-2xl font-semibold">Submit a price</h2>
-                        <div class="  flex xl:flex-row flex-col gap-5 w-full mt-5">
-                            <div class="w-full bg-[#F9FAFB] p-5 rounded-xl">
-                                <div>
-                                    <img src="../../assets/foods/icons/date.png" alt="">
-                                </div>
-                                <h5 class="text-xl font-medium mt-5">Date of Purchase</h5>
-                                <p class="my-2 text-lg">Select your purchase date</p>
-                                <input type="date" placeholder="Select date" class="w-full rounded-md p-2 text-lg"
-                                    name="" id="">
-                            </div>
-                            <div class="w-full bg-[#F9FAFB] p-5 rounded-xl">
-                                <div>
-                                    <img src="../../assets/foods/icons/notepad.png" alt="">
-                                </div>
-                                <h5 class="text-xl font-medium mt-5">Purchase Quantity</h5>
-                                <p class="my-2 text-lg">Enter your purchase quantity</p>
-                                <select name="" id="" class="w-full rounded-md p-2 text-lg">
-                                    <option value="">Enter your quantity</option>
-                                </select>
-                            </div>
-                            <div class="w-full bg-[#F9FAFB] p-5 rounded-xl">
-                                <div>
-                                    <img src="../../assets/foods/icons/location.png" alt="">
-                                </div>
-                                <h5 class="text-xl font-medium mt-5">Location</h5>
-                                <p class="my-2 text-lg">Select your purchase date</p>
-                                <select name="" id="" class="w-full rounded-md p-2 text-lg">
-                                    <option value="">Select location</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex justify-center mt-10">
-                        <button class="font-bold bg-[#78EB54] text-center w-full xl:w-[550px] py-3 rounded-full">Search
-                            Results <i class="fa-solid fa-arrow-right ml-2"></i></button>
-                    </div>
-
-                </div>
-
-                <!-- Search result for Burger -->
-                <div class="mt-12 shadow-xl rounded-xl p-10">
-                    <h1 class="text-2xl font-bold">Search result of 1 beef burger</h1>
-                    <div class="">
-                        <div class="text-center">
-                            <p class="text-blue-700">Pricing Compare</p>
-                            <h1 class="text-2xl font-semibold mt-3 my-5">Beef Burger with Resela</h1>
-                            <p>Check out the cantina chicken menu. Try our slow roasted chicken with <br class="hidden xl:block">
-                                 shredded purple
-                                cabbage and freshly prepared</p>
-                        </div>
-                        <div class="mt-10 flex xl:flex-row flex-col gap-5 justify-between">
-                            <!-- left price compare div -->
-                            <div class="w-full">
-                                <h4 class="text-xl font-semibold mb-5 ">Average Price, $40</h4>
-                                <div class="flex flex-col gap-3">
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Up to 10 individual average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Basic average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Automatic average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Up to 10 individual average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Backup average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Individual average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Extra hour average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Basic average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Up to 10 individual average price</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- price compare pic div -->
-                             <div class="w-full">
-                                <img src="../../assets/foods/images/food_price_banner_responsive.png" class="w-full h-full" alt="">
-                             </div>
-                            <!-- right price compare div -->
-                            <div class="w-full">
-                                <h4 class="text-xl font-semibold mb-5 ">Average Price, $40</h4>
-                                <div class="flex flex-col gap-3">
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Up to 10 individual average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Basic average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Automatic average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Up to 10 individual average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Backup average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Individual average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Extra hour average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Basic average price</p>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <img src="../../assets/foods/icons/check.png" alt="">
-                                        <p>Up to 10 individual average price</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- graph -->
-            <div class="mt-10 bg-white  xl:px-12 px-4 xl:py-10 xl:py-16 rounded-2xl ">
-                <div class="mb-10 flex flex-col xl:flex-row xl:justify-between">
-                    <p class="text-lg font-semibold">Pricing History</p>
-                    <div class="flex gap-4">
-                        <div class="flex justify-center  ">
-                            <div class="py-2 px-4 border border-gray-400 bg-gray-200 shadow rounded-l flex gap-2">
-                                Average <span class="hidden xl:block">Price</span></div>
-                            <div class="py-2 px-4 border border-gray-400 shadow">
-
-                                <span class="flex gap-2">Highest <span class="hidden xl:block">Price</span></span>
-                            </div>
-                            <div class="py-2 px-4 border border-gray-400 shadow rounded-r">
-
-                                <span class="flex gap-2">Lowest <span class="hidden xl:block">Price</span></span>
-                            </div>
-                        </div>
-                        <select name="" id="" class="border-2 border-gray-300 rounded-md px-5 py-2 hidden xl:block">
-                            <option value="">Weekly</option>
-                        </select>
-                        <div class="border border-gray-400 flex justify-center items-center px-4 rounded-xl xl:hidden">
-                            <img class="w-7" src="../../assets/images/filter-lines.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="../../assets/foods/images/line_graph.png" class="hidden xl:block" alt="graph">
-                    <img src="../../assets/foods/images/graph_responsive.png" class="xl:hidden block w-full"
-                        alt="graph">
-                    <div class="flex justify-center gap-5 mt-8">
-                        <div class="flex gap-2 items-center">
-                            <div class="w-4 h-4 rounded-full bg-[#78EB54]"></div>
-                            <span class="flex gap-2"><span>Average</span> <span
-                                    class="hidden xl:block">Price</span></span>
-                        </div>
-                        <div class="flex gap-2 items-center">
-                            <div class="w-4 h-4 rounded-full bg-[#AF52DE]"></div>
-                            <span class="flex gap-2"><span>Highest</span> <span
-                                    class="hidden xl:block">Price</span></span>
-                        </div>
-                        <div class="flex gap-2 items-center">
-                            <div class="w-4 h-4 rounded-full bg-[#FF3B30]"></div>
-                            <span class="flex gap-2"><span>Lowest</span> <span
-                                    class="hidden xl:block">Price</span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- footer -->
-    <footer class=" bg-white  text-white relative">
-        <div class=" bg-[#052e26] md:rounded-t-3xl ">
-            <div class="container  mx-auto px-4  xl:px-20  rounded">
-                <!-- Upper and Lower Footer: Combined Grid Layout -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
-
-                    <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
-                    <div class="col-span-2 sm:col-span-1">
-                        <div class="flex-shrink-0 mb-4">
-                            <!-- Logo -->
-                            <a href="#" class="flex items-center">
-                                <img src="../../assets/images/logo_and_name_footer.png" alt="">
-                            </a>
-                        </div>
-                        <p class="mb-4 w-[14rem] sm:w-full">Fun, engaging and authentic Platform</p>
-                        <div class="flex space-x-4">
-                            <a href="#"><img src="../../assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5"></a>
-                            <a href="#"><img src="../../assets/images/Icon/youtube.png" alt="YouTube" class="h-5"></a>
-                            <a href="#"><img src="../../assets/images/Icon/twitter.png" alt="Twitter" class="h-5"></a>
-                            <a href="#"><img src="../../assets/images/Icon/facebook.png" alt="Facebook" class="h-5"></a>
-                        </div>
-                    </div>
-
-                    <!-- Product Links -->
-                    <div>
-                        <h4 class="font-bold mb-4">Product</h4>
-                        <ul>
-                            <li><a href="#" class="hover:text-green-400">About us</a></li>
-                            <li><a href="#" class="hover:text-green-400">FAQs</a></li>
-                            <li><a href="#" class="hover:text-green-400">Contact</a></li>
-                            <li><a href="#" class="hover:text-green-400">Pricing</a></li>
-                            <li><a href="../../signin.html" class="hover:text-green-400">Log in</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Resources Links -->
-                    <div>
-                        <h4 class="font-bold mb-4">Resources</h4>
-                        <ul>
-                            <li><a href="#" class="hover:text-green-400">Learn</a></li>
-                            <li><a href="#" class="hover:text-green-400">Videos</a></li>
-                            <li><a href="#" class="hover:text-green-400">Help Center</a></li>
-                            <li><a href="#" class="hover:text-green-400">Webinar Glossary</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- More Links -->
-                    <div>
-                        <h4 class="font-bold mb-4">More</h4>
-                        <ul>
-                            <li><a href="#" class="hover:text-green-400">Our story</a></li>
-                            <li><a href="#" class="hover:text-green-400">We’re hiring</a></li>
-                            <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
-                            <li><a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="block md:hidden">
-                        <h4 class="font-bold mb-4">More</h4>
-                        <ul>
-                            <li><a href="#" class="hover:text-green-400">Trust Center</a></li>
-                            <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
-                            <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
-                            <li><a href="#" class="hover:text-green-400">Status</a></li>
-                            <li><a href="#" class="hover:text-green-400">Legal</a></li>
-                            <li><a href="#" class="hover:text-green-400">Do Not Sell My Info</a></li>
-                            <li><a href="#" class="hover:text-green-400">Opt out</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="border-t border-gray-600 py-4">
-                    <div
-                        class="container mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0">
-                        <!-- Left Section: Links -->
-                        <div class="hidden md:block">
-                            <div class="flex flex-wrap justify-center sm:justify-start space-x-6">
-                                <a href="#" class="hover:text-green-400">Trust Center</a>
-                                <a href="#" class="hover:text-green-400">Privacy Policy</a>
-                                <a href="#" class="hover:text-green-400">Status</a>
-                                <a href="#" class="hover:text-green-400">Legal</a>
-                                <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
-                                <a href="#" class="hover:text-green-400">Opt out</a>
-                            </div>
-                        </div>
-
-                        <!-- Right Section: Copyright -->
-                        <div class="text-center sm:text-right">
-                            <p>© All rights reserved by Resolver NG.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Star Icon (Absolute Positioned) -->
-                <div class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4">
-                    <img src="../../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
-                </div>
-
-            </div>
-        </div>
-
-          
-    </footer>
-
-</body>
-
+                if (
+                    !document
+                        .getElementById("notification-btn")
+                        .contains(e.target)
+                ) {
+                    notificationDropdown.classList.add("hidden");
+                }
+            });
+        </script>
+    </body>
 </html>

@@ -1,1318 +1,1862 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List of Company</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>List of Company</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- font awesome cdn link ========== -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- font awesome cdn link end ========== -->
-  </head>
-  <body class="lg:bg-[#F4F4F4] bg-[#F5F7F9]">
-    <header class="bg-white border-b border-gray-200 relative z-20 w-full">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-20 w-full">
-        <div class="flex justify-between h-16 items-center w-full">
-          <!-- Logo -->
-          <div class="flex-shrink-0">
-            <a href="#" class="flex items-center">
-              <img
-                src="../../../assets/logoHeaderAndFooter/logoHeader.png"
-                alt="Logo"
-                class="h-8 w-auto"
-              />
-              
-            </a>
-          </div>
+        <!-- font awesome cdn link ========== -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <!-- font awesome cdn link end ========== -->
+    </head>
+    <body class="lg:bg-[#F4F4F4] bg-[#F5F7F9]">
+        <!-- Header -->
+        <header class="bg-white border-b border-gray-200 relative z-20 w-full">
+            <div class="mx-auto px-4 sm:px-6 lg:px-20 w-full">
+                <div class="flex justify-between h-16 items-center w-full">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <a href="#" class="flex items-center">
+                            <img
+                                src="../../../assets/images/logo.png"
+                                alt="Logo"
+                                class="h-8 w-auto"
+                            />
+                            <span class="ml-2 text-lg font-bold text-green-600"
+                                >Resolver</span
+                            >
+                        </a>
+                    </div>
 
-          <!-- Desktop Menu -->
-          <nav class="hidden lg:flex space-x-4">
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >Home</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >How It Works</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >Read Reviews</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >Write Review</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >About Us</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >Contact</a
-            >
-          </nav>
+                    <!-- Desktop Menu -->
+                    <nav class="hidden lg:flex space-x-4">
+                        <a
+                            href="../../../../index.html"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >Home</a
+                        >
+                        <a
+                            href="#"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >How It Works</a
+                        >
+                        <a
+                            href="#"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >Read Reviews</a
+                        >
+                        <a
+                            href="../../submitYourReview.html"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >Write Review</a
+                        >
+                        <a
+                            href="#"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >About Us</a
+                        >
+                        <a
+                            href="../../priceDiscovery.html"
+                            class="text-gray-900 hover:text-green-500 transition"
+                            >Price Discovery</a
+                        >
+                    </nav>
 
-          <!-- Right-side buttons -->
-          <div class="hidden md:flex items-center space-x-4">
-            <!-- Upgrade Now Button -->
-            <a
-              href="#"
-              class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center"
-            >
-              <img
-                src="../../../assets/images/Icon/thunder.png"
-                alt="thunder-icon"
-                class="h-5 w-5 mr-2"
-              />
-              Upgrade now
-            </a>
+                    <!-- Right-side buttons -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <!-- Upgrade Now Button -->
+                        <a
+                            href="#"
+                            class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center"
+                        >
+                            <img
+                                src="../../../assets/images/Icon/thunder.png"
+                                alt="thunder-icon"
+                                class="h-5 w-5 mr-2"
+                            />
+                            Upgrade now
+                        </a>
 
-            <!-- Icons: Bell, Gear, Profile -->
-            <div class="flex space-x-4">
-              <button class="text-gray-900 hover:text-green-500 transition">
-                <img
-                  src="../../../assets/images/Icon/settings-01.png"
-                  alt="settings-icon"
-                  class="h-5 w-5 mr-2"
-                />
-              </button>
+                        <!-- Icons: Bell, Gear, Profile -->
+                        <div class="flex space-x-4">
+                            <button
+                                class="text-gray-900 hover:text-green-500 transition"
+                            >
+                                <img
+                                    src="../../../assets/images/Icon/settings-01.png"
+                                    alt="settings-icon"
+                                    class="h-5 w-5 mr-2"
+                                />
+                            </button>
 
-              <button class="text-gray-900 hover:text-green-500 transition">
-                <img
-                  src="../../../assets/images/Icon/bell.png"
-                  alt="bell-icon"
-                  class="h-5 w-5 mr-2"
-                />
-              </button>
+                            <!-- Notification Bell and Dropdown -->
+                            <div class="relative flex justify-center">
+                                <button
+                                    id="notification-btn"
+                                    class="focus:outline-none"
+                                >
+                                    <img
+                                        src="../../../assets/images/Icon/bell.png"
+                                        alt="Notification Bell"
+                                        class="h-5 w-5"
+                                    />
+                                </button>
 
-              <div class="flex items-center">
-                <img
-                  src="../../../assets/adminDashboard/image 4.png"
-                  alt="settings-profile-image"
-                  class="h-8 w-8 rounded-full"
-                />
-              </div>
+                                <!-- Notification Dropdown Menu -->
+                                <div
+                                    id="notification-dropdown"
+                                    class="hidden absolute -right-14 top-12 mt-2 w-[40rem] bg-white shadow-lg rounded-lg z-50"
+                                >
+                                    <!-- Green top border -->
+                                    <div
+                                        class="absolute top-[-10px] left-[36rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]"
+                                    ></div>
+
+                                    <!-- Notifications header -->
+                                    <div
+                                        class="flex justify-between items-center px-4 py-3 border-t-4 border-t-[#2f8379] border-b"
+                                    >
+                                        <h3 class="text-sm font-semibold">
+                                            Notifications
+                                        </h3>
+                                        <div
+                                            class="flex gap-2 justify-center items-center"
+                                        >
+                                            <a
+                                                href="#"
+                                                class="text-sm text-green-500 hover:underline"
+                                                >View All</a
+                                            >
+                                            <img
+                                                src="../../../assets/images/profileNotificationIcon/ArrowRight.png"
+                                                alt="ArrowRight"
+                                                class="h-3 w-3"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <!-- Notifications list -->
+                                    <ul class="divide-y divide-gray-200">
+                                        <li
+                                            class="px-4 py-3 flex items-start gap-3"
+                                        >
+                                            <img
+                                                src="../../../assets/images/profileNotificationIcon/image1.png"
+                                                alt="User"
+                                                class="h-10 w-10 rounded-full"
+                                            />
+                                            <div class="flex-1">
+                                                <p class="text-sm">
+                                                    <strong
+                                                        >Charlie
+                                                        Henderson</strong
+                                                    >
+                                                    reviewed in
+                                                    <strong
+                                                        >Exploring Animal
+                                                        Prosthesis...</strong
+                                                    >
+                                                </p>
+                                                <p
+                                                    class="text-gray-500 text-xs"
+                                                >
+                                                    August 31, 2024
+                                                </p>
+                                            </div>
+                                            <button
+                                                class="text-gray-500 hover:text-gray-700"
+                                            >
+                                                <img
+                                                    src="../../../assets/images/profileNotificationIcon/Close.png"
+                                                    alt="cross"
+                                                    class="h-5 w-5"
+                                                />
+                                            </button>
+                                        </li>
+
+                                        <li
+                                            class="px-4 py-3 flex items-start gap-3"
+                                        >
+                                            <img
+                                                src="../../../assets/images/profileNotificationIcon/image2.png"
+                                                alt="User"
+                                                class="h-10 w-10 rounded-full"
+                                            />
+                                            <div class="flex-1">
+                                                <p class="text-sm">
+                                                    <strong
+                                                        >Satoshi
+                                                        Nakamoto</strong
+                                                    >
+                                                    complaint on
+                                                    <strong
+                                                        >International exchange
+                                                        skill event</strong
+                                                    >
+                                                </p>
+                                                <p
+                                                    class="text-gray-500 text-xs"
+                                                >
+                                                    August 31, 2024
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <button
+                                                    class="text-gray-500 hover:text-gray-700"
+                                                >
+                                                    <img
+                                                        src="../../../assets/images/profileNotificationIcon/Close.png"
+                                                        alt="cross"
+                                                        class="h-5 w-5"
+                                                    />
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Profile Dropdown -->
+                            <div class="relative">
+                                <div class="flex gap-2">
+                                    <img
+                                        src="../../../assets/images/settings-component.png"
+                                        alt="Profile Image"
+                                        class="h-8 w-8 rounded-full"
+                                    />
+                                    <button
+                                        id="profile-dropdown-btn"
+                                        class="focus:outline-none"
+                                    >
+                                        <i
+                                            class="fas fa-chevron-down text-black"
+                                        ></i>
+                                    </button>
+                                </div>
+
+                                <!-- Profile Dropdown Menu -->
+                                <div
+                                    id="profile-dropdown"
+                                    class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50"
+                                >
+                                    <div
+                                        class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]"
+                                    ></div>
+                                    <ul
+                                        class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]"
+                                    >
+                                        <!-- Profile -->
+                                        <li
+                                            class="flex justify-between items-center px-4 py-3 border-b border-gray-200"
+                                        >
+                                            <div
+                                                class="flex items-center space-x-3"
+                                            >
+                                                <i
+                                                    class="fas fa-user text-gray-600"
+                                                ></i>
+                                                <a
+                                                    href="#"
+                                                    class="text-gray-800"
+                                                    >Profile</a
+                                                >
+                                            </div>
+                                            <i
+                                                class="fas fa-chevron-right text-gray-400"
+                                            ></i>
+                                        </li>
+
+                                        <!-- Dashboard -->
+                                        <li
+                                            class="flex justify-between items-center px-4 py-3 bg-gray-100 border-b border-gray-200"
+                                        >
+                                            <div
+                                                class="flex items-center space-x-3"
+                                            >
+                                                <i
+                                                    class="fas fa-th-large text-[#2f8379]"
+                                                ></i>
+                                                <a
+                                                    href="#"
+                                                    class="text-[#2f8379]"
+                                                    >Dashboard</a
+                                                >
+                                            </div>
+                                            <i
+                                                class="fas fa-chevron-right text-[#2f8379]"
+                                            ></i>
+                                        </li>
+
+                                        <!-- Settings -->
+                                        <li
+                                            class="flex justify-between items-center px-4 py-3 border-b border-gray-200"
+                                        >
+                                            <div
+                                                class="flex items-center space-x-3"
+                                            >
+                                                <i
+                                                    class="fas fa-cog text-gray-600"
+                                                ></i>
+                                                <a
+                                                    href="#"
+                                                    class="text-gray-800"
+                                                    >Settings</a
+                                                >
+                                            </div>
+                                            <i
+                                                class="fas fa-chevron-right text-gray-400"
+                                            ></i>
+                                        </li>
+
+                                        <!-- Log Out -->
+                                        <li
+                                            class="flex justify-between px-4 items-center py-3"
+                                        >
+                                            <div
+                                                class="flex items-center space-x-3"
+                                            >
+                                                <i
+                                                    class="fas fa-sign-out-alt text-gray-600"
+                                                ></i>
+                                                <a
+                                                    href="#"
+                                                    class="text-gray-800"
+                                                    >Log Out</a
+                                                >
+                                            </div>
+                                            <i
+                                                class="fas fa-chevron-right text-gray-400"
+                                            ></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden flex items-center">
+                        <button
+                            id="mobile-menu-button"
+                            class="text-gray-900 focus:outline-none"
+                        >
+                            <svg
+                                class="h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Mobile Menu Button -->
-          <div class="lg:hidden flex items-center">
-            <button
-              id="mobile-menu-button"
-              class="text-gray-900 focus:outline-none"
-            >
-              <svg
-                class="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden"
-      >
-        <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Home</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >How It Works</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Read Reviews</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Write Review</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >About Us</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Contact</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Sign In</a
-          >
-          <a
-            href="#"
-            class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition"
-            >Sign Up</a
-          >
-        </nav>
-      </div>
-    </header>
-    <!-- inside Companies profile Navbar section start =================== -->
-    <section class="hidden lg:block">
-      <nav
-        class="px-4 flex border-b border-[#EAECF0] w-full bg-white items-center justify-between relative lg:px-20"
-      >
-        <div class="text-[#344054] rounded-[10px] font-semibold py-4">
-          <!-- nav route ===================== -->
-          <a class="px-4 py-2" href="../adminDashboard.html">Admin Dashboard</a>
-          <a
-            class="px-4 py-2 text-[#182230] border border-[#818B9C] rounded-md"
-            href="./companyProfile.html"
-            >Company profile</a
-          >
-
-          <a class="px-4 py-2" href="../../admin-information.html">Settings</a>
-
-          <!-- nav route end ===================== -->
-        </div>
-        <!-- search bar input ================ -->
-        <div class="lg:min-w-[19rem]">
-          <div
-            class="px-4 flex items-center gap-2 py-2 border border-[#D0D5DD] rounded-lg shadow-sm"
-          >
-            <span class="text-[#667085]">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </span>
-            <input
-              class="w-full outline-none"
-              placeholder="Search"
-              type="text"
-            />
-          </div>
-        </div>
-        <!-- search bar input end ================ -->
-      </nav>
-    </section>
-    <!-- inside Companies profile pages Navbar section end =================== -->
-    <main>
-      <section class="lg:bg-[#F4F4F4] bg-[#F5F7F9]">
-        <!-- profile intro section start ===================================== -->
-        <section class="bg-[#F6FBFD] pb-5 lg:py-16 lg:pb-5">
-          <div
-            class="container hidden mx-auto px-4 lg:flex flex-col justify-center items-center"
-          >
-            <div class="flex flex-col justify-center items-center">
-              <div>
-                <img src="../../../assets/companyProfile/image 3.png" alt="" />
-              </div>
-              <h2 class="text-3xl font-medium my-2 text-[#273F2B]">
-                Amazon Fireflex
-              </h2>
-              <p
-                style="background-color: rgba(120, 235, 84, 0.05)"
-                class="border border-[#78EB54] text-[#273F2B] rounded-[100px] px-6 py-2"
-              >
-                <i class="fa-solid fa-location-dot text-[#273F2B] text-sm"></i>
-                <span>San Francisco,CA</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- profile inside nav start =============================== -->
-          <nav class="px-4 relative lg:block hidden lg:px-20">
+            <!-- Mobile Menu -->
             <div
-              class="text-[#667085] border rounded-[10px] border-[#EAECF0] px-4 w-full bg-white font-semibold py-4 mt-10"
+                id="mobile-menu"
+                class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden"
             >
-              <a href="../adminDashboard.html" class="px-4 py-2">Dashboard</a>
-              <a
-                class="px-4 py-2 shadow-md text-[#344054] border border-[#818B9C] rounded-md"
-                href="./listOfCompany.html"
-                >List of Companies</a
-              >
-              <a class="px-4 py-2" href="./adminReviews.html">Reviews</a>
-              <a class="px-4 py-2" href="../../performance.html">Performance</a>
-              <a class="px-4 py-2" href="../analytics.html">Analytics</a>
-            </div>
-          </nav>
-          <!-- profile inside nav end =============================== -->
-
-          <!-- Admin dashboard stats =============================== -->
-          <section
-            class="px-4 hidden my-6 md:grid lg:grid-cols-3 gap-5 lg:px-20"
-          >
-            <!-- card 1 number of companies start ======================= -->
-            <div class="bg-[#FFF] shadow-md rounded-md p-4 space-y-8">
-              <!-- title and 3dot ================ -->
-              <div class="flex justify-between items-center">
-                <h5 class="text-[#101828] font-semibold text-base">
-                  Number of Companies
-                </h5>
-                <span class="text-[#98A2B3]"
-                  ><i class="fa-solid fa-ellipsis-vertical"></i
-                ></span>
-              </div>
-              <!-- title and 3dot end ================ -->
-              <!-- count and line =================== -->
-              <div class="flex justify-between">
-                <!-- left side ================ -->
-                <div class="space-y-3">
-                  <h3 class="text-[#101828] font-semibold text-4xl">2,420</h3>
-                  <div class="flex gap-2">
-                    <div class="text-[#079455] font-medium text-sm">
-                      <span class=""><i class="fa-solid fa-arrow-up"></i></span>
-                      <span> 40% </span>
-                    </div>
-                    <span class="font-medium text-sm text-[#475467]"
-                      >vs last month</span
+                <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a
+                        href="../../../../index.html"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Home</a
                     >
-                  </div>
-                </div>
-                <!-- left side end ================ -->
-
-                <!-- right side line ========== -->
-                <div class="relative">
-                  <img
-                    class=""
-                    src="../../../assets/adminDashboard/Line1.png"
-                    alt=""
-                  />
-                  <img
-                    class="absolute left-20 top-2"
-                    src="../../../assets/adminDashboard/Dot.png"
-                    alt=""
-                  />
-                </div>
-                <!-- right side line end ============ -->
-              </div>
-              <!-- count and line end =================== -->
-            </div>
-            <!-- card 1 number of companies end ======================= -->
-            <!-- card 2 number of companies start ======================= -->
-            <div class="bg-[#FFF] shadow-md rounded-md p-4 space-y-8">
-              <!-- title and 3dot ================ -->
-              <div class="flex justify-between items-center">
-                <h5 class="text-[#101828] font-semibold text-base">
-                  Total Complaints
-                </h5>
-                <span class="text-[#98A2B3]"
-                  ><i class="fa-solid fa-ellipsis-vertical"></i
-                ></span>
-              </div>
-              <!-- title and 3dot end ================ -->
-              <!-- count and line =================== -->
-              <div class="flex justify-between">
-                <!-- left side ================ -->
-                <div class="space-y-3">
-                  <h3 class="text-[#101828] font-semibold text-4xl">316</h3>
-                  <div class="flex gap-2">
-                    <div class="text-[#079455] font-medium text-sm">
-                      <span class=""><i class="fa-solid fa-arrow-up"></i></span>
-                      <span> 20% </span>
-                    </div>
-                    <span class="font-medium text-sm text-[#475467]"
-                      >vs last month</span
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >How It Works</a
                     >
-                  </div>
-                </div>
-                <!-- left side end ================ -->
-
-                <!-- right side line ========== -->
-                <div class="relative">
-                  <img src="../../../assets/adminDashboard/Line1.png" alt="" />
-                  <img
-                    class="absolute left-20 top-2"
-                    src="../../../assets/adminDashboard/Dot.png"
-                    alt=""
-                  />
-                </div>
-                <!-- right side line end ============ -->
-              </div>
-              <!-- count and line end =================== -->
-            </div>
-            <!-- card 2 number of companies end ======================= -->
-            <!-- card 3 number of companies start ======================= -->
-            <div class="bg-[#FFF] shadow-md rounded-md p-4 space-y-8">
-              <!-- title and 3dot ================ -->
-              <div class="flex justify-between items-center">
-                <h5 class="text-[#101828] font-semibold text-base">
-                  Resolved Complaints
-                </h5>
-                <span class="text-[#98A2B3]"
-                  ><i class="fa-solid fa-ellipsis-vertical"></i
-                ></span>
-              </div>
-              <!-- title and 3dot end ================ -->
-              <!-- count and line =================== -->
-              <div class="flex justify-between">
-                <!-- left side ================ -->
-                <div class="space-y-3">
-                  <h3
-                    class="text-[#101828] hidden md:block font-semibold text-4xl"
-                  >
-                    210
-                  </h3>
-                  <h3 class="text-[#101828] md:hidden font-semibold text-4xl">
-                    1,210
-                  </h3>
-                  <div class="flex gap-2">
-                    <div class="text-[#D92D20] font-medium text-sm">
-                      <span class=""
-                        ><i class="fa-solid fa-arrow-down"></i
-                      ></span>
-                      <span> 10% </span>
-                    </div>
-                    <span class="font-medium text-sm text-[#475467]"
-                      >vs last month</span
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Read Reviews</a
                     >
-                  </div>
-                </div>
-                <!-- left side end ================ -->
-
-                <!-- right side line ========== -->
-                <div class="relative">
-                  <img src="../../../assets/adminDashboard/Line.png" alt="" />
-                  <img
-                    class="absolute right-10 top-5"
-                    src="../../../assets/adminDashboard/Dot2.png"
-                    alt=""
-                  />
-                </div>
-                <!-- right side line end ============ -->
-              </div>
-              <!-- count and line end =================== -->
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Write Review</a
+                    >
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >About Us</a
+                    >
+                    <a
+                        href="#"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Price Discovery</a
+                    >
+                    <a
+                        href="../../signin.html"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Sign In</a
+                    >
+                    <a
+                        href="../../signup.html"
+                        class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition"
+                        >Sign Up</a
+                    >
+                </nav>
             </div>
-            <!-- card 3 number of companies end ======================= -->
-          </section>
-          <!-- Admin dashboard stats end =============================== -->
-        </section>
+        </header>
 
-        <!-- profile intro section end ===================================== -->
+        <!-- Header -->
 
-        <!-- Companies data card with header section start ================== -->
-        <section class="md:px-4 container mx-auto mb-8 lg:mb-24 lg:px-20">
-          <section class="lg:bg-white  lg:rounded-lg">
-            <section class="md:mt-12 mb-6 mt-3 md:mb-0 md:bg-white rounded-md">
-              <div class="px-4">
-                <!-- companies title and search, filter, import button ================= -->
-                <div
-                  class="flex shadow-md md:shadow-none space-y-2 md:space-y-4 md:flex-row rounded-md md:rounded-t-md flex-col justify-between lg:items-baseline bg-white py-4 px-4 lg:px-0 md:border-b border-[#EAECF0]"
-                >
-                  <!-- Mobile screen company profile selector ========== -->
-                  <div class="space-y-3 mb-3 md:hidden">
-                    <h1 class="text-[#101828] font-semibold text-2xl">
-                      Company profile
-                    </h1>
+        <!-- inside Companies profile Navbar section start =================== -->
+        <section class="hidden lg:block">
+            <nav
+                class="px-4 flex border-b border-[#EAECF0] w-full bg-white items-center justify-between relative lg:px-20"
+            >
+                <div class="text-[#344054] rounded-[10px] font-semibold py-4">
+                    <!-- nav route ===================== -->
+                    <a class="px-4 py-2" href="../adminDashboard.html"
+                        >Admin Dashboard</a
+                    >
+                    <a
+                        class="px-4 py-2 text-[#182230] border border-[#818B9C] rounded-md"
+                        href="./companyProfile.html"
+                        >Company profile</a
+                    >
 
-                    <div>
-                      <select
-                        class="border border-[#D0D5DD] bg-[#FFF] outline-none shadow-md w-full rounded-lg px-4 py-2"
-                        name=""
-                        id="navSelect"
-                      >
-                        <option value="./listOfCompany.html">
-                          List of Companies
-                        </option>
-                        <option value="../adminDashboard.html">
-                          Dashboard
-                        </option>
-                        <option value="./adminReviews.html">Reviews</option>
-                        <option value="../../performance.html">
-                          Performance
-                        </option>
-                        <option value="../analytics.html">Analytics</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!-- Mobile screen company profile selector end ========== -->
+                    <a class="px-4 py-2" href="../../admin-information.html"
+                        >Settings</a
+                    >
 
-                  <!-- left side title ============== -->
-                  <div class="flex justify-between">
-                    <div class="md:space-y-2">
-                      <h3
-                        class="text-lg font-semibold text-[#273F2B] flex items-center gap-2"
-                      >
-                        <span>List of Companies</span>
-                        <span
-                          class="font-medium text-sm hidden md:block text-[#344054] border px-2 py-1 border-[#D0D5DD] rounded-lg shadow-md"
-                          >202 companies</span
-                        >
-                      </h3>
-                      <p class="text-[#475467] font-normal text-sm">
-                        Keep track of your Companies.
-                      </p>
-                    </div>
-                    <div class="hidden">
-                      <span class="text-[#98A2B3]"
-                        ><i class="fa-solid fa-ellipsis-vertical"></i
-                      ></span>
-                    </div>
-                  </div>
-                  <!-- left side title end ============== -->
-                  <!-- right side button start =============== -->
-                  <div class="flex lg:flex-row flex-col items-start gap-4">
-                    <!-- search field filter ========== -->
-                    <div class="flex items-center w-full md:w-fit gap-3">
-                      <!-- search bar input ================ -->
-                      <div class="flex-1">
-                        <div
-                          class="px-4 flex items-center gap-2 py-2 border border-[#D0D5DD] rounded-lg shadow-md"
-                        >
-                          <span class="text-[#667085]">
+                    <!-- nav route end ===================== -->
+                </div>
+                <!-- search bar input ================ -->
+                <div class="lg:min-w-[19rem]">
+                    <div
+                        class="px-4 flex items-center gap-2 py-2 border border-[#D0D5DD] rounded-lg shadow-sm"
+                    >
+                        <span class="text-[#667085]">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                          </span>
-                          <input
-                            class="w-full outline-none bg-transparent"
+                        </span>
+                        <input
+                            class="w-full outline-none"
                             placeholder="Search"
                             type="text"
-                          />
-                        </div>
-                      </div>
-                      <!-- search bar input end ================ -->
-                      <!-- Responsive  filter button ========== -->
-                      <button
-                        class="shadow-md md:hidden text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
-                      >
-                        <span
-                          ><img
-                            src="../../../assets/adminDashboard/filter-lines.png"
-                            alt=""
-                        /></span>
-                        <span class="hidden lg:block">Filters</span>
-                      </button>
-                      <!-- Responsive filter button ========== -->
+                        />
                     </div>
-                    <!-- search field end ========== -->
-                    <!-- filter button ========== -->
-                    <button
-                      class="shadow-md hidden text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 md:flex items-center gap-2"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/adminDashboard/filter-lines.png"
-                          alt=""
-                      /></span>
-                      <span class="hidden lg:block">Filters</span>
-                    </button>
-                    <!-- filter button ========== -->
-                    <button
-                      class="text-[#344054] w-full md:w-fit justify-center font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center bg-[#78EB54] shadow-md gap-2"
-                    >
-                      <span>
-                        <i class="fa-solid fa-plus"></i>
-                      </span>
-                      <span>Add company</span>
-                    </button>
-                  </div>
-                  <!-- right side button     end =============== -->
                 </div>
-                <!-- companies title and export import button end ================= -->
-              </div>
-            </section>
-
-            <!-- main card start ======================== -->
-
-            <section class="px-4 pb-4 mt-8 space-y-8">
-              <!-- card 1 start =================== -->
-              <div class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg">
-                <!-- upper section ================== -->
-                <div
-                  class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
-                >
-                  <!-- content side ================== -->
-                  <div class="lg:space-y-4">
-                    <button
-                      class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
-                    >
-                      NEW
-                    </button>
-                    <h2
-                      class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
-                    >
-                      Foodiex Corner
-                    </h2>
-                    <div
-                      class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
-                    >
-                      <span>Listed Date 24.07.2024</span>
-                      <span class="hidden md:block">|</span>
-                      <span>480 Followers</span>
-                    </div>
-                    <div class="my-3 md:hidden">
-                      <img
-                        src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
-                        alt=""
-                      />
-                    </div>
-                    <p class="text-sm text-[#4B4B4B] font-medium">
-                      642, R. Marquês Minas 3, Cascais, Portugal
-                    </p>
-                  </div>
-                  <!-- picture side ================== -->
-                  <div class="hidden md:block">
-                    <img
-                      src="../../../assets/listed-of-companies-1/image 8.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <!-- upper section ================== -->
-
-                <!-- bottom section button============ -->
-                <div
-                  class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
-                >
-                  <div class="gap-3 flex items-center">
-                    <button
-                      class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/pencil.png"
-                          alt=""
-                      /></span>
-                      <span>EDIT</span>
-                    </button>
-                    <button
-                      class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/Delete.png"
-                          alt=""
-                      /></span>
-                      <span>DELETE</span>
-                    </button>
-                  </div>
-                  <button
-                    class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span>DELETE</span>
-                  </button>
-                  <button
-                    class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span class="uppercase">see details</span>
-                  </button>
-                </div>
-                <!-- bottom section end ============ -->
-              </div>
-              <!-- card 1 end =================== -->
-              <!-- card 2 start =================== -->
-              <div class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg">
-                <!-- upper section ================== -->
-                <div
-                  class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
-                >
-                  <!-- content side ================== -->
-                  <div class="lg:space-y-4">
-                    <button
-                      class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
-                    >
-                      NEW
-                    </button>
-                    <h2
-                      class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
-                    >
-                      Foodiex Corner
-                    </h2>
-                    <div
-                      class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
-                    >
-                      <span>Listed Date 24.07.2024</span>
-                      <span class="hidden md:block">|</span>
-                      <span>480 Followers</span>
-                    </div>
-                    <div class="my-3 md:hidden">
-                      <img
-                        src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
-                        alt=""
-                      />
-                    </div>
-                    <p class="text-sm text-[#4B4B4B] font-medium">
-                      642, R. Marquês Minas 3, Cascais, Portugal
-                    </p>
-                  </div>
-                  <!-- picture side ================== -->
-                  <div class="hidden md:block">
-                    <img
-                      src="../../../assets/listed-of-companies-1/image 8.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <!-- upper section ================== -->
-
-                <!-- bottom section button============ -->
-                <div
-                  class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
-                >
-                  <div class="gap-3 flex items-center">
-                    <button
-                      class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/pencil.png"
-                          alt=""
-                      /></span>
-                      <span>EDIT</span>
-                    </button>
-                    <button
-                      class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/Delete.png"
-                          alt=""
-                      /></span>
-                      <span>DELETE</span>
-                    </button>
-                  </div>
-                  <button
-                    class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span>DELETE</span>
-                  </button>
-                  <button
-                    class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span class="uppercase">see details</span>
-                  </button>
-                </div>
-                <!-- bottom section end ============ -->
-              </div>
-              <!-- card 2 end =================== -->
-              <!-- card 3 start =================== -->
-              <div class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg">
-                <!-- upper section ================== -->
-                <div
-                  class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
-                >
-                  <!-- content side ================== -->
-                  <div class="lg:space-y-4">
-                    <button
-                      class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
-                    >
-                      NEW
-                    </button>
-                    <h2
-                      class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
-                    >
-                      Foodiex Corner
-                    </h2>
-                    <div
-                      class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
-                    >
-                      <span>Listed Date 24.07.2024</span>
-                      <span class="hidden md:block">|</span>
-                      <span>480 Followers</span>
-                    </div>
-                    <div class="my-3 md:hidden">
-                      <img
-                        src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
-                        alt=""
-                      />
-                    </div>
-                    <p class="text-sm text-[#4B4B4B] font-medium">
-                      642, R. Marquês Minas 3, Cascais, Portugal
-                    </p>
-                  </div>
-                  <!-- picture side ================== -->
-                  <div class="hidden md:block">
-                    <img
-                      src="../../../assets/listed-of-companies-1/image 8.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <!-- upper section ================== -->
-
-                <!-- bottom section button============ -->
-                <div
-                  class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
-                >
-                  <div class="gap-3 flex items-center">
-                    <button
-                      class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/pencil.png"
-                          alt=""
-                      /></span>
-                      <span>EDIT</span>
-                    </button>
-                    <button
-                      class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/Delete.png"
-                          alt=""
-                      /></span>
-                      <span>DELETE</span>
-                    </button>
-                  </div>
-                  <button
-                    class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span>DELETE</span>
-                  </button>
-                  <button
-                    class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span class="uppercase">see details</span>
-                  </button>
-                </div>
-                <!-- bottom section end ============ -->
-              </div>
-              <!-- card 3 end =================== -->
-              <!-- card 4 start =================== -->
-              <div class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg">
-                <!-- upper section ================== -->
-                <div
-                  class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
-                >
-                  <!-- content side ================== -->
-                  <div class="lg:space-y-4">
-                    <button
-                      class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
-                    >
-                      NEW
-                    </button>
-                    <h2
-                      class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
-                    >
-                      Foodiex Corner
-                    </h2>
-                    <div
-                      class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
-                    >
-                      <span>Listed Date 24.07.2024</span>
-                      <span class="hidden md:block">|</span>
-                      <span>480 Followers</span>
-                    </div>
-                    <div class="my-3 md:hidden">
-                      <img
-                        src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
-                        alt=""
-                      />
-                    </div>
-                    <p class="text-sm text-[#4B4B4B] font-medium">
-                      642, R. Marquês Minas 3, Cascais, Portugal
-                    </p>
-                  </div>
-                  <!-- picture side ================== -->
-                  <div class="hidden md:block">
-                    <img
-                      src="../../../assets/listed-of-companies-1/image 8.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <!-- upper section ================== -->
-
-                <!-- bottom section button============ -->
-                <div
-                  class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
-                >
-                  <div class="gap-3 flex items-center">
-                    <button
-                      class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/pencil.png"
-                          alt=""
-                      /></span>
-                      <span>EDIT</span>
-                    </button>
-                    <button
-                      class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/Delete.png"
-                          alt=""
-                      /></span>
-                      <span>DELETE</span>
-                    </button>
-                  </div>
-                  <button
-                    class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span>DELETE</span>
-                  </button>
-                  <button
-                    class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span class="uppercase">see details</span>
-                  </button>
-                </div>
-                <!-- bottom section end ============ -->
-              </div>
-              <!-- card 4 end =================== -->
-              <!-- card 5 start =================== -->
-              <div class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg">
-                <!-- upper section ================== -->
-                <div
-                  class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
-                >
-                  <!-- content side ================== -->
-                  <div class="lg:space-y-4">
-                    <button
-                      class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
-                    >
-                      NEW
-                    </button>
-                    <h2
-                      class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
-                    >
-                      Foodiex Corner
-                    </h2>
-                    <div
-                      class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
-                    >
-                      <span>Listed Date 24.07.2024</span>
-                      <span class="hidden md:block">|</span>
-                      <span>480 Followers</span>
-                    </div>
-                    <div class="my-3 md:hidden">
-                      <img
-                        src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
-                        alt=""
-                      />
-                    </div>
-                    <p class="text-sm text-[#4B4B4B] font-medium">
-                      642, R. Marquês Minas 3, Cascais, Portugal
-                    </p>
-                  </div>
-                  <!-- picture side ================== -->
-                  <div class="hidden md:block">
-                    <img
-                      src="../../../assets/listed-of-companies-1/image 8.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <!-- upper section ================== -->
-
-                <!-- bottom section button============ -->
-                <div
-                  class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
-                >
-                  <div class="gap-3 flex items-center">
-                    <button
-                      class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/pencil.png"
-                          alt=""
-                      /></span>
-                      <span>EDIT</span>
-                    </button>
-                    <button
-                      class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/Delete.png"
-                          alt=""
-                      /></span>
-                      <span>DELETE</span>
-                    </button>
-                  </div>
-                  <button
-                    class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span>DELETE</span>
-                  </button>
-                  <button
-                    class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span class="uppercase">see details</span>
-                  </button>
-                </div>
-                <!-- bottom section end ============ -->
-              </div>
-              <!-- card 5 end =================== -->
-              <!-- card 6 start =================== -->
-              <div class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg">
-                <!-- upper section ================== -->
-                <div
-                  class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
-                >
-                  <!-- content side ================== -->
-                  <div class="lg:space-y-4">
-                    <button
-                      class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
-                    >
-                      NEW
-                    </button>
-                    <h2
-                      class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
-                    >
-                      Foodiex Corner
-                    </h2>
-                    <div
-                      class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
-                    >
-                      <span>Listed Date 24.07.2024</span>
-                      <span class="hidden md:block">|</span>
-                      <span>480 Followers</span>
-                    </div>
-                    <div class="my-3 md:hidden">
-                      <img
-                        src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
-                        alt=""
-                      />
-                    </div>
-                    <p class="text-sm text-[#4B4B4B] font-medium">
-                      642, R. Marquês Minas 3, Cascais, Portugal
-                    </p>
-                  </div>
-                  <!-- picture side ================== -->
-                  <div class="hidden md:block">
-                    <img
-                      src="../../../assets/listed-of-companies-1/image 8.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <!-- upper section ================== -->
-
-                <!-- bottom section button============ -->
-                <div
-                  class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
-                >
-                  <div class="gap-3 flex items-center">
-                    <button
-                      class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/pencil.png"
-                          alt=""
-                      /></span>
-                      <span>EDIT</span>
-                    </button>
-                    <button
-                      class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                    >
-                      <span
-                        ><img
-                          src="../../../assets/listed-of-companies-1/Delete.png"
-                          alt=""
-                      /></span>
-                      <span>DELETE</span>
-                    </button>
-                  </div>
-                  <button
-                    class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span>DELETE</span>
-                  </button>
-                  <button
-                    class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
-                  >
-                    <span
-                      ><img
-                        src="../../../assets/listed-of-companies-1/Delete.png"
-                        alt=""
-                    /></span>
-                    <span class="uppercase">see details</span>
-                  </button>
-                </div>
-                <!-- bottom section end ============ -->
-              </div>
-              <!-- card 6 end =================== -->
-                <!-- pagination start ======================== -->
-          <section class="px-4 shadow-md  mt-4">
-            <section
-              class="hidden border-t border-[#EAECF0] bg-[#FFFFFF] md:flex justify-between py-3"
-            >
-              <div>
-                <h3 class="text-[#344054] font-medium text-sm">Page 1 of 10</h3>
-              </div>
-              <!-- button start ============ -->
-              <div class="flex items-center gap-2">
-                <button
-                  class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
-                >
-                  <span>Previous</span>
-                </button>
-                <button
-                  class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
-                >
-                  <span>Next</span>
-                </button>
-              </div>
-            </section>
-          </section>
-          <!-- pagination end ======================== -->
-               <!-- responsive pagination ====================== -->
-          <section class="">
-            <section
-              class="md:hidden  border-t border-[#EAECF0] flex items-center justify-between py-4"
-            >
-              <button
-                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
-              >
-                <span><i class="fa-solid fa-arrow-left"></i></span>
-              </button>
-              <div>
-                <h3 class="text-[#344054] font-medium text-sm">Page 1 of 10</h3>
-              </div>
-              <button
-                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
-              >
-                <span><i class="fa-solid fa-arrow-right"></i></span>
-              </button>
-            </section>
-          </section>
-          <!-- responsive pagination end ====================== -->
-            </section>
-          </section>
-         
-
-      
+                <!-- search bar input end ================ -->
+            </nav>
         </section>
-      </section>
-      <!-- Companies data card with header section  end ================== -->
-    </main>
+        <!-- inside Companies profile pages Navbar section end =================== -->
+        <main>
+            <section class="lg:bg-[#F4F4F4] bg-[#F5F7F9]">
+                <!-- profile intro section start ===================================== -->
+                <section class="bg-[#F6FBFD] pb-5 lg:py-16 lg:pb-5">
+                    <div
+                        class="container hidden mx-auto px-4 lg:flex flex-col justify-center items-center"
+                    >
+                        <div class="flex flex-col justify-center items-center">
+                            <div>
+                                <img
+                                    src="../../../assets/companyProfile/image 3.png"
+                                    alt=""
+                                />
+                            </div>
+                            <h2
+                                class="text-3xl font-medium my-2 text-[#273F2B]"
+                            >
+                                Amazon Fireflex
+                            </h2>
+                            <p
+                                style="
+                                    background-color: rgba(120, 235, 84, 0.05);
+                                "
+                                class="border border-[#78EB54] text-[#273F2B] rounded-[100px] px-6 py-2"
+                            >
+                                <i
+                                    class="fa-solid fa-location-dot text-[#273F2B] text-sm"
+                                ></i>
+                                <span>San Francisco,CA</span>
+                            </p>
+                        </div>
+                    </div>
 
-    <!-- Footer Section -->
-    <footer class="bg-white text-[#FFFFFFB2] relative">
-      <div class="bg-[#052e26] md:rounded-t-3xl">
-        <div class="container mx-auto px-4 lg:px-20">
-          <!-- Upper and Lower Footer: Combined Grid Layout -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-11 lg:py-20">
-            <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
-            <div class="col-span-2 sm:col-span-1">
-              <div class="flex-shrink-0 mb-4">
-                <!-- Logo -->
-                <a href="#" class="flex items-center">
-                  <img
-                    src="../../../assets/logoHeaderAndFooter/logoFooter .png"
-                    alt="Logo"
-                    class="h-8 w-auto"
-                  />
-                </a>
-              </div>
-              <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
-                Fun, engaging and authentic Platform
-              </p>
-              <div class="flex space-x-4">
-                <a href="#"
-                  ><img
-                    src="../../../assets/images/Icon/linkedin.png"
-                    alt="LinkedIn"
-                    class="h-5"
-                /></a>
-                <a href="#"
-                  ><img
-                    src="../../../assets/images/Icon/youtube.png"
-                    alt="YouTube"
-                    class="h-5"
-                /></a>
-                <a href="#"
-                  ><img
-                    src="../../../assets/images/Icon/twitter.png"
-                    alt="Twitter"
-                    class="h-5"
-                /></a>
-                <a href="#"
-                  ><img
-                    src="../../../assets/images/Icon/facebook.png"
-                    alt="Facebook"
-                    class="h-5"
-                /></a>
-              </div>
-            </div>
+                    <!-- profile inside nav start =============================== -->
+                    <nav class="px-4 relative lg:block hidden lg:px-20">
+                        <div
+                            class="text-[#667085] border rounded-[10px] border-[#EAECF0] px-4 w-full bg-white font-semibold py-4 mt-10"
+                        >
+                            <a href="../adminDashboard.html" class="px-4 py-2"
+                                >Dashboard</a
+                            >
+                            <a
+                                class="px-4 py-2 shadow-md text-[#344054] border border-[#818B9C] rounded-md"
+                                href="./listOfCompany.html"
+                                >List of Companies</a
+                            >
+                            <a class="px-4 py-2" href="./adminReviews.html"
+                                >Reviews</a
+                            >
+                            <a class="px-4 py-2" href="../../performance.html"
+                                >Performance</a
+                            >
+                            <a class="px-4 py-2" href="../analytics.html"
+                                >Analytics</a
+                            >
+                        </div>
+                    </nav>
+                    <!-- profile inside nav end =============================== -->
 
-            <!-- Product Links -->
-            <div>
-              <h4 class="font-bold text-xl text-[#FFF] mb-4">Product</h4>
-              <ul class="lg:space-y-5 space-y-4 font-light">
-                <li><a href="#" class="hover:text-green-400">About us</a></li>
-                <li><a href="#" class="hover:text-green-400">FAQs</a></li>
-                <li><a href="#" class="hover:text-green-400">Contact</a></li>
-                <li><a href="#" class="hover:text-green-400">Pricing</a></li>
-                <li>
-                  <a href="./signin.html" class="hover:text-green-400"
-                    >Log in</a
-                  >
-                </li>
-              </ul>
-            </div>
+                    <!-- Admin dashboard stats =============================== -->
+                    <section
+                        class="px-4 hidden my-6 md:grid lg:grid-cols-3 gap-5 lg:px-20"
+                    >
+                        <!-- card 1 number of companies start ======================= -->
+                        <div
+                            class="bg-[#FFF] shadow-md rounded-md p-4 space-y-8"
+                        >
+                            <!-- title and 3dot ================ -->
+                            <div class="flex justify-between items-center">
+                                <h5
+                                    class="text-[#101828] font-semibold text-base"
+                                >
+                                    Number of Companies
+                                </h5>
+                                <span class="text-[#98A2B3]"
+                                    ><i
+                                        class="fa-solid fa-ellipsis-vertical"
+                                    ></i
+                                ></span>
+                            </div>
+                            <!-- title and 3dot end ================ -->
+                            <!-- count and line =================== -->
+                            <div class="flex justify-between">
+                                <!-- left side ================ -->
+                                <div class="space-y-3">
+                                    <h3
+                                        class="text-[#101828] font-semibold text-4xl"
+                                    >
+                                        2,420
+                                    </h3>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="text-[#079455] font-medium text-sm"
+                                        >
+                                            <span class=""
+                                                ><i
+                                                    class="fa-solid fa-arrow-up"
+                                                ></i
+                                            ></span>
+                                            <span> 40% </span>
+                                        </div>
+                                        <span
+                                            class="font-medium text-sm text-[#475467]"
+                                            >vs last month</span
+                                        >
+                                    </div>
+                                </div>
+                                <!-- left side end ================ -->
 
-            <!-- Resources Links -->
-            <div>
-              <h4 class="font-bold text-xl text-[#FFF] mb-4">Resources</h4>
-              <ul class="lg:space-y-5 space-y-4 font-light">
-                <li><a href="#" class="hover:text-green-400">Learn</a></li>
-                <li><a href="#" class="hover:text-green-400">Videos</a></li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Help Center</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Webinar Glossary</a>
-                </li>
-              </ul>
-            </div>
+                                <!-- right side line ========== -->
+                                <div class="relative">
+                                    <img
+                                        class=""
+                                        src="../../../assets/adminDashboard/Line1.png"
+                                        alt=""
+                                    />
+                                    <img
+                                        class="absolute left-20 top-2"
+                                        src="../../../assets/adminDashboard/Dot.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <!-- right side line end ============ -->
+                            </div>
+                            <!-- count and line end =================== -->
+                        </div>
+                        <!-- card 1 number of companies end ======================= -->
+                        <!-- card 2 number of companies start ======================= -->
+                        <div
+                            class="bg-[#FFF] shadow-md rounded-md p-4 space-y-8"
+                        >
+                            <!-- title and 3dot ================ -->
+                            <div class="flex justify-between items-center">
+                                <h5
+                                    class="text-[#101828] font-semibold text-base"
+                                >
+                                    Total Complaints
+                                </h5>
+                                <span class="text-[#98A2B3]"
+                                    ><i
+                                        class="fa-solid fa-ellipsis-vertical"
+                                    ></i
+                                ></span>
+                            </div>
+                            <!-- title and 3dot end ================ -->
+                            <!-- count and line =================== -->
+                            <div class="flex justify-between">
+                                <!-- left side ================ -->
+                                <div class="space-y-3">
+                                    <h3
+                                        class="text-[#101828] font-semibold text-4xl"
+                                    >
+                                        316
+                                    </h3>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="text-[#079455] font-medium text-sm"
+                                        >
+                                            <span class=""
+                                                ><i
+                                                    class="fa-solid fa-arrow-up"
+                                                ></i
+                                            ></span>
+                                            <span> 20% </span>
+                                        </div>
+                                        <span
+                                            class="font-medium text-sm text-[#475467]"
+                                            >vs last month</span
+                                        >
+                                    </div>
+                                </div>
+                                <!-- left side end ================ -->
 
-            <!-- More Links -->
-            <div>
-              <h4 class="font-bold text-xl text-[#FFF] mb-4">More</h4>
-              <ul class="lg:space-y-5 space-y-4 font-light">
-                <li><a href="#" class="hover:text-green-400">Our story</a></li>
-                <li>
-                  <a href="#" class="hover:text-green-400">We’re hiring</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Resolver NG</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400"
-                    >Resolver NG Satisfaction</a
-                  >
-                </li>
-              </ul>
-            </div>
+                                <!-- right side line ========== -->
+                                <div class="relative">
+                                    <img
+                                        src="../../../assets/adminDashboard/Line1.png"
+                                        alt=""
+                                    />
+                                    <img
+                                        class="absolute left-20 top-2"
+                                        src="../../../assets/adminDashboard/Dot.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <!-- right side line end ============ -->
+                            </div>
+                            <!-- count and line end =================== -->
+                        </div>
+                        <!-- card 2 number of companies end ======================= -->
+                        <!-- card 3 number of companies start ======================= -->
+                        <div
+                            class="bg-[#FFF] shadow-md rounded-md p-4 space-y-8"
+                        >
+                            <!-- title and 3dot ================ -->
+                            <div class="flex justify-between items-center">
+                                <h5
+                                    class="text-[#101828] font-semibold text-base"
+                                >
+                                    Resolved Complaints
+                                </h5>
+                                <span class="text-[#98A2B3]"
+                                    ><i
+                                        class="fa-solid fa-ellipsis-vertical"
+                                    ></i
+                                ></span>
+                            </div>
+                            <!-- title and 3dot end ================ -->
+                            <!-- count and line =================== -->
+                            <div class="flex justify-between">
+                                <!-- left side ================ -->
+                                <div class="space-y-3">
+                                    <h3
+                                        class="text-[#101828] hidden md:block font-semibold text-4xl"
+                                    >
+                                        210
+                                    </h3>
+                                    <h3
+                                        class="text-[#101828] md:hidden font-semibold text-4xl"
+                                    >
+                                        1,210
+                                    </h3>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="text-[#D92D20] font-medium text-sm"
+                                        >
+                                            <span class=""
+                                                ><i
+                                                    class="fa-solid fa-arrow-down"
+                                                ></i
+                                            ></span>
+                                            <span> 10% </span>
+                                        </div>
+                                        <span
+                                            class="font-medium text-sm text-[#475467]"
+                                            >vs last month</span
+                                        >
+                                    </div>
+                                </div>
+                                <!-- left side end ================ -->
 
-            <div class="block md:hidden">
-              <h4 class="font-bold text-[#FFF] mb-4">Support</h4>
-              <ul class="lg:space-y-5 space-y-4 font-light">
-                <li>
-                  <a href="#" class="hover:text-green-400">Trust Center</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Resolver NG</a>
-                </li>
-                <li><a href="#" class="hover:text-green-400">Status</a></li>
-                <li><a href="#" class="hover:text-green-400">Legal</a></li>
-                <li>
-                  <a href="#" class="hover:text-green-400"
-                    >Do Not Sell My Info</a
-                  >
-                </li>
-                <li><a href="#" class="hover:text-green-400">Opt out</a></li>
-              </ul>
-            </div>
-          </div>
+                                <!-- right side line ========== -->
+                                <div class="relative">
+                                    <img
+                                        src="../../../assets/adminDashboard/Line.png"
+                                        alt=""
+                                    />
+                                    <img
+                                        class="absolute right-10 top-5"
+                                        src="../../../assets/adminDashboard/Dot2.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <!-- right side line end ============ -->
+                            </div>
+                            <!-- count and line end =================== -->
+                        </div>
+                        <!-- card 3 number of companies end ======================= -->
+                    </section>
+                    <!-- Admin dashboard stats end =============================== -->
+                </section>
 
-          <div class="border-t border-gray-600 py-4">
-            <div
-              class="mx-auto text-[#FFF] flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
-            >
-              <!-- Left Section: Links -->
-              <div class="hidden  md:block">
-                <div
-                  class="flex  flex-wrap justify-center sm:justify-start space-x-6"
+                <!-- profile intro section end ===================================== -->
+
+                <!-- Companies data card with header section start ================== -->
+                <section
+                    class="md:px-4 container mx-auto mb-8 lg:mb-24 lg:px-20"
                 >
-                  <a href="#" class="hover:text-green-400">Trust Center</a>
-                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
-                  <a href="#" class="hover:text-green-400">Status</a>
-                  <a href="#" class="hover:text-green-400">Legal</a>
-                  <a href="#" class="hover:text-green-400"
-                    >Do Not Sell My Info</a
-                  >
-                  <a href="#" class="hover:text-green-400">Opt out</a>
+                    <section class="lg:bg-white lg:rounded-lg">
+                        <section
+                            class="md:mt-12 mb-6 mt-3 md:mb-0 md:bg-white rounded-md"
+                        >
+                            <div class="px-4">
+                                <!-- companies title and search, filter, import button ================= -->
+                                <div
+                                    class="flex shadow-md md:shadow-none space-y-2 md:space-y-4 md:flex-row rounded-md md:rounded-t-md flex-col justify-between lg:items-baseline bg-white py-4 px-4 lg:px-0 md:border-b border-[#EAECF0]"
+                                >
+                                    <!-- Mobile screen company profile selector ========== -->
+                                    <div class="space-y-3 mb-3 md:hidden">
+                                        <h1
+                                            class="text-[#101828] font-semibold text-2xl"
+                                        >
+                                            Company profile
+                                        </h1>
+
+                                        <div>
+                                            <select
+                                                class="border border-[#D0D5DD] bg-[#FFF] outline-none shadow-md w-full rounded-lg px-4 py-2"
+                                                name=""
+                                                id="navSelect"
+                                            >
+                                                <option
+                                                    value="./listOfCompany.html"
+                                                >
+                                                    List of Companies
+                                                </option>
+                                                <option
+                                                    value="../adminDashboard.html"
+                                                >
+                                                    Dashboard
+                                                </option>
+                                                <option
+                                                    value="./adminReviews.html"
+                                                >
+                                                    Reviews
+                                                </option>
+                                                <option
+                                                    value="../../performance.html"
+                                                >
+                                                    Performance
+                                                </option>
+                                                <option
+                                                    value="../analytics.html"
+                                                >
+                                                    Analytics
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Mobile screen company profile selector end ========== -->
+
+                                    <!-- left side title ============== -->
+                                    <div class="flex justify-between">
+                                        <div class="md:space-y-2">
+                                            <h3
+                                                class="text-lg font-semibold text-[#273F2B] flex items-center gap-2"
+                                            >
+                                                <span>List of Companies</span>
+                                                <span
+                                                    class="font-medium text-sm hidden md:block text-[#344054] border px-2 py-1 border-[#D0D5DD] rounded-lg shadow-md"
+                                                    >202 companies</span
+                                                >
+                                            </h3>
+                                            <p
+                                                class="text-[#475467] font-normal text-sm"
+                                            >
+                                                Keep track of your Companies.
+                                            </p>
+                                        </div>
+                                        <div class="hidden">
+                                            <span class="text-[#98A2B3]"
+                                                ><i
+                                                    class="fa-solid fa-ellipsis-vertical"
+                                                ></i
+                                            ></span>
+                                        </div>
+                                    </div>
+                                    <!-- left side title end ============== -->
+                                    <!-- right side button start =============== -->
+                                    <div
+                                        class="flex lg:flex-row flex-col items-start gap-4"
+                                    >
+                                        <!-- search field filter ========== -->
+                                        <div
+                                            class="flex items-center w-full md:w-fit gap-3"
+                                        >
+                                            <!-- search bar input ================ -->
+                                            <div class="flex-1">
+                                                <div
+                                                    class="px-4 flex items-center gap-2 py-2 border border-[#D0D5DD] rounded-lg shadow-md"
+                                                >
+                                                    <span
+                                                        class="text-[#667085]"
+                                                    >
+                                                        <i
+                                                            class="fa-solid fa-magnifying-glass"
+                                                        ></i>
+                                                    </span>
+                                                    <input
+                                                        class="w-full outline-none bg-transparent"
+                                                        placeholder="Search"
+                                                        type="text"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <!-- search bar input end ================ -->
+                                            <!-- Responsive  filter button ========== -->
+                                            <button
+                                                class="shadow-md md:hidden text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+                                            >
+                                                <span
+                                                    ><img
+                                                        src="../../../assets/adminDashboard/filter-lines.png"
+                                                        alt=""
+                                                /></span>
+                                                <span class="hidden lg:block"
+                                                    >Filters</span
+                                                >
+                                            </button>
+                                            <!-- Responsive filter button ========== -->
+                                        </div>
+                                        <!-- search field end ========== -->
+                                        <!-- filter button ========== -->
+                                        <button
+                                            class="shadow-md hidden text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 md:flex items-center gap-2"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/adminDashboard/filter-lines.png"
+                                                    alt=""
+                                            /></span>
+                                            <span class="hidden lg:block"
+                                                >Filters</span
+                                            >
+                                        </button>
+                                        <!-- filter button ========== -->
+                                        <button
+                                            class="text-[#344054] w-full md:w-fit justify-center font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center bg-[#78EB54] shadow-md gap-2"
+                                        >
+                                            <span>
+                                                <i class="fa-solid fa-plus"></i>
+                                            </span>
+                                            <span>Add company</span>
+                                        </button>
+                                    </div>
+                                    <!-- right side button     end =============== -->
+                                </div>
+                                <!-- companies title and export import button end ================= -->
+                            </div>
+                        </section>
+
+                        <!-- main card start ======================== -->
+
+                        <section class="px-4 pb-4 mt-8 space-y-8">
+                            <!-- card 1 start =================== -->
+                            <div
+                                class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg"
+                            >
+                                <!-- upper section ================== -->
+                                <div
+                                    class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
+                                >
+                                    <!-- content side ================== -->
+                                    <div class="lg:space-y-4">
+                                        <button
+                                            class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
+                                        >
+                                            NEW
+                                        </button>
+                                        <h2
+                                            class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
+                                        >
+                                            Foodiex Corner
+                                        </h2>
+                                        <div
+                                            class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
+                                        >
+                                            <span>Listed Date 24.07.2024</span>
+                                            <span class="hidden md:block"
+                                                >|</span
+                                            >
+                                            <span>480 Followers</span>
+                                        </div>
+                                        <div class="my-3 md:hidden">
+                                            <img
+                                                src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p
+                                            class="text-sm text-[#4B4B4B] font-medium"
+                                        >
+                                            642, R. Marquês Minas 3, Cascais,
+                                            Portugal
+                                        </p>
+                                    </div>
+                                    <!-- picture side ================== -->
+                                    <div class="hidden md:block">
+                                        <img
+                                            src="../../../assets/listed-of-companies-1/image 8.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <!-- upper section ================== -->
+
+                                <!-- bottom section button============ -->
+                                <div
+                                    class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
+                                >
+                                    <div class="gap-3 flex items-center">
+                                        <button
+                                            class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/pencil.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>EDIT</span>
+                                        </button>
+                                        <button
+                                            class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/Delete.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>DELETE</span>
+                                        </button>
+                                    </div>
+                                    <button
+                                        class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span>DELETE</span>
+                                    </button>
+                                    <button
+                                        class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span class="uppercase"
+                                            >see details</span
+                                        >
+                                    </button>
+                                </div>
+                                <!-- bottom section end ============ -->
+                            </div>
+                            <!-- card 1 end =================== -->
+                            <!-- card 2 start =================== -->
+                            <div
+                                class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg"
+                            >
+                                <!-- upper section ================== -->
+                                <div
+                                    class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
+                                >
+                                    <!-- content side ================== -->
+                                    <div class="lg:space-y-4">
+                                        <button
+                                            class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
+                                        >
+                                            NEW
+                                        </button>
+                                        <h2
+                                            class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
+                                        >
+                                            Foodiex Corner
+                                        </h2>
+                                        <div
+                                            class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
+                                        >
+                                            <span>Listed Date 24.07.2024</span>
+                                            <span class="hidden md:block"
+                                                >|</span
+                                            >
+                                            <span>480 Followers</span>
+                                        </div>
+                                        <div class="my-3 md:hidden">
+                                            <img
+                                                src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p
+                                            class="text-sm text-[#4B4B4B] font-medium"
+                                        >
+                                            642, R. Marquês Minas 3, Cascais,
+                                            Portugal
+                                        </p>
+                                    </div>
+                                    <!-- picture side ================== -->
+                                    <div class="hidden md:block">
+                                        <img
+                                            src="../../../assets/listed-of-companies-1/image 8.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <!-- upper section ================== -->
+
+                                <!-- bottom section button============ -->
+                                <div
+                                    class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
+                                >
+                                    <div class="gap-3 flex items-center">
+                                        <button
+                                            class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/pencil.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>EDIT</span>
+                                        </button>
+                                        <button
+                                            class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/Delete.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>DELETE</span>
+                                        </button>
+                                    </div>
+                                    <button
+                                        class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span>DELETE</span>
+                                    </button>
+                                    <button
+                                        class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span class="uppercase"
+                                            >see details</span
+                                        >
+                                    </button>
+                                </div>
+                                <!-- bottom section end ============ -->
+                            </div>
+                            <!-- card 2 end =================== -->
+                            <!-- card 3 start =================== -->
+                            <div
+                                class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg"
+                            >
+                                <!-- upper section ================== -->
+                                <div
+                                    class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
+                                >
+                                    <!-- content side ================== -->
+                                    <div class="lg:space-y-4">
+                                        <button
+                                            class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
+                                        >
+                                            NEW
+                                        </button>
+                                        <h2
+                                            class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
+                                        >
+                                            Foodiex Corner
+                                        </h2>
+                                        <div
+                                            class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
+                                        >
+                                            <span>Listed Date 24.07.2024</span>
+                                            <span class="hidden md:block"
+                                                >|</span
+                                            >
+                                            <span>480 Followers</span>
+                                        </div>
+                                        <div class="my-3 md:hidden">
+                                            <img
+                                                src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p
+                                            class="text-sm text-[#4B4B4B] font-medium"
+                                        >
+                                            642, R. Marquês Minas 3, Cascais,
+                                            Portugal
+                                        </p>
+                                    </div>
+                                    <!-- picture side ================== -->
+                                    <div class="hidden md:block">
+                                        <img
+                                            src="../../../assets/listed-of-companies-1/image 8.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <!-- upper section ================== -->
+
+                                <!-- bottom section button============ -->
+                                <div
+                                    class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
+                                >
+                                    <div class="gap-3 flex items-center">
+                                        <button
+                                            class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/pencil.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>EDIT</span>
+                                        </button>
+                                        <button
+                                            class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/Delete.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>DELETE</span>
+                                        </button>
+                                    </div>
+                                    <button
+                                        class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span>DELETE</span>
+                                    </button>
+                                    <button
+                                        class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span class="uppercase"
+                                            >see details</span
+                                        >
+                                    </button>
+                                </div>
+                                <!-- bottom section end ============ -->
+                            </div>
+                            <!-- card 3 end =================== -->
+                            <!-- card 4 start =================== -->
+                            <div
+                                class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg"
+                            >
+                                <!-- upper section ================== -->
+                                <div
+                                    class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
+                                >
+                                    <!-- content side ================== -->
+                                    <div class="lg:space-y-4">
+                                        <button
+                                            class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
+                                        >
+                                            NEW
+                                        </button>
+                                        <h2
+                                            class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
+                                        >
+                                            Foodiex Corner
+                                        </h2>
+                                        <div
+                                            class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
+                                        >
+                                            <span>Listed Date 24.07.2024</span>
+                                            <span class="hidden md:block"
+                                                >|</span
+                                            >
+                                            <span>480 Followers</span>
+                                        </div>
+                                        <div class="my-3 md:hidden">
+                                            <img
+                                                src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p
+                                            class="text-sm text-[#4B4B4B] font-medium"
+                                        >
+                                            642, R. Marquês Minas 3, Cascais,
+                                            Portugal
+                                        </p>
+                                    </div>
+                                    <!-- picture side ================== -->
+                                    <div class="hidden md:block">
+                                        <img
+                                            src="../../../assets/listed-of-companies-1/image 8.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <!-- upper section ================== -->
+
+                                <!-- bottom section button============ -->
+                                <div
+                                    class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
+                                >
+                                    <div class="gap-3 flex items-center">
+                                        <button
+                                            class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/pencil.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>EDIT</span>
+                                        </button>
+                                        <button
+                                            class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/Delete.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>DELETE</span>
+                                        </button>
+                                    </div>
+                                    <button
+                                        class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span>DELETE</span>
+                                    </button>
+                                    <button
+                                        class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span class="uppercase"
+                                            >see details</span
+                                        >
+                                    </button>
+                                </div>
+                                <!-- bottom section end ============ -->
+                            </div>
+                            <!-- card 4 end =================== -->
+                            <!-- card 5 start =================== -->
+                            <div
+                                class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg"
+                            >
+                                <!-- upper section ================== -->
+                                <div
+                                    class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
+                                >
+                                    <!-- content side ================== -->
+                                    <div class="lg:space-y-4">
+                                        <button
+                                            class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
+                                        >
+                                            NEW
+                                        </button>
+                                        <h2
+                                            class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
+                                        >
+                                            Foodiex Corner
+                                        </h2>
+                                        <div
+                                            class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
+                                        >
+                                            <span>Listed Date 24.07.2024</span>
+                                            <span class="hidden md:block"
+                                                >|</span
+                                            >
+                                            <span>480 Followers</span>
+                                        </div>
+                                        <div class="my-3 md:hidden">
+                                            <img
+                                                src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p
+                                            class="text-sm text-[#4B4B4B] font-medium"
+                                        >
+                                            642, R. Marquês Minas 3, Cascais,
+                                            Portugal
+                                        </p>
+                                    </div>
+                                    <!-- picture side ================== -->
+                                    <div class="hidden md:block">
+                                        <img
+                                            src="../../../assets/listed-of-companies-1/image 8.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <!-- upper section ================== -->
+
+                                <!-- bottom section button============ -->
+                                <div
+                                    class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
+                                >
+                                    <div class="gap-3 flex items-center">
+                                        <button
+                                            class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/pencil.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>EDIT</span>
+                                        </button>
+                                        <button
+                                            class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/Delete.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>DELETE</span>
+                                        </button>
+                                    </div>
+                                    <button
+                                        class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span>DELETE</span>
+                                    </button>
+                                    <button
+                                        class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span class="uppercase"
+                                            >see details</span
+                                        >
+                                    </button>
+                                </div>
+                                <!-- bottom section end ============ -->
+                            </div>
+                            <!-- card 5 end =================== -->
+                            <!-- card 6 start =================== -->
+                            <div
+                                class="bg-[#FFF] px-4 lg:p-4 shadow-md rounded-lg"
+                            >
+                                <!-- upper section ================== -->
+                                <div
+                                    class="flex justify-between py-3 lg:py-5 border-[#EAECF0] border-b"
+                                >
+                                    <!-- content side ================== -->
+                                    <div class="lg:space-y-4">
+                                        <button
+                                            class="bg-[#78EB54] mb-4 lg:mb-0 font-semibold text-xs text-[#FFFFFF] px-2 py-0.5"
+                                        >
+                                            NEW
+                                        </button>
+                                        <h2
+                                            class="text-[#4B4B4B] md:text-[#273F2B] font-medium lg:font-semibold text-base lg:text-2xl"
+                                        >
+                                            Foodiex Corner
+                                        </h2>
+                                        <div
+                                            class="text-[#818B9C] font-medium text-sm flex lg:flex-row flex-col-reverse lg:items-center lg:gap-2"
+                                        >
+                                            <span>Listed Date 24.07.2024</span>
+                                            <span class="hidden md:block"
+                                                >|</span
+                                            >
+                                            <span>480 Followers</span>
+                                        </div>
+                                        <div class="my-3 md:hidden">
+                                            <img
+                                                src="../../../assets/listed-of-companies-1/Rectangle 34624150.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p
+                                            class="text-sm text-[#4B4B4B] font-medium"
+                                        >
+                                            642, R. Marquês Minas 3, Cascais,
+                                            Portugal
+                                        </p>
+                                    </div>
+                                    <!-- picture side ================== -->
+                                    <div class="hidden md:block">
+                                        <img
+                                            src="../../../assets/listed-of-companies-1/image 8.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <!-- upper section ================== -->
+
+                                <!-- bottom section button============ -->
+                                <div
+                                    class="pt-3 pb-5 lg:py-5 flex flex-col lg:flex-row gap-3 lg:items-center"
+                                >
+                                    <div class="gap-3 flex items-center">
+                                        <button
+                                            class="text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/pencil.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>EDIT</span>
+                                        </button>
+                                        <button
+                                            class="text-[#4D585F] md:hidden font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                        >
+                                            <span
+                                                ><img
+                                                    src="../../../assets/listed-of-companies-1/Delete.png"
+                                                    alt=""
+                                            /></span>
+                                            <span>DELETE</span>
+                                        </button>
+                                    </div>
+                                    <button
+                                        class="hidden text-[#4D585F] font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 md:flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span>DELETE</span>
+                                    </button>
+                                    <button
+                                        class="text-[#4D585F] w-fit font-semibold rounded-lg border border-[#969EA3] px-4 py-1.5 flex items-center gap-1"
+                                    >
+                                        <span
+                                            ><img
+                                                src="../../../assets/listed-of-companies-1/Delete.png"
+                                                alt=""
+                                        /></span>
+                                        <span class="uppercase"
+                                            >see details</span
+                                        >
+                                    </button>
+                                </div>
+                                <!-- bottom section end ============ -->
+                            </div>
+                            <!-- card 6 end =================== -->
+                            <!-- pagination start ======================== -->
+                            <section class="px-4 shadow-md mt-4">
+                                <section
+                                    class="hidden border-t border-[#EAECF0] bg-[#FFFFFF] md:flex justify-between py-3"
+                                >
+                                    <div>
+                                        <h3
+                                            class="text-[#344054] font-medium text-sm"
+                                        >
+                                            Page 1 of 10
+                                        </h3>
+                                    </div>
+                                    <!-- button start ============ -->
+                                    <div class="flex items-center gap-2">
+                                        <button
+                                            class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+                                        >
+                                            <span>Previous</span>
+                                        </button>
+                                        <button
+                                            class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+                                        >
+                                            <span>Next</span>
+                                        </button>
+                                    </div>
+                                </section>
+                            </section>
+                            <!-- pagination end ======================== -->
+                            <!-- responsive pagination ====================== -->
+                            <section class="">
+                                <section
+                                    class="md:hidden border-t border-[#EAECF0] flex items-center justify-between py-4"
+                                >
+                                    <button
+                                        class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+                                    >
+                                        <span
+                                            ><i
+                                                class="fa-solid fa-arrow-left"
+                                            ></i
+                                        ></span>
+                                    </button>
+                                    <div>
+                                        <h3
+                                            class="text-[#344054] font-medium text-sm"
+                                        >
+                                            Page 1 of 10
+                                        </h3>
+                                    </div>
+                                    <button
+                                        class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+                                    >
+                                        <span
+                                            ><i
+                                                class="fa-solid fa-arrow-right"
+                                            ></i
+                                        ></span>
+                                    </button>
+                                </section>
+                            </section>
+                            <!-- responsive pagination end ====================== -->
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <!-- Companies data card with header section  end ================== -->
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="bg-white text-[#FFFFFFB2] relative">
+            <div class="bg-[#052e26] md:rounded-t-3xl">
+                <div class="container mx-auto px-4 lg:px-20">
+                    <!-- Upper and Lower Footer: Combined Grid Layout -->
+                    <div
+                        class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-11 lg:py-20"
+                    >
+                        <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+                        <div class="col-span-2 sm:col-span-1">
+                            <div class="flex-shrink-0 mb-4">
+                                <!-- Logo -->
+                                <a href="#" class="flex items-center">
+                                    <img
+                                        src="../../../assets/logoHeaderAndFooter/logoFooter .png"
+                                        alt="Logo"
+                                        class="h-8 w-auto"
+                                    />
+                                </a>
+                            </div>
+                            <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
+                                Fun, engaging and authentic Platform
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    ><img
+                                        src="../../../assets/images/Icon/linkedin.png"
+                                        alt="LinkedIn"
+                                        class="h-5"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        src="../../../assets/images/Icon/youtube.png"
+                                        alt="YouTube"
+                                        class="h-5"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        src="../../../assets/images/Icon/twitter.png"
+                                        alt="Twitter"
+                                        class="h-5"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        src="../../../assets/images/Icon/facebook.png"
+                                        alt="Facebook"
+                                        class="h-5"
+                                /></a>
+                            </div>
+                        </div>
+
+                        <!-- Product Links -->
+                        <div>
+                            <h4 class="font-bold text-xl text-[#FFF] mb-4">
+                                Product
+                            </h4>
+                            <ul class="lg:space-y-5 space-y-4 font-light">
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >About us</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >FAQs</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Contact</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Pricing</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./signin.html"
+                                        class="hover:text-green-400"
+                                        >Log in</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Resources Links -->
+                        <div>
+                            <h4 class="font-bold text-xl text-[#FFF] mb-4">
+                                Resources
+                            </h4>
+                            <ul class="lg:space-y-5 space-y-4 font-light">
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Learn</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Videos</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Help Center</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Webinar Glossary</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- More Links -->
+                        <div>
+                            <h4 class="font-bold text-xl text-[#FFF] mb-4">
+                                More
+                            </h4>
+                            <ul class="lg:space-y-5 space-y-4 font-light">
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Our story</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >We’re hiring</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Resolver NG</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Resolver NG Satisfaction</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="block md:hidden">
+                            <h4 class="font-bold text-[#FFF] mb-4">Support</h4>
+                            <ul class="lg:space-y-5 space-y-4 font-light">
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Trust Center</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Privacy Policy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Resolver NG</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Status</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Legal</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Do Not Sell My Info</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Opt out</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-600 py-4">
+                        <div
+                            class="mx-auto text-[#FFF] flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
+                        >
+                            <!-- Left Section: Links -->
+                            <div class="hidden md:block">
+                                <div
+                                    class="flex flex-wrap justify-center sm:justify-start space-x-6"
+                                >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Trust Center</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Privacy Policy</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Status</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Legal</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Do Not Sell My Info</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Opt out</a
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Right Section: Copyright -->
+                            <div class="text-center sm:text-right">
+                                <p>© All rights reserved by Resolver NG.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Star Icon (Absolute Positioned) -->
+                    <div
+                        class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4"
+                    >
+                        <img
+                            src="../../../assets/images/3d-star.png"
+                            alt="Star Icon"
+                            class="h-32 w-32"
+                        />
+                    </div>
                 </div>
-              </div>
-
-              <!-- Right Section: Copyright -->
-              <div class="text-center sm:text-right">
-                <p>© All rights reserved by Resolver NG.</p>
-              </div>
             </div>
-          </div>
+        </footer>
 
-          <!-- Star Icon (Absolute Positioned) -->
-          <div
-            class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4"
-          >
-            <img
-              src="../../../assets/images/3d-star.png"
-              alt="Star Icon"
-              class="h-32 w-32"
-            />
-          </div>
-        </div>
-      </div>
-    </footer>
+        <script src="../../../js/linkup.js"></script>
 
-    <script src="../../../js/linkup.js"></script>
-  </body>
+        <script>
+            // Profile Dropdown
+            document
+                .getElementById("profile-dropdown-btn")
+                .addEventListener("click", function () {
+                    const dropdown =
+                        document.getElementById("profile-dropdown");
+                    dropdown.classList.toggle("hidden");
+                });
+
+            // Notification Dropdown
+            document
+                .getElementById("notification-btn")
+                .addEventListener("click", function () {
+                    const dropdown = document.getElementById(
+                        "notification-dropdown"
+                    );
+                    dropdown.classList.toggle("hidden");
+                });
+
+            // Close dropdowns when clicking outside
+            window.addEventListener("click", function (e) {
+                const profileDropdown =
+                    document.getElementById("profile-dropdown");
+                const notificationDropdown = document.getElementById(
+                    "notification-dropdown"
+                );
+
+                if (
+                    !document
+                        .getElementById("profile-dropdown-btn")
+                        .contains(e.target)
+                ) {
+                    profileDropdown.classList.add("hidden");
+                }
+
+                if (
+                    !document
+                        .getElementById("notification-btn")
+                        .contains(e.target)
+                ) {
+                    notificationDropdown.classList.add("hidden");
+                }
+            });
+        </script>
+    </body>
 </html>
