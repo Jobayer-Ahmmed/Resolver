@@ -1,805 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-    <link rel="stylesheet" href="../css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#273F2B",
-              secondary: "#4B4B4B",
-            },
-            boxShadow: {
-              "3xl": "0px 14px 34px 0px rgba(21, 58, 36, 0.10)",
-            },
+  <link rel="stylesheet" href="../css/main.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#273F2B",
+            secondary: "#4B4B4B",
+          },
+          boxShadow: {
+            "3xl": "0px 14px 34px 0px rgba(21, 58, 36, 0.10)",
           },
         },
-      };
-    </script>
-  </head>
-  <body class="bg-[#F4F4F4]">
-    <header class="bg-white border-b border-gray-200 relative z-20 w-full">
-      <div class="container mx-auto px-4 lg:px-20 w-full">
-        <div class="flex justify-between h-16 items-center w-full">
-          <!-- Logo -->
-          <!-- Logo -->
-          <div class="flex-shrink-0">
-            <a href="#" class="flex items-center">
-              <img
-                src="../assets/logoHeaderAndFooter/logoHeader.png"
-                alt="Logo"
-                class="h-8 w-auto"
-              />
-            </a>
-          </div>
+      },
+    };
+  </script>
+</head>
 
-          <!-- Desktop Menu -->
-          <nav class="hidden lg:flex space-x-4">
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >Home</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >How It Works</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >Read Reviews</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >Write Review</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >About Us</a
-            >
-            <a href="#" class="text-gray-900 hover:text-green-500 transition"
-              >Contact</a
-            >
-          </nav>
+<body class="bg-[#F4F4F4]">
 
-          <!-- Right-side buttons -->
-          <div class="hidden md:flex items-center space-x-4">
-            <!-- Upgrade Now Button -->
-            <a
-              href="#"
-              class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center"
-            >
-              <img
-                src="../assets/images//Icon/thunder.png"
-                alt="thunder-icon"
-                class="h-5 w-5 mr-2"
-              />
-              Upgrade now
-            </a>
-
-            <!-- Icons: Bell, Gear, Profile -->
-            <div class="flex space-x-4">
-              <button class="text-gray-900 hover:text-green-500 transition">
-                <img
-                  src="../assets/images/Icon/settings-01.png"
-                  alt="settings-icon"
-                  class="h-5 w-5 mr-2"
-                />
-              </button>
-
-              <button class="text-gray-900 hover:text-green-500 transition">
-                <img
-                  src="../assets/images/Icon/bell.png"
-                  alt="bell-icon"
-                  class="h-5 w-5 mr-2"
-                />
-              </button>
-
-              <div class="flex items-center">
-                <img
-                  src="../assets/adminDashboard/image 4.png"
-                  alt="settings-profile-image"
-                  class="h-8 w-8 rounded-full"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Mobile Menu Button -->
-          <div class="lg:hidden flex items-center">
-            <button
-              id="mobile-menu-button"
-              class="text-gray-900 focus:outline-none"
-            >
-              <svg
-                class="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+  <header class="bg-white border-b border-gray-200 relative z-20 w-full">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-20 w-full">
+      <div class="flex justify-between h-16 items-center w-full">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="flex items-center">
+            <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+            <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
+          </a>
         </div>
-      </div>
 
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden"
-      >
-        <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Home</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >How It Works</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Read Reviews</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Write Review</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >About Us</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Contact</a
-          >
-          <a
-            href="#"
-            class="block text-gray-900 hover:text-green-500 transition"
-            >Sign In</a
-          >
-          <a
-            href="#"
-            class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition"
-            >Sign Up</a
-          >
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex space-x-4">
+          <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
+          <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
+          <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+          <a href="../pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
+          <a href="../../index.html#about-us" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+          <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
+            Discovery</a>
         </nav>
-      </div>
-    </header>
-    <section class="bg-white">
-      <div
-        class="lg:flex container lg:px-20 px-4 mx-auto py-5 items-center justify-between hidden"
-      >
-        <ul
-          class="text-[#344054] flex items-center gap-6 text-base font-semibold"
-        >
-          <li>
-            <a
-              class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
-              href="../pages/user-dashboard-page.html"
-              >Dashboard</a
-            >
-          </li>
-          <li>
-            <a
-              class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
-              href="../pages/profile-complaints-page.html"
-              >Profiles</a
-            >
-          </li>
-          <li>
-            <a
-              href="../pages/userInformation.html"
-              class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
-              href=""
-              >Settings</a
-            >
-          </li>
-        </ul>
-        <div class="relative">
-          <div
-            class="flex items-center border border-gray-300 rounded-md py-2 px-4 bg-white w-64"
-          >
-            <svg
-              class="w-5 h-5 text-gray-500 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              ></path>
-            </svg>
-            <input
-              type="text"
-              placeholder="Search"
-              class="bg-white focus:outline-none focus:ring-0 w-full"
-            />
+
+        <!-- Right-side buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <!-- Upgrade Now Button -->
+          <a href="#"
+            class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
+            <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
+            Upgrade now
+          </a>
+
+          <!-- Icons: Bell, Gear, Profile -->
+          <div class="flex space-x-4">
+            <button class="text-gray-900 hover:text-green-500 transition">
+              <img src="../assets/images/Icon/settings-01.png" alt="settings-icon" class="h-5 w-5 mr-2" />
+            </button>
+
+            <!-- Notification Bell and Dropdown -->
+            <div class="relative flex justify-center">
+              <button id="notification-btn" class="focus:outline-none">
+                <img src="../assets/images/Icon/bell.png" alt="Notification Bell" class="h-5 w-5">
+              </button>
+
+              <!-- Notification Dropdown Menu -->
+              <div id="notification-dropdown"
+                class="hidden absolute -right-14 top-12 mt-2 w-[40rem] bg-white shadow-lg rounded-lg z-50">
+
+                <!-- Green top border -->
+                <div
+                  class="absolute top-[-10px] left-[36rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
+                          border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
+                </div>
+
+                <!-- Notifications header -->
+                <div class="flex justify-between items-center px-4 py-3 border-t-4 border-t-[#2f8379] border-b">
+                  <h3 class="text-sm font-semibold">Notifications</h3>
+                  <div class="flex gap-2 justify-center items-center">
+                    <a href="#" class="text-sm text-green-500 hover:underline">View All</a>
+                    <img src="../assets/images/profileNotificationIcon/ArrowRight.png" alt="ArrowRight"
+                      class="h-3 w-3" />
+                  </div>
+                </div>
+
+                <!-- Notifications list -->
+                <ul class="divide-y divide-gray-200">
+
+                  <li class="px-4 py-3 flex items-start gap-3">
+                    <img src="../assets/images/profileNotificationIcon/image1.png" alt="User"
+                      class="h-10 w-10 rounded-full">
+                    <div class="flex-1">
+                      <p class="text-sm"><strong>Charlie Henderson</strong> reviewed in <strong>Exploring Animal
+                          Prosthesis...</strong></p>
+                      <p class="text-gray-500 text-xs">August 31, 2024</p>
+                    </div>
+                    <button class="text-gray-500 hover:text-gray-700">
+                      <img src="../assets/images/profileNotificationIcon/Close.png" alt="cross" class="h-5 w-5">
+                    </button>
+                  </li>
+
+                  <li class="px-4 py-3 flex items-start gap-3">
+                    <img src="../assets/images/profileNotificationIcon/image2.png" alt="User"
+                      class="h-10 w-10 rounded-full">
+                    <div class="flex-1">
+                      <p class="text-sm"><strong>Satoshi Nakamoto</strong> complaint on <strong>International exchange
+                          skill event</strong></p>
+                      <p class="text-gray-500 text-xs">August 31, 2024</p>
+                    </div>
+                    <div>
+                      <button class="text-gray-500 hover:text-gray-700">
+                        <img src="../assets/images/profileNotificationIcon/Close.png" alt="cross" class="h-5 w-5">
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <!-- Profile Dropdown -->
+            <div class="relative">
+
+              <div class="flex gap-2">
+                <img src="../assets/images/settings-component.png" alt="Profile Image" class="h-8 w-8 rounded-full">
+                <button id="profile-dropdown-btn" class="focus:outline-none">
+                  <i class="fas fa-chevron-down text-black"></i>
+                </button>
+              </div>
+
+              <!-- Profile Dropdown Menu -->
+              <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50">
+                <div
+                  class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
+                          border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
+                </div>
+                <ul class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]">
+                  <!-- Profile -->
+                  <li class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+                    <div class="flex items-center space-x-3">
+                      <i class="fas fa-user text-gray-600"></i>
+                      <a href="../pages/userProfileInformation.html" class="text-gray-800">Profile</a>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                  </li>
+
+                  <!-- Dashboard -->
+                  <li class="flex justify-between items-center  px-4 py-3 bg-gray-100 border-b border-gray-200">
+                    <div class="flex items-center space-x-3">
+                      <i class="fas fa-th-large text-[#2f8379]"></i>
+                      <a href="../pages/user-dashboard-page.html" class="text-[#2f8379]">Dashboard</a>
+                    </div>
+                    <i class="fas fa-chevron-right text-[#2f8379]"></i>
+                  </li>
+
+                  <!-- Settings -->
+                  <li class="flex justify-between items-center  px-4 py-3 border-b border-gray-200">
+                    <div class="flex items-center space-x-3">
+                      <i class="fas fa-cog text-gray-600"></i>
+                      <a href="../pages/userInformation.html" class="text-gray-800">Settings</a>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                  </li>
+
+                  <!-- Log Out -->
+                  <li class="flex justify-between  px-4 items-center py-3">
+                    <div class="flex items-center space-x-3">
+                      <i class="fas fa-sign-out-alt text-gray-600"></i>
+                      <a href="#" class="text-gray-800">Log Out</a>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Complaint start -->
-    <section class="mt-10">
-      <div class="md:w-[978px] relative px-3 mx-auto">
-        <div
-          class="flex md:px-40 flex-col item-center justify-center gap-4 mb-11 text-center"
-        >
-          <h1
-            class="text-primary leading-tight font-intel md:text-5xl text-4xl font-bold"
-          >
-            Submit Your Complaint
-          </h1>
-          <p class="text-secondary">
-            Whether you need to file a complaint, post a review, tell us about a
-            misleading advertisement, or report a scam, you're in the right
-            place.
-          </p>
-        </div>
 
-        <div
-          class="md:bg-white md:rounded-lg md:py-[60px] md:px-10 md:shadow-3xl"
-        >
-          <form id="" action="" class="space-y-3 md:space-y-8">
-            <div>
-              <h2 class="text-primary md:text-2xl text-xl font-medium">
-                Submit a Complaint
-              </h2>
-            </div>
-            <div
-              class="flex md:flex-row flex-col items-center justify-between gap-3 md:gap-8"
-            >
-              <div class="w-full">
-                <label class="text-[#344054] text-sm font-medium" for=""
-                  >Company Type<span class="text-gray-400">
-                    (Industry Sector)</span
-                  ></label
-                >
-                <br />
-                <select
-                  class="border-2 w-full rounded-md outline-none p-3"
-                  name=""
-                  id=""
-                >
-                  <option value="">Enter company type</option>
-                </select>
-              </div>
-              <div class="w-full">
-                <label class="text-[#344054] text-sm font-medium" for=""
-                  >Company Name</label
-                >
-                <br />
-                <select
-                  class="border-2 w-full rounded-md outline-none p-3"
-                  name=""
-                  id=""
-                >
-                  <option value="">Enter company type</option>
-                </select>
-              </div>
-            </div>
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
+      <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="../../index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
+        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Price Discovery</a>
+        <a href="../../src/pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+        <a href="../../src/pages/signup.html"
+          class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="bg-white">
+    <div class="lg:flex container lg:px-20 px-4 mx-auto py-5 items-center justify-between hidden">
+      <ul class="text-[#344054] flex items-center gap-6 text-base font-semibold">
+        <li>
+          <a class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
+            href="../pages/user-dashboard-page.html">Dashboard</a>
+        </li>
+        <li>
+          <a class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
+            href="../pages/profile-complaints-page.html">Profiles</a>
+        </li>
+        <li>
+          <a href="../pages/userInformation.html"
+            class="px-3 py-2 rounded-md hover:border-2 border-2 border-transparent hover:border-[#818B9C]"
+            href="">Settings</a>
+        </li>
+      </ul>
+      <div class="relative">
+        <div class="flex items-center border border-gray-300 rounded-md py-2 px-4 bg-white w-64">
+          <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input type="text" placeholder="Search" class="bg-white focus:outline-none focus:ring-0 w-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Complaint start -->
+  <section class="mt-10">
+    <div class="md:w-[978px] relative px-3 mx-auto">
+      <div class="flex md:px-40 flex-col item-center justify-center gap-4 mb-11 text-center">
+        <h1 class="text-primary leading-tight font-intel md:text-5xl text-4xl font-bold">
+          Submit Your Complaint
+        </h1>
+        <p class="text-secondary">
+          Whether you need to file a complaint, post a review, tell us about a
+          misleading advertisement, or report a scam, you're in the right
+          place.
+        </p>
+      </div>
+
+      <div class="md:bg-white md:rounded-lg md:py-[60px] md:px-10 md:shadow-3xl">
+        <form id="" action="" class="space-y-3 md:space-y-8">
+          <div>
+            <h2 class="text-primary md:text-2xl text-xl font-medium">
+              Submit a Complaint
+            </h2>
+          </div>
+          <div class="flex md:flex-row flex-col items-center justify-between gap-3 md:gap-8">
             <div class="w-full">
-              <label class="text-[#344054] text-sm font-medium" for=""
-                >Company Type</label
-              >
+              <label class="text-[#344054] text-sm font-medium" for="">Company Type<span class="text-gray-400">
+                  (Industry Sector)</span></label>
               <br />
-              <select
-                class="border-2 w-full rounded-md outline-none p-3"
-                name=""
-                id=""
-              >
+              <select class="border-2 w-full rounded-md outline-none p-3" name="" id="">
                 <option value="">Enter company type</option>
               </select>
             </div>
             <div class="w-full">
-              <label class="text-[#344054] text-sm font-medium" for=""
-                >Complaint Description</label
-              >
+              <label class="text-[#344054] text-sm font-medium" for="">Company Name</label>
               <br />
+              <select class="border-2 w-full rounded-md outline-none p-3" name="" id="">
+                <option value="">Enter company type</option>
+              </select>
+            </div>
+          </div>
+          <div class="w-full">
+            <label class="text-[#344054] text-sm font-medium" for="">Company Type</label>
+            <br />
+            <select class="border-2 w-full rounded-md outline-none p-3" name="" id="">
+              <option value="">Enter company type</option>
+            </select>
+          </div>
+          <div class="w-full">
+            <label class="text-[#344054] text-sm font-medium" for="">Complaint Description</label>
+            <br />
 
-              <textarea
-                class="border-2 w-full h-[104px] rounded-md outline-none p-3"
-                name=""
-                id=""
-                placeholder="Enter a description..."
-              ></textarea>
-              <p class="text-right">0/1000</p>
+            <textarea class="border-2 w-full h-[104px] rounded-md outline-none p-3" name="" id=""
+              placeholder="Enter a description..."></textarea>
+            <p class="text-right">0/1000</p>
+          </div>
+          <div class="w-full">
+            <label class="text-[#344054] text-sm font-medium" for="">Upload Files<span class="text-gray-400">
+                (Optional)</span></label>
+            <br />
+            <div class="flex items-center justify-center w-full">
+              <label for="dropzone-file"
+                class="flex flex-col items-center px-6 py-4 justify-center w-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                  <img src="../assets/images/upload-cloud-02.svg" alt="" />
+                  <p class="mb-2 text-sm text-gray-500">
+                    <span class="font-semibold text-[#78EB54]">Click to upload</span>
+                    or drag and drop
+                  </p>
+                  <p class="text-xs text-gray-500">
+                    SVG, PNG, JPG or GIF (MAX. 800x400px)
+                  </p>
+                </div>
+                <input id="dropzone-file" type="file" class="hidden" />
+              </label>
             </div>
-            <div class="w-full">
-              <label class="text-[#344054] text-sm font-medium" for=""
-                >Upload Files<span class="text-gray-400">
-                  (Optional)</span
-                ></label
-              >
-              <br />
-              <div class="flex items-center justify-center w-full">
-                <label
-                  for="dropzone-file"
-                  class="flex flex-col items-center px-6 py-4 justify-center w-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
-                >
-                  <div
-                    class="flex flex-col items-center justify-center pt-5 pb-6"
-                  >
-                    <img src="../assets/images/upload-cloud-02.svg" alt="" />
-                    <p class="mb-2 text-sm text-gray-500">
-                      <span class="font-semibold text-[#78EB54]"
-                        >Click to upload</span
-                      >
-                      or drag and drop
-                    </p>
-                    <p class="text-xs text-gray-500">
-                      SVG, PNG, JPG or GIF (MAX. 800x400px)
-                    </p>
-                  </div>
-                  <input id="dropzone-file" type="file" class="hidden" />
-                </label>
-              </div>
-            </div>
+          </div>
 
-            <div class="flex mb-4">
-              <input
-                id="default-checkbox"
-                type="checkbox"
-                value=""
-                class="w-6 h-6 shrink-0 text-[#78EB54] bg-gray-100 border-gray-300 rounded focus:ring-[#78EB54] focus:ring-2"
-              />
-              <label
-                for="default-checkbox"
-                class="ms-2 text-base font-normal text-[#737C86]"
-                >I confirm this review reflects my own experience and genuine
-                opinion. I have no personal or business ties with this
-                organization. By checking this box, I consent to ConsumerAffairs
-                contacting me and agree to their Terms of Use. Zero tolerance
-                policy applies.</label
-              >
-            </div>
-            <div class="flex mb-4">
-              <input
-                id="default-checkbox"
-                type="checkbox"
-                value=""
-                class="w-6 h-6 shrink-0 text-[#78EB54] bg-gray-100 border-gray-300 rounded focus:ring-[#78EB54] focus:ring-2"
-              />
-              <label
-                for="default-checkbox"
-                class="ms-2 text-base font-normal text-[#737C86]"
-                >Escalate and report to regulator</label
-              >
-            </div>
-            <div>
-              <input
-                class="text-base md:mt-3 mt-6 md:w-auto w-full shadow font-semibold bg-[#78EB54] cursor-pointer text-primary px-8 py-4 rounded-[99px]"
-                type="submit"
-                value="Submit Complaint"
-              />
-            </div>
-          </form>
-        </div>
+          <div class="flex mb-4">
+            <input id="default-checkbox" type="checkbox" value=""
+              class="w-6 h-6 shrink-0 text-[#78EB54] bg-gray-100 border-gray-300 rounded focus:ring-[#78EB54] focus:ring-2" />
+            <label for="default-checkbox" class="ms-2 text-base font-normal text-[#737C86]">I confirm this review
+              reflects my own experience and genuine
+              opinion. I have no personal or business ties with this
+              organization. By checking this box, I consent to ConsumerAffairs
+              contacting me and agree to their Terms of Use. Zero tolerance
+              policy applies.</label>
+          </div>
+          <div class="flex mb-4">
+            <input id="default-checkbox" type="checkbox" value=""
+              class="w-6 h-6 shrink-0 text-[#78EB54] bg-gray-100 border-gray-300 rounded focus:ring-[#78EB54] focus:ring-2" />
+            <label for="default-checkbox" class="ms-2 text-base font-normal text-[#737C86]">Escalate and report to
+              regulator</label>
+          </div>
+          <div>
+            <input
+              class="text-base md:mt-3 mt-6 md:w-auto w-full shadow font-semibold bg-[#78EB54] cursor-pointer text-primary px-8 py-4 rounded-[99px]"
+              type="submit" value="Submit Complaint" />
+          </div>
+        </form>
       </div>
-    </section>
-    <!-- Complaint end  -->
-    <!-- Resolver Support start -->
-    <section
-      class="md:mb-[90px ] container lg:px-20 px-4 w-full mx-auto py-[90px] space-y-14"
-    >
-      <div
-        class="flex md:w-[600px] mx-auto flex-col item-center justify-center gap-4 mb-11 text-center"
-      >
-        <h1
-          class="text-primary leading-tight font-intel md:text-5xl text-4xl font-bold"
-        >
-          How Resolver Support
-        </h1>
-        <p class="text-secondary">
-          Resolver software is a type of software tool used for data analysis
-          and reporting. It is designed to help businesses, organizations.
+    </div>
+  </section>
+  <!-- Complaint end  -->
+  <!-- Resolver Support start -->
+  <section class="md:mb-[90px ] container lg:px-20 px-4 w-full mx-auto py-[90px] space-y-14">
+    <div class="flex md:w-[600px] mx-auto flex-col item-center justify-center gap-4 mb-11 text-center">
+      <h1 class="text-primary leading-tight font-intel md:text-5xl text-4xl font-bold">
+        How Resolver Support
+      </h1>
+      <p class="text-secondary">
+        Resolver software is a type of software tool used for data analysis
+        and reporting. It is designed to help businesses, organizations.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 grid-cols-1 md:gap-24 gap-10">
+      <div>
+        <div
+          class="md:w-[150px] w-[120px] md:h-[150px] h-[120px] mx-auto md:mb-8 mb-4 bg-[#2196F3] flex items-center rounded-full justify-center">
+          <img src="../assets/images/support-icon/mail-receive-02.svg" alt="" />
+        </div>
+        <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
+          Email
+        </h3>
+        <p class="text-center text-secondary">
+          We are here to assist you with any questions or concerns you may
+          have. Please don't hesitate to email
+          <a class="text-[#2196F3]" href="mailto:us-email@example.com">us-email@example.com</a>.
         </p>
       </div>
-      <div class="grid md:grid-cols-3 grid-cols-1 md:gap-24 gap-10">
-        <div>
-          <div
-            class="md:w-[150px] w-[120px] md:h-[150px] h-[120px] mx-auto md:mb-8 mb-4 bg-[#2196F3] flex items-center rounded-full justify-center"
-          >
-            <img
-              src="../assets/images/support-icon/mail-receive-02.svg"
-              alt=""
-            />
-          </div>
-          <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
-            Email
-          </h3>
-          <p class="text-center text-secondary">
-            We are here to assist you with any questions or concerns you may
-            have. Please don't hesitate to email
-            <a class="text-[#2196F3]" href="mailto:us-email@example.com"
-              >us-email@example.com</a
-            >.
-          </p>
-        </div>
-        <div>
-          <div
-            class="md:w-[150px] w-[120px] md:h-[150px] h-[120px] mx-auto md:mb-8 mb-4 bg-[#6F4BE5] flex items-center rounded-full justify-center"
-          >
-            <img
-              src="../assets/images/support-icon/customer-service-01.svg"
-              alt=""
-            />
-          </div>
-          <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
-            Live Support
-          </h3>
-          <p class="text-center text-secondary">
-            Live support for resolvers ensures quick assistance in resolving
-            complaints, fostering trust and satisfaction.
-          </p>
-        </div>
-        <div>
-          <div
-            class="md:w-[150px] w-[120px] md:h-[150px] h-[120px] mx-auto md:mb-8 mb-4 bg-[#FF9066] flex items-center rounded-full justify-center"
-          >
-            <img src="../assets/images/support-icon/telephone.svg" alt="" />
-          </div>
-          <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
-            Over Telephone
-          </h3>
-          <p class="text-center text-secondary">
-            Live support for resolvers ensures quick assistance in resolving
-            complaints, fostering trust and satisfaction.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resolver Support end -->
-
-    <!-- Around the Corner start -->
-    <section class="bg-[#FAFAFA]">
-      <div
-        class="py-[100px] mb-[180px] flex md:flex-row gap-12 flex-col items-center justify-between container lg:px-20 px-4 mx-auto"
-      >
-        <div class="flex-1">
-          <h1
-            class="text-primary font-semibold md:text-left text-center md:text-5xl text-4xl mb-4"
-          >
-            Your Next Review is Just Around the Corner
-          </h1>
-          <p class="text-secondary md:mb-12 mb-8">
-            We're currently out of suggestions for you. Keep using Yelp, and
-            we'll have new recommendations for you soon.
-          </p>
-          <button
-            class="bg-[#78EB54] md:w-auto w-full font-semibold text-primary px-8 py-[18px] rounded-[99px] shadow"
-          >
-            Write First Review
-          </button>
-        </div>
-        <div class="flex flex-1 justify-end relative items-end">
-          <img class="md:w-3/4" src="../assets/images//frame.png " alt="" />
-          <div
-            class="absolute md:left-20 left-0 md:right-auto right-0 -bottom-5 mx-10 flex items-center gap-3 bg-[#78EB54] rounded-[47.799px] py-3 pr-3 ps-2"
-          >
-            <img class="md:w-16 w-8" src="../assets/images/type.svg" alt="" />
-            <p class="text-[#26422B] md:text-2xl font-bold">
-              Share your thought
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Around the Corner end -->
-    <!-- Popup and Overlay  start -->
-    <div
-      id="overlay"
-      class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
-    ></div>
-
-    <div
-      id="popup"
-      class="hidden fixed top-72 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-white md:px-28 px-3 md:py-20 py-6 rounded-lg shadow-3xl md:w-[978px] w-full text-center"
-    >
-      <img
-        class="w-20 mb-10 mx-auto"
-        src="../assets/images/support-icon/right.svg"
-        alt=""
-      />
-      <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
-        Thank You for Your Submission!
-      </h3>
-      <p class="text-secondary mb-10">
-        Your reference number is [123456]. You can track the status of your
-        complaint using this reference number
-      </p>
-      <button
-        id="closePopup"
-        class="bg-[#78EB54] text-primary font-semibold text-based rounded-full px-8 py-4 cursor-pointer"
-      >
-        See Complaint
-      </button>
-    </div>
-    <!-- Footer Section -->
-    <footer class="bg-white text-[#FFFFFFB2] relative">
-      <div class="bg-[#052e26] md:rounded-t-3xl">
-        <div class="container mx-auto px-4 lg:px-20">
-          <!-- Upper and Lower Footer: Combined Grid Layout -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-11 lg:py-20">
-            <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
-            <div class="col-span-2 sm:col-span-1">
-              <div class="flex-shrink-0 mb-4">
-                <!-- Logo -->
-                <a href="#" class="flex items-center">
-                  <img
-                    src="../assets/logoHeaderAndFooter/logoFooter .png"
-                    alt="Logo"
-                    class="h-8 w-auto"
-                  />
-                </a>
-              </div>
-              <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
-                Fun, engaging and authentic Platform
-              </p>
-              <div class="flex space-x-4">
-                <a href="#"
-                  ><img
-                    src="../assets/images/Icon/linkedin.png"
-                    alt="LinkedIn"
-                    class="h-5"
-                /></a>
-                <a href="#"
-                  ><img
-                    src="../assets/images/Icon/youtube.png"
-                    alt="YouTube"
-                    class="h-5"
-                /></a>
-                <a href="#"
-                  ><img
-                    src="../assets/images/Icon/twitter.png"
-                    alt="Twitter"
-                    class="h-5"
-                /></a>
-                <a href="#"
-                  ><img
-                    src="../assets/images/Icon/facebook.png"
-                    alt="Facebook"
-                    class="h-5"
-                /></a>
-              </div>
-            </div>
-
-            <!-- Product Links -->
-            <div>
-              <h4 class="font-bold text-xl text-[#FFF] mb-4">Product</h4>
-              <ul class="lg:space-y-5 space-y-4 font-light">
-                <li><a href="#" class="hover:text-green-400">About us</a></li>
-                <li><a href="#" class="hover:text-green-400">FAQs</a></li>
-                <li><a href="#" class="hover:text-green-400">Contact</a></li>
-                <li><a href="#" class="hover:text-green-400">Pricing</a></li>
-                <li>
-                  <a href="./signin.html" class="hover:text-green-400"
-                    >Log in</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Resources Links -->
-            <div>
-              <h4 class="font-bold text-xl text-[#FFF] mb-4">Resources</h4>
-              <ul class="lg:space-y-5 space-y-4 font-light">
-                <li><a href="#" class="hover:text-green-400">Learn</a></li>
-                <li><a href="#" class="hover:text-green-400">Videos</a></li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Help Center</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Webinar Glossary</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- More Links -->
-            <div>
-              <h4 class="font-bold text-xl text-[#FFF] mb-4">More</h4>
-              <ul class="lg:space-y-5 space-y-4 font-light">
-                <li><a href="#" class="hover:text-green-400">Our story</a></li>
-                <li>
-                  <a href="#" class="hover:text-green-400">We’re hiring</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Resolver NG</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400"
-                    >Resolver NG Satisfaction</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="block md:hidden">
-              <h4 class="font-bold text-[#FFF] mb-4">Support</h4>
-              <ul class="lg:space-y-5 space-y-4 font-light">
-                <li>
-                  <a href="#" class="hover:text-green-400">Trust Center</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:text-green-400">Resolver NG</a>
-                </li>
-                <li><a href="#" class="hover:text-green-400">Status</a></li>
-                <li><a href="#" class="hover:text-green-400">Legal</a></li>
-                <li>
-                  <a href="#" class="hover:text-green-400"
-                    >Do Not Sell My Info</a
-                  >
-                </li>
-                <li><a href="#" class="hover:text-green-400">Opt out</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="border-t border-gray-600 py-4">
-            <div
-              class="mx-auto text-[#FFF] flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
-            >
-              <!-- Left Section: Links -->
-              <div class="hidden  md:block">
-                <div
-                  class="flex  flex-wrap justify-center sm:justify-start space-x-6"
-                >
-                  <a href="#" class="hover:text-green-400">Trust Center</a>
-                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
-                  <a href="#" class="hover:text-green-400">Status</a>
-                  <a href="#" class="hover:text-green-400">Legal</a>
-                  <a href="#" class="hover:text-green-400"
-                    >Do Not Sell My Info</a
-                  >
-                  <a href="#" class="hover:text-green-400">Opt out</a>
-                </div>
-              </div>
-
-              <!-- Right Section: Copyright -->
-              <div class="text-center sm:text-right">
-                <p>© All rights reserved by Resolver NG.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Star Icon (Absolute Positioned) -->
-          <div
-            class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4"
-          >
-            <img
-              src="../assets/images/3d-star.png"
-              alt="Star Icon"
-              class="h-32 w-32"
-            />
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Popup and Overlay  end -->
-
-    <!-- popup button link -->
-    <!-- Pop up button -->
-
-    <div class="fixed lg:top-96 lg:left-20 lg:right-auto right-0 top-96">
-      <!-- Floating Action Button -->
-      <button
-        id="fab-btn"
-        class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg"
-      >
-        <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
-      </button>
-
-      <!-- Pop-up Menu (Initially hidden) -->
-      <div id="popup-menu" class="hidden">
+      <div>
         <div
-          class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16"
-        >
-          <button
-            id="close-popup"
-            class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64"
-          >
-            <img
-              src="../assets/images/Icon/cancel-circle.png"
-              alt="cancel-circle"
-              class="h-8 w-auto"
-            />
-          </button>
+          class="md:w-[150px] w-[120px] md:h-[150px] h-[120px] mx-auto md:mb-8 mb-4 bg-[#6F4BE5] flex items-center rounded-full justify-center">
+          <img src="../assets/images/support-icon/customer-service-01.svg" alt="" />
+        </div>
+        <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
+          Live Support
+        </h3>
+        <p class="text-center text-secondary">
+          Live support for resolvers ensures quick assistance in resolving
+          complaints, fostering trust and satisfaction.
+        </p>
+      </div>
+      <div>
+        <div
+          class="md:w-[150px] w-[120px] md:h-[150px] h-[120px] mx-auto md:mb-8 mb-4 bg-[#FF9066] flex items-center rounded-full justify-center">
+          <img src="../assets/images/support-icon/telephone.svg" alt="" />
+        </div>
+        <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
+          Over Telephone
+        </h3>
+        <p class="text-center text-secondary">
+          Live support for resolvers ensures quick assistance in resolving
+          complaints, fostering trust and satisfaction.
+        </p>
+      </div>
+    </div>
+  </section>
 
-          <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
-            <img
-              src="../assets/images/Icon/star.svg"
-              alt="pop-up-star"
-              class="h-4 w-auto"
-            />
-            <span class="text-gray-800">Write Review</span>
-          </button>
+  <!-- Resolver Support end -->
 
-          <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
-            <img
-              src="../assets/images/Icon/idea-01.png"
-              alt="pop-up-idea"
-              class="h-4 w-auto"
-            />
-            <span class="text-gray-800">Resolve an Issue</span>
-          </button>
-
-          <button class="flex items-center space-x-2 px-6 py-2 w-60">
-            <img
-              src="../assets/images/Icon/infinity.svg"
-              alt="pop-up-infinity"
-              class="h-4 w-auto"
-            />
-            <span class="text-gray-800">Price Comparison</span>
-          </button>
+  <!-- Around the Corner start -->
+  <section class="bg-[#FAFAFA]">
+    <div
+      class="py-[100px] mb-[180px] flex md:flex-row gap-12 flex-col items-center justify-between container lg:px-20 px-4 mx-auto">
+      <div class="flex-1">
+        <h1 class="text-primary font-semibold md:text-left text-center md:text-5xl text-4xl mb-4">
+          Your Next Review is Just Around the Corner
+        </h1>
+        <p class="text-secondary md:mb-12 mb-8">
+          We're currently out of suggestions for you. Keep using Yelp, and
+          we'll have new recommendations for you soon.
+        </p>
+        <button class="bg-[#78EB54] md:w-auto w-full font-semibold text-primary px-8 py-[18px] rounded-[99px] shadow">
+          Write First Review
+        </button>
+      </div>
+      <div class="flex flex-1 justify-end relative items-end">
+        <img class="md:w-3/4" src="../assets/images//frame.png " alt="" />
+        <div
+          class="absolute md:left-20 left-0 md:right-auto right-0 -bottom-5 mx-10 flex items-center gap-3 bg-[#78EB54] rounded-[47.799px] py-3 pr-3 ps-2">
+          <img class="md:w-16 w-8" src="../assets/images/type.svg" alt="" />
+          <p class="text-[#26422B] md:text-2xl font-bold">
+            Share your thought
+          </p>
         </div>
       </div>
-             
     </div>
+  </section>
 
-    <script>
-      const fabBtn = document.getElementById("fab-btn");
-      const popupMenu = document.getElementById("popup-menu");
-      const closePopup = document.getElementById("close-popup");
+  <!-- Around the Corner end -->
+  <!-- Popup and Overlay  start -->
+  <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
 
-      // Toggle the popup menu visibility on the floating action button click
-      fabBtn.addEventListener("click", () => {
-        popupMenu.classList.toggle("hidden");
+  <div id="popup"
+    class="hidden fixed top-72 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-white md:px-28 px-3 md:py-20 py-6 rounded-lg shadow-3xl md:w-[978px] w-full text-center">
+    <img class="w-20 mb-10 mx-auto" src="../assets/images/support-icon/right.svg" alt="" />
+    <h3 class="text-primary font-semibold mb-4 text-2xl text-center">
+      Thank You for Your Submission!
+    </h3>
+    <p class="text-secondary mb-10">
+      Your reference number is [123456]. You can track the status of your
+      complaint using this reference number
+    </p>
+    <button id="closePopup"
+      class="bg-[#78EB54] text-primary font-semibold text-based rounded-full px-8 py-4 cursor-pointer">
+      See Complaint
+    </button>
+  </div>
+  <!-- Footer Section -->
+  <footer class="bg-white text-[#FFFFFFB2] relative">
+    <div class="bg-[#052e26] md:rounded-t-3xl">
+      <div class="container mx-auto px-4 lg:px-20">
+        <!-- Upper and Lower Footer: Combined Grid Layout -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-11 lg:py-20">
+          <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+          <div class="col-span-2 sm:col-span-1">
+            <div class="flex-shrink-0 mb-4">
+              <!-- Logo -->
+              <a href="#" class="flex items-center">
+                <img src="../assets/logoHeaderAndFooter/logoFooter .png" alt="Logo" class="h-8 w-auto" />
+              </a>
+            </div>
+            <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
+              Fun, engaging and authentic Platform
+            </p>
+            <div class="flex space-x-4">
+              <a href="#"><img src="../assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5" /></a>
+              <a href="#"><img src="../assets/images/Icon/youtube.png" alt="YouTube" class="h-5" /></a>
+              <a href="#"><img src="../assets/images/Icon/twitter.png" alt="Twitter" class="h-5" /></a>
+              <a href="#"><img src="../assets/images/Icon/facebook.png" alt="Facebook" class="h-5" /></a>
+            </div>
+          </div>
+
+          <!-- Product Links -->
+          <div>
+            <h4 class="font-bold text-xl text-[#FFF] mb-4">Product</h4>
+            <ul class="lg:space-y-5 space-y-4 font-light">
+              <li><a href="#" class="hover:text-green-400">About us</a></li>
+              <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+              <li><a href="#" class="hover:text-green-400">Contact</a></li>
+              <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+              <li>
+                <a href="./signin.html" class="hover:text-green-400">Log in</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Resources Links -->
+          <div>
+            <h4 class="font-bold text-xl text-[#FFF] mb-4">Resources</h4>
+            <ul class="lg:space-y-5 space-y-4 font-light">
+              <li><a href="#" class="hover:text-green-400">Learn</a></li>
+              <li><a href="#" class="hover:text-green-400">Videos</a></li>
+              <li>
+                <a href="#" class="hover:text-green-400">Help Center</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Webinar Glossary</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- More Links -->
+          <div>
+            <h4 class="font-bold text-xl text-[#FFF] mb-4">More</h4>
+            <ul class="lg:space-y-5 space-y-4 font-light">
+              <li><a href="#" class="hover:text-green-400">Our story</a></li>
+              <li>
+                <a href="#" class="hover:text-green-400">We’re hiring</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Resolver NG</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="block md:hidden">
+            <h4 class="font-bold text-[#FFF] mb-4">Support</h4>
+            <ul class="lg:space-y-5 space-y-4 font-light">
+              <li>
+                <a href="#" class="hover:text-green-400">Trust Center</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Resolver NG</a>
+              </li>
+              <li><a href="#" class="hover:text-green-400">Status</a></li>
+              <li><a href="#" class="hover:text-green-400">Legal</a></li>
+              <li>
+                <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
+              </li>
+              <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-600 py-4">
+          <div
+            class="mx-auto text-[#FFF] flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0">
+            <!-- Left Section: Links -->
+            <div class="hidden  md:block">
+              <div class="flex  flex-wrap justify-center sm:justify-start space-x-6">
+                <a href="#" class="hover:text-green-400">Trust Center</a>
+                <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                <a href="#" class="hover:text-green-400">Status</a>
+                <a href="#" class="hover:text-green-400">Legal</a>
+                <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
+                <a href="#" class="hover:text-green-400">Opt out</a>
+              </div>
+            </div>
+
+            <!-- Right Section: Copyright -->
+            <div class="text-center sm:text-right">
+              <p>© All rights reserved by Resolver NG.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Star Icon (Absolute Positioned) -->
+        <div class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4">
+          <img src="../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Button -->
+  <div class="fixed  lg:top-96 lg:left-20 lg:right-auto right-0 top-96">
+    <button id="fab-btn"
+      class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg">
+      <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+    </button>
+
+    <!-- Pop-up Menu (Initially hidden) -->
+    <div id="popup-menu" class="hidden">
+      <div class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16">
+        <button id="close-popup"
+          class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64">
+          <img src="../assets/images/Icon/cancel-circle.png" alt="cancel-circle" class="h-8 w-auto" />
+        </button>
+
+        <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
+          <img src="../assets/images/Icon/star.svg" alt="pop-up-star" class="h-4 w-auto" />
+          <a href="../pages/write-compaint.html" class="text-gray-800">Write Review<a>
+        </button>
+
+        <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
+          <img src="../assets/images/Icon/idea-01.png" alt="pop-up-idea" class="h-4 w-auto" />
+          <a href="../pages/businessSide/CompanyProfile/companyProfile.html" class="text-gray-800">Resolve an
+            Issue</a>
+        </button>
+
+        <button class="flex items-center space-x-2 px-6 py-2 w-60">
+          <img src="../assets/images/Icon/infinity.svg" alt="pop-up-infinity" class="h-4 w-auto" />
+          <a href="../pages/foods/foodPriceCompare.html" class="text-gray-800">Price Comparison</a>
+        </button>
+      </div>
+    </div>
+           
+  </div>
+
+  <!-- Notification and Profile Dropdown -->
+  <script>
+    // Profile Dropdown
+    document.getElementById('profile-dropdown-btn').addEventListener('click', function () {
+      const dropdown = document.getElementById('profile-dropdown');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Notification Dropdown
+    document.getElementById('notification-btn').addEventListener('click', function () {
+      const dropdown = document.getElementById('notification-dropdown');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Close dropdowns when clicking outside
+    window.addEventListener('click', function (e) {
+      const profileDropdown = document.getElementById('profile-dropdown');
+      const notificationDropdown = document.getElementById('notification-dropdown');
+
+      if (!document.getElementById('profile-dropdown-btn').contains(e.target)) {
+        profileDropdown.classList.add('hidden');
+      }
+
+      if (!document.getElementById('notification-btn').contains(e.target)) {
+        notificationDropdown.classList.add('hidden');
+      }
+    });
+  </script>
+
+
+  <script>
+    const fabBtn = document.getElementById("fab-btn");
+    const popupMenu = document.getElementById("popup-menu");
+    const closePopup = document.getElementById("close-popup");
+
+    // Toggle the popup menu visibility on the floating action button click
+    fabBtn.addEventListener("click", () => {
+      popupMenu.classList.toggle("hidden");
+    });
+
+    // Hide the popup when the close button is clicked
+    closePopup.addEventListener("click", () => {
+      popupMenu.classList.add("hidden");
+    });
+  </script>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const submitButton = document.querySelector("input[type='submit']");
+      submitButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        document.getElementById("overlay").classList.remove("hidden");
+        document.getElementById("popup").classList.remove("hidden");
       });
 
-      // Hide the popup when the close button is clicked
-      closePopup.addEventListener("click", () => {
-        popupMenu.classList.add("hidden");
+      const closeButton = document.getElementById("overlay");
+      closeButton.addEventListener("click", function () {
+        document.getElementById("popup").classList.add("hidden");
+        document.getElementById("overlay").classList.add("hidden");
       });
-    </script>
+    });
+  </script>
+</body>
 
-    <script src="../js/main.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const submitButton = document.querySelector("input[type='submit']");
-        submitButton.addEventListener("click", function (event) {
-          event.preventDefault();
-
-          document.getElementById("overlay").classList.remove("hidden");
-          document.getElementById("popup").classList.remove("hidden");
-        });
-
-        const closeButton = document.getElementById("overlay");
-        closeButton.addEventListener("click", function () {
-          document.getElementById("popup").classList.add("hidden");
-          document.getElementById("overlay").classList.add("hidden");
-        });
-      });
-    </script>
-  </body>
 </html>

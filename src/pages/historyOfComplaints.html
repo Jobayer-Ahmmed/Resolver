@@ -15,81 +15,187 @@
 
 <body>
     <!-- navbar -->
-    <header class="bg-white border-b border-gray-200 relative z-20 container  mx-auto pt-5">
-        <div class=" mx-auto px-4  xl:px-20 container">
-            <div class="flex justify-between h-16 items-center w-full">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="#" class="flex items-center">
-                        <img src="../assets/images/logo_and_name.png" alt="logo">
-                    </a>
-                </div>
-
-                <!-- Desktop Menu -->
-                <nav class="hidden xl:flex space-x-4">
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Home</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
-                </nav>
-
-                <!-- Right-side buttons -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <!-- Upgrade Now Button -->
-                    <a href="#"
-                        class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
-                        <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
-                        Upgrade now
-                    </a>
-
-                    <!-- Icons: Bell, Gear, Profile -->
-                    <div class="flex space-x-4">
-                        <button class="text-gray-900 hover:text-green-500 transition">
-                            <img src="../assets/images/Icon/settings-01.png" alt="settings-icon" class="h-5 w-5 mr-2" />
-                        </button>
-
-                        <button class="text-gray-900 hover:text-green-500 transition">
-                            <img src="../assets/images/Icon/bell.png" alt="bell-icon" class="h-5 w-5 mr-2" />
-                        </button>
-
-                        <div class="flex items-center">
-                            <img src="../assets/adminDashboard/image 4.png" alt="settings-profile-image"
-                                class="h-8 w-8 rounded-full" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="xl:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+    <header class="bg-white border-b border-gray-200 relative z-20 w-full">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div class="flex justify-between h-16 items-center w-full">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+              <a href="#" class="flex items-center">
+                <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+                <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
+              </a>
             </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="xl:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
-            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Home</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
-                <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign
-                    Up</a>
+    
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex space-x-4">
+              <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
+              <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
+              <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+              <a href="../pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
+              <a href="../../index.html#about-us" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+              <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
+                Discovery</a>
             </nav>
+    
+            <!-- Right-side buttons -->
+            <div class="hidden md:flex items-center space-x-4">
+              <!-- Upgrade Now Button -->
+              <a href="#"
+                class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
+                <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
+                Upgrade now
+              </a>
+    
+              <!-- Icons: Bell, Gear, Profile -->
+              <div class="flex space-x-4">
+                <button class="text-gray-900 hover:text-green-500 transition">
+                  <img src="../assets/images/Icon/settings-01.png" alt="settings-icon" class="h-5 w-5 mr-2" />
+                </button>
+    
+                <!-- Notification Bell and Dropdown -->
+                <div class="relative flex justify-center">
+                  <button id="notification-btn" class="focus:outline-none">
+                    <img src="../assets/images/Icon/bell.png" alt="Notification Bell" class="h-5 w-5">
+                  </button>
+    
+                  <!-- Notification Dropdown Menu -->
+                  <div id="notification-dropdown"
+                    class="hidden absolute -right-14 top-12 mt-2 w-[40rem] bg-white shadow-lg rounded-lg z-50">
+    
+                    <!-- Green top border -->
+                    <div class="absolute top-[-10px] left-[36rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
+                            border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
+                    </div>
+    
+                    <!-- Notifications header -->
+                    <div class="flex justify-between items-center px-4 py-3 border-t-4 border-t-[#2f8379] border-b">
+                      <h3 class="text-sm font-semibold">Notifications</h3>
+                      <div class="flex gap-2 justify-center items-center">
+                        <a href="#" class="text-sm text-green-500 hover:underline">View All</a>
+                        <img src="../assets/images/profileNotificationIcon/ArrowRight.png" alt="ArrowRight"
+                          class="h-3 w-3" />
+                      </div>
+                    </div>
+    
+                    <!-- Notifications list -->
+                    <ul class="divide-y divide-gray-200">
+    
+                      <li class="px-4 py-3 flex items-start gap-3">
+                        <img src="../assets/images/profileNotificationIcon/image1.png" alt="User"
+                          class="h-10 w-10 rounded-full">
+                        <div class="flex-1">
+                          <p class="text-sm"><strong>Charlie Henderson</strong> reviewed in <strong>Exploring Animal
+                              Prosthesis...</strong></p>
+                          <p class="text-gray-500 text-xs">August 31, 2024</p>
+                        </div>
+                        <button class="text-gray-500 hover:text-gray-700">
+                          <img src="../assets/images/profileNotificationIcon/Close.png" alt="cross" class="h-5 w-5">
+                        </button>
+                      </li>
+    
+                      <li class="px-4 py-3 flex items-start gap-3">
+                        <img src="../assets/images/profileNotificationIcon/image2.png" alt="User"
+                          class="h-10 w-10 rounded-full">
+                        <div class="flex-1">
+                          <p class="text-sm"><strong>Satoshi Nakamoto</strong> complaint on <strong>International exchange
+                              skill event</strong></p>
+                          <p class="text-gray-500 text-xs">August 31, 2024</p>
+                        </div>
+                        <div>
+                          <button class="text-gray-500 hover:text-gray-700">
+                            <img src="../assets/images/profileNotificationIcon/Close.png" alt="cross" class="h-5 w-5">
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+    
+    
+                <!-- Profile Dropdown -->
+                <div class="relative">
+    
+                  <div class="flex gap-2">
+                    <img src="../assets/images/settings-component.png" alt="Profile Image" class="h-8 w-8 rounded-full">
+                    <button id="profile-dropdown-btn" class="focus:outline-none">
+                      <i class="fas fa-chevron-down text-black"></i>
+                    </button>
+                  </div>
+    
+                  <!-- Profile Dropdown Menu -->
+                  <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50">
+                    <div class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
+                            border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
+                    </div>
+                    <ul class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]">
+                      <!-- Profile -->
+                      <li class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+                        <div class="flex items-center space-x-3">
+                          <i class="fas fa-user text-gray-600"></i>
+                          <a href="../pages/userProfileInformation.html" class="text-gray-800">Profile</a>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                      </li>
+    
+                      <!-- Dashboard -->
+                      <li class="flex justify-between items-center  px-4 py-3 bg-gray-100 border-b border-gray-200">
+                        <div class="flex items-center space-x-3">
+                          <i class="fas fa-th-large text-[#2f8379]"></i>
+                          <a href="../pages/user-dashboard-page.html" class="text-[#2f8379]">Dashboard</a>
+                        </div>
+                        <i class="fas fa-chevron-right text-[#2f8379]"></i>
+                      </li>
+    
+                      <!-- Settings -->
+                      <li class="flex justify-between items-center  px-4 py-3 border-b border-gray-200">
+                        <div class="flex items-center space-x-3">
+                          <i class="fas fa-cog text-gray-600"></i>
+                          <a href="../pages/userInformation.html" class="text-gray-800">Settings</a>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                      </li>
+    
+                      <!-- Log Out -->
+                      <li class="flex justify-between  px-4 items-center py-3">
+                        <div class="flex items-center space-x-3">
+                          <i class="fas fa-sign-out-alt text-gray-600"></i>
+                          <a href="#" class="text-gray-800">Log Out</a>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden flex items-center">
+              <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-          
-    </header>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
+          <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="../../index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
+            <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
+            <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+            <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
+            <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
+            <a href="#" class="block text-gray-900 hover:text-green-500 transition">Price Discovery</a>
+            <a href="../../src/pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+            <a href="../../src/pages/signup.html"
+              class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+          </nav>
+        </div>
+      </header>
     <!-- sub menu -->
     <div
         class="hidden xl:flex justify-between items-center container mx-auto px-20 text-gray-700  bg-white  font-semibold  py-3 mt-10">
@@ -169,734 +275,7 @@
     </section>
 
     <!-- complain section  -->
-    <section class="bg-[#F4F4F4] ">
-        <div class="relative container mx-auto xl:px-20 px-4 xl:pt-10 xl:pb-32  ">
-            <!-- green icon btn -->
-        <div class="xl:block hidden dropdown dropdown-top absolute top-16 left-0">
-            <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-left"
-                onclick="toggleDropdown('dropdown-menu-left')" />
-            <ul id="dropdown-menu-left"
-                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 left-10 shadow relative">
-                <li class="flex justify-end">
-                    <button class="absolute top-0 -left-10 btn btn-xs btn-circle border-2 border-black"
-                        onclick="closeDropdown('dropdown-menu-left')">&times;</button>
-                </li>
-                <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
-                <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
-                <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
-            </ul>
-        </div>
-
-        <!-- green icon btn responsive -->
-        <div class="xl:hidden block dropdown dropdown-top absolute top-56 right-8">
-            <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class="" id="fab-btn-right"
-                onclick="toggleDropdown('dropdown-menu-right')" />
-            <ul id="dropdown-menu-right"
-                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 right-6 shadow relative">
-                <li class="flex justify-end"></li>
-                <button class="absolute top-0 -right-10 btn btn-xs btn-circle border-2 border-black"
-                    onclick="closeDropdown('dropdown-menu-right')">&times;</button>
-                <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
-                <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
-                <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
-            </ul>
-        </div>
-
-        <div class="xl:bg-white px-5 pt-5 pb-10 shadow">
-            <div class="hidden xl:flex justify-center items-center ">
-                <div class=" xl:w-[700px] text-center ">
-                    <h1 class="text-[#273F2B] xl:text-4xl font-medium mb-3">History of your complaint</h1>
-                    <p>Tracking allows users to monitor the progress of their complaints in real-time, providing
-                        transparency
-                        and timely updates on each stage of the resolution process.</p>
-
-                    <p> search comment</p>
-                    <div
-                        class="w-[600px] mx-auto flex justify-between items-center px-4 py-2 shadow-2xl rounded-full mt-10 border">
-                        <div class="flex justify-start items-center gap-3">
-                            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
-                            <input type="text" class="outline-none border-collapse" placeholder="Search for companies"
-                                name="" id="">
-                        </div>
-                        <div class="h-7 w-[1px] bg-[#818B9C]"></div>
-                        <div class="flex justify-start items-center gap-3">
-                            <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                            <input type="text" class="outline-none border-collapse" placeholder="San Francisco,CA"
-                                name="" id="">
-                        </div>
-                        <a href="./complaintTracking.html"
-                            class="bg-[#78EB54] px-5 py-2 rounded-full text-[#273F2B] text-xl font-semibold">Search </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hidden uppercase xl:flex justify-between my-10">
-                <button class="uppercase w-56 py-2 rounded-xl bg-[#78EB54]">all</button>
-                <button class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">in progress</button>
-                <button class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">submitted</button>
-                <button class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">resolved</button>
-                <button class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">pending</button>
-            </div>
-            <!-- for responsive -->
-            <select
-                class="font-semibold shadow xl:hidden uppercase flex justify-between my-3 border w-full rounded-lg px-4 py-3">
-                <option class="uppercase w-56 py-2 rounded-xl bg-[#78EB54]">all</option>
-                <option class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">in progress</option>
-                <option class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">submitted</option>
-                <option class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">resolved</option>
-                <option class="uppercase w-56 py-2 rounded-xl bg-[#F4F4F4]">pending</option>
-            </select>
-
-            <!-- card divs commment -->
-            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 mt-8">
-                <div class="rounded-lg  shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <div class="flex justify-between ">
-                            <h3 class="text-lg text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        </div>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg   shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  hidden xl:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  hidden xl:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  hidden xl:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  hidden xl:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  hidden xl:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  hidden xl:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  hidden xl:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-                <div class="rounded-lg  hidden xl:block shadow-xl bg-white border-l-8 border-[#78EB54] p-8">
-                    <div class="flex xl:flex-row flex-col xl:justify-between">
-                        <div class=" flex justify-start xl:justify-center items-center gap-3">
-                            <div><img class="w-12 rounded-full" src="../assets/images/alisa.png" alt="alisa gomez ">
-                            </div>
-                            <div>
-                                <div class="flex justify-center items-center gap-2">
-                                    <h5 class="text-lg font-medium text-[#4B4B4B]">Alisa Gomez</h5>
-                                    <i class="fa-solid fa-star text-[#FFE81C]"></i>
-                                    <h5 class="text-[#273F2B] font-semibold">2.9</h5>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-[#8F8F8F] text-sm "></i>
-                                    <p class="text-[#8F8F8F] text-sm ">New York, CA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-start xl:justify-center items-center xl:mt-0 mt-5 gap-3">
-                            <i class="fa-solid fa-flag text-[#78EB54] mt-1"></i>
-                            <p class="text-[#666] font-medium">Resolved</p>
-                        </div>
-                    </div>
-                    <div class="my-5">
-                        <h3 class="text-xl text-[#1A1A1A] font-semibold">Issues with Installation</h3>
-                        <p class="text-[#666]">Complaint resolution is crucial to good customer service. Eventually, it
-                            leads to the company or
-                            brand’s good name recognition and reputation, bringing more customers and profit...</p>
-                    </div>
-                    <div class="flex xl:flex-row flex-col xl:justify-between xl:items-end xl:gap-0 gap-2">
-                        <div class="text-[#4B4B4B]">
-                            <p>Tracking number</p>
-                            <p>#569874</p>
-                        </div>
-                        <div class="flex gap-2 items-center text-[#949494]">
-                            <div>
-                                <p>Submitted on</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>1 Apr 2024</p>
-                            </div>
-                            <div class="w-1 h-1 rounded-full bg-[#949494]"></div>
-                            <div>
-                                <p>3PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xl:hidden flex items-center mt-5">
-                        <p class="text-black"><span class="font-semibold mr-5">See details</span> <i
-                                class="fa-solid fa-arrow-right "></i></p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- page number -->
-            <div class="mt-10 flex justify-between ">
-                <div class="xl:hidden block">
-                    <i class="fa-solid fa-arrow-left border border-gray-400 py-2 px-3 shadow-lg rounded"></i>
-                </div>
-                <div>
-                    <p>Page 1 of 10</p>
-                </div>
-                <div class="hidden xl:flex xl:gap-3">
-                    <button class="border border-gray-400 rounded px-4 py-1">Previous</button>
-                    <button class="border border-gray-400 rounded px-4 py-1">Next</button>
-                </div>
-                <div class="xl:hidden block">
-                    <i class="fa-solid fa-arrow-right border border-gray-400 py-2 px-3 shadow-lg rounded"></i>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
+    <!--  -->
 
     <!-- Review section -->
     <section class="bg-[#ECEFEE]">
@@ -1096,7 +475,37 @@
       </footer>
 
 
-    <script>
+       <!-- Notification and Profile Dropdown -->
+  <script>
+    // Profile Dropdown
+    document.getElementById('profile-dropdown-btn').addEventListener('click', function () {
+      const dropdown = document.getElementById('profile-dropdown');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Notification Dropdown
+    document.getElementById('notification-btn').addEventListener('click', function () {
+      const dropdown = document.getElementById('notification-dropdown');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Close dropdowns when clicking outside
+    window.addEventListener('click', function (e) {
+      const profileDropdown = document.getElementById('profile-dropdown');
+      const notificationDropdown = document.getElementById('notification-dropdown');
+
+      if (!document.getElementById('profile-dropdown-btn').contains(e.target)) {
+        profileDropdown.classList.add('hidden');
+      }
+
+      if (!document.getElementById('notification-btn').contains(e.target)) {
+        notificationDropdown.classList.add('hidden');
+      }
+    });
+  </script>
+
+
+    <!-- <script>
         function toggleDropdown(menuId) {
             const dropdown = document.getElementById(menuId);
             if (dropdown.style.display === 'none' || dropdown.style.display === '') {
@@ -1109,7 +518,62 @@
         function closeDropdown(menuId) {
             document.getElementById(menuId).style.display = 'none';
         }
-    </script>
+    </script> -->
+
+    <!-- Pop up button -->
+
+  <div class="fixed  lg:top-96 lg:left-20 lg:right-auto right-0 top-96">
+    <!-- Floating Action Button -->
+    <button id="fab-btn"
+      class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg">
+      <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+    </button>
+
+    <!-- Pop-up Menu (Initially hidden) -->
+    <div id="popup-menu" class="hidden">
+      <div class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16">
+        <button id="close-popup"
+          class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64">
+          <img src="../assets/images/Icon/cancel-circle.png" alt="cancel-circle" class="h-8 w-auto" />
+        </button>
+
+        <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
+          <img src="../assets/images/Icon/star.svg" alt="pop-up-star" class="h-4 w-auto" />
+          <a href="../pages/write-compaint.html" class="text-gray-800">Write Review<a>
+        </button>
+
+        <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
+          <img src="../assets/images/Icon/idea-01.png" alt="pop-up-idea" class="h-4 w-auto" />
+          <a href="../pages/businessSide/CompanyProfile/companyProfile.html" class="text-gray-800">Resolve an Issue</a>
+        </button>
+
+        <button class="flex items-center space-x-2 px-6 py-2 w-60">
+          <img src="../assets/images/Icon/infinity.svg" alt="pop-up-infinity" class="h-4 w-auto" />
+          <a href="../pages/foods/foodPriceCompare.html" class="text-gray-800">Price Comparison</a>
+        </button>
+      </div>
+    </div>
+           
+  </div>
+
+  <script>
+    const fabBtn = document.getElementById("fab-btn");
+    const popupMenu = document.getElementById("popup-menu");
+    const closePopup = document.getElementById("close-popup");
+
+    // Toggle the popup menu visibility on the floating action button click
+    fabBtn.addEventListener("click", () => {
+      popupMenu.classList.toggle("hidden");
+    });
+
+    // Hide the popup when the close button is clicked
+    closePopup.addEventListener("click", () => {
+      popupMenu.classList.add("hidden");
+    });
+  </script>
+
+
+
     <script src="../js/linkup.js"></script>
 </body>
 
