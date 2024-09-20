@@ -1,16 +1,15 @@
-# Team Task Distribution and Page Numbers
+# Navigation Links
 
-### Web-resolver
+This README contains links to all HTML pages in the `./src/pages` directory. You can access these pages using the following URLs:
 
--   Naushad: 1,2,3
--   Noor: 4,6,7
--   Saurav Basak: 8,9,15,16
--   Jobayer Ahmmed: 10,12,13,14,(11)
--   Ahsan Ullah: (5)
+- [Admin Dashboard](http://localhost:3000/src/pages/businessSide/adminDashboard.html)
+- [Other Page 1](http://localhost:3000/src/pages/otherPage1.html)
+- [Other Page 2](http://localhost:3000/src/pages/otherPage2.html)
+// ... Add more links for other HTML pages in the directory ...
 
-### Business Side
+## How to Use
 
--   Naushad: 9,10
--   Saurav Basak: 6,8
--   Jobayer Ahmmed: 5, 7
--   Ahsan Ullah: 1,2,3,4
+1. Make sure your local development server is running on port 3000.
+2. Click on the links above to navigate to the respective pages.
+
+Note: If your server is running on a different port, replace '3000' in the URLs with the appropriate port number.
