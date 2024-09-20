@@ -23,25 +23,30 @@
 </head>
 
 <body class="relative">
-    <!-- Header -->
-    <header class="bg-white border-b border-gray-200 relative z-20 w-full font-bold text-sm pt-2">
-        <div class="mx-auto px-4 sm:px-6 lg:px-20 w-full">
+    <header class="bg-white border-b border-gray-200 relative z-20 w-full">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-20 w-full">
             <div class="flex justify-between h-16 items-center w-full">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="#" class="flex items-center">
-                        <img src="../assets/images/logo/logo.svg" alt="Logo" class="h-8 w-auto" />
+                        <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+                        <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
-                <nav class="hidden lg:flex space-x-8">
+                <nav class="hidden lg:flex space-x-4">
                     <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
-                    <a href="#" class="text-gray-900 hover:text-green-500 transition">Contact</a>
+                    <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It
+                        Works</a>
+                    <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read
+                        Reviews</a>
+                    <a href="../pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write
+                        Review</a>
+                    <a href="../../index.html#about-us" class="text-gray-900 hover:text-green-500 transition">About
+                        Us</a>
+                    <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
+                        Discovery</a>
                 </nav>
 
                 <!-- Right-side buttons -->
@@ -49,23 +54,141 @@
                     <!-- Upgrade Now Button -->
                     <a href="#"
                         class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
-                        <img src="../assets/images/thunder.svg" alt="thunder-icon" class="h-5 w-5 mr-2" />
+                        <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
                         Upgrade now
                     </a>
 
                     <!-- Icons: Bell, Gear, Profile -->
                     <div class="flex space-x-4">
                         <button class="text-gray-900 hover:text-green-500 transition">
-                            <img src="../assets/images/settings.svg" alt="settings-icon" class="h-5 w-5 mr-2" />
+                            <img src="../assets/images/Icon/settings-01.png" alt="settings-icon" class="h-5 w-5 mr-2" />
                         </button>
 
-                        <button class="text-gray-900 hover:text-green-500 transition">
-                            <img src="../assets/images/bell-01.svg" alt="bell-icon" class="h-5 w-5 mr-2" />
-                        </button>
+                        <!-- Notification Bell and Dropdown -->
+                        <div class="relative flex justify-center">
+                            <button id="notification-btn" class="focus:outline-none">
+                                <img src="../assets/images/Icon/bell.png" alt="Notification Bell" class="h-5 w-5">
+                            </button>
 
-                        <div class="flex items-center">
-                            <img src="../assets/images/image 3.png" alt="settings-profile-image"
-                                class="h-8 w-8 rounded-full" />
+                            <!-- Notification Dropdown Menu -->
+                            <div id="notification-dropdown"
+                                class="hidden absolute -right-14 top-12 mt-2 w-[40rem] bg-white shadow-lg rounded-lg z-50">
+
+                                <!-- Green top border -->
+                                <div
+                                    class="absolute top-[-10px] left-[36rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
+                              border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
+                                </div>
+
+                                <!-- Notifications header -->
+                                <div
+                                    class="flex justify-between items-center px-4 py-3 border-t-4 border-t-[#2f8379] border-b">
+                                    <h3 class="text-sm font-semibold">Notifications</h3>
+                                    <div class="flex gap-2 justify-center items-center">
+                                        <a href="#" class="text-sm text-green-500 hover:underline">View All</a>
+                                        <img src="../assets/images/profileNotificationIcon/ArrowRight.png"
+                                            alt="ArrowRight" class="h-3 w-3" />
+                                    </div>
+                                </div>
+
+                                <!-- Notifications list -->
+                                <ul class="divide-y divide-gray-200">
+
+                                    <li class="px-4 py-3 flex items-start gap-3">
+                                        <img src="../assets/images/profileNotificationIcon/image1.png" alt="User"
+                                            class="h-10 w-10 rounded-full">
+                                        <div class="flex-1">
+                                            <p class="text-sm"><strong>Charlie Henderson</strong> reviewed in
+                                                <strong>Exploring Animal
+                                                    Prosthesis...</strong></p>
+                                            <p class="text-gray-500 text-xs">August 31, 2024</p>
+                                        </div>
+                                        <button class="text-gray-500 hover:text-gray-700">
+                                            <img src="../assets/images/profileNotificationIcon/Close.png" alt="cross"
+                                                class="h-5 w-5">
+                                        </button>
+                                    </li>
+
+                                    <li class="px-4 py-3 flex items-start gap-3">
+                                        <img src="../assets/images/profileNotificationIcon/image2.png" alt="User"
+                                            class="h-10 w-10 rounded-full">
+                                        <div class="flex-1">
+                                            <p class="text-sm"><strong>Satoshi Nakamoto</strong> complaint on
+                                                <strong>International exchange
+                                                    skill event</strong></p>
+                                            <p class="text-gray-500 text-xs">August 31, 2024</p>
+                                        </div>
+                                        <div>
+                                            <button class="text-gray-500 hover:text-gray-700">
+                                                <img src="../assets/images/profileNotificationIcon/Close.png"
+                                                    alt="cross" class="h-5 w-5">
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- Profile Dropdown -->
+                        <div class="relative">
+
+                            <div class="flex gap-2">
+                                <img src="../assets/images/settings-component.png" alt="Profile Image"
+                                    class="h-8 w-8 rounded-full">
+                                <button id="profile-dropdown-btn" class="focus:outline-none">
+                                    <i class="fas fa-chevron-down text-black"></i>
+                                </button>
+                            </div>
+
+                            <!-- Profile Dropdown Menu -->
+                            <div id="profile-dropdown"
+                                class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50">
+                                <div
+                                    class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
+                              border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
+                                </div>
+                                <ul class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]">
+                                    <!-- Profile -->
+                                    <li class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fas fa-user text-gray-600"></i>
+                                            <a href="../pages/userProfileInformation.html"
+                                                class="text-gray-800">Profile</a>
+                                        </div>
+                                        <i class="fas fa-chevron-right text-gray-400"></i>
+                                    </li>
+
+                                    <!-- Dashboard -->
+                                    <li
+                                        class="flex justify-between items-center  px-4 py-3 bg-gray-100 border-b border-gray-200">
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fas fa-th-large text-[#2f8379]"></i>
+                                            <a href="../pages/user-dashboard-page.html"
+                                                class="text-[#2f8379]">Dashboard</a>
+                                        </div>
+                                        <i class="fas fa-chevron-right text-[#2f8379]"></i>
+                                    </li>
+
+                                    <!-- Settings -->
+                                    <li class="flex justify-between items-center  px-4 py-3 border-b border-gray-200">
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fas fa-cog text-gray-600"></i>
+                                            <a href="../pages/userInformation.html" class="text-gray-800">Settings</a>
+                                        </div>
+                                        <i class="fas fa-chevron-right text-gray-400"></i>
+                                    </li>
+
+                                    <!-- Log Out -->
+                                    <li class="flex justify-between  px-4 items-center py-3">
+                                        <div class="flex items-center space-x-3">
+                                            <i class="fas fa-sign-out-alt text-gray-600"></i>
+                                            <a href="#" class="text-gray-800">Log Out</a>
+                                        </div>
+                                        <i class="fas fa-chevron-right text-gray-400"></i>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,13 +214,13 @@
                 <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
                 <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
                 <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
-                <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign
-                    Up</a>
+                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Price Discovery</a>
+                <a href="../../src/pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign
+                    In</a>
+                <a href="../../src/pages/signup.html"
+                    class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
             </nav>
         </div>
-          
     </header>
 
     <section class="bg-[#f6fbfd]">
@@ -123,7 +246,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
-                        <input type="text" placeholder="Search" class="bg-white focus:outline-none focus:ring-0 w-full" />
+                        <input type="text" placeholder="Search"
+                            class="bg-white focus:outline-none focus:ring-0 w-full" />
                     </div>
                 </div>
             </nav>
@@ -134,7 +258,8 @@
         <div class=" container mx-auto font-inter px-20">
             <!-- User Profile -->
             <div class="text-center pb-10 hidden sm:block">
-                <img src="../assets/images/image 3.png" alt="Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4" />
+                <img src="../assets/images/image 3.png" alt="Profile Picture"
+                    class="w-24 h-24 rounded-full mx-auto mb-4" />
                 <h1 class="text-2xl font-bold mb-2">Charlie Henderson</h1>
                 <div class="flex gap-2 items-center justify-center">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -184,7 +309,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Complaints Dashboard -->
             <div class="bg-white rounded-lg shadow-md p-6 hidden sm:block">
                 <div
@@ -203,27 +328,28 @@
                     <div class="flex mt-4 md:mt-0">
                         <button
                             class="bg-white text-gray-700 border border-gray-300 rounded-md px-4 py-2 mr-2 flex items-center">
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                class="mr-2">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="mr-2">
                                 <path
                                     d="M6.66699 12.3333L10.0003 9M10.0003 9L13.3337 12.3333M10.0003 9V16.5M16.667 12.9524C17.6849 12.1117 18.3337 10.8399 18.3337 9.41667C18.3337 6.88536 16.2816 4.83333 13.7503 4.83333C13.5682 4.83333 13.3979 4.73833 13.3054 4.58145C12.2187 2.73736 10.2124 1.5 7.91699 1.5C4.46521 1.5 1.66699 4.29822 1.66699 7.75C1.66699 9.47175 2.3632 11.0309 3.48945 12.1613"
                                     stroke="#344054" stroke-width="1.66667" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-    
+
                             Export
                         </button>
                         <a href="./write-compaint.html"
                             class="bg-[#4CAF50] text-white rounded-md px-4 py-2 flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4" />
                             </svg>
                             Write Complaint
                         </a>
                     </div>
                 </div>
-    
+
                 <div class="w-full flex flex-col md:flex-row items-center justify-between">
                     <!-- First child div with buttons -->
                     <div class="mb-4 w-full md:w-6/12">
@@ -239,13 +365,14 @@
                             </button>
                         </div>
                     </div>
-    
+
                     <!-- Second child div with search and filter, aligned to the right -->
                     <div class="flex flex-row justify-end gap-2 md:items-center mb-4 w-full md:w-4/12">
                         <div class="relative w-full md:w-64 mb-4 md:mb-0">
                             <input type="text" placeholder="Search" class="w-full pl-10 pr-4 py-2 border rounded-md" />
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 absolute left-3 top-2.5"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 text-gray-400 absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
@@ -261,7 +388,7 @@
                         </button>
                     </div>
                 </div>
-    
+
                 <div class="py-4">
                     <div class="overflow-x-auto">
                         <table class="min-w-full table-auto border-collapse bg-white shadow-md rounded-lg">
@@ -307,11 +434,13 @@
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex gap-2 flex-wrap">
-                                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
+                                            <span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
                                                 data</span>
                                             <span
                                                 class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">Admin</span>
-                                            <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
+                                            <span
+                                                class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
                                         </div>
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
@@ -326,7 +455,7 @@
                                                 <path d="M5 8.5V1.5M5 1.5L1.5 5M5 1.5L8.5 5" stroke="#17B26A"
                                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-    
+
                                             <span>High</span>
                                         </div>
                                     </td>
@@ -361,7 +490,7 @@
                                         </button>
                                     </td>
                                 </tr>
-    
+
                                 <tr class="border-t">
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex items-center">
@@ -374,11 +503,13 @@
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex gap-2 flex-wrap">
-                                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
+                                            <span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
                                                 data</span>
                                             <span
                                                 class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">Admin</span>
-                                            <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
+                                            <span
+                                                class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
                                         </div>
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
@@ -393,7 +524,7 @@
                                                 <path d="M5 1.5V8.5M5 8.5L8.5 5M5 8.5L1.5 5" stroke="#F04438"
                                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-    
+
                                             <span>Low</span>
                                         </div>
                                     </td>
@@ -428,7 +559,7 @@
                                         </button>
                                     </td>
                                 </tr>
-    
+
                                 <tr class="border-t">
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex items-center">
@@ -441,11 +572,13 @@
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex gap-2 flex-wrap">
-                                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
+                                            <span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
                                                 data</span>
                                             <span
                                                 class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">Admin</span>
-                                            <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
+                                            <span
+                                                class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
                                         </div>
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
@@ -460,7 +593,7 @@
                                                 <path d="M5 8.5V1.5M5 1.5L1.5 5M5 1.5L8.5 5" stroke="#17B26A"
                                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-    
+
                                             <span>High</span>
                                         </div>
                                     </td>
@@ -507,11 +640,13 @@
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex gap-2 flex-wrap">
-                                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
+                                            <span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
                                                 data</span>
                                             <span
                                                 class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">Admin</span>
-                                            <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
+                                            <span
+                                                class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
                                         </div>
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
@@ -526,7 +661,7 @@
                                                 <path d="M5 8.5V1.5M5 1.5L1.5 5M5 1.5L8.5 5" stroke="#17B26A"
                                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-    
+
                                             <span>High</span>
                                         </div>
                                     </td>
@@ -561,7 +696,7 @@
                                         </button>
                                     </td>
                                 </tr>
-    
+
                                 <tr class="border-t">
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex items-center">
@@ -574,11 +709,13 @@
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex gap-2 flex-wrap">
-                                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
+                                            <span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
                                                 data</span>
                                             <span
                                                 class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">Admin</span>
-                                            <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
+                                            <span
+                                                class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
                                         </div>
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
@@ -593,7 +730,7 @@
                                                 <path d="M5 1.5V8.5M5 8.5L8.5 5M5 8.5L1.5 5" stroke="#F04438"
                                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-    
+
                                             <span>Low</span>
                                         </div>
                                     </td>
@@ -628,7 +765,7 @@
                                         </button>
                                     </td>
                                 </tr>
-    
+
                                 <tr class="border-t">
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex items-center">
@@ -641,11 +778,13 @@
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex gap-2 flex-wrap">
-                                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
+                                            <span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
                                                 data</span>
                                             <span
                                                 class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">Admin</span>
-                                            <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
+                                            <span
+                                                class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
                                         </div>
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
@@ -660,7 +799,7 @@
                                                 <path d="M5 8.5V1.5M5 1.5L1.5 5M5 1.5L8.5 5" stroke="#17B26A"
                                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-    
+
                                             <span>High</span>
                                         </div>
                                     </td>
@@ -707,11 +846,13 @@
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex gap-2 flex-wrap">
-                                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
+                                            <span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
                                                 data</span>
                                             <span
                                                 class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">Admin</span>
-                                            <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
+                                            <span
+                                                class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
                                         </div>
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
@@ -726,7 +867,7 @@
                                                 <path d="M5 8.5V1.5M5 1.5L1.5 5M5 1.5L8.5 5" stroke="#17B26A"
                                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-    
+
                                             <span>High</span>
                                         </div>
                                     </td>
@@ -761,7 +902,7 @@
                                         </button>
                                     </td>
                                 </tr>
-    
+
                                 <tr class="border-t">
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex items-center">
@@ -774,11 +915,13 @@
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex gap-2 flex-wrap">
-                                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
+                                            <span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
                                                 data</span>
                                             <span
                                                 class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">Admin</span>
-                                            <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
+                                            <span
+                                                class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
                                         </div>
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
@@ -793,7 +936,7 @@
                                                 <path d="M5 1.5V8.5M5 8.5L8.5 5M5 8.5L1.5 5" stroke="#F04438"
                                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-    
+
                                             <span>Low</span>
                                         </div>
                                     </td>
@@ -828,7 +971,7 @@
                                         </button>
                                     </td>
                                 </tr>
-    
+
                                 <tr class="border-t">
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex items-center">
@@ -841,11 +984,13 @@
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
                                         <div class="flex gap-2 flex-wrap">
-                                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
+                                            <span
+                                                class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">Customer
                                                 data</span>
                                             <span
                                                 class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">Admin</span>
-                                            <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
+                                            <span
+                                                class="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">+4</span>
                                         </div>
                                     </td>
                                     <td class="px-2 md:px-6 py-2 md:py-4">
@@ -860,7 +1005,7 @@
                                                 <path d="M5 8.5V1.5M5 1.5L1.5 5M5 1.5L8.5 5" stroke="#17B26A"
                                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-    
+
                                             <span>High</span>
                                         </div>
                                     </td>
@@ -899,7 +1044,7 @@
                             </tbody>
                         </table>
                     </div>
-    
+
                     <div class="flex items-center justify-between py-4">
                         <span class="text-sm text-gray-600">Page 1 of 10</span>
                         <div class="flex gap-2">
@@ -913,7 +1058,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Time Period Tabs -->
             <div class="sm:flex space-x-4 my-8 px-4 bg-white rounded-lg shadow-lg py-3 hidden">
                 <button class="text-gray-600 px-2 py-1 rounded-md font-medium">
@@ -929,7 +1074,7 @@
                     Yearly
                 </button>
             </div>
-    
+
             <!-- Metric Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-between items-center w-full my-12">
                 <!-- Card 1 -->
@@ -947,9 +1092,10 @@
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M10.0003 15.8337V4.16699M10.0003 4.16699L4.16699 10.0003M10.0003 4.16699L15.8337 10.0003"
-                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
-    
+
                                 <span class="text-emerald-500 text-lg font-semibold">40%</span>
                                 <span class="text-sm text-gray-500">vs last month</span>
                             </div>
@@ -975,8 +1121,8 @@
                             <div class="w-full -h-16">
                                 <svg class="w-full h-full" width="131" height="66" viewBox="0 0 131 66" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_3117_27797" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="1"
-                                        y="1" width="129" height="64">
+                                    <mask id="mask0_3117_27797" style="mask-type: alpha" maskUnits="userSpaceOnUse"
+                                        x="1" y="1" width="129" height="64">
                                         <rect width="128" height="64" transform="translate(1.33301 1)"
                                             fill="url(#paint0_linear_3117_27797)" />
                                     </mask>
@@ -987,7 +1133,8 @@
                                     </g>
                                     <path
                                         d="M1.33301 65L5.93907 57.2759L9.33301 60.5862L12.9694 57.2759L16.6057 53.9655L21.2118 57.2759L24.6057 53.9655L27.7572 47.3448L31.9997 40.7241L36.2421 35.2069H40.4845L44.9694 31.8966L48.1209 35.2069H49.9391L52.9694 40.7241L56.4845 48.6552L60.1209 47.9655H61.4542L64.4845 40.7241L67.636 35.2069L70.4239 31.8966L75.8785 28.5862L77.6966 20.8621L81.6966 17.5517L86.3027 14.2414H88.2421C89.0098 15.3448 90.5936 17.5517 90.7876 17.5517C90.9815 17.5517 93.4542 19.7586 94.6663 20.8621L97.8179 28.5862H101.575L105.212 20.8621L107.757 24.1724L112.606 28.5862L115.636 24.1724L120.848 20.8621C121.454 19.7586 122.715 17.5517 122.909 17.5517C123.103 17.5517 124.444 13.8736 125.091 12.0345H127.515L129.333 1"
-                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                     <g opacity="0.2">
                                         <rect x="76.333" y="5" width="20" height="20" rx="10" stroke="#17B26A"
                                             stroke-width="2" />
@@ -1007,7 +1154,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Card 2 -->
                 <div class="bg-white col-span-1 rounded-lg shadow-lg px-6 py-8 w-full">
                     <div class="grid grid-cols-2 gap-6 justify-between">
@@ -1023,9 +1170,10 @@
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M7.33333 12.8332V1.1665M7.33333 1.1665L1.5 6.99984M7.33333 1.1665L13.1667 6.99984"
-                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
-    
+
                                 <span class="text-emerald-500 text-lg font-semibold">40%</span>
                                 <span class="text-sm text-gray-500">vs last month</span>
                             </div>
@@ -1051,8 +1199,8 @@
                             <div class="w-full -h-16">
                                 <svg class="w-full h-full" width="131" height="66" viewBox="0 0 131 66" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_3117_27797" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="1"
-                                        y="1" width="129" height="64">
+                                    <mask id="mask0_3117_27797" style="mask-type: alpha" maskUnits="userSpaceOnUse"
+                                        x="1" y="1" width="129" height="64">
                                         <rect width="128" height="64" transform="translate(1.33301 1)"
                                             fill="url(#paint0_linear_3117_27797)" />
                                     </mask>
@@ -1063,7 +1211,8 @@
                                     </g>
                                     <path
                                         d="M1.33301 65L5.93907 57.2759L9.33301 60.5862L12.9694 57.2759L16.6057 53.9655L21.2118 57.2759L24.6057 53.9655L27.7572 47.3448L31.9997 40.7241L36.2421 35.2069H40.4845L44.9694 31.8966L48.1209 35.2069H49.9391L52.9694 40.7241L56.4845 48.6552L60.1209 47.9655H61.4542L64.4845 40.7241L67.636 35.2069L70.4239 31.8966L75.8785 28.5862L77.6966 20.8621L81.6966 17.5517L86.3027 14.2414H88.2421C89.0098 15.3448 90.5936 17.5517 90.7876 17.5517C90.9815 17.5517 93.4542 19.7586 94.6663 20.8621L97.8179 28.5862H101.575L105.212 20.8621L107.757 24.1724L112.606 28.5862L115.636 24.1724L120.848 20.8621C121.454 19.7586 122.715 17.5517 122.909 17.5517C123.103 17.5517 124.444 13.8736 125.091 12.0345H127.515L129.333 1"
-                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                     <g opacity="0.2">
                                         <rect x="76.333" y="5" width="20" height="20" rx="10" stroke="#17B26A"
                                             stroke-width="2" />
@@ -1083,7 +1232,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Card 3 -->
                 <div class="bg-white col-span-1 rounded-lg shadow-lg px-6 py-8 w-full">
                     <div class="grid grid-cols-2 gap-6 justify-between">
@@ -1099,9 +1248,10 @@
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M7.66732 1.1665V12.8332M7.66732 12.8332L13.5007 6.99984M7.66732 12.8332L1.83398 6.99984"
-                                        stroke="#F04438" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke="#F04438" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
-    
+
                                 <span class="text-red-500 text-lg font-semibold">10%</span>
                                 <span class="text-sm text-gray-500">vs last month</span>
                             </div>
@@ -1127,8 +1277,8 @@
                             <div class="w-full -h-16">
                                 <svg class="w-full h-full" width="131" height="66" viewBox="0 0 131 66" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_3117_27797" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="1"
-                                        y="1" width="129" height="64">
+                                    <mask id="mask0_3117_27797" style="mask-type: alpha" maskUnits="userSpaceOnUse"
+                                        x="1" y="1" width="129" height="64">
                                         <rect width="128" height="64" transform="translate(1.33301 1)"
                                             fill="url(#paint0_linear_3117_27797)" />
                                     </mask>
@@ -1139,7 +1289,8 @@
                                     </g>
                                     <path
                                         d="M1.33301 65L5.93907 57.2759L9.33301 60.5862L12.9694 57.2759L16.6057 53.9655L21.2118 57.2759L24.6057 53.9655L27.7572 47.3448L31.9997 40.7241L36.2421 35.2069H40.4845L44.9694 31.8966L48.1209 35.2069H49.9391L52.9694 40.7241L56.4845 48.6552L60.1209 47.9655H61.4542L64.4845 40.7241L67.636 35.2069L70.4239 31.8966L75.8785 28.5862L77.6966 20.8621L81.6966 17.5517L86.3027 14.2414H88.2421C89.0098 15.3448 90.5936 17.5517 90.7876 17.5517C90.9815 17.5517 93.4542 19.7586 94.6663 20.8621L97.8179 28.5862H101.575L105.212 20.8621L107.757 24.1724L112.606 28.5862L115.636 24.1724L120.848 20.8621C121.454 19.7586 122.715 17.5517 122.909 17.5517C123.103 17.5517 124.444 13.8736 125.091 12.0345H127.515L129.333 1"
-                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                     <g opacity="0.2">
                                         <rect x="76.333" y="5" width="20" height="20" rx="10" stroke="#17B26A"
                                             stroke-width="2" />
@@ -1160,7 +1311,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Complaints Mobile Section -->
             <div class="bg-gray-100 sm:hidden w-full my-2">
                 <div class="mx-auto bg-white rounded-xl shadow-md overflow-hidden min-w-full">
@@ -1183,8 +1334,8 @@
                         <div class="flex space-x-2 mb-4">
                             <button
                                 class="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg>
@@ -1192,8 +1343,8 @@
                             </button>
                             <a href="./write-compaint.html"
                                 class="px-4 py-2 bg-green-500 text-white rounded-md flex items-center text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M12 4v16m8-8H4" />
                                 </svg>
@@ -1204,8 +1355,9 @@
                             <div class="relative flex-grow">
                                 <input type="text" placeholder="Search"
                                     class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-sm" />
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 absolute left-3 top-2"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 text-gray-400 absolute left-3 top-2" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
@@ -1454,184 +1606,228 @@
                         <button class="flex items-center text-gray-600">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
                             </svg>
                         </button>
                         <span class="text-sm text-gray-600">Page 1 of 10</span>
                         <button class="flex items-center text-gray-600">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
                             </svg>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-
+    </section>
     <!-- Footer Section -->
     <footer class="bg-white text-[#FFFFFFB2] relative">
         <div class="bg-[#052e26] md:rounded-t-3xl">
-          <div class="container mx-auto px-4 lg:px-20">
-            <!-- Upper and Lower Footer: Combined Grid Layout -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-11 lg:py-20">
-              <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
-              <div class="col-span-2 sm:col-span-1">
-                <div class="flex-shrink-0 mb-4">
-                  <!-- Logo -->
-                  <a href="#" class="flex items-center">
-                    <img
-                      src="../assets/logoHeaderAndFooter/logoFooter .png"
-                      alt="Logo"
-                      class="h-8 w-auto"
-                    />
-                  </a>
+            <div class="container mx-auto px-4 lg:px-20">
+                <!-- Upper and Lower Footer: Combined Grid Layout -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-11 lg:py-20">
+                    <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+                    <div class="col-span-2 sm:col-span-1">
+                        <div class="flex-shrink-0 mb-4">
+                            <!-- Logo -->
+                            <a href="#" class="flex items-center">
+                                <img src="../assets/logoHeaderAndFooter/logoFooter .png" alt="Logo"
+                                    class="h-8 w-auto" />
+                            </a>
+                        </div>
+                        <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
+                            Fun, engaging and authentic Platform
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#"><img src="../assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5" /></a>
+                            <a href="#"><img src="../assets/images/Icon/youtube.png" alt="YouTube" class="h-5" /></a>
+                            <a href="#"><img src="../assets/images/Icon/twitter.png" alt="Twitter" class="h-5" /></a>
+                            <a href="#"><img src="../assets/images/Icon/facebook.png" alt="Facebook" class="h-5" /></a>
+                        </div>
+                    </div>
+
+                    <!-- Product Links -->
+                    <div>
+                        <h4 class="font-bold text-xl text-[#FFF] mb-4">Product</h4>
+                        <ul class="lg:space-y-5 space-y-4 font-light">
+                            <li><a href="#" class="hover:text-green-400">About us</a></li>
+                            <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+                            <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                            <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+                            <li>
+                                <a href="./signin.html" class="hover:text-green-400">Log in</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources Links -->
+                    <div>
+                        <h4 class="font-bold text-xl text-[#FFF] mb-4">Resources</h4>
+                        <ul class="lg:space-y-5 space-y-4 font-light">
+                            <li><a href="#" class="hover:text-green-400">Learn</a></li>
+                            <li><a href="#" class="hover:text-green-400">Videos</a></li>
+                            <li>
+                                <a href="#" class="hover:text-green-400">Help Center</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-green-400">Webinar Glossary</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- More Links -->
+                    <div>
+                        <h4 class="font-bold text-xl text-[#FFF] mb-4">More</h4>
+                        <ul class="lg:space-y-5 space-y-4 font-light">
+                            <li><a href="#" class="hover:text-green-400">Our story</a></li>
+                            <li>
+                                <a href="#" class="hover:text-green-400">We’re hiring</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-green-400">Resolver NG</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="block md:hidden">
+                        <h4 class="font-bold text-[#FFF] mb-4">Support</h4>
+                        <ul class="lg:space-y-5 space-y-4 font-light">
+                            <li>
+                                <a href="#" class="hover:text-green-400">Trust Center</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-green-400">Resolver NG</a>
+                            </li>
+                            <li><a href="#" class="hover:text-green-400">Status</a></li>
+                            <li><a href="#" class="hover:text-green-400">Legal</a></li>
+                            <li>
+                                <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
+                            </li>
+                            <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
-                  Fun, engaging and authentic Platform
-                </p>
-                <div class="flex space-x-4">
-                  <a href="#"
-                    ><img
-                      src="../assets/images/Icon/linkedin.png"
-                      alt="LinkedIn"
-                      class="h-5"
-                  /></a>
-                  <a href="#"
-                    ><img
-                      src="../assets/images/Icon/youtube.png"
-                      alt="YouTube"
-                      class="h-5"
-                  /></a>
-                  <a href="#"
-                    ><img
-                      src="../assets/images/Icon/twitter.png"
-                      alt="Twitter"
-                      class="h-5"
-                  /></a>
-                  <a href="#"
-                    ><img
-                      src="../assets/images/Icon/facebook.png"
-                      alt="Facebook"
-                      class="h-5"
-                  /></a>
+
+                <div class="border-t border-gray-600 py-4">
+                    <div
+                        class="mx-auto text-[#FFF] flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0">
+                        <!-- Left Section: Links -->
+                        <div class="hidden  md:block">
+                            <div class="flex  flex-wrap justify-center sm:justify-start space-x-6">
+                                <a href="#" class="hover:text-green-400">Trust Center</a>
+                                <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                                <a href="#" class="hover:text-green-400">Status</a>
+                                <a href="#" class="hover:text-green-400">Legal</a>
+                                <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
+                                <a href="#" class="hover:text-green-400">Opt out</a>
+                            </div>
+                        </div>
+
+                        <!-- Right Section: Copyright -->
+                        <div class="text-center sm:text-right">
+                            <p>© All rights reserved by Resolver NG.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-  
-              <!-- Product Links -->
-              <div>
-                <h4 class="font-bold text-xl text-[#FFF] mb-4">Product</h4>
-                <ul class="lg:space-y-5 space-y-4 font-light">
-                  <li><a href="#" class="hover:text-green-400">About us</a></li>
-                  <li><a href="#" class="hover:text-green-400">FAQs</a></li>
-                  <li><a href="#" class="hover:text-green-400">Contact</a></li>
-                  <li><a href="#" class="hover:text-green-400">Pricing</a></li>
-                  <li>
-                    <a href="./signin.html" class="hover:text-green-400"
-                      >Log in</a
-                    >
-                  </li>
-                </ul>
-              </div>
-  
-              <!-- Resources Links -->
-              <div>
-                <h4 class="font-bold text-xl text-[#FFF] mb-4">Resources</h4>
-                <ul class="lg:space-y-5 space-y-4 font-light">
-                  <li><a href="#" class="hover:text-green-400">Learn</a></li>
-                  <li><a href="#" class="hover:text-green-400">Videos</a></li>
-                  <li>
-                    <a href="#" class="hover:text-green-400">Help Center</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-green-400">Webinar Glossary</a>
-                  </li>
-                </ul>
-              </div>
-  
-              <!-- More Links -->
-              <div>
-                <h4 class="font-bold text-xl text-[#FFF] mb-4">More</h4>
-                <ul class="lg:space-y-5 space-y-4 font-light">
-                  <li><a href="#" class="hover:text-green-400">Our story</a></li>
-                  <li>
-                    <a href="#" class="hover:text-green-400">We’re hiring</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-green-400">Resolver NG</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-green-400"
-                      >Resolver NG Satisfaction</a
-                    >
-                  </li>
-                </ul>
-              </div>
-  
-              <div class="block md:hidden">
-                <h4 class="font-bold text-[#FFF] mb-4">Support</h4>
-                <ul class="lg:space-y-5 space-y-4 font-light">
-                  <li>
-                    <a href="#" class="hover:text-green-400">Trust Center</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-green-400">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:text-green-400">Resolver NG</a>
-                  </li>
-                  <li><a href="#" class="hover:text-green-400">Status</a></li>
-                  <li><a href="#" class="hover:text-green-400">Legal</a></li>
-                  <li>
-                    <a href="#" class="hover:text-green-400"
-                      >Do Not Sell My Info</a
-                    >
-                  </li>
-                  <li><a href="#" class="hover:text-green-400">Opt out</a></li>
-                </ul>
-              </div>
+
+                <!-- Star Icon (Absolute Positioned) -->
+                <div class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4">
+                    <img src="../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32" />
+                </div>
             </div>
-  
-            <div class="border-t border-gray-600 py-4">
-              <div
-                class="mx-auto text-[#FFF] flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
-              >
-                <!-- Left Section: Links -->
-                <div class="hidden  md:block">
-                  <div
-                    class="flex  flex-wrap justify-center sm:justify-start space-x-6"
-                  >
-                    <a href="#" class="hover:text-green-400">Trust Center</a>
-                    <a href="#" class="hover:text-green-400">Privacy Policy</a>
-                    <a href="#" class="hover:text-green-400">Status</a>
-                    <a href="#" class="hover:text-green-400">Legal</a>
-                    <a href="#" class="hover:text-green-400"
-                      >Do Not Sell My Info</a
-                    >
-                    <a href="#" class="hover:text-green-400">Opt out</a>
-                  </div>
-                </div>
-  
-                <!-- Right Section: Copyright -->
-                <div class="text-center sm:text-right">
-                  <p>© All rights reserved by Resolver NG.</p>
-                </div>
-              </div>
-            </div>
-  
-            <!-- Star Icon (Absolute Positioned) -->
-            <div
-              class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4"
-            >
-              <img
-                src="../assets/images/3d-star.png"
-                alt="Star Icon"
-                class="h-32 w-32"
-              />
-            </div>
-          </div>
         </div>
-      </footer>
+    </footer>
+
+
+    <!-- Floating Action Button -->
+    <div class="fixed  lg:top-96 lg:left-20 lg:right-auto right-0 top-96">
+        <button id="fab-btn"
+            class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg">
+            <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+        </button>
+
+        <!-- Pop-up Menu (Initially hidden) -->
+        <div id="popup-menu" class="hidden">
+            <div
+                class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16">
+                <button id="close-popup"
+                    class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64">
+                    <img src="../assets/images/Icon/cancel-circle.png" alt="cancel-circle" class="h-8 w-auto" />
+                </button>
+
+                <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
+                    <img src="../assets/images/Icon/star.svg" alt="pop-up-star" class="h-4 w-auto" />
+                    <a href="../pages/write-compaint.html" class="text-gray-800">Write Review<a>
+                </button>
+
+                <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
+                    <img src="../assets/images/Icon/idea-01.png" alt="pop-up-idea" class="h-4 w-auto" />
+                    <a href="../pages/businessSide/CompanyProfile/companyProfile.html" class="text-gray-800">Resolve an
+                        Issue</a>
+                </button>
+
+                <button class="flex items-center space-x-2 px-6 py-2 w-60">
+                    <img src="../assets/images/Icon/infinity.svg" alt="pop-up-infinity" class="h-4 w-auto" />
+                    <a href="../pages/foods/foodPriceCompare.html" class="text-gray-800">Price Comparison</a>
+                </button>
+            </div>
+        </div>
+               
+    </div>
+
+    <!-- Notification and Profile Dropdown -->
+    <script>
+        // Profile Dropdown
+        document.getElementById('profile-dropdown-btn').addEventListener('click', function () {
+            const dropdown = document.getElementById('profile-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
+
+        // Notification Dropdown
+        document.getElementById('notification-btn').addEventListener('click', function () {
+            const dropdown = document.getElementById('notification-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdowns when clicking outside
+        window.addEventListener('click', function (e) {
+            const profileDropdown = document.getElementById('profile-dropdown');
+            const notificationDropdown = document.getElementById('notification-dropdown');
+
+            if (!document.getElementById('profile-dropdown-btn').contains(e.target)) {
+                profileDropdown.classList.add('hidden');
+            }
+
+            if (!document.getElementById('notification-btn').contains(e.target)) {
+                notificationDropdown.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <script>
+        const fabBtn = document.getElementById("fab-btn");
+        const popupMenu = document.getElementById("popup-menu");
+        const closePopup = document.getElementById("close-popup");
+
+        // Toggle the popup menu visibility on the floating action button click
+        fabBtn.addEventListener("click", () => {
+            popupMenu.classList.toggle("hidden");
+        });
+
+        // Hide the popup when the close button is clicked
+        closePopup.addEventListener("click", () => {
+            popupMenu.classList.add("hidden");
+        });
+    </script>
 
     <script src="../js/linkup.js"></script>
 </body>
