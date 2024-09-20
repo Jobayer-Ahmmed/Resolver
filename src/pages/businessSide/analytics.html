@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resolver | Analytics</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/96ee5d0221.js" crossorigin="anonymous"></script>
 </head>
@@ -192,640 +192,1420 @@
 
 
     <!-- complaint section -->
-    <section class="container xl:px-20 px-4 bg-[#F4F4F4]">
-        <div class="bg-white py-8 xl:px-8 px-3  rounded-lg shadow-lg">
-            <div class="flex xl:flex-row flex-col justify-center xl:justify-between xl:gap-0 gap-5">
-
-                <div>
-                    <div class="flex  gap-1">
-                        <p class="text-lg font-medium">All Complaints</p> <small
-                            class=" border-2 border-gray-400 rounded px-1 ">240 Complaints</small>
-                    </div>
-                    <p>Keep track of your company ratings.</p>
-                </div>
-
-                <div class="flex gap-5">
-                    <div class="border-2 border-gray-300 px-4 h-10 flex items-center rounded gap-2 font-medium"><img
-                            class="w-4" src="../../assets/images/upload-cloud.png" alt="">Export</div>
-                    <a href="./addACompany.html" class="rounded px-4 h-10 flex items-center font-medium bg-[#78EB54]">+ Add company</a>
-                </div>
-            </div>
-            <hr class="my-5 hidden xl:block">
-            <div class="flex xl:flex-row flex-col justify-center xl:justify-between gap-5 xl:gap-0 xl:mt-0 mt-5">
-                <div class="xl:flex justify-center  hidden ">
-                    <div class="py-2 px-4 border border-gray-400 bg-gray-200 shadow rounded-l">View all</div>
-                    <div class="py-2 px-4 border border-gray-400 shadow">
-
-                        <span>Top Rated Complaints</span>
-                    </div>
-                    <div class="py-2 px-4 border border-gray-400 shadow rounded-r">
-
-                        <span>Under Rated Complaints</span>
-                    </div>
-                </div>
-                <!-- reviews Search bar -->
-                <div class=" flex justify-between items-center gap-5">
-                    <div class="flex justify-between  gap-5">
-                        <div
-                            class="w-full xl:w-96 h-12 flex justify-start items-center gap-3 border-2 border-gray-300 rounded-xl pl-5 py-3">
-                            <i class="fa-solid fa-magnifying-glass text-[#818B9C]"></i>
-                            <input type="text" class="xl:w-auto  outline-none border-collapse w-full rounded-full"
-                                placeholder="Search" name="" id="">
-
-                        </div>
-                        <div class="h-12 border border-gray-400 flex justify-center items-center px-4 rounded-xl">
-                            <img class="w-7" src="../../assets/images/filter-lines.png" alt="">
-                            <span class="hidden xl:inline ml-2 text-lg">Filters</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- table menu responsive -->
-            <div class="xl:hidden flex justify-center   w-full">
-                <div class="xl:w-auto w-full mt-5 py-2 px-4 border border-gray-400 bg-gray-200 shadow rounded-l">View
-                    all</div>
-                <div class="xl:w-auto w-full mt-5 py-2 px-4 border border-gray-400 shadow">
-                    <span>Resolved</span>
-
-                </div>
-                <div class="xl:w-auto w-full mt-5 py-2 px-4 border border-gray-400 shadow rounded-r">
-                    <span>Unresolved</span>
-
-                </div>
-            </div>
-
-            <!-- table -->
-            <div class="overflow-x-auto mt-5 hidden xl:block">
-                <table class="table">
-                    <!-- head -->
-                    <thead>
-                        <tr class="bg-base-200">
-                            <th>
-                                <div
-                                    class="text-white bg-green-400 w-4 h-4 rounded flex justify-center items-center text-lg ">
-                                    <span class="mb-2 text-xl ">-</span>
-                                </div>
-                            </th>
-                            <th>ID</th>
-                            <th>Ticket Name</th>
-                            <th>Categories</th>
-                            <th>Date</th>
-                            <th>Priority</th>
-                            <th>Status</th>
-                            <th>Action</th>
-
-                        </tr>
-                    </thead>
-                    <tbody class="text-[12px]">
-                        <!-- row 1 -->
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>#010203</td>
-                            <td>Mobile App feature</td>
-                            <td>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Customer
-                                    data</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Admin</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
-                            </td>
-                            <td>22 Jun 2024</td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                            </td>
-                            <td class="flex justify-center items-center gap-2 font-medium">
-                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
-                                    <div class="bg-blue-500 h-2.5 rounded-full w-2/3"></div>
-                                </div>
-                                <p>In Progress</p>
-                            </td>
-                            <td>
-                                <i class="fa-regular fa-comments"></i>
-                                <i class="fa-solid fa-pencil ml-4"></i>
-                            </td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>#010203</td>
-                            <td>Mobile App feature</td>
-                            <td>
-                                <span
-                                    class="bg-purple-100 text-purple-600 py-1 border-2 border-gray-300    rounded-full px-4">Customer
-                                    data</span>
-                                <span
-                                    class=" bg-blue-100 text-blue-600 py-1 border-2 border-gray-300  rounded-full px-4">Admin</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
-                            </td>
-                            <td>22 Jun 2024</td>
-                            <td>
-                                <div
-                                    class="bg-red-100  text-red-600 border-red-300 border-2  px-2 py-1 rounded-full flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-arrow-down text-[10px] mt-[1px]"></i>
-                                    <p>Low</p>
-                                </div>
-                            </td>
-                            <td class="flex justify-center items-center gap-2 font-medium">
-                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
-                                    <div class="bg-green-400 h-2.5 rounded-full w-2/3"></div>
-                                </div>
-                                <p>Resolved</p>
-                            </td>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                                <i class="fa-solid fa-pencil ml-4"></i>
-                            </td>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>#010203</td>
-                            <td>Mobile App feature</td>
-                            <td>
-                                <span
-                                    class="bg-purple-100 text-purple-600 py-1 border-2 border-gray-300    rounded-full px-4">Customer
-                                    data</span>
-                                <span
-                                    class=" bg-red-100 text-red-600 py-1 border-2 border-gray-300  rounded-full px-4">Financials</span>
-
-                            </td>
-                            <td>22 Jun 2024</td>
-                            <td>
-                                <div
-                                    class="bg-red-100  text-red-600 border-red-300 border-2  px-2 py-1 rounded-full flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-arrow-down text-[10px] mt-[1px]"></i>
-                                    <p>Low</p>
-                                </div>
-                            </td>
-                            <td class="flex justify-center items-center gap-2 font-medium">
-                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
-                                    <div class="bg-orange-400 h-2.5 rounded-full w-2/3"></div>
-                                </div>
-                                <p>Pending</p>
-                            </td>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                                <i class="fa-solid fa-pencil ml-4"></i>
-                            </td>
-                        </tr>
-                        <!-- row 4 -->
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>#010203</td>
-                            <td>Mobile App feature</td>
-                            <td>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Customer
-                                    data</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Admin</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
-                            </td>
-                            <td>22 Jun 2024</td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                            </td>
-                            <td class="flex justify-center items-center gap-2 font-medium">
-                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
-                                    <div class="bg-blue-500 h-2.5 rounded-full w-2/3"></div>
-                                </div>
-                                <p>In Progress</p>
-                            </td>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                                <i class="fa-solid fa-pencil ml-4"></i>
-                            </td>
-                        </tr>
-                        <!-- row 5 -->
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>#010203</td>
-                            <td>Mobile App feature</td>
-                            <td>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Customer
-                                    data</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Admin</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
-                            </td>
-                            <td>22 Jun 2024</td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                            </td>
-                            <td class="flex justify-center items-center gap-2 font-medium">
-                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
-                                    <div class="bg-blue-500 h-2.5 rounded-full w-2/3"></div>
-                                </div>
-                                <p>In Progress</p>
-                            </td>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                                <i class="fa-solid fa-pencil ml-4"></i>
-                            </td>
-                        </tr>
-                        <!-- row 6 -->
-                        <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td>#010203</td>
-                            <td>Mobile App feature</td>
-                            <td>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Customer
-                                    data</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">Admin</span>
-                                <span
-                                    class="bg-blue-100 text-blue-600 py-1 border-2 border-gray-300 rounded-full px-4">+4</span>
-                            </td>
-                            <td>22 Jun 2024</td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                            </td>
-                            <td class="flex justify-center items-center gap-2 font-medium">
-                                <div class=" w-48 bg-gray-200 rounded-full h-2.5 ">
-                                    <div class="bg-blue-500 h-2.5 rounded-full w-2/3"></div>
-                                </div>
-                                <p>In Progress</p>
-                            </td>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                                <i class="fa-solid fa-pencil ml-4"></i>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- table responsive-->
-            <div class="overflow-x-auto mt-5 block xl:hidden text-[12px] font-medium">
-                <table class="table">
-                    <tbody class="text-[12px]">
-                        <!-- row 1 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-red-100  text-red-600 border-red-300 border-2  px-2 py-1 rounded-full flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-arrow-down text-[10px] mt-[1px]"></i>
-                                    <p>Low</p>
-                                </div>
-                                <p class="mt-1 text-yellow-500">Pending</p>
-                            </td>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-red-100  text-red-600 border-red-300 border-2  px-2 py-1 rounded-full flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-arrow-down text-[10px] mt-[1px]"></i>
-                                    <p>Low</p>
-                                </div>
-                                <p class="mt-1 text-green-300">Resolved</p>
-                            </td>
-                        </tr>
-                        <!-- row 4 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-                        <!-- row 5 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-                        <!-- row 6 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-                        <!-- row 7 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-                        <!-- row 8 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-                        <!-- row 9 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-                        <!-- row 10 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-                        <!-- row 11 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-                        <!-- row 12 -->
-                        <tr>
-                            <td>
-                                <p>Mobile App</p>
-                                <p class="mt-1">ID : #010203</p>
-                            </td>
-                            <td>
-                                <p>22 Jun 2024</p>
-                                <p class="mt-1 text-orange-500">Customer data</p>
-                            </td>
-                            <td>
-                                <div
-                                    class="bg-green-100 border-2 border-green-300 px-2 py-1 rounded-full flex justify-center items-center gap-1 text-green-600">
-                                    <i class="fa-solid fa-arrow-up text-[10px] mt-[1px]"></i>
-                                    <p>High</p>
-                                </div>
-                                <p class="mt-1 text-blue-800">In Progress</p>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- footer -->
-    <footer class=" bg-white mt-5 text-white relative">
-        <div class=" bg-[#052e26] md:rounded-t-3xl ">
-          <div class="container  mx-auto px-4  xl:px-20  rounded">
-            <!-- Upper and Lower Footer: Combined Grid Layout -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
-    
-              <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
-              <div class="col-span-2 sm:col-span-1">
-                <div class="flex-shrink-0 mb-4">
-                  <!-- Logo -->
-                  <a href="#" class="flex items-center">
-                    <img src="../../assets/images/logo_and_name_footer.png" alt="">
-                  </a>
-                </div>
-                <p class="mb-4 w-[14rem] sm:w-full">Fun, engaging and authentic Platform</p>
-                <div class="flex space-x-4">
-                  <a href="#"><img src="../../assets/images/Icon/linkedin.png" alt="LinkedIn" class="h-5"></a>
-                  <a href="#"><img src="../../assets/images/Icon/youtube.png" alt="YouTube" class="h-5"></a>
-                  <a href="#"><img src="../../assets/images/Icon/twitter.png" alt="Twitter" class="h-5"></a>
-                  <a href="#"><img src="../../assets/images/Icon/facebook.png" alt="Facebook" class="h-5"></a>
-                </div>
+      <!-- table data and there header section start ==================== -->
+      <section class="px-4 container mx-auto lg:px-20 ">
+        <section class="md:mt-12 mb-20  bg-white shadow-md rounded-md   ">
+          <!-- companies title and export import button ================= -->
+          <div
+            class="px-4 md:border-b flex space-y-4 md:flex-row flex-col justify-between border-[#EAECF0] py-5"
+          >
+            <!-- left side title ============== -->
+            <div class="flex justify-between">
+              <div class="md:space-y-2">
+                <h3
+                  class="text-lg font-semibold text-[#273F2B] flex items-center gap-2"
+                >
+                  <span>All Companies</span>
+                  <span
+                    class="font-medium text-sm hidden md:block text-[#344054] border px-2 py-1 border-[#D0D5DD] rounded-lg shadow-md"
+                    >240 companies</span
+                  >
+                </h3>
+                <p class="text-[#475467] font-normal text-sm">
+                  Keep track of your company ratings.
+                </p>
               </div>
-    
-              <!-- Product Links -->
-              <div>
-                <h4 class="font-bold mb-4">Product</h4>
-                <ul>
-                  <li><a href="#" class="hover:text-green-400">About us</a></li>
-                  <li><a href="#" class="hover:text-green-400">FAQs</a></li>
-                  <li><a href="#" class="hover:text-green-400">Contact</a></li>
-                  <li><a href="#" class="hover:text-green-400">Pricing</a></li>
-                  <li><a href="../../signin.html" class="hover:text-green-400">Log in</a></li>
-                </ul>
-              </div>
-    
-              <!-- Resources Links -->
-              <div>
-                <h4 class="font-bold mb-4">Resources</h4>
-                <ul>
-                  <li><a href="#" class="hover:text-green-400">Learn</a></li>
-                  <li><a href="#" class="hover:text-green-400">Videos</a></li>
-                  <li><a href="#" class="hover:text-green-400">Help Center</a></li>
-                  <li><a href="#" class="hover:text-green-400">Webinar Glossary</a></li>
-                </ul>
-              </div>
-    
-              <!-- More Links -->
-              <div>
-                <h4 class="font-bold mb-4">More</h4>
-                <ul>
-                  <li><a href="#" class="hover:text-green-400">Our story</a></li>
-                  <li><a href="#" class="hover:text-green-400">We’re hiring</a></li>
-                  <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
-                  <li><a href="#" class="hover:text-green-400">Resolver NG Satisfaction</a></li>
-                </ul>
-              </div>
-    
-              <div class="block md:hidden">
-                <h4 class="font-bold mb-4">More</h4>
-                <ul>
-                  <li><a href="#" class="hover:text-green-400">Trust Center</a></li>
-                  <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
-                  <li><a href="#" class="hover:text-green-400">Resolver NG</a></li>
-                  <li><a href="#" class="hover:text-green-400">Status</a></li>
-                  <li><a href="#" class="hover:text-green-400">Legal</a></li>
-                  <li><a href="#" class="hover:text-green-400">Do Not Sell My Info</a></li>
-                  <li><a href="#" class="hover:text-green-400">Opt out</a></li>
-                </ul>
-              </div>
-    
-            </div>
-    
-            <div class="border-t border-gray-600 py-4">
-              <div
-                class="container mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0">
-                <!-- Left Section: Links -->
-                <div class="hidden md:block">
-                  <div class="flex flex-wrap justify-center sm:justify-start space-x-6">
-                    <a href="#" class="hover:text-green-400">Trust Center</a>
-                    <a href="#" class="hover:text-green-400">Privacy Policy</a>
-                    <a href="#" class="hover:text-green-400">Status</a>
-                    <a href="#" class="hover:text-green-400">Legal</a>
-                    <a href="#" class="hover:text-green-400">Do Not Sell My Info</a>
-                    <a href="#" class="hover:text-green-400">Opt out</a>
-                  </div>
-                </div>
-    
-                <!-- Right Section: Copyright -->
-                <div class="text-center sm:text-right">
-                  <p>© All rights reserved by Resolver NG.</p>
-                </div>
+              <div class="md:hidden">
+                <span class="text-[#98A2B3]"
+                  ><i class="fa-solid fa-ellipsis-vertical"></i
+                ></span>
               </div>
             </div>
-    
-            <!-- Star Icon (Absolute Positioned) -->
-            <div class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4">
-              <img src="../../assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
+            <!-- left side title end ============== -->
+            <!-- right side button start =============== -->
+            <div class="flex items-start gap-4">
+              <!-- export button ====== -->
+              <button
+                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+              >
+                <span
+                  ><img
+                    src="../../assets/adminDashboard/upload-cloud-02.png"
+                    alt=""
+                /></span>
+                <span>Export</span>
+              </button>
+              <!-- button 2 ================= -->
+              <button
+                class="text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center bg-[#78EB54] shadow-md gap-2"
+              >
+                <span>
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span>Add company</span>
+              </button>
             </div>
-    
+            <!-- right side button     end =============== -->
           </div>
-        </div>
-    
-      </footer>
+          <!-- companies title and export import button end ================= -->
+
+          <!-- search and button in div ======================== -->
+          <div class="px-4 py-3 flex flex-col-reverse gap-3 lg:flex-row justify-between md:border-b border-[#EAECF0]">
+            <!-- button start =========== -->
+            <div class="text-[#344054] flex font-semibold text-sm">
+              <div>
+                <button
+                  class="px-4 py-2 shadow-md border-r-transparent border border-[#D0D5DD] rounded-l-lg"
+                >
+                  View all
+                </button>
+              </div>
+              <div>
+                <button class="px-4 py-2 shadow-md border border-[#D0D5DD]">
+                  Top Rated Companies
+                </button>
+              </div>
+              <div>
+                <button
+                  class="px-4 py-2 shadow-md border-l-transparent border border-[#D0D5DD] rounded-r-lg"
+                >
+                  Under Rated Companies
+                </button>
+              </div>
+            </div>
+            <!-- button     end =========== -->
+
+            <!-- search and filter ========== -->
+            <div class="flex gap-3">
+              <!-- search bar input ================ -->
+              <div class="flex-1">
+                <div
+                  class="px-4 flex items-center gap-2 py-2 border border-[#D0D5DD] rounded-lg shadow-md"
+                >
+                  <span class="text-[#667085]">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                  <input
+                    class="w-full outline-none"
+                    placeholder="Search"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <!-- search bar input end ================ -->
+
+              <!-- filter button ========== -->
+              <button
+                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+              >
+                <span
+                  ><img
+                    src="../../assets/adminDashboard/filter-lines.png"
+                    alt=""
+                /></span>
+                <span class="hidden lg:block" >Filterst</span>
+              </button>
+              <!-- filter button ========== -->
+            </div>
+            <!-- search and filter end ========== -->
+          </div>
+          <!-- search and button in div end ======================== -->
+
+          <!-- Table elements start =========================== -->
+          <section class="container  mx-auto">
+           <!-- lg screen table =============================== -->
+           <div class=" hidden lg:flex flex-col">
+            <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div
+                class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8"
+              >
+                <div
+                  class="overflow-hidden border  "
+                >
+                  <table
+                    class="min-w-full  "
+                  >
+                    <thead class="bg-[#F9FAFB]  font-medium text-[#475467] text-xs ">
+                      <tr class="" >
+                        <th
+                          scope="col"
+                          class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        >
+                          <div class="flex items-center gap-x-3">
+                          
+                            <img src="../../assets/adminDashboard/Checkbox.png" alt="">
+                            <button class="flex text-[#475467] items-center gap-x-2">
+                              <span>ID</span>
+                            </button>
+                          </div>
+                        </th>
+
+                        <th
+                          scope="col"
+                          class="px-4 py-3.5  text-left rtl:text-right "
+                        >
+                        Ticket Name
+                        </th>
+
+                        <th
+                          scope="col"
+                          class="px-4 py-3.5   text-left rtl:text-right  "
+                        >
+                        Categories
+                        </th>
+
+                        <th
+                          scope="col"
+                          class="px-4 py-3.5   text-left rtl:text-right  "
+                        >
+                        Date
+                        </th>
+
+                        <th
+                          scope="col"
+                          class="px-4 py-3.5  text-left rtl:text-right "
+                        >
+                        Priority
+                        </th>
+                        <th
+                        scope="col"
+                        class="px-4 py-3.5  text-left rtl:text-right "
+                      >
+                      Status
+                      </th>
+                      <th
+                      scope="col"
+                      class="px-4 py-3.5  text-center rtl:text-right "
+                    >
+                    Action
+                    </th>
+                      
+                      </tr>
+                    </thead>
+        <tbody
+                      class=" "
+                    >
+                    <!-- table tr 1 -================= -->
+                      <tr class="border-b border-[#EAECF0]" >
+                        <td
+                          class="px-4 py-4 text-sm font-medium  whitespace-nowrap"
+                        >
+                          <div class="inline-flex items-center gap-x-3">
+                            <input
+                              type="checkbox"
+                              class="text-blue-500 rounded dark:bg-gray-900 dark:ring-offset-gray-900 border-[#D0D5DD]"
+                            />
+
+                            <span class="text-[#101828] font-medium text-sm" >#010203</span>
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        Mobile App feature
+                        </td>
+                        <td
+                          class="px-4 py-4  whitespace-nowrap"
+                        >
+                          <div
+                            class="inline-flex border border-[#B2DDFF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#EFF8FF] text-[#175CD3]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Customer data</h2>
+                          </div>
+                          <div
+                            class="inline-flex border border-[#B2DDFF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#EFF8FF] text-[#175CD3]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Admin</h2>
+                          </div>
+                          <div
+                          class="inline-flex border border-[#EAECF0] items-center px-3 py-1 rounded-full gap-x-2   text-[#344054]"
+                        >
+                         
+
+                          <h2 class="text-xs font-medium">+4</h2>
+                        </div>
+                       
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        22 Jun 2024
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"
+                        >
+                        <div
+                            class="inline-flex border border-[#ABEFC6] items-center px-3 py-0.5 rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                          >
+                           
+                        <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                            <h2 class="text-xs font-medium">High</h2>
+                          </div>
+                        </td>
+                        <td class="px-4 flex gap-2 items-center py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                              <div class="w-48 h-1.5 bg-[#EAECF0] overflow-hidden rounded-full">
+                                  <div class="bg-[#2196F3] rounded-r-full w-2/3 h-1.5"></div>
+                              </div>
+                          </div>
+                          <button
+                              class="text-sm font-medium text-[#344054]"
+                            >
+                            In Progress
+                            </button>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                          <button>
+                              <img src="../../assets/adminDashboard/message-chat-square.png" alt="">
+                          </button>
+                          <button>
+                              <img src="../../assets/adminDashboard/edit-01.png" alt="">
+                          </button>
+                          </div>
+                        </td>
+                        
+                      </tr>
+                      <!-- table tr 1 end -================= -->
+                         <!-- table tr 2 -================= -->
+                      <tr class="border-b border-[#EAECF0]" >
+                        <td
+                          class="px-4 py-4 text-sm font-medium  whitespace-nowrap"
+                        >
+                          <div class="inline-flex items-center gap-x-3">
+                            <input
+                              type="checkbox"
+                              class="text-blue-500 rounded dark:bg-gray-900 dark:ring-offset-gray-900 border-[#D0D5DD]"
+                            />
+
+                            <span class="text-[#101828] font-medium text-sm" >#010203</span>
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        Mobile App feature
+                        </td>
+                        <td
+                          class="px-4 py-4  whitespace-nowrap"
+                        >
+                          <div
+                            class="inline-flex border border-[#E9D7FEF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#F9F5FF] text-[#6941C6]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Business data</h2>
+                          </div>
+                          <div
+                            class="inline-flex border border-[#B2DDFF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#EFF8FF] text-[#175CD3]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Admin</h2>
+                          </div>
+                          <div
+                          class="inline-flex border border-[#EAECF0] items-center px-3 py-1 rounded-full gap-x-2   text-[#344054]"
+                        >
+                         
+
+                          <h2 class="text-xs font-medium">+4</h2>
+                        </div>
+                       
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        22 Jun 2024
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"
+                        >
+                        <div
+                            class="inline-flex border border-[#FECDCA] items-center px-3 py-0.5 rounded-full gap-x-1  bg-[#FEF3F2] text-[#F04438]"
+                          >
+                           
+                        <span><i class="fa-solid text-xs fa-arrow-down"></i></span>
+                            <h2 class="text-xs font-medium">Low</h2>
+                          </div>
+                        </td>
+                        <td class="px-4 flex gap-2 items-center py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                              <div class="w-48 h-1.5 bg-[#EAECF0] overflow-hidden rounded-full">
+                                  <div class="bg-[#78EB54] rounded-r-full w-[72%] h-1.5"></div>
+                              </div>
+                          </div>
+                          <button
+                              class="text-sm font-medium text-[#344054]"
+                            >
+                            Resolved
+                            </button>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                          <button>
+                              <img src="../../assets/adminDashboard/message-chat-square.png" alt="">
+                          </button>
+                          <button>
+                              <img src="../../assets/adminDashboard/edit-01.png" alt="">
+                          </button>
+                          </div>
+                        </td>
+                        
+                      </tr>
+                      <!-- table tr 2 end -================= -->
+                        <!-- table tr 3 -================= -->
+                      <tr class="border-b border-[#EAECF0]" >
+                        <td
+                          class="px-4 py-4 text-sm font-medium  whitespace-nowrap"
+                        >
+                          <div class="inline-flex items-center gap-x-3">
+                            <input
+                              type="checkbox"
+                              class="text-blue-500 rounded dark:bg-gray-900 dark:ring-offset-gray-900 border-[#D0D5DD]"
+                            />
+
+                            <span class="text-[#101828] font-medium text-sm" >#010203</span>
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        Mobile App feature
+                        </td>
+                        <td
+                          class="px-4 py-4  whitespace-nowrap"
+                        >
+                          <div
+                            class="inline-flex border border-[#B2DDFF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#EFF8FF] text-[#175CD3]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Customer data</h2>
+                          </div>
+                          <div
+                            class="inline-flex border border-[#FCCEEE] items-center px-3 py-1 rounded-full gap-x-2  bg-[#FDF2FA] text-[#C11574]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Financials</h2>
+                          </div>
+                       
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        22 Jun 2024
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"
+                        >
+                        <div
+                            class="inline-flex border border-[#ABEFC6] items-center px-3 py-0.5 rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                          >
+                           
+                        <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                            <h2 class="text-xs font-medium">High</h2>
+                          </div>
+                        </td>
+                        <td class="px-4 flex gap-2 items-center py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                              <div class="w-48 h-1.5 bg-[#EAECF0] overflow-hidden rounded-full">
+                                  <div class="bg-[#FFBB31] rounded-r-full w-[72%] h-1.5"></div>
+                              </div>
+                          </div>
+                          <button
+                              class="text-sm font-medium text-[#344054]"
+                            >
+                           Pending
+                            </button>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                          <button>
+                              <img src="../../assets/adminDashboard/message-chat-square.png" alt="">
+                          </button>
+                          <button>
+                              <img src="../../assets/adminDashboard/edit-01.png" alt="">
+                          </button>
+                          </div>
+                        </td>
+                        
+                      </tr>
+                      <!-- table tr 3 end -================= -->
+
+                             <!-- table tr 4 -================= -->
+                             <tr class="border-b border-[#EAECF0]" >
+                                <td
+                                  class="px-4 py-4 text-sm font-medium  whitespace-nowrap"
+                                >
+                                  <div class="inline-flex items-center gap-x-3">
+                                    <input
+                                      type="checkbox"
+                                      class="text-blue-500 rounded dark:bg-gray-900 dark:ring-offset-gray-900 border-[#D0D5DD]"
+                                    />
+        
+                                    <span class="text-[#101828] font-medium text-sm" >#010203</span>
+                                  </div>
+                                </td>
+                                <td
+                                  class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                                >
+                                Mobile App feature
+                                </td>
+                                <td
+                                  class="px-4 py-4  whitespace-nowrap"
+                                >
+                                
+                                  <div
+                                    class="inline-flex border border-[#D5D9EB] items-center px-3 py-1 rounded-full gap-x-2  bg-[#F8F9FC] text-[#363F72]"
+                                  >
+                                   
+        
+                                    <h2 class="text-xs font-medium">Database access</h2>
+                                  </div>
+                                  <div
+                                  class="inline-flex border border-[#B2DDFF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#EFF8FF] text-[#175CD3]"
+                                >
+                                 
+      
+                                  <h2 class="text-xs font-medium">Admin</h2>
+                                </div>
+                               
+                                </td>
+                                <td
+                                  class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                                >
+                                22 Jun 2024
+                                  </div>
+                                </td>
+                                <td
+                                  class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"
+                                >
+                                <div
+                                    class="inline-flex border border-[#ABEFC6] items-center px-3 py-0.5 rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                                  >
+                                   
+                                <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                                    <h2 class="text-xs font-medium">High</h2>
+                                  </div>
+                                </td>
+                                <td class="px-4 flex gap-2 items-center py-4 text-sm whitespace-nowrap">
+                                  <div class="flex items-center gap-x-6">
+                                      <div class="w-48 h-1.5 bg-[#EAECF0] overflow-hidden rounded-full">
+                                          <div class="bg-[#2196F3] rounded-r-full w-2/3 h-1.5"></div>
+                                      </div>
+                                  </div>
+                                  <button
+                                      class="text-sm font-medium text-[#344054]"
+                                    >
+                                    In Progress
+                                    </button>
+                                </td>
+                                <td class="px-4 py-4 text-sm whitespace-nowrap">
+                                  <div class="flex items-center gap-x-6">
+                                  <button>
+                                      <img src="../../assets/adminDashboard/message-chat-square.png" alt="">
+                                  </button>
+                                  <button>
+                                      <img src="../../assets/adminDashboard/edit-01.png" alt="">
+                                  </button>
+                                  </div>
+                                </td>
+                                
+                              </tr>
+                              <!-- table tr 4 end -================= -->
+
+                                      <!-- table tr 5 -================= -->
+                      <tr class="border-b border-[#EAECF0]" >
+                        <td
+                          class="px-4 py-4 text-sm font-medium  whitespace-nowrap"
+                        >
+                          <div class="inline-flex items-center gap-x-3">
+                            <input
+                              type="checkbox"
+                              class="text-blue-500 rounded dark:bg-gray-900 dark:ring-offset-gray-900 border-[#D0D5DD]"
+                            />
+
+                            <span class="text-[#101828] font-medium text-sm" >#010203</span>
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        Mobile App feature
+                        </td>
+                        <td
+                          class="px-4 py-4  whitespace-nowrap"
+                        >
+                        <div
+                        class="inline-flex border border-[#B2DDFF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#EFF8FF] text-[#B93815]"
+                      >
+                       
+
+                        <h2 class="text-xs font-medium">Salesforce</h2>
+                      </div>
+                          <div
+                            class="inline-flex border border-[#F9DBAF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#FEF6EE] text-[#175CD3]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Admin</h2>
+                          </div>
+                         
+                          <div
+                          class="inline-flex border border-[#EAECF0] items-center px-3 py-1 rounded-full gap-x-2   text-[#344054]"
+                        >
+                         
+
+                          <h2 class="text-xs font-medium">+4</h2>
+                        </div>
+                       
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        22 Jun 2024
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"
+                        >
+                        <div
+                            class="inline-flex border border-[#FECDCA] items-center px-3 py-0.5 rounded-full gap-x-1  bg-[#FEF3F2] text-[#F04438]"
+                          >
+                           
+                        <span><i class="fa-solid text-xs fa-arrow-down"></i></span>
+                            <h2 class="text-xs font-medium">Low</h2>
+                          </div>
+                        </td>
+                        <td class="px-4 flex gap-2 items-center py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                              <div class="w-48 h-1.5 bg-[#EAECF0] overflow-hidden rounded-full">
+                                  <div class="bg-[#2196F3] rounded-r-full w-2/3 h-1.5"></div>
+                              </div>
+                          </div>
+                          <button
+                              class="text-sm font-medium text-[#344054]"
+                            >
+                            In Progress
+                            </button>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                          <button>
+                              <img src="../../assets/adminDashboard/message-chat-square.png" alt="">
+                          </button>
+                          <button>
+                              <img src="../../assets/adminDashboard/edit-01.png" alt="">
+                          </button>
+                          </div>
+                        </td>
+                        
+                      </tr>
+                      <!-- table tr 5 end -================= -->
+                           <!-- table tr 6 -================= -->
+                      <tr class="border-b border-[#EAECF0]" >
+                        <td
+                          class="px-4 py-4 text-sm font-medium  whitespace-nowrap"
+                        >
+                          <div class="inline-flex items-center gap-x-3">
+                            <input
+                              type="checkbox"
+                              class="text-blue-500 rounded dark:bg-gray-900 dark:ring-offset-gray-900 border-[#D0D5DD]"
+                            />
+
+                            <span class="text-[#101828] font-medium text-sm" >#010203</span>
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        Mobile App feature
+                        </td>
+                        <td
+                          class="px-4 py-4  whitespace-nowrap"
+                        >
+                          <div
+                            class="inline-flex border border-[#C7D7FE] items-center px-3 py-1 rounded-full gap-x-2  bg-[#F9F5FF] text-[#6941C6]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Business data</h2>
+                          </div>
+                          <div
+                            class="inline-flex border border-[#B2DDFF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#EFF8FF] text-[#175CD3]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Admin</h2>
+                          </div>
+                          <div
+                          class="inline-flex border border-[#EAECF0] items-center px-3 py-1 rounded-full gap-x-2   text-[#344054]"
+                        >
+                         
+
+                          <h2 class="text-xs font-medium">+4</h2>
+                        </div>
+                       
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        22 Jun 2024
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"
+                        >
+                        <div
+                            class="inline-flex border border-[#FECDCA] items-center px-3 py-0.5 rounded-full gap-x-1  bg-[#FEF3F2] text-[#F04438]"
+                          >
+                           
+                        <span><i class="fa-solid text-xs fa-arrow-down"></i></span>
+                            <h2 class="text-xs font-medium">Low</h2>
+                          </div>
+                        </td>
+                        <td class="px-4 flex gap-2 items-center py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                              <div class="w-48 h-1.5 bg-[#EAECF0] overflow-hidden rounded-full">
+                                  <div class="bg-[#2196F3] rounded-r-full w-2/3 h-1.5"></div>
+                              </div>
+                          </div>
+                          <button
+                              class="text-sm font-medium text-[#344054]"
+                            >
+                            In Progress
+                            </button>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                          <button>
+                              <img src="../../assets/adminDashboard/message-chat-square.png" alt="">
+                          </button>
+                          <button>
+                              <img src="../../assets/adminDashboard/edit-01.png" alt="">
+                          </button>
+                          </div>
+                        </td>
+                        
+                      </tr>
+                      <!-- table tr 6 end -================= -->
+                         <!-- table tr 3 -================= -->
+                      <tr class="border-b border-[#EAECF0]" >
+                        <td
+                          class="px-4 py-4 text-sm font-medium  whitespace-nowrap"
+                        >
+                          <div class="inline-flex items-center gap-x-3">
+                            <input
+                              type="checkbox"
+                              class="text-blue-500 rounded dark:bg-gray-900 dark:ring-offset-gray-900 border-[#D0D5DD]"
+                            />
+
+                            <span class="text-[#101828] font-medium text-sm" >#010203</span>
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        Mobile App feature
+                        </td>
+                        <td
+                          class="px-4 py-4  whitespace-nowrap"
+                        >
+                          <div
+                            class="inline-flex border border-[#B2DDFF] items-center px-3 py-1 rounded-full gap-x-2  bg-[#EFF8FF] text-[#175CD3]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Customer data</h2>
+                          </div>
+                          <div
+                            class="inline-flex border border-[#FCCEEE] items-center px-3 py-1 rounded-full gap-x-2  bg-[#FDF2FA] text-[#C11574]"
+                          >
+                           
+
+                            <h2 class="text-xs font-medium">Financials</h2>
+                          </div>
+                       
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm font-normal text-[#475467] whitespace-nowrap"
+                        >
+                        22 Jun 2024
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap"
+                        >
+                        <div
+                            class="inline-flex border border-[#ABEFC6] items-center px-3 py-0.5 rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                          >
+                           
+                        <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                            <h2 class="text-xs font-medium">High</h2>
+                          </div>
+                        </td>
+                        <td class="px-4 flex gap-2 items-center py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                              <div class="w-48 h-1.5 bg-[#EAECF0] overflow-hidden rounded-full">
+                                  <div class="bg-[#2196F3] rounded-r-full w-2/3 h-1.5"></div>
+                              </div>
+                          </div>
+                          <button
+                              class="text-sm font-medium text-[#344054]"
+                            >
+                           In Progress
+                            </button>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                          <div class="flex items-center gap-x-6">
+                          <button>
+                              <img src="../../assets/adminDashboard/message-chat-square.png" alt="">
+                          </button>
+                          <button>
+                              <img src="../../assets/adminDashboard/edit-01.png" alt="">
+                          </button>
+                          </div>
+                        </td>
+                        
+                      </tr>
+                      <!-- table tr 8 end -================= -->
 
 
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+           <!-- lg screen table end =============================== -->
+
+          <!-- Responsive table start ============================ -->
+            <section class="mt-4 md:hidden" >
+                <!-- table row 1 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#ABEFC6] items-center px-3  py-[1px] rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                        <h2 class="text-xs font-medium">High</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 1 end =========== -->
+
+                <!-- table row 2 start ====================== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#FECDCA] items-center px-3 py-[1px] rounded-full gap-x-1  bg-[#FEF3F2] text-[#B42318]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-down"></i></span>
+                        <h2 class="text-xs font-medium">Low</h2>
+                      </div>
+                        <h6 class="text-xs text-[#F9C033] font-semibold " >Pending</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 2 end ====================== -->
+                  <!-- table row 3 start ====================== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#FECDCA] items-center px-3 py-[1px] rounded-full gap-x-1  bg-[#FEF3F2] text-[#B42318]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-down"></i></span>
+                        <h2 class="text-xs font-medium">Low</h2>
+                      </div>
+                        <h6 class="text-xs text-[#78EB54] font-semibold " >Resolve</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 3 end ====================== -->
+                  <!-- table row 4 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#ABEFC6] items-center px-3  py-[1px] rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                        <h2 class="text-xs font-medium">High</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 4 end =========== -->
+                  <!-- table row 5 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#ABEFC6] items-center px-3  py-[1px] rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                        <h2 class="text-xs font-medium">High</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 5 end =========== -->
+                  <!-- table row 6 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#FECDCA] items-center px-3 py-[1px] rounded-full gap-x-1  bg-[#FEF3F2] text-[#B42318]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-down"></i></span>
+                        <h2 class="text-xs font-medium">Low</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 6 end =========== -->
+                  <!-- table row 7 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#ABEFC6] items-center px-3  py-[1px] rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                        <h2 class="text-xs font-medium">High</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 7 end =========== -->
+                 <!-- table row 8 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#FECDCA] items-center px-3 py-[1px] rounded-full gap-x-1  bg-[#FEF3F2] text-[#B42318]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-down"></i></span>
+                        <h2 class="text-xs font-medium">Low</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 8 end =========== -->
+                   <!-- table row 9 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#ABEFC6] items-center px-3  py-[1px] rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                        <h2 class="text-xs font-medium">High</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 9 end =========== -->
+                 <!-- table row 10 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#FECDCA] items-center px-3 py-[1px] rounded-full gap-x-1  bg-[#FEF3F2] text-[#B42318]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-down"></i></span>
+                        <h2 class="text-xs font-medium">Low</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 10 end =========== -->
+                    <!-- table row 11 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#ABEFC6] items-center px-3  py-[1px] rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                        <h2 class="text-xs font-medium">High</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 11 end =========== -->
+                 <!-- table row 12 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#FECDCA] items-center px-3 py-[1px] rounded-full gap-x-1  bg-[#FEF3F2] text-[#B42318]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-down"></i></span>
+                        <h2 class="text-xs font-medium">Low</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 12 end =========== -->
+                  <!-- table row 13 start =========== -->
+                <div class="px-4 border-y border-[#F5F6FA] py-3 flex justify-between items-center " >
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>Mobile App</h1>
+                        <h6 >ID : #010203</h6>
+                    </div>
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <h1>22 Jun 2024</h1>
+                        <h6 class="text-xs text-[#FF9500] font-semibold " >Customer data</h6>
+                    </div>
+                        
+                   
+                    <div class="text-[#4B4B4B] font-semibold text-sm  space-y-1"  >
+                        <div
+                        class="inline-flex border border-[#ABEFC6] items-center px-3  py-[1px] rounded-full gap-x-1  bg-[#ECFDF3] text-[#067647]"
+                      >
+                       
+                    <span><i class="fa-solid text-xs fa-arrow-up"></i></span>
+                        <h2 class="text-xs font-medium">High</h2>
+                      </div>
+                        <h6 class="text-xs text-[#2196F3] font-semibold " >In Progress</h6>
+                    </div>
+                   
+                </div>
+                <!-- table row 13 end =========== -->
+
+                
+            </section>
+          <!-- Responsive table end ============================ -->
+
+            <!-- pagination start ======================== -->
+             <section class="hidden  px-4 md:flex justify-between py-3" >
+                 <div>
+                    <h3 class="text-[#344054] font-medium text-sm" >Page 1 of 10</h3>
+                 </div>
+                 <!-- button start ============ -->
+                 <div class="flex items-center gap-2" >
+                  <button
+                  class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+                >
+                
+                  <span>Previous</span>
+                </button>
+                <button
+                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+              >
+              
+                <span>Next</span>
+              </button>
+
+                 </div>
+                 
+             </section>
+            <!-- pagination end ======================== -->
+
+            <!-- responsive pagination ====================== -->
+            <section class="md:hidden  px-4 flex items-center justify-between py-3" >
+              <button
+              class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+            >
+            
+              <span><i class="fa-solid fa-arrow-left"></i></span>
+            </button>
+              <div>
+                 <h3 class="text-[#344054] font-medium text-sm" >Page 1 of 10</h3>
+              </div>
+              <button
+              class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+            >
+            
+              <span><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+             
+              
+          </section>
+            <!-- responsive pagination end ====================== -->
+
+
+          </section>
+          <!-- Table elements end =========================== -->
+        </section>
+      </section>
+      <!-- table data and there header section end ==================== -->
+
+
+          <!-- Footer Section -->
+        <footer class="bg-white text-[#FFFFFFB2] relative">
+            <div class="bg-[#052e26] md:rounded-t-3xl">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 rounded">
+                    <!-- Upper and Lower Footer: Combined Grid Layout -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+                        <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+                        <div class="col-span-2 sm:col-span-1">
+                            <div class="flex-shrink-0 mb-4">
+                                <!-- Logo -->
+                                <a href="#" class="flex items-center">
+                                    <img
+                                        src="../../assets/images/logo/logo_footer.png"
+                                        alt="Logo"
+                                        class="h-8 w-auto"
+                                    />
+                                </a>
+                            </div>
+                            <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
+                                Fun, engaging and authentic Platform
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    ><img
+                                        src="../../assets/linkedin.png"
+                                        alt="LinkedIn"
+                                        class="h-5"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        src="../../assets/youtube.png"
+                                        alt="YouTube"
+                                        class="h-5"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        src="../../assets/twitter.png"
+                                        alt="Twitter"
+                                        class="h-5"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        src="../../assets/facebook.png"
+                                        alt="Facebook"
+                                        class="h-5"
+                                /></a>
+                            </div>
+                        </div>
+
+                        <!-- Product Links -->
+                        <div>
+                            <h4 class="font-bold mb-4 text-[#FFF]">Product</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >About us</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >FAQs</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Contact</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Pricing</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../../signin.html"
+                                        class="hover:text-green-400"
+                                        >Log in</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Resources Links -->
+                        <div>
+                            <h4 class="font-bold mb-4 text-[#FFF]">
+                                Resources
+                            </h4>
+                            <ul>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Learn</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Videos</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Help Center</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Webinar Glossary</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- More Links -->
+                        <div>
+                            <h4 class="font-bold mb-4 text-[#FFF]">More</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Our story</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >We’re hiring</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Resolver NG</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Resolver NG Satisfaction</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="block md:hidden">
+                            <h4 class="font-bold mb-4 text-[#FFF]">Support</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Trust Center</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Privacy Policy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Resolver NG</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Status</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Legal</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Do Not Sell My Info</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-green-400"
+                                        >Opt out</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-t text-[#FFF] border-gray-600 py-4">
+                        <div
+                            class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
+                        >
+                            <!-- Left Section: Links -->
+                            <div class="hidden md:block">
+                                <div
+                                    class="flex flex-wrap justify-center sm:justify-start space-x-6"
+                                >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Trust Center</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Privacy Policy</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Status</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Legal</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Do Not Sell My Info</a
+                                    >
+                                    <a href="#" class="hover:text-green-400"
+                                        >Opt out</a
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Right Section: Copyright -->
+                            <div class="text-right sm:text-center">
+                                <p>© All rights reserved by Resolver NG.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Star Icon (Absolute Positioned) -->
+                    <div
+                        class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4"
+                    >
+                        <img
+                            src="../../assets/images/footer_star.png"
+                            alt="Star Icon"
+                            class="h-32 w-32"
+                        />
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     <script>
         document.getElementById('navSelect').addEventListener('change', function() {
