@@ -171,38 +171,41 @@
     <!-- main section ------------ -->
     <main>
       <!-- header section ------------------------>
-      <section class="bg-[#F6FBFD] py-20  ">
+      <section class="bg-[#F6FBFD]  px-4 lg:px-0 container mx-auto py-16 lg:py-20">
         <!-- headTitle -------------------- -->
-        <h1 class="font-bold text-[#273F2B] text-center text-6xl">
+        <h1
+          class="font-semibold   lg:font-bold text-[#273F2B] text-center text-4xl lg:text-6xl"
+        >
           Food price in different
-          <span class="block leading-normal">marketplace</span>
+          <span class="block leading-tight lg:leading-normal">marketplace</span>
         </h1>
         <!-- SubTitle---------------- -->
         <p
-          class="font-normal text-xl text-[#4B4B4B] mx-auto max-w-2xl text-center"
+          class="font-normal mt-4 lg:mt-0 text-lg lg:text-xl text-[#4B4B4B] mx-auto max-w-xl  lg:px-0 lg:max-w-2xl text-center"
         >
           Discover and share your reviews on Resolver.ng today. Start reading
           and writing reviews on Resolver.ng now.
         </p>
 
-        <!-- Search field------------------ -->
+        <!-- Search field for xl------------------ -->
         <div
           style="box-shadow: 0px 10px 40px 0px rgba(32, 32, 35, 0.08)"
-          class="flex mt-6  rounded-[99px] gap-6 items-center justify-center bg-white py-2 pl-5 pr-3 w-fit mx-auto"
+          class="lg:flex mt-6 hidden rounded-[99px] gap-6 items-center justify-center bg-white py-2 pl-5 pr-3 w-fit mx-auto"
         >
           <!-- left site---------- -->
-          <div class="flex flex-1  gap-2 items-center ">
-            <span class="text-[#818B9C] max-h-5 "
-              ><i class="fa-solid fa-magnifying-glass"></i
-            ></span>
+          <div class="flex flex-1 gap-2 items-center">
+            <span class=""
+              >
+              <img src="../assets/foods/icons/Search.png" alt=""></span>
+            </span>
             <input
-              class= "min-w-80 text-[#818B9C] outline-none font-medium text-sm"
+              class="min-w-80 text-[#818B9C] outline-none font-medium text-sm"
               placeholder="Search for foods and restaurants"
               type="text"
             />
           </div>
 
-          <span>|</span>
+          <span class="">|</span>
 
           <div class="flex items-center gap-6">
             <div class="flex items-center gap-2">
@@ -221,6 +224,158 @@
             </button>
           </div>
         </div>
+
+        <!-- Search field for mobile------------------ -->
+        <div class=" space-y-4 lg:hidden mt-8 " >
+          <div 
+          style="box-shadow:  0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
+          class="flex bg-white py-3 px-4 gap-2 items-center rounded-[32px]">
+            <span class=""
+              >
+            <img src="../assets/foods/icons/Search.png" alt=""></span>
+            <input
+              class="text-[#818B9C] w-full outline-none font-medium text-sm"
+              placeholder="Search for foods and restaurants"
+              type="text"
+            />
+          </div>
+
+          <!-- search button------------- -->
+
+          <div class="" >
+            <button class="text-[#273F2B] w-full font-semibold text-base py-3 rounded-[32px] bg-[#78EB54]  " >Search</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Food item section-------------------- -->
+
+      <section class=" lg:mt-8 container mx-auto lg:px-20" >
+            <div
+            style="box-shadow: 0px 10px 40px 0px rgba(32, 32, 35, 0.08)"
+            class="bg-white pt-8 lg:pt-10 pb-16 px-4 lg:px-10 lg:rounded-[16px] " >
+
+            <!-- filter section----------------------- -->
+                <div class="flex lg:flex-row flex-col justify-between gap-8" >
+                    <!-- categories------------ -->
+                     <div class="border-b flex-1 pb-4 lg:pb-0 border-[#EAECF0]" >
+                        <ul class="flex cursor-default justify-between  lg:justify-normal lg:gap-4 text-[#818B9C] font-semibold lg:font-bold text-base " >
+                            <li class="relative   text-[#273F2B] group tab clicked hover:text-[#78EB54] " >View all
+                                <span class="inline-flex absolute -bottom-4 left-0 h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                            <li class=" group   relative hover:text-[#78EB54] tab" >Coffee
+
+                                <span class=" absolute  transition-all  hidden group-hover:block duration-300 -bottom-4 left-0  h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                            <li class="group   relative hover:text-[#78EB54] tab " >Fast-foods
+
+                                <span class=" absolute  transition-all hidden group-hover:block duration-300 -bottom-4 left-0  h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                            <li class="hidden lg:block  group   relative hover:text-[#78EB54] tab" >Chiness
+
+                                <span class=" absolute  transition-all hidden group-hover:block duration-300 -bottom-4 left-0  h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                            <li class=" group   relative hover:text-[#78EB54] tab">Burgers
+
+                                <span class=" absolute  transition-all hidden group-hover:block duration-300 -bottom-4 left-0  h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                        </ul>
+                     </div>
+                     <!-- select filter--------------- -->
+
+                     <div class="min-w-64 shadow-sm px-3 gap-1 flex py-2 border border-[#D0D5DD] rounded-lg">
+                        <select class="outline-none font-medium text-[16px] text-[#273F2B] w-full" name="" >
+                          <option >Most recent</option>
+                          <option >Oldest</option>
+                          
+        
+                        </select>
+                      </div>
+                </div>
+
+                <!-- Food item cart section--------------- -->
+
+                <section class="grid  gap-6 lg:grid-cols-3 my-10 lg:my-12 " id="food-container" >
+                        <!-- There will be put cart item using js dom---------- -->
+
+                </section>
+
+              <!-- Pagination--------------------- -->
+               <section class=" hidden lg:flex justify-between items-center pt-5 border-t border-[#EAECF0]" >
+
+                <button class="text-[#475467] font-semibold text-sm flex items-center gap-2 " >
+                    <span>
+                        <i class="fa-solid fa-arrow-left" ></i>
+                    </span>
+                    <span>
+                        Previous
+                    </span>
+                </button>
+                <div class="flex">
+                   
+                
+                    <button class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300  ">
+                        1
+                    </button>
+                
+                    <button class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        2
+                    </button>
+                    <button  class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        3
+                    </button>
+                    
+                
+                    <button  class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        ...
+                    </button>
+                    <button class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        8
+                    </button>
+                
+                    <button  class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        9
+                    </button>
+                
+                    <button class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        10
+                    </button>
+                
+                 
+                </div>
+                <button class="text-[#475467] font-semibold text-sm flex items-center gap-2 " >
+                   
+                    <span>
+                       Next
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right" ></i>
+                    </span>
+                </button>
+          
+               </section>
+                    <!-- responsive pagination ====================== -->
+            <section class="md:hidden  border-t  flex items-center justify-between pt-4" >
+                <button
+                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+              >
+              
+                <span><i class="fa-solid fa-arrow-left"></i></span>
+              </button>
+                <div>
+                   <h3 class="text-[#344054] font-medium text-sm" >Page 1 of 10</h3>
+                </div>
+                <button
+                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+              >
+              
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </button>
+               
+                
+            </section>
+              <!-- responsive pagination end ====================== -->
+            </div>
       </section>
     </main>
 
@@ -387,5 +542,63 @@
         </div>
       </div>
     </footer>
+     <!-- Pop up button -->
+     <div class="fixed right-5 bottom-11 sm:left-5 sm:bottom-11">
+        <!-- Floating Action Button -->
+        <button
+          id="fab-btn"
+          class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg"
+        >
+          <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+        </button>
+  
+        <!-- Pop-up Menu (Initially hidden) -->
+        <div id="popup-menu" class="hidden">
+          <div
+            class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16"
+          >
+            <button
+              id="close-popup"
+              class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64"
+            >
+              <img
+                src="../assets/images/Icon/cancel-circle.png"
+                alt="cancel-circle"
+                class="h-8 w-auto"
+              />
+            </button>
+  
+            <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
+              <img
+                src="../assets/images/Icon/pop-up-star.png"
+                alt="pop-up-star"
+                class="h-4 w-auto"
+              />
+              <span class="text-gray-800">Write Review</span>
+            </button>
+  
+            <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
+              <img
+                src="../assets/images/Icon/pop-up-idea.png"
+                alt="pop-up-idea"
+                class="h-4 w-auto"
+              />
+              <span class="text-gray-800">Resolve an Issue</span>
+            </button>
+  
+            <button class="flex items-center space-x-2 px-6 py-2 w-60">
+              <img
+                src="../assets/images/Icon/pop-up-infinity.png"
+                alt="pop-up-infinity"
+                class="h-4 w-auto"
+              />
+              <span class="text-gray-800">Price Comparison</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    <script src="../js/priceDiscovery.js" ></script>
+   
   </body>
 </html>
