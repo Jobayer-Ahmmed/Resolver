@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Discovery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome cdn link ========== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- font awesome cdn link end ========== -->
+  </head>
+  <body class="bg-[#F4F4F4]">
+    <header class="bg-white border-b border-gray-200 relative z-20 w-full">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-20 w-full">
+        <div class="flex justify-between h-16 items-center w-full">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="flex items-center">
+              <img
+                src="../assets/logoHeaderAndFooter/logoHeader.png"
+                alt="Logo"
+                class="h-8 w-auto"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <nav class="hidden lg:flex space-x-4">
+            <a href="#" class="text-gray-900 hover:text-green-500 transition"
+              >Home</a
+            >
+            <a href="#" class="text-gray-900 hover:text-green-500 transition"
+              >How It Works</a
+            >
+            <a href="#" class="text-gray-900 hover:text-green-500 transition"
+              >Read Reviews</a
+            >
+            <a href="#" class="text-gray-900 hover:text-green-500 transition"
+              >Write Review</a
+            >
+            <a href="#" class="text-gray-900 hover:text-green-500 transition"
+              >About Us</a
+            >
+            <a href="#" class="text-gray-900 hover:text-green-500 transition"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- Right-side buttons -->
+          <div class="hidden md:flex items-center space-x-4">
+            <!-- Upgrade Now Button -->
+            <a
+              href="#"
+              class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center"
+            >
+              <img
+                src="../assets/images/Icon/thunder.png"
+                alt="thunder-icon"
+                class="h-5 w-5 mr-2"
+              />
+              Upgrade now
+            </a>
+
+            <!-- Icons: Bell, Gear, Profile -->
+            <div class="flex space-x-4">
+              <button class="text-gray-900 hover:text-green-500 transition">
+                <img
+                  src="../assets/images/Icon/settings-01.png"
+                  alt="settings-icon"
+                  class="h-5 w-5 mr-2"
+                />
+              </button>
+
+              <button class="text-gray-900 hover:text-green-500 transition">
+                <img
+                  src="../assets/images/Icon/bell.png"
+                  alt="bell-icon"
+                  class="h-5 w-5 mr-2"
+                />
+              </button>
+
+              <div class="flex items-center">
+                <img
+                  src="../assets/images/user.png"
+                  alt="settings-profile-image"
+                  class="h-8 w-8 rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="lg:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-900 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden"
+      >
+        <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#"
+            class="block text-gray-900 hover:text-green-500 transition"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block text-gray-900 hover:text-green-500 transition"
+            >How It Works</a
+          >
+          <a
+            href="#"
+            class="block text-gray-900 hover:text-green-500 transition"
+            >Read Reviews</a
+          >
+          <a
+            href="#"
+            class="block text-gray-900 hover:text-green-500 transition"
+            >Write Review</a
+          >
+          <a
+            href="#"
+            class="block text-gray-900 hover:text-green-500 transition"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="block text-gray-900 hover:text-green-500 transition"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="block text-gray-900 hover:text-green-500 transition"
+            >Sign In</a
+          >
+          <a
+            href="#"
+            class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition"
+            >Price Discovery</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- main section ------------ -->
+    <main>
+      <!-- header section ------------------------>
+      <section class="bg-[#F6FBFD]  px-4 lg:px-0 container mx-auto py-16 lg:py-20">
+        <!-- headTitle -------------------- -->
+        <h1
+          class="font-semibold   lg:font-bold text-[#273F2B] text-center text-4xl lg:text-6xl"
+        >
+          Food price in different
+          <span class="block leading-tight lg:leading-normal">marketplace</span>
+        </h1>
+        <!-- SubTitle---------------- -->
+        <p
+          class="font-normal mt-4 lg:mt-0 text-lg lg:text-xl text-[#4B4B4B] mx-auto max-w-xl  lg:px-0 lg:max-w-2xl text-center"
+        >
+          Discover and share your reviews on Resolver.ng today. Start reading
+          and writing reviews on Resolver.ng now.
+        </p>
+
+        <!-- Search field for xl------------------ -->
+        <div
+          style="box-shadow: 0px 10px 40px 0px rgba(32, 32, 35, 0.08)"
+          class="lg:flex mt-6 hidden rounded-[99px] gap-6 items-center justify-center bg-white py-2 pl-5 pr-3 w-fit mx-auto"
+        >
+          <!-- left site---------- -->
+          <div class="flex flex-1 gap-2 items-center">
+            <span class=""
+              >
+              <img src="../assets/foods/icons/Search.png" alt=""></span>
+            </span>
+            <input
+              class="min-w-80 text-[#818B9C] outline-none font-medium text-sm"
+              placeholder="Search for foods and restaurants"
+              type="text"
+            />
+          </div>
+
+          <span class="">|</span>
+
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2">
+              <span>
+                <img src="../assets/foods/icons/location-04.png" alt="" />
+              </span>
+              <span class="text-[#818B9C] font-normal text-sm">
+                San Francisco,CA
+              </span>
+            </div>
+
+            <button
+              class="text-[#273F2B] px-4 py-2 bg-[#78EB54] font-semibold text-xl rounded-[67px]"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <!-- Search field for mobile------------------ -->
+        <div class=" space-y-4 lg:hidden mt-8 " >
+          <div 
+          style="box-shadow:  0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
+          class="flex bg-white py-3 px-4 gap-2 items-center rounded-[32px]">
+            <span class=""
+              >
+            <img src="../assets/foods/icons/Search.png" alt=""></span>
+            <input
+              class="text-[#818B9C] w-full outline-none font-medium text-sm"
+              placeholder="Search for foods and restaurants"
+              type="text"
+            />
+          </div>
+
+          <!-- search button------------- -->
+
+          <div class="" >
+            <button class="text-[#273F2B] w-full font-semibold text-base py-3 rounded-[32px] bg-[#78EB54]  " >Search</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Food item section-------------------- -->
+
+      <section class=" lg:mt-8 container mx-auto lg:px-20" >
+            <div
+            style="box-shadow: 0px 10px 40px 0px rgba(32, 32, 35, 0.08)"
+            class="bg-white pt-8 lg:pt-10 pb-16 px-4 lg:px-10 lg:rounded-[16px] " >
+
+            <!-- filter section----------------------- -->
+                <div class="flex lg:flex-row flex-col justify-between gap-8" >
+                    <!-- categories------------ -->
+                     <div class="border-b flex-1 pb-4 lg:pb-0 border-[#EAECF0]" >
+                        <ul class="flex cursor-default justify-between  lg:justify-normal lg:gap-4 text-[#818B9C] font-semibold lg:font-bold text-base " >
+                            <li class="relative   text-[#273F2B] group tab clicked hover:text-[#78EB54] " >View all
+                                <span class="inline-flex absolute -bottom-4 left-0 h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                            <li class=" group   relative hover:text-[#78EB54] tab" >Coffee
+
+                                <span class=" absolute  transition-all  hidden group-hover:block duration-300 -bottom-4 left-0  h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                            <li class="group   relative hover:text-[#78EB54] tab " >Fast-foods
+
+                                <span class=" absolute  transition-all hidden group-hover:block duration-300 -bottom-4 left-0  h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                            <li class="hidden lg:block  group   relative hover:text-[#78EB54] tab" >Chiness
+
+                                <span class=" absolute  transition-all hidden group-hover:block duration-300 -bottom-4 left-0  h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                            <li class=" group   relative hover:text-[#78EB54] tab">Burgers
+
+                                <span class=" absolute  transition-all hidden group-hover:block duration-300 -bottom-4 left-0  h-[2px] w-full bg-[#78EB54]" ></span>
+                            </li>
+                        </ul>
+                     </div>
+                     <!-- select filter--------------- -->
+
+                     <div class="min-w-64 shadow-sm px-3 gap-1 flex py-2 border border-[#D0D5DD] rounded-lg">
+                        <select class="outline-none font-medium text-[16px] text-[#273F2B] w-full" name="" >
+                          <option >Most recent</option>
+                          <option >Oldest</option>
+                          
+        
+                        </select>
+                      </div>
+                </div>
+
+                <!-- Food item cart section--------------- -->
+
+                <section class="grid  gap-6 lg:grid-cols-3 my-10 lg:my-12 " id="food-container" >
+                        <!-- There will be put cart item using js dom---------- -->
+
+                </section>
+
+              <!-- Pagination--------------------- -->
+               <section class=" hidden lg:flex justify-between items-center pt-5 border-t border-[#EAECF0]" >
+
+                <button class="text-[#475467] font-semibold text-sm flex items-center gap-2 " >
+                    <span>
+                        <i class="fa-solid fa-arrow-left" ></i>
+                    </span>
+                    <span>
+                        Previous
+                    </span>
+                </button>
+                <div class="flex">
+                   
+                
+                    <button class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300  ">
+                        1
+                    </button>
+                
+                    <button class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        2
+                    </button>
+                    <button  class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        3
+                    </button>
+                    
+                
+                    <button  class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        ...
+                    </button>
+                    <button class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        8
+                    </button>
+                
+                    <button  class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        9
+                    </button>
+                
+                    <button class="hidden px-4 py-2 mx-1 text-[#182230] transition-colors transform bg-[#F9FAFB] rounded-full sm:inline   hover:bg-gray-200 duration-300 ">
+                        10
+                    </button>
+                
+                 
+                </div>
+                <button class="text-[#475467] font-semibold text-sm flex items-center gap-2 " >
+                   
+                    <span>
+                       Next
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right" ></i>
+                    </span>
+                </button>
+          
+               </section>
+                    <!-- responsive pagination ====================== -->
+            <section class="md:hidden  border-t  flex items-center justify-between pt-4" >
+                <button
+                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+              >
+              
+                <span><i class="fa-solid fa-arrow-left"></i></span>
+              </button>
+                <div>
+                   <h3 class="text-[#344054] font-medium text-sm" >Page 1 of 10</h3>
+                </div>
+                <button
+                class="shadow-md text-[#344054] font-semibold text-sm border border-[#D0D5DD] rounded-lg px-4 py-2 flex items-center gap-2"
+              >
+              
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </button>
+               
+                
+            </section>
+              <!-- responsive pagination end ====================== -->
+            </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-white text-[#FFFFFFB2] relative md:mt-24">
+      <div class="bg-[#052e26] md:rounded-t-3xl">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 rounded">
+          <!-- Upper and Lower Footer: Combined Grid Layout -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+            <!-- Logo and Social Links (spanning 2 columns on mobile, 1 on larger screens) -->
+            <div class="col-span-2 sm:col-span-1">
+              <div class="flex-shrink-0 mb-4">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                  <img
+                    src="../assets/logoHeaderAndFooter/logoFooter .png"
+                    alt="Logo"
+                    class="h-8 w-auto"
+                  />
+                </a>
+              </div>
+              <p class="mb-4 w-[14rem] text-[#FFF] sm:w-full">
+                Fun, engaging and authentic Platform
+              </p>
+              <div class="flex space-x-4">
+                <a href="#"
+                  ><img
+                    src="../assets/images/Icon/linkedin.png"
+                    alt="LinkedIn"
+                    class="h-5"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="../assets/images/Icon/youtube.png"
+                    alt="YouTube"
+                    class="h-5"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="../assets/images/Icon/twitter.png"
+                    alt="Twitter"
+                    class="h-5"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="../assets/images/Icon/facebook.png"
+                    alt="Facebook"
+                    class="h-5"
+                /></a>
+              </div>
+            </div>
+
+            <!-- Product Links -->
+            <div>
+              <h4 class="font-bold mb-4 text-[#FFF]">Product</h4>
+              <ul>
+                <li><a href="#" class="hover:text-green-400">About us</a></li>
+                <li><a href="#" class="hover:text-green-400">FAQs</a></li>
+                <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+                <li>
+                  <a href="./signin.html" class="hover:text-green-400"
+                    >Log in</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Resources Links -->
+            <div>
+              <h4 class="font-bold mb-4 text-[#FFF]">Resources</h4>
+              <ul>
+                <li><a href="#" class="hover:text-green-400">Learn</a></li>
+                <li><a href="#" class="hover:text-green-400">Videos</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Help Center</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Webinar Glossary</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- More Links -->
+            <div>
+              <h4 class="font-bold mb-4 text-[#FFF]">More</h4>
+              <ul>
+                <li><a href="#" class="hover:text-green-400">Our story</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400">We’re hiring</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Resolver NG</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400"
+                    >Resolver NG Satisfaction</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="block md:hidden">
+              <h4 class="font-bold mb-4 text-[#FFF]">Support</h4>
+              <ul>
+                <li>
+                  <a href="#" class="hover:text-green-400">Trust Center</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-green-400">Resolver NG</a>
+                </li>
+                <li><a href="#" class="hover:text-green-400">Status</a></li>
+                <li><a href="#" class="hover:text-green-400">Legal</a></li>
+                <li>
+                  <a href="#" class="hover:text-green-400"
+                    >Do Not Sell My Info</a
+                  >
+                </li>
+                <li><a href="#" class="hover:text-green-400">Opt out</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="border-t text-[#FFF] border-gray-600 py-4">
+            <div
+              class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm space-y-4 sm:space-y-0"
+            >
+              <!-- Left Section: Links -->
+              <div class="hidden md:block">
+                <div
+                  class="flex flex-wrap justify-center sm:justify-start space-x-6"
+                >
+                  <a href="#" class="hover:text-green-400">Trust Center</a>
+                  <a href="#" class="hover:text-green-400">Privacy Policy</a>
+                  <a href="#" class="hover:text-green-400">Status</a>
+                  <a href="#" class="hover:text-green-400">Legal</a>
+                  <a href="#" class="hover:text-green-400"
+                    >Do Not Sell My Info</a
+                  >
+                  <a href="#" class="hover:text-green-400">Opt out</a>
+                </div>
+              </div>
+
+              <!-- Right Section: Copyright -->
+              <div class="text-center sm:text-right">
+                <p>© All rights reserved by Resolver NG.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Star Icon (Absolute Positioned) -->
+          <div
+            class="absolute top-9 md:top-11 right-9 transform translate-x-1/4 -translate-y-1/4"
+          >
+            <img
+              src="../assets/images/3d-star.png"
+              alt="Star Icon"
+              class="h-32 w-32"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+     <!-- Pop up button -->
+     <div class="fixed right-5 bottom-11 sm:left-5 sm:bottom-11">
+        <!-- Floating Action Button -->
+        <button
+          id="fab-btn"
+          class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg"
+        >
+          <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+        </button>
+  
+        <!-- Pop-up Menu (Initially hidden) -->
+        <div id="popup-menu" class="hidden">
+          <div
+            class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16"
+          >
+            <button
+              id="close-popup"
+              class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64"
+            >
+              <img
+                src="../assets/images/Icon/cancel-circle.png"
+                alt="cancel-circle"
+                class="h-8 w-auto"
+              />
+            </button>
+  
+            <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
+              <img
+                src="../assets/images/Icon/pop-up-star.png"
+                alt="pop-up-star"
+                class="h-4 w-auto"
+              />
+              <span class="text-gray-800">Write Review</span>
+            </button>
+  
+            <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
+              <img
+                src="../assets/images/Icon/pop-up-idea.png"
+                alt="pop-up-idea"
+                class="h-4 w-auto"
+              />
+              <span class="text-gray-800">Resolve an Issue</span>
+            </button>
+  
+            <button class="flex items-center space-x-2 px-6 py-2 w-60">
+              <img
+                src="../assets/images/Icon/pop-up-infinity.png"
+                alt="pop-up-infinity"
+                class="h-4 w-auto"
+              />
+              <span class="text-gray-800">Price Comparison</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    <script src="../js/priceDiscovery.js" ></script>
+   
+  </body>
+</html>
