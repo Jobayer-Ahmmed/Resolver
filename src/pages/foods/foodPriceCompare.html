@@ -102,39 +102,10 @@
     </div>
     <section class="bg-white xl:bg-[#e6e3e3] pb-10">
         <div class="xl:relative container mx-auto xl:px-20 px-4 xl:py-10 ">
-            <!-- green icon btn -->
-            <div class="xl:block hidden dropdown dropdown-top absolute top-28 left-0">
-                <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class=""
-                    id="fab-btn-left" onclick="toggleDropdown('dropdown-menu-left')" />
-                <ul id="dropdown-menu-left"
-                    class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 left-10 shadow relative">
-                    <li class="flex justify-end">
-                        <button class="absolute top-0 -left-10 btn btn-xs btn-circle border-2 border-black"
-                            onclick="closeDropdown('dropdown-menu-left')">&times;</button>
-                    </li>
-                    <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
-                    <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
-                    <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
-                </ul>
-            </div>
 
-            <!-- green icon btn responsive -->
-            <div class="xl:hidden block dropdown dropdown-top absolute top-[710px] right-5">
-                <img src="../assets/images/green-plus.png" alt="Logo" tabindex="0" role="button" class=""
-                    id="fab-btn-right" onclick="toggleDropdown('dropdown-menu-right')" />
-                <ul id="dropdown-menu-right"
-                    class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 right-6 shadow relative">
-                    <li class="flex justify-end"></li>
-                    <button class="absolute top-0 -right-10 btn btn-xs btn-circle border-2 border-black"
-                        onclick="closeDropdown('dropdown-menu-right')">&times;</button>
-                    <li><a><i class="fa-regular fa-star ml-2"></i>Write Review</a></li>
-                    <li><a><i class="fa-regular fa-star ml-2"></i>Resolve an Issue</a></li>
-                    <li><a><i class="fa-regular fa-star ml-2"></i>Price Comparison</a></li>
-                </ul>
-            </div>
 
             <!--  -->
-            <div class="mt-10 bg-white  xl:px-12 px-4 xl:py-10 xl:py-16 rounded-2xl ">
+            <div class="mt-10 bg-white  xl:px-12 xl:py-10 xl:py-16 rounded-2xl ">
                 <!-- banner  -->
                 <div class="xl:relative">
                     <!-- banner image -->
@@ -235,9 +206,9 @@
                                 </p>
                                 <div class="mt-5 flex gap-5">
                                     <button class="px-6 py-2 border-2 shadow-lg rounded-md font-medium"><i
-                                            class="fa-regular fa-comments mr-2"></i>Chat to us</button>
+                                            class="fa-regular fa-comments mr-2 hidden xl:inline"></i>Chat to us</button>
                                     <button class="px-6 py-2 bg-[#78EB54] rounded-md shadow-lg font-medium"><i
-                                            class="fa-regular fa-star mr-2"></i>Give a Review</button>
+                                            class="fa-regular fa-star mr-2  hidden xl:inline "></i>Give a Review</button>
                                 </div>
                             </div>
                             <div class="xl:w-1/2 w-full">
@@ -297,7 +268,7 @@
                                  shredded purple
                                 cabbage and freshly prepared</p>
                         </div>
-                        <div class="mt-10 flex xl:flex-row flex-col gap-5 justify-between">
+                        <div class="mt-10 flex xl:flex-row flex-col gap-2 justify-between">
                             <!-- left price compare div -->
                             <div class="w-full">
                                 <h4 class="text-xl font-semibold mb-5 ">Average Price, $40</h4>
@@ -345,9 +316,25 @@
                                 </div>
                             </div>
                             <!-- price compare pic div -->
-                             <div class="w-full">
-                                <img src="../../assets/foods/images/food_price_banner_responsive.png" class="w-full h-full" alt="">
-                             </div>
+                            <div class=" w-full h-full relative">
+                                <img class="w-full" src="../../assets/foods/images/burgar.png" alt="Beef Burger">
+                                <div class="absolute bottom-0 bg-gray-400 bg-opacity-50 w-full h-36 py-5 px-2  flex justify-between">
+                                    <div class="text-white">
+                                        <h1 class=" text-xl font-bold">Beef Burger, $48.30</h1>
+                                        <p class="text-[16px]  font-semibold mt-5 mb-1">Persnickety Crane Cafe</p>
+                                        <p class="text-[16px]  font-semibold">Cascais, Portugal</p>
+                                    </div>
+                            
+                                    <div class="text-[14px] xl:text-[16px]">
+                                        <i class="fas fa-star text-[#74f579]"></i>
+                                        <i class="fas fa-star text-[#74f579]"></i>
+                                        <i class="fas fa-star text-[#74f579]"></i>
+                                        <i class="fas fa-star text-[#74f579]"></i>
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <!-- right price compare div -->
                             <div class="w-full">
                                 <h4 class="text-xl font-semibold mb-5 ">Average Price, $40</h4>
