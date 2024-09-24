@@ -34,7 +34,7 @@
 </head>
 
 <body class="bg-[#F4F4F4]">
-  <header class="bg-white border-b border-gray-200 relative z-20 w-full">
+  <header class="bg-white border-b border-gray-200 z-20 w-full sticky top-0">
     <div class="container mx-auto px-4  xl:px-20 w-full">
       <div class="flex justify-between h-16 items-center w-full">
         <!-- Logo -->
@@ -51,11 +51,11 @@
             <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
             <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It
               Works</a>
-            <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-            <a href="../pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write
-              Review</a>
-            <a href="../../index.html#about-us" class="text-gray-900 hover:text-green-500 transition">About Us</a>
-            <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
+          <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read/Write
+              Reviews</a>
+          <a href="../pages/foods/foodPriceCompare.html"
+              class="text-gray-900 hover:text-green-500 transition">Price Comparison</a>
+          <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
               Discovery</a>
           </nav>
 
@@ -209,13 +209,16 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
-      <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <nav class="px-2 pt-2 pb-3 flex flex-col space-y-1 sm:px-3">
         <a href="../../index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Price Discovery</a>
+        <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It
+          Works</a>
+      <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read/Write
+          Reviews</a>
+      <a href="../pages/foods/foodPriceCompare.html"
+          class="text-gray-900 hover:text-green-500 transition">Price Comparison</a>
+      <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
+          Discovery</a>
         <a href="../../src/pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
         <a href="../../src/pages/signup.html" class="block text-gray-900 hover:text-green-500 transition">Sign Up</a>
       </nav>
@@ -613,8 +616,30 @@
         </button>
       </div>
     </div>
-           
   </div>
+
+  <!-- Mobile Responsive menu -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.getElementById("menu-icon");
+      const menu = document.getElementById("menu");
+
+      menuIcon.addEventListener("click", function () {
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+        }
+      });
+    });
+
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 
   <!-- Notification and Profile Dropdown -->
   <script>
@@ -661,8 +686,6 @@
       popupMenu.classList.add("hidden");
     });
   </script>
-
-  <script src="../js/main.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {

@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-gray-100">
-  <header class="bg-white shadow-md sm:fixed sm:w-full top-0 sm:z-50">
+  <header class="bg-white shadow-md sm:fixed sm:w-full top-0 sm:z-50 sticky">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
         <div class="flex-shrink-0">
@@ -27,12 +27,11 @@
         <nav class="hidden lg:flex items-center justify-end  space-x-8">
           <a href="./index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
           <a href="#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
-          <a href="#read-reviews" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-          <a href="./src/pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write
-            Review</a>
-          <a href="#about-us" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+          <a href="./src/pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read/Write Reviews</a>
+      
           <a href="./src/pages/priceDiscovery.html" class="text-gray-900
            hover:text-green-500 transition">Price Discovery</a>
+           <a href="./src/pages/foods/foodPriceCompare.html" class="text-gray-900 hover:text-green-500 transition">Price Comparison</a>
                    <div class="hidden lg:flex items-center space-x-4">
           <!-- Sign In -->
            <div class="px-1"></div>
@@ -62,11 +61,10 @@
     <div id="mobile-menu" class="lg:hidden hidden">
       <nav class="px-2 pt-2 pb-3 flex flex-col gap-4 sm:px-3">
         <a href="./index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
+        <a href="#how-it-works" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
+        <a href="./src/pages/myReviews.html" class="block text-gray-900 hover:text-green-500 transition">Read/Write Reviews</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">Price Discovery</a>
+        <a href="./src/pages/foods/foodPriceCompare.html" class="text-gray-900 hover:text-green-500 transition">Price Comparison</a>
         <a href="./src/pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
         <a href="./src/pages/signup.html" class="block text-gray-900 hover:text-green-500 transition">Sign Up</a>
       </nav>
@@ -254,8 +252,6 @@
       </div>
     </div>
   </section>
-
-
 
 
   <!-- Logo Section -->
@@ -1030,9 +1026,6 @@
       </button>
     </div>
   </div>
-
-
-
 
   <!-- Modal -->
   <script>
