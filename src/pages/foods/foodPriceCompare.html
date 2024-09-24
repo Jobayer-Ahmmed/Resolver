@@ -1113,7 +1113,7 @@
                             class="h-4 w-auto"
                         />
                         <a
-                            href="../submitYourReview.htmls"
+                            href="../../pages/submitYourReview.html"
                             class="text-gray-800"
                             >Write Review</a
                         >
@@ -1127,7 +1127,7 @@
                             alt="pop-up-idea"
                             class="h-4 w-auto"
                         />
-                        <span class="text-gray-800">Resolve an Issue</span>
+                        <a href="../../pages/businessSide/CompanyProfile/companyProfile.html" class="text-gray-800">Resolve an Issue</a>
                     </button>
 
                     <button class="flex items-center space-x-2 px-6 py-2 w-60">
@@ -1136,7 +1136,7 @@
                             alt="pop-up-infinity"
                             class="h-4 w-auto"
                         />
-                        <span class="text-gray-800">Price Comparison</span>
+                        <a href="../../pages/foods/foodPriceCompare.html" class="text-gray-800">Price Comparison</a>
                     </button>
                 </div>
             </div>
@@ -1152,11 +1152,57 @@
                 <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
                 <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
                 <a href="#" class="block text-gray-900 hover:text-green-500 transition">Contact</a>
-                <a href="#" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
-                <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign
+                <a href="../signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
+                <a href="../signup.html" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign
                     Up</a>
             </nav>
         </div>
+
+        <!-- Notification and Profile Dropdown -->
+    <script>
+        // Profile Dropdown
+        document.getElementById('profile-dropdown-btn').addEventListener('click', function () {
+            const dropdown = document.getElementById('profile-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
+
+        // Notification Dropdown
+        document.getElementById('notification-btn').addEventListener('click', function () {
+            const dropdown = document.getElementById('notification-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdowns when clicking outside
+        window.addEventListener('click', function (e) {
+            const profileDropdown = document.getElementById('profile-dropdown');
+            const notificationDropdown = document.getElementById('notification-dropdown');
+
+            if (!document.getElementById('profile-dropdown-btn').contains(e.target)) {
+                profileDropdown.classList.add('hidden');
+            }
+
+            if (!document.getElementById('notification-btn').contains(e.target)) {
+                notificationDropdown.classList.add('hidden');
+            }
+        });
+    </script>
+
+     <!-- Popup Icon -->
+     <script>
+        const fabBtn = document.getElementById('fab-btn');
+        const popupMenu = document.getElementById('popup-menu');
+        const closePopup = document.getElementById('close-popup');
+  
+        // Toggle the popup menu visibility on the floating action button click
+        fabBtn.addEventListener('click', () => {
+          popupMenu.classList.toggle('hidden');
+        });
+  
+        // Hide the popup when the close button is clicked
+        closePopup.addEventListener('click', () => {
+          popupMenu.classList.add('hidden');
+        });
+      </script>
           
 <script src="../../js/main.js"></script>
 <script src="../../js/linkup.js"></script>
