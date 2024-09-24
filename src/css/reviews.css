@@ -1,0 +1,44 @@
+.line-clamp-8 {
+    display: -webkit-box;
+    -webkit-line-clamp: 8; /* Limit to 8 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 5rem; /* Adjust the height to match 8 lines of text */
+    margin-bottom: auto; /* Ensure space below the text */
+}
+
+.review-carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.review-card {
+    height: 350px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 10px; /* Space for padding between text and container */
+    animation: moveUp 10s linear infinite;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
