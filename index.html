@@ -24,12 +24,14 @@
         </div>
 
         <!-- Desktop Menu -->
-        <nav class="hidden lg:flex space-x-8 items-center justify-between font-semibold text-sm text-gray-600">
-          <a href="./index.html" class=" hover:text-green-500 transition">Home</a>
-          <a href="#how-it-works" class=" hover:text-green-500 transition">How It Works</a>
-          <a href="./src/pages/submitYourReview.html" class=" hover:text-green-500 transition">Read/Write Review</a>
-          <a href="#about-us" class=" hover:text-green-500 transition">About Us</a>
-          <a href="./src/pages/priceDiscovery.html" class="
+        <nav class="hidden lg:flex space-x-8">
+          <a href="./index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
+          <a href="#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
+          <a href="#read-reviews" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+          <a href="./src/pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write
+            Review</a>
+          <a href="#about-us" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+          <a href="./src/pages/priceDiscovery.html" class="text-gray-900
            hover:text-green-500 transition">Price Discovery</a>
                    <div class="hidden lg:flex items-center space-x-4">
           <!-- Sign In -->
@@ -70,8 +72,9 @@
       </nav>
     </div>
   </header>
+
   <!-- Hero Section -->
-  <section class="bg-[#273f2b] relative text-white pt-24 h-[33rem]">
+  <section class="bg-[#273f2b] relative text-white pt-24 h-[33rem] overflow-hidden">
     <div
       class=" flex flex-col items-center gap-y-4 justify-center a max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-3xl md:text-5xl font-bold">
@@ -249,7 +252,11 @@
       <div class="absolute bottom-0 right-0 w-1/4 bg-contain bg-no-repeat transform -scale-x-100">
         <img src="./src/assets/images/hand-holding-star-removebg1.png" alt="Logo" class="h-16 md:h-64 w-auto" />
       </div>
+    </div>
   </section>
+
+
+
 
   <!-- Logo Section -->
   <section class="py-12 bg-white">
@@ -992,9 +999,7 @@
 
   </footer>
 
-
   <!-- Pop up button -->
-
   <div class="fixed top-[47rem] right-0 sm:bottom-0 sm:top-[35.5rem] sm:left-[12rem]">
     <!-- Floating Action Button -->
     <button id="fab-btn"
@@ -1056,6 +1061,30 @@
       }
     });
   </script>
+
+  <script>
+    const slider = document.querySelector('.hero-slider');
+    const slides = document.querySelectorAll('.hero-slider > div');
+    const prevSlide = document.getElementById('prev-slide');
+    const nextSlide = document.getElementById('next-slide');
+
+    let currentSlide = 0;
+
+    function updateSlidePosition() {
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    nextSlide.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlidePosition();
+    });
+
+    prevSlide.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlidePosition();
+    });
+  </script>
+
 
   <script src="./src/js/main.js"></script>
 </body>

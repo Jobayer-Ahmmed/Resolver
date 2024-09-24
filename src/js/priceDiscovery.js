@@ -133,3 +133,26 @@ tabItems.forEach(tab => {
     tab.addEventListener('click',handleClickTab)
 })
   
+
+
+
+// Mobile menu button 
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const menu = document.getElementById("menu");
+
+  menuIcon.addEventListener("click", function () {
+    if (menu.classList.contains("hidden")) {
+      menu.classList.remove("hidden");
+    } else {
+      menu.classList.add("hidden");
+    }
+  });
+});
+
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+
+mobileMenuButton.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
