@@ -27,13 +27,16 @@
                     <!-- Desktop Menu -->
                     <nav class="hidden lg:flex  space-x-4">
                         <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
-                        <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It
+                        <a href="../../index.html#how-it-works"
+                            class="text-gray-900 hover:text-green-500 transition">How It
                             Works</a>
-                        <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read/Write
+                        <a href="../pages/myReviews.html"
+                            class="text-gray-900 hover:text-green-500 transition">Read/Write
                             Reviews</a>
                         <a href="../pages/foods/foodPriceCompare.html"
                             class="text-gray-900 hover:text-green-500 transition">Price Comparison</a>
-                        <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
+                        <a href="../pages/priceDiscovery.html"
+                            class="text-gray-900 hover:text-green-500 transition">Price
                             Discovery</a>
                     </nav>
 
@@ -203,16 +206,19 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
-            <nav class="px-2 pt-2 pb-3 flex flex-col space-y-1 sm:px-3">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="../../index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
-                <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It
-                    Works</a>
-                <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read/Write
-                    Reviews</a>
-                <a href="../pages/foods/foodPriceCompare.html"
-                    class="text-gray-900 hover:text-green-500 transition">Price Comparison</a>
-                <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
-                    Discovery</a>
+                <a href="../../index.html#how-it-works"
+                            class="text-gray-900 hover:text-green-500 transition">How It
+                            Works</a>
+                        <a href="../pages/myReviews.html"
+                            class="text-gray-900 hover:text-green-500 transition">Read/Write
+                            Reviews</a>
+                        <a href="../pages/foods/foodPriceCompare.html"
+                            class="text-gray-900 hover:text-green-500 transition">Price Comparison</a>
+                        <a href="../pages/priceDiscovery.html"
+                            class="text-gray-900 hover:text-green-500 transition">Price
+                            Discovery</a>
                 <a href="../../src/pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign
                     In</a>
                 <a href="../../src/pages/signup.html" class="block text-gray-900 hover:text-green-500 transition">Sign
@@ -223,7 +229,7 @@
     <section>
         <!-- sub menu -->
         <div
-            class="hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white font-semibold px-20 py-3 mt-10">
+            class="hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white font-semibold px-20 py-3">
             <div>
                 <button class="px-4 py-2">Dashboard</button>
                 <button class="px-4 py-2 border border-black rounded text-black">
@@ -240,7 +246,7 @@
 
     <!-- write review section -->
     <section class="bg-[#F4F4F4]">
-        <div class="container mx-auto xl:px-20 px-4  pt-16 pb-24">
+        <div class="container mx-auto xl:px-20 px-4  pt-10 pb-24">
             <div class="xl:hidden block mb-10">
                 <i class="fa-solid fa-arrow-left mr-2"></i><span class="text-lg font-semibold">Back</span>
             </div>
@@ -253,6 +259,21 @@
                     about a misleading advertisement, or report a scam, you're
                     in the right place.
                 </p>
+                <div class=" mt-5 hidden md:flex items-center bg-white shadow-lg p-2 rounded-full w-full xl:w-[610px]">
+                    <i class="fas fa-search h-4 w-6 text-gray-400 ml-2"></i>
+                    <input type="text" placeholder="Search for reviews, companies, or categories."
+                        class="bg-transparent focus:outline-none px-2  w-full" />
+                    <div class="flex items-center border-l border-gray-300 pl-2">
+                        <i class="fa-solid fa-location-crosshairs h-5 w-5 text-gray-400"></i>
+                        <input type="text" placeholder="San Francisco,CA"
+                            class="bg-transparent focus:outline-none  w-32 pl-2" />
+                    </div>
+                    <div class="border-l h-auto mx-2"></div>
+                    <button id="search-btn"
+                        class="bg-[#78EB54] text-black font-bold  px-6 py-2 rounded-full  ml-2 focus:outline-none hover:bg-green-600 transition">
+                        Search
+                    </button>
+                </div>
             </div>
             <div class="xl:w-[800px] mx-auto shadow-xl bg-white p-4 pb-10 rounded-lg">
                 <h2 class="text-xl font-semibold">Write a review</h2>
@@ -589,6 +610,7 @@
                 </button>
             </div>
         </div>
+               
     </div>
 
     <!-- Mobile Responsive menu -->
