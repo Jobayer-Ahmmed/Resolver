@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-gray-100">
-  <header class="bg-white shadow-md">
+  <header class="bg-white shadow-md sm:fixed sm:w-full top-0 sm:z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
         <div class="flex-shrink-0">
@@ -24,24 +24,23 @@
         </div>
 
         <!-- Desktop Menu -->
-        <nav class="hidden lg:flex space-x-8">
-          <a href="./index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
-          <a href="#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
-          <a href="#read-reviews" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-          <a href="./src/pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
-          <a href="#about-us" class="text-gray-900 hover:text-green-500 transition">About Us</a>
-          <a href="./src/pages/priceDiscovery.html" class="text-gray-900
+        <nav class="hidden lg:flex space-x-8 items-center justify-between font-semibold text-sm text-gray-600">
+          <a href="./index.html" class=" hover:text-green-500 transition">Home</a>
+          <a href="#how-it-works" class=" hover:text-green-500 transition">How It Works</a>
+          <a href="./src/pages/submitYourReview.html" class=" hover:text-green-500 transition">Read/Write Review</a>
+          <a href="#about-us" class=" hover:text-green-500 transition">About Us</a>
+          <a href="./src/pages/priceDiscovery.html" class="
            hover:text-green-500 transition">Price Discovery</a>
-        </nav>
-
-        <div class="hidden lg:flex items-center space-x-4">
+                   <div class="hidden lg:flex items-center space-x-4">
           <!-- Sign In -->
-          <a href="./src/pages/signin.html" class="text-gray-900 hover:text-green-500 transition">Sign In</a>
+           <div class="px-4"></div>
+          <a href="./src/pages/signin.html" class=" hover:text-green-500 transition">Sign In</a>
 
           <!-- Sign Up -->
           <a href="./src/pages/signup.html"
-            class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+            class="bg-[#78EB54] px-5 py-3 rounded-full hover:bg-green-600 transition">Sign Up</a>
         </div>
+        </nav>
 
         <!-- Mobile Menu Button -->
         <div class="lg:hidden flex items-center">
@@ -52,6 +51,8 @@
             </svg>
           </button>
         </div>
+
+
       </div>
     </div>
 
