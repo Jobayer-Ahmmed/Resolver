@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +15,7 @@
 
 <body class="bg-[#F4F4F4]">
   <header class="bg-white border-b border-gray-200 relative z-20 w-full">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="container mx-auto px-4  xl:px-20 w-full">
       <div class="flex justify-between h-16 items-center w-full">
         <!-- Logo -->
         <div class="flex-shrink-0">
@@ -24,150 +25,155 @@
           </a>
         </div>
 
-        <!-- Desktop Menu -->
-        <nav class="hidden lg:flex space-x-4">
-          <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
-          <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
-          <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-          <a href="../pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
-          <a href="../../index.html#about-us" class="text-gray-900 hover:text-green-500 transition">About Us</a>
-          <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
-            Discovery</a>
-        </nav>
+        <div class="flex gap-10 items-center justify-between">
+          <!-- Desktop Menu -->
+          <nav class="hidden lg:flex  space-x-4">
+            <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
+            <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It
+              Works</a>
+            <a href="../pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
+            <a href="../pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write
+              Review</a>
+            <a href="../../index.html#about-us" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+            <a href="../pages/priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price
+              Discovery</a>
+          </nav>
 
-        <!-- Right-side buttons -->
-        <div class="hidden md:flex items-center space-x-4">
-          <!-- Upgrade Now Button -->
-          <a href="#"
-            class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
-            <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
-            Upgrade now
-          </a>
+          <!-- Right-side buttons -->
+          <div class="hidden md:flex items-center space-x-4">
+            <!-- Upgrade Now Button -->
+            <a href="#"
+              class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
+              <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
+              Upgrade now
+            </a>
 
-          <!-- Icons: Bell, Gear, Profile -->
-          <div class="flex space-x-4">
-            <button class="text-gray-900 hover:text-green-500 transition">
-              <img src="../assets/images/Icon/settings-01.png" alt="settings-icon" class="h-5 w-5 mr-2" />
-            </button>
-
-            <!-- Notification Bell and Dropdown -->
-            <div class="relative flex justify-center">
-              <button id="notification-btn" class="focus:outline-none">
-                <img src="../assets/images/Icon/bell.png" alt="Notification Bell" class="h-5 w-5">
+            <!-- Icons: Bell, Gear, Profile -->
+            <div class="flex space-x-4">
+              <button class="text-gray-900 hover:text-green-500 transition">
+                <img src="../assets/images/Icon/settings-01.png" alt="settings-icon" class="h-5 w-5 mr-2" />
               </button>
 
-              <!-- Notification Dropdown Menu -->
-              <div id="notification-dropdown"
-                class="hidden absolute -right-14 top-12 mt-2 w-[40rem] bg-white shadow-lg rounded-lg z-50">
+              <!-- Notification Bell and Dropdown -->
+              <div class="relative flex justify-center">
+                <button id="notification-btn" class="focus:outline-none">
+                  <img src="../assets/images/Icon/bell.png" alt="Notification Bell" class="h-5 w-5">
+                </button>
 
-                <!-- Green top border -->
-                <div
-                  class="absolute top-[-10px] left-[36rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
+                <!-- Notification Dropdown Menu -->
+                <div id="notification-dropdown"
+                  class="hidden absolute -right-14 top-12 mt-2 w-[40rem] bg-white shadow-lg rounded-lg z-50">
+
+                  <!-- Green top border -->
+                  <div
+                    class="absolute top-[-10px] left-[36rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
                           border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
-                </div>
-
-                <!-- Notifications header -->
-                <div class="flex justify-between items-center px-4 py-3 border-t-4 border-t-[#2f8379] border-b">
-                  <h3 class="text-sm font-semibold">Notifications</h3>
-                  <div class="flex gap-2 justify-center items-center">
-                    <a href="#" class="text-sm text-green-500 hover:underline">View All</a>
-                    <img src="../assets/images/profileNotificationIcon/ArrowRight.png" alt="ArrowRight"
-                      class="h-3 w-3" />
                   </div>
-                </div>
 
-                <!-- Notifications list -->
-                <ul class="divide-y divide-gray-200">
-
-                  <li class="px-4 py-3 flex items-start gap-3">
-                    <img src="../assets/images/profileNotificationIcon/image1.png" alt="User"
-                      class="h-10 w-10 rounded-full">
-                    <div class="flex-1">
-                      <p class="text-sm"><strong>Charlie Henderson</strong> reviewed in <strong>Exploring Animal
-                          Prosthesis...</strong></p>
-                      <p class="text-gray-500 text-xs">August 31, 2024</p>
+                  <!-- Notifications header -->
+                  <div class="flex justify-between items-center px-4 py-3 border-t-4 border-t-[#2f8379] border-b">
+                    <h3 class="text-sm font-semibold">Notifications</h3>
+                    <div class="flex gap-2 justify-center items-center">
+                      <a href="./notification.html" class="text-sm text-green-500 hover:underline">View All</a>
+                      <img src="../assets/images/profileNotificationIcon/ArrowRight.png" alt="ArrowRight"
+                        class="h-3 w-3" />
                     </div>
-                    <button class="text-gray-500 hover:text-gray-700">
-                      <img src="../assets/images/profileNotificationIcon/Close.png" alt="cross" class="h-5 w-5">
-                    </button>
-                  </li>
+                  </div>
 
-                  <li class="px-4 py-3 flex items-start gap-3">
-                    <img src="../assets/images/profileNotificationIcon/image2.png" alt="User"
-                      class="h-10 w-10 rounded-full">
-                    <div class="flex-1">
-                      <p class="text-sm"><strong>Satoshi Nakamoto</strong> complaint on <strong>International exchange
-                          skill event</strong></p>
-                      <p class="text-gray-500 text-xs">August 31, 2024</p>
-                    </div>
-                    <div>
+                  <!-- Notifications list -->
+                  <ul class="divide-y divide-gray-200">
+
+                    <li class="px-4 py-3 flex items-start gap-3">
+                      <img src="../assets/images/profileNotificationIcon/image1.png" alt="User"
+                        class="h-10 w-10 rounded-full">
+                      <div class="flex-1">
+                        <p class="text-sm"><strong>Charlie Henderson</strong> reviewed in <strong>Exploring Animal
+                            Prosthesis...</strong></p>
+                        <p class="text-gray-500 text-xs">August 31, 2024</p>
+                      </div>
                       <button class="text-gray-500 hover:text-gray-700">
                         <img src="../assets/images/profileNotificationIcon/Close.png" alt="cross" class="h-5 w-5">
                       </button>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
+                    </li>
 
-
-            <!-- Profile Dropdown -->
-            <div class="relative">
-
-              <div class="flex gap-2">
-                <img src="../assets/images/settings-component.png" alt="Profile Image" class="h-8 w-8 rounded-full">
-                <button id="profile-dropdown-btn" class="focus:outline-none">
-                  <i class="fas fa-chevron-down text-black"></i>
-                </button>
-              </div>
-
-              <!-- Profile Dropdown Menu -->
-              <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50">
-                <div
-                  class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
-                          border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
+                    <li class="px-4 py-3 flex items-start gap-3">
+                      <img src="../assets/images/profileNotificationIcon/image2.png" alt="User"
+                        class="h-10 w-10 rounded-full">
+                      <div class="flex-1">
+                        <p class="text-sm"><strong>Satoshi Nakamoto</strong> complaint on <strong>International exchange
+                            skill event</strong></p>
+                        <p class="text-gray-500 text-xs">August 31, 2024</p>
+                      </div>
+                      <div>
+                        <button class="text-gray-500 hover:text-gray-700">
+                          <img src="../assets/images/profileNotificationIcon/Close.png" alt="cross" class="h-5 w-5">
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <ul class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]">
-                  <!-- Profile -->
-                  <li class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
-                    <div class="flex items-center space-x-3">
-                      <i class="fas fa-user text-gray-600"></i>
-                      <a href="../pages/userProfileInformation.html" class="text-gray-800">Profile</a>
-                    </div>
-                    <i class="fas fa-chevron-right text-gray-400"></i>
-                  </li>
+              </div>
 
-                  <!-- Dashboard -->
-                  <li class="flex justify-between items-center  px-4 py-3 bg-gray-100 border-b border-gray-200">
-                    <div class="flex items-center space-x-3">
-                      <i class="fas fa-th-large text-[#2f8379]"></i>
-                      <a href="../pages/user-dashboard-page.html" class="text-[#2f8379]">Dashboard</a>
-                    </div>
-                    <i class="fas fa-chevron-right text-[#2f8379]"></i>
-                  </li>
 
-                  <!-- Settings -->
-                  <li class="flex justify-between items-center  px-4 py-3 border-b border-gray-200">
-                    <div class="flex items-center space-x-3">
-                      <i class="fas fa-cog text-gray-600"></i>
-                      <a href="../pages/userInformation.html" class="text-gray-800">Settings</a>
-                    </div>
-                    <i class="fas fa-chevron-right text-gray-400"></i>
-                  </li>
+              <!-- Profile Dropdown -->
+              <div class="relative">
 
-                  <!-- Log Out -->
-                  <li class="flex justify-between  px-4 items-center py-3">
-                    <div class="flex items-center space-x-3">
-                      <i class="fas fa-sign-out-alt text-gray-600"></i>
-                      <a href="#" class="text-gray-800">Log Out</a>
-                    </div>
-                    <i class="fas fa-chevron-right text-gray-400"></i>
-                  </li>
-                </ul>
+                <div class="flex gap-2">
+                  <img src="../assets/images/settings-component.png" alt="Profile Image" class="h-8 w-8 rounded-full">
+                  <button id="profile-dropdown-btn" class="focus:outline-none">
+                    <i class="fas fa-chevron-down text-black"></i>
+                  </button>
+                </div>
+
+                <!-- Profile Dropdown Menu -->
+                <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50">
+                  <div
+                    class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
+                          border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
+                  </div>
+                  <ul class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]">
+                    <!-- Profile -->
+                    <li class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+                      <div class="flex items-center space-x-3">
+                        <i class="fas fa-user text-gray-600"></i>
+                        <a href="../pages/userProfileInformation.html" class="text-gray-800">Profile</a>
+                      </div>
+                      <i class="fas fa-chevron-right text-gray-400"></i>
+                    </li>
+
+                    <!-- Dashboard -->
+                    <li class="flex justify-between items-center  px-4 py-3 bg-gray-100 border-b border-gray-200">
+                      <div class="flex items-center space-x-3">
+                        <i class="fas fa-th-large text-[#2f8379]"></i>
+                        <a href="../pages/user-dashboard-page.html" class="text-[#2f8379]">Dashboard</a>
+                      </div>
+                      <i class="fas fa-chevron-right text-[#2f8379]"></i>
+                    </li>
+
+                    <!-- Settings -->
+                    <li class="flex justify-between items-center  px-4 py-3 border-b border-gray-200">
+                      <div class="flex items-center space-x-3">
+                        <i class="fas fa-cog text-gray-600"></i>
+                        <a href="../pages/userInformation.html" class="text-gray-800">Settings</a>
+                      </div>
+                      <i class="fas fa-chevron-right text-gray-400"></i>
+                    </li>
+
+                    <!-- Log Out -->
+                    <li class="flex justify-between  px-4 items-center py-3">
+                      <div class="flex items-center space-x-3">
+                        <i class="fas fa-sign-out-alt text-gray-600"></i>
+                        <a href="#" class="text-gray-800">Log Out</a>
+                      </div>
+                      <i class="fas fa-chevron-right text-gray-400"></i>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
 
         <!-- Mobile Menu Button -->
         <div class="lg:hidden flex items-center">
@@ -199,69 +205,69 @@
   <!-- main section ------------ -->
   <main>
     <!-- header section ------------------------>
-     <section class="bg-[#F6FBFD] ">
-    <div class=" px-4 lg:px-0 container mx-auto py-16 lg:py-20">
-      <!-- headTitle -------------------- -->
-      <h1 class="font-semibold   lg:font-bold text-[#273F2B] text-center text-4xl lg:text-6xl">
-        Food price in different
-        <span class="block leading-tight lg:leading-normal">marketplace</span>
-      </h1>
-      <!-- SubTitle---------------- -->
-      <p
-        class="font-normal mt-4 lg:mt-0 text-lg lg:text-xl text-[#4B4B4B] mx-auto max-w-xl  lg:px-0 lg:max-w-2xl text-center">
-        Discover and share your reviews on Resolver.ng today. Start reading
-        and writing reviews on Resolver.ng now.
-      </p>
+    <section class="bg-[#F6FBFD] ">
+      <div class=" px-4 lg:px-0 container mx-auto py-16 lg:py-20">
+        <!-- headTitle -------------------- -->
+        <h1 class="font-semibold   lg:font-bold text-[#273F2B] text-center text-4xl lg:text-6xl">
+          Food price in different
+          <span class="block leading-tight lg:leading-normal">marketplace</span>
+        </h1>
+        <!-- SubTitle---------------- -->
+        <p
+          class="font-normal mt-4 lg:mt-0 text-lg lg:text-xl text-[#4B4B4B] mx-auto max-w-xl  lg:px-0 lg:max-w-2xl text-center">
+          Discover and share your reviews on Resolver.ng today. Start reading
+          and writing reviews on Resolver.ng now.
+        </p>
 
-      <!-- Search field for xl------------------ -->
-      <div style="box-shadow: 0px 10px 40px 0px rgba(32, 32, 35, 0.08)"
-        class="lg:flex mt-6 hidden rounded-[99px] gap-6 items-center justify-center bg-white py-2 pl-5 pr-3 w-fit mx-auto">
-        <!-- left site---------- -->
-        <div class="flex flex-1 gap-2 items-center">
-          <span class="">
-            <img src="../assets/foods/icons/Search.png" alt=""></span>
-          </span>
-          <input class="min-w-80 text-[#818B9C] outline-none font-medium text-sm"
-            placeholder="Search for foods and restaurants" type="text" />
-        </div>
- 
-        <span class="">|</span>
-
-        <div class="flex items-center gap-6">
-          <div class="flex items-center gap-2">
-            <span>
-              <img src="../assets/foods/icons/location-04.png" alt="" />
+        <!-- Search field for xl------------------ -->
+        <div style="box-shadow: 0px 10px 40px 0px rgba(32, 32, 35, 0.08)"
+          class="lg:flex mt-6 hidden rounded-[99px] gap-6 items-center justify-center bg-white py-2 pl-5 pr-3 w-fit mx-auto">
+          <!-- left site---------- -->
+          <div class="flex flex-1 gap-2 items-center">
+            <span class="">
+              <img src="../assets/foods/icons/Search.png" alt=""></span>
             </span>
-            <span class="text-[#818B9C] font-normal text-sm">
-              San Francisco,CA
-            </span>
+            <input class="min-w-80 text-[#818B9C] outline-none font-medium text-sm"
+              placeholder="Search for foods and restaurants" type="text" />
           </div>
 
-          <button class="text-[#273F2B] px-4 py-2 bg-[#78EB54] font-semibold text-xl rounded-[67px]">
-            Search
-          </button>
+          <span class="">|</span>
+
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2">
+              <span>
+                <img src="../assets/foods/icons/location-04.png" alt="" />
+              </span>
+              <span class="text-[#818B9C] font-normal text-sm">
+                San Francisco,CA
+              </span>
+            </div>
+
+            <button class="text-[#273F2B] px-4 py-2 bg-[#78EB54] font-semibold text-xl rounded-[67px]">
+              Search
+            </button>
+          </div>
+        </div>
+
+        <!-- Search field for mobile------------------ -->
+        <div class=" space-y-4 lg:hidden mt-8 ">
+          <div style="box-shadow:  0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
+            class="flex bg-white py-3 px-4 gap-2 items-center rounded-[32px]">
+            <span class="">
+              <img src="../assets/foods/icons/Search.png" alt=""></span>
+            <input class="text-[#818B9C] w-full outline-none font-medium text-sm"
+              placeholder="Search for foods and restaurants" type="text" />
+          </div>
+
+          <!-- search button------------- -->
+
+          <div class="">
+            <button
+              class="text-[#273F2B] w-full font-semibold text-base py-3 rounded-[32px] bg-[#78EB54]  ">Search</button>
+          </div>
         </div>
       </div>
-
-      <!-- Search field for mobile------------------ -->
-      <div class=" space-y-4 lg:hidden mt-8 ">
-        <div style="box-shadow:  0px 1px 2px 0px rgba(16, 24, 40, 0.05);"
-          class="flex bg-white py-3 px-4 gap-2 items-center rounded-[32px]">
-          <span class="">
-            <img src="../assets/foods/icons/Search.png" alt=""></span>
-          <input class="text-[#818B9C] w-full outline-none font-medium text-sm"
-            placeholder="Search for foods and restaurants" type="text" />
-        </div>
-
-        <!-- search button------------- -->
-
-        <div class="">
-          <button
-            class="text-[#273F2B] w-full font-semibold text-base py-3 rounded-[32px] bg-[#78EB54]  ">Search</button>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Food item section-------------------- -->
 
@@ -531,38 +537,37 @@
   <div class="fixed  lg:top-96 lg:left-20 lg:right-auto right-0 top-96">
     <!-- Floating Action Button -->
     <button id="fab-btn"
-        class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg">
-        <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+      class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg">
+      <img src="../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
     </button>
 
     <!-- Pop-up Menu (Initially hidden) -->
     <div id="popup-menu" class="hidden">
-        <div
-            class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16">
-            <button id="close-popup"
-                class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64">
-                <img src="../assets/images/Icon/cancel-circle.png" alt="cancel-circle" class="h-8 w-auto" />
-            </button>
+      <div class="flex flex-col bg-white shadow-lg rounded-lg py-6 absolute -top-48 -left-64 sm:-top-52 sm:left-16">
+        <button id="close-popup"
+          class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center absolute top-0 left-64">
+          <img src="../assets/images/Icon/cancel-circle.png" alt="cancel-circle" class="h-8 w-auto" />
+        </button>
 
-            <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
-                <img src="../assets/images/Icon/star.svg" alt="pop-up-star" class="h-4 w-auto" />
-                <a href="../pages/write-compaint.html" class="text-gray-800">Write Review<a>
-            </button>
+        <button class="flex items-center space-x-2 px-6 border-b py-2 w-60">
+          <img src="../assets/images/Icon/star.svg" alt="pop-up-star" class="h-4 w-auto" />
+          <a href="../pages/write-compaint.html" class="text-gray-800">Write Review<a>
+        </button>
 
-            <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
-                <img src="../assets/images/Icon/idea-01.png" alt="pop-up-idea" class="h-4 w-auto" />
-                <a href="../pages/businessSide/CompanyProfile/companyProfile.html" class="text-gray-800">Resolve an
-                    Issue</a>
-            </button>
+        <button class="flex items-center space-x-2 border-b px-6 py-2 w-60">
+          <img src="../assets/images/Icon/idea-01.png" alt="pop-up-idea" class="h-4 w-auto" />
+          <a href="../pages/businessSide/CompanyProfile/companyProfile.html" class="text-gray-800">Resolve an
+            Issue</a>
+        </button>
 
-            <button class="flex items-center space-x-2 px-6 py-2 w-60">
-                <img src="../assets/images/Icon/infinity.svg" alt="pop-up-infinity" class="h-4 w-auto" />
-                <a href="../pages/foods/foodPriceCompare.html" class="text-gray-800">Price Comparison</a>
-            </button>
-        </div>
+        <button class="flex items-center space-x-2 px-6 py-2 w-60">
+          <img src="../assets/images/Icon/infinity.svg" alt="pop-up-infinity" class="h-4 w-auto" />
+          <a href="../pages/foods/foodPriceCompare.html" class="text-gray-800">Price Comparison</a>
+        </button>
+      </div>
     </div>
            
-</div>
+  </div>
 
   <script src="../js/priceDiscovery.js"></script>
 
