@@ -21,7 +21,7 @@
         <header
             class="bg-white border-b border-gray-200 relative z-20 w-full sm:fixed sm:top-0 sm:shadow-sm"
         >
-            <div class="container mx-auto px-4 xl:px-20 w-full">
+            <div class="container mx-auto px-4 lg:px-20 w-full">
                 <div class="flex justify-between h-16 items-center w-full">
                     <!-- Logo -->
                     <div class="flex-shrink-0">
@@ -40,7 +40,7 @@
                     <div class="flex gap-10 items-center justify-between">
                         <!-- Desktop Menu -->
                         <nav
-                            class="hidden lg:flex space-x-8 text-gray-600 font-semibold"
+                            class="hidden lg:flex space-x-5 text-[#273F2B] items-center text-base font-semibold"
                         >
                             <a
                                 href="../../../index.html"
@@ -71,30 +71,11 @@
 
                         <!-- Right-side buttons -->
                         <div class="hidden md:flex items-center space-x-4">
-                            <!-- Upgrade Now Button -->
-                            <a
-                                href="#"
-                                class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center"
-                            >
-                                <img
-                                    src="../../assets/images/Icon/thunder.png"
-                                    alt="thunder-icon"
-                                    class="h-5 w-5 mr-2"
-                                />
-                                Upgrade now
-                            </a>
+                          
 
                             <!-- Icons: Bell, Gear, Profile -->
                             <div class="flex space-x-4">
-                                <button
-                                    class="text-gray-900 hover:text-green-500 transition"
-                                >
-                                    <img
-                                        src="../../assets/images/Icon/settings-01.png"
-                                        alt="settings-icon"
-                                        class="h-5 w-5 mr-2"
-                                    />
-                                </button>
+                             
 
                                 <!-- Notification Bell and Dropdown -->
                                 <div class="relative flex justify-center">
@@ -316,6 +297,27 @@
                                                 ></i>
                                             </li>
 
+                                             <!-- Admin Dashboard -->
+                                             <li
+                                             class="flex justify-between items-center px-4 py-3 bg-gray-100 border-b border-gray-200"
+                                         >
+                                             <div
+                                                 class="flex items-center space-x-3"
+                                             >
+                                                 <i
+                                                     class="fas fa-th-large text-[#2f8379]"
+                                                 ></i>
+                                                 <a
+                                                     href="../businessSide/adminDashboard.html"
+                                                     class="text-[#2f8379]"
+                                                     >Admin Dashboard</a
+                                                 >
+                                             </div>
+                                             <i
+                                                 class="fas fa-chevron-right text-[#2f8379]"
+                                             ></i>
+                                         </li>
+
                                             <!-- Log Out -->
                                             <li
                                                 class="flex justify-between px-4 items-center py-3"
@@ -414,7 +416,7 @@
         </header>
         <!-- sub menu -->
         <div
-            class="mt-20 hidden xl:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white font-semibold px-20 py-3  mb-5"
+            class="mt-20 hidden lg:flex justify-between items-center container mx-auto text-gray-700 w-full bg-white font-semibold px-20 py-3  mb-5"
         >
             <div>
                 <a
@@ -435,13 +437,13 @@
                 />
             </div>
         </div>
-        <section class="bg-white xl:bg-[#e6e3e3] pb-10">
-            <div class="xl:relative container mx-auto xl:px-20 px-4 xl:py-10">
+        <section class="bg-white lg:bg-[#e6e3e3] pb-10">
+            <div class="lg:relative container mx-auto lg:px-20 px-4 lg:py-10">
                 <div
-                    class="mt-10 bg-white xl:px-12 px-4 xl:py-10 xl:py-16 rounded-2xl"
+                    class="mt-10 bg-white lg:px-12 px-4 lg:py-10 lg:py-16 rounded-2xl"
                 >
                     <!-- banner  -->
-                    <div class="xl:relative">
+                    <div class="lg:relative">
                         <!-- banner image -->
                         <img
                             src="../../assets/foods/images/food_price_banner.png"
@@ -449,12 +451,12 @@
                         />
                         <!-- banner image gradient -->
                         <div
-                            class="xl:absolute xl:block xl:bottom-0 w-full xl:p-10 xl:mt-0 mt-5 text-gray-800 xl:text-white"
+                            class="lg:absolute lg:block lg:bottom-0 w-full lg:p-10 lg:mt-0 mt-5 text-gray-800 lg:text-white"
                         >
                             <div class="flex justify-between">
                                 <div>
                                     <div
-                                        class="flex xl:flex-row flex-col gap-3 xl:gap-5"
+                                        class="flex lg:flex-row flex-col gap-3 lg:gap-5"
                                     >
                                         <h2 class="text-3xl font-bold">
                                             Taco Beller
@@ -487,12 +489,12 @@
                                 <div>
                                     <img
                                         src="../../assets/foods/icons/arrow-up-right.png"
-                                        class="hidden xl:block"
+                                        class="hidden lg:block"
                                         alt=""
                                     />
                                     <img
                                         src="../../assets/foods/icons/arrow-up-right_responsive.png"
-                                        class="xl:hidden block"
+                                        class="lg:hidden block"
                                         alt=""
                                     />
                                 </div>
@@ -510,12 +512,12 @@
                                         <div class="flex gap-2">
                                             <img
                                                 src="../../assets/foods/icons/clock.png"
-                                                class="hidden xl:block"
+                                                class="hidden lg:block"
                                                 alt=""
                                             />
                                             <img
                                                 src="../../assets/foods/icons/clock_resonsive.png"
-                                                class="xl:hidden block"
+                                                class="lg:hidden block"
                                                 alt=""
                                             />
                                             <p>Open Hour</p>
@@ -527,7 +529,7 @@
                                         <p class="mt-3">10 April 2024</p>
                                     </div>
                                 </div>
-                                <div class="hidden xl:block">
+                                <div class="hidden lg:block">
                                     <p>Food under</p>
                                     <div class="mt-3 flex gap-2">
                                         <button
@@ -555,14 +557,14 @@
                     <div class="mt-12 shadow-xl rounded-xl p-10">
                         <div>
                             <h3
-                                class="text-xl font-semibold mb-10 hidden xl:inline-block pb-3 border-b-2 border-green-300"
+                                class="text-xl font-semibold mb-10 hidden lg:inline-block pb-3 border-b-2 border-green-300"
                             >
                                 Items Details
                             </h3>
                             <div
-                                class="w-full flex xl:flex-row flex-col xl:gap-10 gap-5"
+                                class="w-full flex lg:flex-row flex-col lg:gap-10 gap-5"
                             >
-                                <div class="xl:w-1/2 w-full">
+                                <div class="lg:w-1/2 w-full">
                                     <div class="flex justify-between">
                                         <div>
                                             <p class="text-blue-500">
@@ -630,7 +632,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="xl:w-1/2 w-full">
+                                <div class="lg:w-1/2 w-full">
                                     <img
                                         class="w-full"
                                         src="../../assets/foods/images/food_price_banner.png"
@@ -644,7 +646,7 @@
                                 Submit a price
                             </h2>
                             <div
-                                class="flex xl:flex-row flex-col gap-5 w-full mt-5"
+                                class="flex lg:flex-row flex-col gap-5 w-full mt-5"
                             >
                                 <div class="w-full bg-[#F9FAFB] p-5 rounded-xl">
                                     <div>
@@ -717,7 +719,7 @@
                         </div>
                         <div class="flex justify-center mt-10">
                             <button
-                                class="font-bold bg-[#78EB54] text-center w-full xl:w-[550px] py-3 rounded-full"
+                                class="font-bold bg-[#78EB54] text-center w-full lg:w-[550px] py-3 rounded-full"
                             >
                                 Search Results
                                 <i class="fa-solid fa-arrow-right ml-2"></i>
@@ -739,12 +741,12 @@
                                 <p>
                                     Check out the cantina chicken menu. Try our
                                     slow roasted chicken with
-                                    <br class="hidden xl:block" />
+                                    <br class="hidden lg:block" />
                                     shredded purple cabbage and freshly prepared
                                 </p>
                             </div>
                             <div
-                                class="mt-10 flex xl:flex-row flex-col gap-5 justify-between"
+                                class="mt-10 flex lg:flex-row flex-col gap-5 justify-between"
                             >
                                 <!-- left price compare div -->
                                 <div class="w-full">
@@ -859,7 +861,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="text-[14px] xl:text-[16px]">
+                                        <div class="text-[14px] lg:text-[16px]">
                                             <i
                                                 class="fas fa-star text-[#74f579]"
                                             ></i>
@@ -972,10 +974,10 @@
 
                 <!-- graph -->
                 <div
-                    class="mt-10 bg-white xl:px-12 px-4 xl:py-10 xl:py-16 rounded-2xl"
+                    class="mt-10 bg-white lg:px-12 px-4 lg:py-10 lg:py-16 rounded-2xl"
                 >
                     <div
-                        class="mb-10 flex flex-col xl:flex-row xl:justify-between"
+                        class="mb-10 flex flex-col lg:flex-row lg:justify-between"
                     >
                         <p class="text-lg font-semibold">Pricing History</p>
                         <div class="flex gap-4">
@@ -984,14 +986,14 @@
                                     class="py-2 px-4 border border-gray-400 bg-gray-200 shadow rounded-l flex gap-2"
                                 >
                                     Average
-                                    <span class="hidden xl:block">Price</span>
+                                    <span class="hidden lg:block">Price</span>
                                 </div>
                                 <div
                                     class="py-2 px-4 border border-gray-400 shadow"
                                 >
                                     <span class="flex gap-2"
                                         >Highest
-                                        <span class="hidden xl:block"
+                                        <span class="hidden lg:block"
                                             >Price</span
                                         ></span
                                     >
@@ -1001,7 +1003,7 @@
                                 >
                                     <span class="flex gap-2"
                                         >Lowest
-                                        <span class="hidden xl:block"
+                                        <span class="hidden lg:block"
                                             >Price</span
                                         ></span
                                     >
@@ -1010,12 +1012,12 @@
                             <select
                                 name=""
                                 id=""
-                                class="border-2 border-gray-300 rounded-md px-5 py-2 hidden xl:block"
+                                class="border-2 border-gray-300 rounded-md px-5 py-2 hidden lg:block"
                             >
                                 <option value="">Weekly</option>
                             </select>
                             <div
-                                class="border border-gray-400 flex justify-center items-center px-4 rounded-xl xl:hidden"
+                                class="border border-gray-400 flex justify-center items-center px-4 rounded-xl lg:hidden"
                             >
                                 <img
                                     class="w-7"
@@ -1028,12 +1030,12 @@
                     <div>
                         <img
                             src="../../assets/foods/images/line_graph.png"
-                            class="hidden xl:block"
+                            class="hidden lg:block"
                             alt="graph"
                         />
                         <img
                             src="../../assets/foods/images/graph_responsive.png"
-                            class="xl:hidden block w-full"
+                            class="lg:hidden block w-full"
                             alt="graph"
                         />
                         <div class="flex justify-center gap-5 mt-8">
@@ -1043,7 +1045,7 @@
                                 ></div>
                                 <span class="flex gap-2"
                                     ><span>Average</span>
-                                    <span class="hidden xl:block"
+                                    <span class="hidden lg:block"
                                         >Price</span
                                     ></span
                                 >
@@ -1054,7 +1056,7 @@
                                 ></div>
                                 <span class="flex gap-2"
                                     ><span>Highest</span>
-                                    <span class="hidden xl:block"
+                                    <span class="hidden lg:block"
                                         >Price</span
                                     ></span
                                 >
@@ -1065,7 +1067,7 @@
                                 ></div>
                                 <span class="flex gap-2"
                                     ><span>Lowest</span>
-                                    <span class="hidden xl:block"
+                                    <span class="hidden lg:block"
                                         >Price</span
                                     ></span
                                 >
@@ -1386,7 +1388,7 @@
         <!-- Mobile Menu -->
         <div
             id="mobile-menu"
-            class="xl:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden"
+            class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden"
         >
             <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a

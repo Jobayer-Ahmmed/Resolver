@@ -71,7 +71,7 @@
 
   <body>
     <header class="bg-white border-b border-gray-200 sticky top-0 z-20 w-full">
-      <div class="container mx-auto px-4  xl:px-20 w-full">
+      <div class="container mx-auto px-4  xl:px-8 w-full">
         <div class="flex justify-between h-16 items-center w-full">
           <!-- Logo -->
           <div class="flex-shrink-0">
@@ -83,7 +83,7 @@
 
           <div class="flex gap-10 items-center justify-between">
             <!-- Desktop Menu -->
-            <nav class="hidden lg:flex  space-x-4">
+            <nav class="hidden lg:flex  font-semibold  space-x-5 items-center text-base text-[#273F2B]">
               <a href="../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
               <a href="../../index.html#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It
                 Works</a>
@@ -97,18 +97,11 @@
 
             <!-- Right-side buttons -->
             <div class="hidden md:flex items-center space-x-4">
-              <!-- Upgrade Now Button -->
-              <a href="#"
-                class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
-                <img src="../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
-                Upgrade now
-              </a>
+             
 
               <!-- Icons: Bell, Gear, Profile -->
               <div class="flex space-x-4">
-                <button class="text-gray-900 hover:text-green-500 transition">
-                  <img src="../assets/images/Icon/settings-01.png" alt="settings-icon" class="h-5 w-5 mr-2" />
-                </button>
+               
 
                 <!-- Notification Bell and Dropdown -->
                 <div class="relative flex justify-center">
@@ -184,9 +177,9 @@
 
                   <!-- Profile Dropdown Menu -->
                   <div id="profile-dropdown"
-                    class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50">
+                    class="hidden absolute right-14 mt-2 w-48 bg-white shadow-lg rounded-lg z-50">
                     <div
-                      class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
+                      class="absolute top-[-10px] left-[15rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
                             border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
                     </div>
                     <ul class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]">
@@ -216,6 +209,15 @@
                         </div>
                         <i class="fas fa-chevron-right text-gray-400"></i>
                       </li>
+
+                         <!-- Admin Dashboard -->
+                         <li class="flex justify-between items-center  px-4 py-3 bg-gray-100 border-b border-gray-200">
+                          <div class="flex items-center space-x-3">
+                            <i class="fas fa-th-large text-[#2f8379]"></i>
+                            <a href="./businessSide/adminDashboard.html" class="text-[#2f8379]">Admin Dashboard</a>
+                          </div>
+                          <i class="fas fa-chevron-right text-[#2f8379]"></i>
+                        </li>
 
                       <!-- Log Out -->
                       <li class="flex justify-between  px-4 items-center py-3">
@@ -676,7 +678,7 @@
 
 
     <!-- Pop up button -->
-    <div class="fixed top-[47rem] right-0 sm:bottom-0 sm:top-[35.5rem] sm:left-[12rem]">
+    <div class="fixed bottom-14 right-4 lg:left-5">
       <!-- Floating Action Button -->
       <button id="fab-btn"
         class="w-12 h-12 rounded-full bg-white text-green-500 flex justify-center items-center shadow-lg">
