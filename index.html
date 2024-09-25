@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-gray-100">
-  <header class="bg-white shadow-md">
+  <header class="bg-white shadow-md sm:fixed sm:w-full top-0 sm:z-50 sticky">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
         <div class="flex-shrink-0">
@@ -24,24 +24,24 @@
         </div>
 
         <!-- Desktop Menu -->
-        <nav class="hidden lg:flex space-x-8">
+        <nav class="hidden lg:flex items-center justify-end  space-x-8">
           <a href="./index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
           <a href="#how-it-works" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
-          <a href="#read-reviews" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-          <a href="./src/pages/write-compaint.html" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
-          <a href="#about-us" class="text-gray-900 hover:text-green-500 transition">About Us</a>
+          <a href="./src/pages/myReviews.html" class="text-gray-900 hover:text-green-500 transition">Read/Write Reviews</a>
+      
           <a href="./src/pages/priceDiscovery.html" class="text-gray-900
            hover:text-green-500 transition">Price Discovery</a>
-        </nav>
-
-        <div class="hidden lg:flex items-center space-x-4">
+           <a href="./src/pages/foods/foodPriceCompare.html" class="text-gray-900 hover:text-green-500 transition">Price Comparison</a>
+                   <div class="hidden lg:flex items-center space-x-4">
           <!-- Sign In -->
-          <a href="./src/pages/signin.html" class="text-gray-900 hover:text-green-500 transition">Sign In</a>
+           <div class="px-1"></div>
+          <a href="./src/pages/signin.html" class=" hover:text-green-500 transition">Sign In</a>
 
           <!-- Sign Up -->
           <a href="./src/pages/signup.html"
-            class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
+            class="bg-[#78EB54] px-5 py-3 rounded-full hover:bg-green-600 transition">Sign Up</a>
         </div>
+        </nav>
 
         <!-- Mobile Menu Button -->
         <div class="lg:hidden flex items-center">
@@ -52,6 +52,8 @@
             </svg>
           </button>
         </div>
+
+
       </div>
     </div>
 
@@ -59,18 +61,18 @@
     <div id="mobile-menu" class="lg:hidden hidden">
       <nav class="px-2 pt-2 pb-3 flex flex-col gap-4 sm:px-3">
         <a href="./index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
-        <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
+        <a href="#how-it-works" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
+        <a href="./src/pages/myReviews.html" class="block text-gray-900 hover:text-green-500 transition">Read/Write Reviews</a>
         <a href="#" class="block text-gray-900 hover:text-green-500 transition">Price Discovery</a>
+        <a href="./src/pages/foods/foodPriceCompare.html" class="text-gray-900 hover:text-green-500 transition">Price Comparison</a>
         <a href="./src/pages/signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
         <a href="./src/pages/signup.html" class="block text-gray-900 hover:text-green-500 transition">Sign Up</a>
       </nav>
     </div>
   </header>
+
   <!-- Hero Section -->
-  <section class="bg-[#273f2b] relative text-white pt-24 h-[33rem]">
+  <section class="bg-[#273f2b] relative text-white pt-24 h-[33rem] overflow-hidden">
     <div
       class=" flex flex-col items-center gap-y-4 justify-center a max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-3xl md:text-5xl font-bold">
@@ -248,7 +250,9 @@
       <div class="absolute bottom-0 right-0 w-1/4 bg-contain bg-no-repeat transform -scale-x-100">
         <img src="./src/assets/images/hand-holding-star-removebg1.png" alt="Logo" class="h-16 md:h-64 w-auto" />
       </div>
+    </div>
   </section>
+
 
   <!-- Logo Section -->
   <section class="py-12 bg-white">
@@ -295,7 +299,7 @@
   <!-- How Resolver Works -->
   <section id="how-it-works" class="md:py-32 py-12 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h4 class="text-blue-500 text-sm mb-2">How it works</h4>
+      <!-- <h4 class="text-blue-500 text-sm mb-2">How it works</h4> -->
       <h2 class="text-3xl font-bold text-gray-800 mb-4">
         How Resolver Works
       </h2>
@@ -396,7 +400,7 @@
   <!-- Review Section -->
   <section id="read-reviews" class="md:py-32 py-12 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h4 class="text-blue-500 text-sm mb-2">Reviews</h4>
+      <!-- <h4 class="text-blue-500 text-sm mb-2">Reviews</h4> -->
       <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Recent Review</h2>
       <p class="text-gray-500 max-w-2xl mx-auto mb-12">
         Help others by providing detailed feedback on your purchases and interactions.
@@ -751,7 +755,7 @@
   <section class="bg-green-100 md:py-32 py-12 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <!-- Category Title -->
-      <h4 class="text-blue-500 text-sm mb-2">Categories</h4>
+      <!-- <h4 class="text-blue-500 text-sm mb-2">Categories</h4> -->
       <h2 class="text-3xl font-bold text-gray-800 mb-4">Explore Our Categories</h2>
       <p class="text-gray-500 max-w-2xl mx-auto mb-12">
         Resolver is a user-friendly platform for reading, writing, and sharing reviews. Access a vast database of
@@ -776,7 +780,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 md:gap-20">
       <!-- About Us Title -->
       <div class="text-center px-4 sm:px-6 lg:px-8">
-        <h4 class="text-blue-500 text-sm mb-2">About us</h4>
+        <!-- <h4 class="text-blue-500 text-sm mb-2">About us</h4> -->
         <h2 class="text-3xl font-bold text-gray-800 mb-4">Resolving Your Concerns, <br> One Step at a Time</h2>
         <p class="text-gray-500 max-w-2xl mx-auto">
           At Resolver, we swiftly and effectively resolve your concerns. We ensure clear communication between consumers
@@ -985,15 +989,11 @@
         <div class="absolute top-24 md:top-40 right-12 transform translate-x-1/4 -translate-y-1/4">
           <img src="./src/assets/images/3d-star.png" alt="Star Icon" class="h-32 w-32">
         </div>
-
       </div>
     </div>
-
   </footer>
 
-
   <!-- Pop up button -->
-
   <div class="fixed top-[47rem] right-0 sm:bottom-0 sm:top-[35.5rem] sm:left-[12rem]">
     <!-- Floating Action Button -->
     <button id="fab-btn"
@@ -1022,15 +1022,12 @@
 
       <button class="flex items-center space-x-2 px-6 py-2 w-60">
         <img src="./src/assets/images/Icon/pop-up-infinity.png" alt="pop-up-infinity" class="h-4 w-auto" />
-        <a class="text-gray-800">Price Comparison</a>
+        <a href="./src/pages/foods/foodPriceCompare.html" class="text-gray-800">Price Comparison</a>
       </button>
     </div>
   </div>
 
-
-
-
-
+  <!-- Modal -->
   <script>
     const searchBtn = document.getElementById('search-btn');
     const resultModal = document.getElementById('result-modal');
@@ -1055,6 +1052,30 @@
       }
     });
   </script>
+
+  <!-- <script>
+    const slider = document.querySelector('.hero-slider');
+    const slides = document.querySelectorAll('.hero-slider > div');
+    const prevSlide = document.getElementById('prev-slide');
+    const nextSlide = document.getElementById('next-slide');
+
+    let currentSlide = 0;
+
+    function updateSlidePosition() {
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    nextSlide.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlidePosition();
+    });
+
+    prevSlide.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlidePosition();
+    });
+  </script> -->
+
 
   <script src="./src/js/main.js"></script>
 </body>

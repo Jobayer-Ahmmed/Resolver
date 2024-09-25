@@ -19,190 +19,404 @@
   </head>
   <body class=" lg:bg-[#F4F4F4]  bg-[#F5F7F9]" >
         <!-- Header -->
-        <header class="bg-white border-b border-gray-200 relative z-20 w-full">
-      <div class="mx-auto px-4 sm:px-6 lg:px-20 w-full">
-        <div class="flex justify-between h-16 items-center w-full">
-          <!-- Logo -->
-          <div class="flex-shrink-0">
-            <a href="#" class="flex items-center">
-              <img src="../../assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
-              <span class="ml-2 text-lg font-bold text-green-600">Resolver</span>
-            </a>
-          </div>
-
-          <!-- Desktop Menu -->
-          <nav class="hidden lg:flex space-x-4">
-            <a href="../../../index.html" class="text-gray-900 hover:text-green-500 transition">Home</a>
-            <a href="#" class="text-gray-900 hover:text-green-500 transition">How It Works</a>
-            <a href="#" class="text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-            <a href="../submitYourReview.html" class="text-gray-900 hover:text-green-500 transition">Write Review</a>
-            <a href="#" class="text-gray-900 hover:text-green-500 transition">About Us</a>
-            <a href="../priceDiscovery.html" class="text-gray-900 hover:text-green-500 transition">Price Discovery</a>
-          </nav>
-
-          <!-- Right-side buttons -->
-          <div class="hidden md:flex items-center space-x-4">
-            <!-- Upgrade Now Button -->
-            <a href="#"
-              class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center">
-              <img src="../../assets/images/Icon/thunder.png" alt="thunder-icon" class="h-5 w-5 mr-2" />
-              Upgrade now
-            </a>
-
-            <!-- Icons: Bell, Gear, Profile -->
-            <div class="flex space-x-4">
-              <button class="text-gray-900 hover:text-green-500 transition">
-                <img src="../../assets/images/Icon/settings-01.png" alt="settings-icon" class="h-5 w-5 mr-2" />
-              </button>
-
-              <!-- Notification Bell and Dropdown -->
-              <div class="relative flex justify-center">
-                <button id="notification-btn" class="focus:outline-none">
-                  <img src="../../assets/images/Icon/bell.png" alt="Notification Bell" class="h-5 w-5">
-                </button>
-
-                <!-- Notification Dropdown Menu -->
-                <div id="notification-dropdown"
-                  class="hidden absolute -right-14 top-12 mt-2 w-[40rem] bg-white shadow-lg rounded-lg z-50">
-
-                  <!-- Green top border -->
-                  <div class="absolute top-[-10px] left-[36rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
-                  border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
-                  </div>
-
-                  <!-- Notifications header -->
-                  <div class="flex justify-between items-center px-4 py-3 border-t-4 border-t-[#2f8379] border-b">
-                    <h3 class="text-sm font-semibold">Notifications</h3>
-                    <div class="flex gap-2 justify-center items-center">
-                      <a href="../../pages/notification.html" class="text-sm text-green-500 hover:underline">View All</a>
-                      <img src="../../assets/images/profileNotificationIcon/ArrowRight.png" alt="ArrowRight"
-                        class="h-3 w-3" />
+        <header
+            class="bg-white border-b border-gray-200 relative z-20 w-full sm:fixed sm:top-0 sm:shadow-sm"
+        >
+            <div class="container mx-auto px-4 xl:px-20 w-full">
+                <div class="flex justify-between h-16 items-center w-full">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <a href="#" class="flex items-center">
+                            <img
+                                src="../../assets/images/logo.png"
+                                alt="Logo"
+                                class="h-8 w-auto"
+                            />
+                            <span class="ml-2 text-lg font-bold text-green-600"
+                                >Resolver</span
+                            >
+                        </a>
                     </div>
-                  </div>
 
-                  <!-- Notifications list -->
-                  <ul class="divide-y divide-gray-200">
+                    <div class="flex gap-10 items-center justify-between">
+                        <!-- Desktop Menu -->
+                        <nav
+                            class="hidden lg:flex space-x-8 text-gray-600 font-semibold"
+                        >
+                            <a
+                                href="../../../index.html"
+                                class="hover:text-green-500 transition"
+                                >Home</a
+                            >
+                            <a
+                                href="../../../index.html#how-it-works"
+                                class="hover:text-green-500 transition"
+                                >How It Works</a
+                            >
+                            <a
+                                href="../myReviews.html"
+                                class="hover:text-green-500 transition"
+                                >Read/Write Reviews</a
+                            >
+                            <a
+                                href="../priceDiscovery.html"
+                                class="hover:text-green-500 transition"
+                                >Price Discovery</a
+                            >
+                            <a
+                                href="../foods/foodPriceCompare.html"
+                                class="hover:text-green-500 transition"
+                                >Price Comparison</a
+                            >
+                        </nav>
 
-                    <li class="px-4 py-3 flex items-start gap-3">
-                      <img src="../../assets/images/profileNotificationIcon/image1.png" alt="User"
-                        class="h-10 w-10 rounded-full">
-                      <div class="flex-1">
-                        <p class="text-sm"><strong>Charlie Henderson</strong> reviewed in <strong>Exploring Animal
-                            Prosthesis...</strong></p>
-                        <p class="text-gray-500 text-xs">August 31, 2024</p>
-                      </div>
-                      <button class="text-gray-500 hover:text-gray-700">
-                        <img src="../../assets/images/profileNotificationIcon/Close.png" alt="cross" class="h-5 w-5">
-                      </button>
-                    </li>
+                        <!-- Right-side buttons -->
+                        <div class="hidden md:flex items-center space-x-4">
+                            <!-- Upgrade Now Button -->
+                            <a
+                                href="#"
+                                class="bg-gray-100 px-4 py-2 rounded-full text-gray-900 hover:bg-gray-200 transition flex items-center"
+                            >
+                                <img
+                                    src="../../assets/images/Icon/thunder.png"
+                                    alt="thunder-icon"
+                                    class="h-5 w-5 mr-2"
+                                />
+                                Upgrade now
+                            </a>
 
-                    <li class="px-4 py-3 flex items-start gap-3">
-                      <img src="../../assets/images/profileNotificationIcon/image2.png" alt="User"
-                        class="h-10 w-10 rounded-full">
-                      <div class="flex-1">
-                        <p class="text-sm"><strong>Satoshi Nakamoto</strong> complaint on <strong>International exchange
-                            skill event</strong></p>
-                        <p class="text-gray-500 text-xs">August 31, 2024</p>
-                      </div>
-                      <div>
-                        <button class="text-gray-500 hover:text-gray-700">
-                          <img src="../../assets/images/profileNotificationIcon/Close.png" alt="cross" class="h-5 w-5">
+                            <!-- Icons: Bell, Gear, Profile -->
+                            <div class="flex space-x-4">
+                                <button
+                                    class="text-gray-900 hover:text-green-500 transition"
+                                >
+                                    <img
+                                        src="../../assets/images/Icon/settings-01.png"
+                                        alt="settings-icon"
+                                        class="h-5 w-5 mr-2"
+                                    />
+                                </button>
+
+                                <!-- Notification Bell and Dropdown -->
+                                <div class="relative flex justify-center">
+                                    <button
+                                        id="notification-btn"
+                                        class="focus:outline-none"
+                                    >
+                                        <img
+                                            src="../../assets/images/Icon/bell.png"
+                                            alt="Notification Bell"
+                                            class="h-5 w-5"
+                                        />
+                                    </button>
+
+                                    <!-- Notification Dropdown Menu -->
+                                    <div
+                                        id="notification-dropdown"
+                                        class="hidden absolute -right-14 top-12 mt-2 w-[40rem] bg-white shadow-lg rounded-lg z-50"
+                                    >
+                                        <!-- Green top border -->
+                                        <div
+                                            class="absolute top-[-10px] left-[36rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]"
+                                        ></div>
+
+                                        <!-- Notifications header -->
+                                        <div
+                                            class="flex justify-between items-center px-4 py-3 border-t-4 border-t-[#2f8379] border-b"
+                                        >
+                                            <h3 class="text-sm font-semibold">
+                                                Notifications
+                                            </h3>
+                                            <div
+                                                class="flex gap-2 justify-center items-center"
+                                            >
+                                                <a
+                                                    href="../notification.html"
+                                                    class="text-sm text-green-500 hover:underline"
+                                                    >View All</a
+                                                >
+                                                <img
+                                                    src="../../assets/images/profileNotificationIcon/ArrowRight.png"
+                                                    alt="ArrowRight"
+                                                    class="h-3 w-3"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <!-- Notifications list -->
+                                        <ul class="divide-y divide-gray-200">
+                                            <li
+                                                class="px-4 py-3 flex items-start gap-3"
+                                            >
+                                                <img
+                                                    src="../../assets/images/profileNotificationIcon/image1.png"
+                                                    alt="User"
+                                                    class="h-10 w-10 rounded-full"
+                                                />
+                                                <div class="flex-1">
+                                                    <p class="text-sm">
+                                                        <strong
+                                                            >Charlie
+                                                            Henderson</strong
+                                                        >
+                                                        reviewed in
+                                                        <strong
+                                                            >Exploring Animal
+                                                            Prosthesis...</strong
+                                                        >
+                                                    </p>
+                                                    <p
+                                                        class="text-gray-500 text-xs"
+                                                    >
+                                                        August 31, 2024
+                                                    </p>
+                                                </div>
+                                                <button
+                                                    class="text-gray-500 hover:text-gray-700"
+                                                >
+                                                    <img
+                                                        src="../../assets/images/profileNotificationIcon/Close.png"
+                                                        alt="cross"
+                                                        class="h-5 w-5"
+                                                    />
+                                                </button>
+                                            </li>
+
+                                            <li
+                                                class="px-4 py-3 flex items-start gap-3"
+                                            >
+                                                <img
+                                                    src="../../assets/images/profileNotificationIcon/image2.png"
+                                                    alt="User"
+                                                    class="h-10 w-10 rounded-full"
+                                                />
+                                                <div class="flex-1">
+                                                    <p class="text-sm">
+                                                        <strong
+                                                            >Satoshi
+                                                            Nakamoto</strong
+                                                        >
+                                                        complaint on
+                                                        <strong
+                                                            >International
+                                                            exchange skill
+                                                            event</strong
+                                                        >
+                                                    </p>
+                                                    <p
+                                                        class="text-gray-500 text-xs"
+                                                    >
+                                                        August 31, 2024
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <button
+                                                        class="text-gray-500 hover:text-gray-700"
+                                                    >
+                                                        <img
+                                                            src="../../assets/images/profileNotificationIcon/Close.png"
+                                                            alt="cross"
+                                                            class="h-5 w-5"
+                                                        />
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Profile Dropdown -->
+                                <div class="relative">
+                                    <div class="flex gap-2">
+                                        <img
+                                            src="../../assets/images/settings-component.png"
+                                            alt="Profile Image"
+                                            class="h-8 w-8 rounded-full"
+                                        />
+                                        <button
+                                            id="profile-dropdown-btn"
+                                            class="focus:outline-none"
+                                        >
+                                            <i
+                                                class="fas fa-chevron-down text-black"
+                                            ></i>
+                                        </button>
+                                    </div>
+
+                                    <!-- Profile Dropdown Menu -->
+                                    <div
+                                        id="profile-dropdown"
+                                        class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50"
+                                    >
+                                        <div
+                                            class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]"
+                                        ></div>
+                                        <ul
+                                            class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]"
+                                        >
+                                            <!-- Profile -->
+                                            <li
+                                                class="flex justify-between items-center px-4 py-3 border-b border-gray-200"
+                                            >
+                                                <div
+                                                    class="flex items-center space-x-3"
+                                                >
+                                                    <i
+                                                        class="fas fa-user text-gray-600"
+                                                    ></i>
+                                                    <a
+                                                        href="../userProfileInformation.html"
+                                                        class="text-gray-800"
+                                                        >Profile</a
+                                                    >
+                                                </div>
+                                                <i
+                                                    class="fas fa-chevron-right text-gray-400"
+                                                ></i>
+                                            </li>
+
+                                            <!-- Dashboard -->
+                                            <li
+                                                class="flex justify-between items-center px-4 py-3 bg-gray-100 border-b border-gray-200"
+                                            >
+                                                <div
+                                                    class="flex items-center space-x-3"
+                                                >
+                                                    <i
+                                                        class="fas fa-th-large text-[#2f8379]"
+                                                    ></i>
+                                                    <a
+                                                        href="../user-dashboard-page.html"
+                                                        class="text-[#2f8379]"
+                                                        >Dashboard</a
+                                                    >
+                                                </div>
+                                                <i
+                                                    class="fas fa-chevron-right text-[#2f8379]"
+                                                ></i>
+                                            </li>
+
+                                            <!-- Settings -->
+                                            <li
+                                                class="flex justify-between items-center px-4 py-3 border-b border-gray-200"
+                                            >
+                                                <div
+                                                    class="flex items-center space-x-3"
+                                                >
+                                                    <i
+                                                        class="fas fa-cog text-gray-600"
+                                                    ></i>
+                                                    <a
+                                                        href="../userInformation.html"
+                                                        class="text-gray-800"
+                                                        >Settings</a
+                                                    >
+                                                </div>
+                                                <i
+                                                    class="fas fa-chevron-right text-gray-400"
+                                                ></i>
+                                            </li>
+
+                                            <!-- Log Out -->
+                                            <li
+                                                class="flex justify-between px-4 items-center py-3"
+                                            >
+                                                <div
+                                                    class="flex items-center space-x-3"
+                                                >
+                                                    <i
+                                                        class="fas fa-sign-out-alt text-gray-600"
+                                                    ></i>
+                                                    <a
+                                                        href="#"
+                                                        class="text-gray-800"
+                                                        >Log Out</a
+                                                    >
+                                                </div>
+                                                <i
+                                                    class="fas fa-chevron-right text-gray-400"
+                                                ></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden flex items-center">
+                        <button
+                            id="mobile-menu-button"
+                            class="text-gray-900 focus:outline-none"
+                        >
+                            <svg
+                                class="h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
                         </button>
-                      </div>
-                    </li>
-                  </ul>
+                    </div>
                 </div>
-              </div>
-
-
-              <!-- Profile Dropdown -->
-              <div class="relative">
-
-                <div class="flex gap-2">
-                  <img src="../../assets/images/settings-component.png" alt="Profile Image" class="h-8 w-8 rounded-full">
-                  <button id="profile-dropdown-btn" class="focus:outline-none">
-                    <i class="fas fa-chevron-down text-black"></i>
-                  </button>
-                </div>
-
-                <!-- Profile Dropdown Menu -->
-                <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50">
-                  <div class="absolute top-[-10px] left-[11rem] transform -translate-x-1/2 w-0 h-0 border-l-[10px] 
-                  border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-[#2f8379]">
-                  </div>
-                  <ul class="bg-white shadow-lg p-4 w-64 border-t-4 border-t-[#2f8379]">
-                    <!-- Profile -->
-                    <li class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
-                      <div class="flex items-center space-x-3">
-                        <i class="fas fa-user text-gray-600"></i>
-                        <a href="#" class="text-gray-800">Profile</a>
-                      </div>
-                      <i class="fas fa-chevron-right text-gray-400"></i>
-                    </li>
-
-                    <!-- Dashboard -->
-                    <li class="flex justify-between items-center  px-4 py-3 bg-gray-100 border-b border-gray-200">
-                      <div class="flex items-center space-x-3">
-                        <i class="fas fa-th-large text-[#2f8379]"></i>
-                        <a href="#" class="text-[#2f8379]">Dashboard</a>
-                      </div>
-                      <i class="fas fa-chevron-right text-[#2f8379]"></i>
-                    </li>
-
-                    <!-- Settings -->
-                    <li class="flex justify-between items-center  px-4 py-3 border-b border-gray-200">
-                      <div class="flex items-center space-x-3">
-                        <i class="fas fa-cog text-gray-600"></i>
-                        <a href="#" class="text-gray-800">Settings</a>
-                      </div>
-                      <i class="fas fa-chevron-right text-gray-400"></i>
-                    </li>
-
-                    <!-- Log Out -->
-                    <li class="flex justify-between  px-4 items-center py-3">
-                      <div class="flex items-center space-x-3">
-                        <i class="fas fa-sign-out-alt text-gray-600"></i>
-                        <a href="#" class="text-gray-800">Log Out</a>
-                      </div>
-                      <i class="fas fa-chevron-right text-gray-400"></i>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
-          </div>
 
-          <!-- Mobile Menu Button -->
-          <div class="lg:hidden flex items-center">
-            <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden">
-        <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="../../../index.html" class="block text-gray-900 hover:text-green-500 transition">Home</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">How It Works</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">Read Reviews</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">Write Review</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">About Us</a>
-          <a href="#" class="block text-gray-900 hover:text-green-500 transition">Price Discovery</a>
-          <a href="../signin.html" class="block text-gray-900 hover:text-green-500 transition">Sign In</a>
-          <a href="../signup.html"
-            class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Sign Up</a>
-        </nav>
-      </div>
-    </header>
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="lg:hidden absolute top-16 left-0 w-full bg-white z-50 shadow-lg hidden"
+            >
+                <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a
+                        href="../../../index.html"
+                        class="hover:text-green-500 transition"
+                        >Home</a
+                    >
+                    <a
+                        href="../../../index.html#how-it-works"
+                        class="hover:text-green-500 transition"
+                        >How It Works</a
+                    >
+                    <a
+                        href="../myReviews.html"
+                        class="hover:text-green-500 transition"
+                        >Read/Write Reviews</a
+                    >
+                    <a
+                        href="../priceDiscovery.html"
+                        class="hover:text-green-500 transition"
+                        >Price Discovery</a
+                    >
+                    <a
+                        href="../foods/foodPriceCompare.html"
+                        class="hover:text-green-500 transition"
+                        >Price Comparison</a
+                    >
+                    <a
+                        href="../signin.html"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Sign In</a
+                    >
+                    <a
+                        href="../signup.html"
+                        class="block text-gray-900 hover:text-green-500 transition"
+                        >Sign Up</a
+                    >
+                </nav>
+            </div>
+        </header>
 
     <!-- Header -->
     <!-- inside admin Dashboard Navbar section start =================== -->
-    <section class="hidden lg:block">
+    <section class="hidden lg:block mt-16">
       <nav
         class="px-4 flex container mx-auto border-b  border-[#EAECF0]  bg-white items-center justify-between relative lg:px-20"
       >
